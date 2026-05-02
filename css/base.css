@@ -1,0 +1,77 @@
+/* ========== BASE / RESET / VARIABLES ========== */
+:root{
+  --bg:#050818;
+  --bg-2:#0a0f2e;
+  --card:#121a3a;
+  --card-hi:#1a2452;
+  --line:#2a3470;
+  --line-2:#3b478f;
+  --text:#eef1ff;
+  --text-soft:#aab2dc;
+  --muted:#7a82b3;
+  --b1:#5e9eff;
+  --b2:#9b6eff;
+  --b3:#3ee0c1;
+  --b4:#ff7ab8;
+  --b5:#ffb547;
+  --b6:#5fdc9a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{
+  height:100vh; width:100vw;
+  overflow:hidden;
+  font-family:'IBM Plex Sans Thai','Inter',system-ui,sans-serif;
+  background:var(--bg); color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  user-select:none;
+}
+
+/* GLOBAL BG */
+body::before{
+  content:""; position:fixed; inset:0; z-index:-2;
+  background:
+    radial-gradient(900px 700px at 80% 10%, rgba(155,110,255,.18), transparent 60%),
+    radial-gradient(800px 600px at 10% 90%, rgba(94,158,255,.16), transparent 60%),
+    radial-gradient(700px 500px at 50% 50%, rgba(62,224,193,.06), transparent 60%);
+}
+body::after{
+  content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,.5), transparent),
+    radial-gradient(1px 1px at 70% 50%, rgba(255,255,255,.4), transparent),
+    radial-gradient(1px 1px at 40% 80%, rgba(255,255,255,.6), transparent),
+    radial-gradient(2px 2px at 85% 75%, rgba(62,224,193,.4), transparent),
+    radial-gradient(2px 2px at 15% 65%, rgba(155,110,255,.4), transparent);
+  background-size: 200px 200px, 250px 250px, 300px 300px, 400px 400px, 350px 350px;
+  animation: drift 80s linear infinite;
+  opacity:.6;
+}
+@keyframes drift{from{transform:translate(0,0)} to{transform:translate(-200px,-200px)}}
+
+/* DECK */
+.deck{position:fixed; inset:0; overflow:hidden}
+.slide{
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center;
+  padding: 60px 80px 100px;
+  opacity:0; pointer-events:none;
+  transform: translateX(40px);
+  transition: opacity .6s ease, transform .7s cubic-bezier(.2,.8,.2,1);
+  overflow:hidden;
+}
+.slide.active{opacity:1; pointer-events:auto; transform:none}
+.slide.prev{transform:translateX(-40px)}
+.slide-inner{
+  width:100%; max-width:1400px; max-height:calc(100vh - 160px);
+}
+
+@keyframes pulse{0%,100%{transform:scale(1); opacity:1} 50%{transform:scale(1.4); opacity:.5}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideUp{from{transform:translateY(40px); opacity:0}to{transform:none; opacity:1}}
+@keyframes gradMove{0%,100%{background-position:0% 50%} 50%{background-position:100% 50%}}
+@keyframes hintBob{0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)}}
+@keyframes pulseGlow{
+  0%,100%{box-shadow: 0 0 80px var(--b1), inset 0 0 40px rgba(255,255,255,.1)}
+  50%{box-shadow: 0 0 130px var(--b2), inset 0 0 60px rgba(255,255,255,.2)}
+}
+@keyframes rotate{from{transform:rotate(0)} to{transform:rotate(360deg)}}

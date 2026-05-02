@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NET Energy · Annual Report 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/ui.css">
+<link rel="stylesheet" href="css/slides.css">
+<link rel="stylesheet" href="css/flow.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="brand">
+    <div class="logo">🛡️</div>
+    <span><b>NET Energy</b> · Annual Report 2026</span>
+  </div>
+  <div class="top-actions">
+    <button class="icon-btn" id="menu-btn" title="เมนู (M)">☰</button>
+    <button class="icon-btn" id="fs-btn" title="เต็มจอ (F)">⛶</button>
+  </div>
+</div>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar"><div class="fill" id="progress-fill"></div></div>
+
+<!-- DECK -->
+<div class="deck" id="deck">
+
+  <!-- 1. TITLE -->
+  <section class="slide active" data-title="ปกหน้า" data-icon="🎬" data-desc="เริ่มต้นนำเสนอ">
+    <div class="slide-inner">
+      <div class="s-title-grid">
+        <div>
+          <span class="eyebrow"><span class="live-dot"></span> NET Energy · ประจำปี 2026</span>
+          <h1 class="title"><span class="grad">รายงานผล</span><br/>การปฏิบัติงาน<br/><span style="font-size:.65em; color:var(--text-soft); font-weight:600">ม.ค. – เม.ย. 2026</span></h1>
+          <p class="lede">
+            สรุปงานที่ทำในช่วง 4 เดือนแรกของปี — ทั้งระบบที่เปิดใช้จริง
+            ระบบที่กำลังพัฒนา ระบบที่ดูแลต่อเนื่อง และงานนอกการเขียนโปรแกรมที่ทำในรอบนี้
+          </p>
+          <div class="meta-row">
+            <span class="meta-pill">📅 ม.ค. – เม.ย. 2026</span>
+            <span class="meta-pill">⚡ <b>5 ระบบ</b> ใช้งานจริง</span>
+            <span class="meta-pill">🔬 <b>2 ระบบ</b> กำลังพัฒนา</span>
+            <span class="meta-pill">📞 <b>1 งาน</b> นอกโปรแกรม</span>
+          </div>
+        </div>
+        <div>
+          <div class="orbit-wrap">
+            <div class="orbit-ring"></div>
+            <div class="orbit-ring r2"></div>
+            <div class="orbit-center"><img src="assets/icons/training-platform.png" alt="NET"/></div>
+            <div class="orbit-node n1">📄</div>
+            <div class="orbit-node n2"><img src="assets/icons/netmer-flow.png" alt="N"/></div>
+            <div class="orbit-node n3"><img src="assets/icons/chat-mobile.png" alt="C"/></div>
+            <div class="orbit-node n4"><img src="assets/icons/cp-passport.png" alt="P"/></div>
+            <div class="orbit-node n5"><img src="assets/icons/safety-hero.png" alt="S"/></div>
+            <div class="orbit-node n6">💧</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. AGENDA -->
+  <section class="slide" data-title="Agenda" data-icon="📑" data-desc="หัวข้อนำเสนอ">
+    <div class="slide-inner">
+      <div class="head">
+        <h2>📑 Agenda · หัวข้อนำเสนอ</h2>
+        <div class="sub">7 หัวข้อหลัก · คลิกการ์ดเพื่อข้ามไปยังหัวข้อนั้น</div>
+      </div>
+
+      <div class="agenda-grid">
+        <div class="agenda-card" data-jump="3" style="--accent:var(--b1);--accent2:var(--b2)">
+          <div class="ag-num">01</div>
+          <div class="ag-icon">🏗️</div>
+          <div class="ag-title">Systems Overview</div>
+          <div class="ag-desc">7 ระบบที่ดูแล — มีทั้งระบบเดิมที่ปรับปรุง ระบบใหม่ที่เปิดใช้งาน และโปรเจกต์ที่กำลังพัฒนา</div>
+        </div>
+        <div class="agenda-card" data-jump="4" style="--accent:var(--b3);--accent2:var(--b1)">
+          <div class="ag-num">02</div>
+          <div class="ag-icon">🔗</div>
+          <div class="ag-title">System Integration</div>
+          <div class="ag-desc">การเชื่อมต่อระหว่างระบบ — ทุกระบบสื่อสารและแลกเปลี่ยนข้อมูลกันแบบเรียลไทม์</div>
+        </div>
+        <div class="agenda-card" data-jump="5" style="--accent:var(--b4);--accent2:var(--b2)">
+          <div class="ag-num">03</div>
+          <div class="ag-icon">🔄</div>
+          <div class="ag-title">ERP Workflow</div>
+          <div class="ag-desc">ขั้นตอนการทำงานของ ERP ตั้งแต่สร้างรอบ → ลงทะเบียน → ชำระเงิน → อบรม → ออกใบประกาศ → จัดส่ง</div>
+        </div>
+        <div class="agenda-card" data-jump="6" style="--accent:var(--b5);--accent2:var(--b4)">
+          <div class="ag-num">04</div>
+          <div class="ag-icon">📞</div>
+          <div class="ag-title">Cloud Phone System</div>
+          <div class="ag-desc">ระบบโทรศัพท์ Cloud ของบริษัท — 5 คู่สาย 15 user · งาน IT นอกเหนือจากการพัฒนา</div>
+        </div>
+        <div class="agenda-card" data-jump="7" style="--accent:var(--b6);--accent2:var(--b3)">
+          <div class="ag-num">05</div>
+          <div class="ag-icon">🔎</div>
+          <div class="ag-title">SEO &amp; AI Search</div>
+          <div class="ag-desc">ปรับเว็บไซต์ให้ติดอันดับ Google และให้ ChatGPT, Gemini อ้างอิงในผลคำตอบ</div>
+        </div>
+        <div class="agenda-card" data-jump="9" style="--accent:var(--b2);--accent2:var(--b4)">
+          <div class="ag-num">06</div>
+          <div class="ag-icon">📅</div>
+          <div class="ag-title">Timeline</div>
+          <div class="ag-desc">ลำดับเหตุการณ์สำคัญในรอบ 4 เดือน — วันที่ระบบเปิดใช้งาน และโปรเจกต์ใหม่ที่เริ่มต้น</div>
+        </div>
+        <div class="agenda-card" data-jump="10" style="--accent:var(--b1);--accent2:var(--b3)" data-span="2">
+          <div class="ag-num">07</div>
+          <div class="ag-icon">🛣️</div>
+          <div class="ag-title">Roadmap</div>
+          <div class="ag-desc">แผนการพัฒนาตั้งแต่ พ.ค. 2026 เป็นต้นไป — ระบบใหม่ที่จะเปิดใช้ ระบบที่ขยายต่อ และฟีเจอร์ที่อยู่ในแผน</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SYSTEMS -->
+  <section class="slide" data-title="Systems Overview" data-icon="🏗️" data-desc="6 ระบบที่ดูแล">
+    <div class="slide-inner">
+      <div class="head">
+        <h2>🏗️ Systems Overview <span style="font-size:13px; font-weight:400; color:var(--muted)">— คลิกการ์ดเพื่อดูรายละเอียด</span></h2>
+        <div class="sub">7 ระบบที่ดูแลในรอบนี้ — ระบบที่เปิดใช้งานจริง ระบบที่ปรับปรุงต่อเนื่อง และระบบที่กำลังพัฒนา</div>
+      </div>
+      <div class="sys-grid" id="sys-grid"></div>
+    </div>
+  </section>
+
+  <!-- 5. FLOW (INTERACTIVE) -->
+  <section class="slide" data-title="System Integration" data-icon="🔗" data-desc="การเชื่อมต่อระหว่างระบบ · Interactive">
+    <div class="slide-inner" style="height:100%; display:flex; flex-direction:column; max-width:1500px">
+      <div class="head" style="margin-bottom:12px">
+        <h2>🔗 System Integration · การเชื่อมต่อระหว่างระบบ</h2>
+        <div class="sub">ERP เป็นศูนย์กลาง · ระบบรอบ ๆ แลกเปลี่ยนข้อมูลแบบเรียลไทม์ · <b style="color:var(--text)">คลิกที่กล่องระบบ</b>เพื่อดูรายละเอียด · <b style="color:var(--text)">กด ⛶</b> เพื่อขยายเต็มจอ</div>
+      </div>
+
+      <div class="flow-stage" id="flow-stage" style="flex:1">
+        <div class="flow-toolbar">
+          <div class="flow-legend-pills">
+            <span class="lp live"><span class="dot"></span>Live · Connected</span>
+            <span class="lp plan"><span class="dot"></span>Planned</span>
+            <span class="lp two">↔ Bidirectional</span>
+            <span class="lp">→ One-way</span>
+          </div>
+          <div class="flow-tools">
+            <button class="flow-tool-btn" id="flow-reset" title="Reset Selection">↺</button>
+            <button class="flow-tool-btn active" id="flow-toggle-panel" title="Toggle Detail Panel">📋</button>
+            <button class="flow-tool-btn" id="flow-fs" title="Fullscreen">⛶</button>
+          </div>
+        </div>
+
+        <div class="flow-canvas" id="flow-canvas">
+          <div class="flow-svg-wrap">
+            <svg id="flow-svg" viewBox="0 0 1400 760" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+              <defs>
+                <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#1a2452"/>
+                  <stop offset="100%" stop-color="#0d1330"/>
+                </linearGradient>
+                <linearGradient id="liveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#5e9eff" stop-opacity="0.3"/>
+                  <stop offset="50%" stop-color="#5e9eff" stop-opacity="0.95"/>
+                  <stop offset="100%" stop-color="#3ee0c1" stop-opacity="0.3"/>
+                </linearGradient>
+                <linearGradient id="liveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#9b6eff" stop-opacity="0.3"/>
+                  <stop offset="50%" stop-color="#ff7ab8" stop-opacity="0.95"/>
+                  <stop offset="100%" stop-color="#9b6eff" stop-opacity="0.3"/>
+                </linearGradient>
+                <linearGradient id="planGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#ffb547" stop-opacity="0.5"/>
+                  <stop offset="50%" stop-color="#ffb547" stop-opacity="0.95"/>
+                  <stop offset="100%" stop-color="#ffb547" stop-opacity="0.5"/>
+                </linearGradient>
+                <radialGradient id="centerGrad" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#5e9eff"/>
+                  <stop offset="100%" stop-color="#9b6eff"/>
+                </radialGradient>
+                <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                <filter id="glow-strong"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                <!-- Arrow markers (auto-orient along path) -->
+                <marker id="arrow-cyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#3ee0c1"/></marker>
+                <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#5e9eff"/></marker>
+                <marker id="arrow-pink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#ff7ab8"/></marker>
+                <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#5fdc9a"/></marker>
+                <marker id="arrow-orange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#ffb547"/></marker>
+                <marker id="arrow-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#9b6eff"/></marker>
+              </defs>
+
+              <!-- PULSE RINGS -->
+              <circle cx="700" cy="380" r="100" fill="none" stroke="#5e9eff" stroke-width="2" opacity="0">
+                <animate attributeName="r" from="100" to="220" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" from="0.6" to="0" dur="3s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="700" cy="380" r="100" fill="none" stroke="#9b6eff" stroke-width="2" opacity="0">
+                <animate attributeName="r" from="100" to="220" dur="3s" begin="1s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" from="0.6" to="0" dur="3s" begin="1s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="700" cy="380" r="100" fill="none" stroke="#3ee0c1" stroke-width="2" opacity="0">
+                <animate attributeName="r" from="100" to="220" dur="3s" begin="2s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" from="0.6" to="0" dur="3s" begin="2s" repeatCount="indefinite"/>
+              </circle>
+
+              <!-- CONNECTIONS — paths drawn from source → destination, marker-end shows arrow at destination -->
+              <!-- Document Flow (2-way): out from ERP top-right, in from Doc Flow bottom-left -->
+              <path id="path-doc-out" class="conn" d="M 770 320 Q 950 240, 1122 178" fill="none" stroke="url(#liveGrad)" stroke-width="3" marker-end="url(#arrow-cyan)"/>
+              <path id="path-doc-in"  class="conn" d="M 1190 222 Q 970 290, 808 358" fill="none" stroke="url(#liveGrad)" stroke-width="3" marker-end="url(#arrow-blue)"/>
+              <!-- NETMER-Flow (1-way): ERP → NETMER -->
+              <path id="path-netmer" class="conn" d="M 770 440 Q 950 530, 1122 590" fill="none" stroke="url(#liveGrad2)" stroke-width="3" marker-end="url(#arrow-pink)"/>
+              <!-- Chat Mobile (2-way) -->
+              <path id="path-chat-out" class="conn" d="M 630 440 Q 460 540, 278 590" fill="none" stroke="url(#liveGrad)" stroke-width="3" marker-end="url(#arrow-green)"/>
+              <path id="path-chat-in"  class="conn" d="M 220 545 Q 420 480, 612 415" fill="none" stroke="url(#liveGrad)" stroke-width="3" marker-end="url(#arrow-cyan)"/>
+              <!-- CP Passport (planned, dashed) -->
+              <path id="path-cp" class="conn" d="M 630 320 Q 450 250, 278 178" fill="none" stroke="url(#planGrad)" stroke-width="3" stroke-dasharray="10 6" marker-end="url(#arrow-orange)"/>
+              <!-- Thailand Post (1-way ← into ERP) -->
+              <path id="path-post" class="conn" d="M 700 122 L 700 282" fill="none" stroke="url(#liveGrad2)" stroke-width="3" marker-end="url(#arrow-orange)"/>
+              <!-- Card Reader (2-way, split) -->
+              <path id="path-card-in"  class="conn" d="M 208 375 L 595 375" fill="none" stroke="url(#liveGrad)" stroke-width="3" marker-end="url(#arrow-blue)"/>
+              <path id="path-card-out" class="conn" d="M 605 387 L 212 387" fill="none" stroke="url(#liveGrad)" stroke-width="3" marker-end="url(#arrow-blue)"/>
+              <!-- AI / Gemini (2-way, split) -->
+              <path id="path-ai-out" class="conn" d="M 805 375 L 1222 375" fill="none" stroke="url(#liveGrad2)" stroke-width="3" marker-end="url(#arrow-purple)"/>
+              <path id="path-ai-in"  class="conn" d="M 1222 387 L 808 387" fill="none" stroke="url(#liveGrad2)" stroke-width="3" marker-end="url(#arrow-purple)"/>
+              <!-- Push (2-way, split) -->
+              <path id="path-push-out" class="conn" d="M 695 482 L 695 658" fill="none" stroke="url(#liveGrad)" stroke-width="3" marker-end="url(#arrow-green)"/>
+              <path id="path-push-in"  class="conn" d="M 705 658 L 705 484" fill="none" stroke="url(#liveGrad)" stroke-width="3" marker-end="url(#arrow-green)"/>
+
+              <!-- ANIMATED DOTS — all flow forward along their paths -->
+              <circle class="anim-dot" data-related="docflow" r="6" fill="#3ee0c1" filter="url(#glow-strong)"><animateMotion dur="3s" repeatCount="indefinite"><mpath href="#path-doc-out"/></animateMotion></circle>
+              <circle class="anim-dot" data-related="docflow" r="5" fill="#5e9eff" filter="url(#glow)"><animateMotion dur="3.4s" begin="1.5s" repeatCount="indefinite"><mpath href="#path-doc-in"/></animateMotion></circle>
+              <circle class="anim-dot" data-related="netmer" r="6" fill="#ff7ab8" filter="url(#glow-strong)"><animateMotion dur="3s" repeatCount="indefinite"><mpath href="#path-netmer"/></animateMotion></circle>
+              <circle class="anim-dot" data-related="chat" r="6" fill="#5fdc9a" filter="url(#glow-strong)"><animateMotion dur="3s" repeatCount="indefinite"><mpath href="#path-chat-out"/></animateMotion></circle>
+              <circle class="anim-dot" data-related="chat" r="5" fill="#3ee0c1" filter="url(#glow)"><animateMotion dur="3.2s" begin="1.5s" repeatCount="indefinite"><mpath href="#path-chat-in"/></animateMotion></circle>
+              <circle class="anim-dot" data-related="cp" r="5" fill="#ffb547" opacity="0.75" filter="url(#glow)"><animateMotion dur="4.5s" repeatCount="indefinite"><mpath href="#path-cp"/></animateMotion></circle>
+              <circle class="anim-dot" data-related="post" r="5" fill="#ffb547" filter="url(#glow)"><animateMotion dur="2.5s" repeatCount="indefinite"><mpath href="#path-post"/></animateMotion></circle>
+              <circle class="anim-dot" data-related="card" r="5" fill="#5e9eff" filter="url(#glow)"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#path-card-in"/></animateMotion></circle>
+              <circle class="anim-dot" data-related="card" r="4" fill="#3ee0c1" filter="url(#glow)" opacity=".7"><animateMotion dur="2.6s" begin="1.2s" repeatCount="indefinite"><mpath href="#path-card-out"/></animateMotion></circle>
+              <circle class="anim-dot" data-related="ai" r="5" fill="#9b6eff" filter="url(#glow)"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#path-ai-out"/></animateMotion></circle>
+              <circle class="anim-dot" data-related="ai" r="4" fill="#ff7ab8" filter="url(#glow)" opacity=".7"><animateMotion dur="2.6s" begin="1.2s" repeatCount="indefinite"><mpath href="#path-ai-in"/></animateMotion></circle>
+              <circle class="anim-dot" data-related="push" r="5" fill="#5fdc9a" filter="url(#glow)"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#path-push-out"/></animateMotion></circle>
+              <circle class="anim-dot" data-related="push" r="4" fill="#3ee0c1" filter="url(#glow)" opacity=".7"><animateMotion dur="2.6s" begin="1.2s" repeatCount="indefinite"><mpath href="#path-push-in"/></animateMotion></circle>
+
+              <!-- LABELS -->
+              <g font-family="IBM Plex Sans Thai" font-size="10.5" fill="#aab2dc">
+                <text id="lbl-doc" class="label" data-related="docflow" x="970" y="240" text-anchor="middle">Quotation · Invoice · Receipt</text>
+                <text id="lbl-netmer" class="label" data-related="netmer" x="970" y="540" text-anchor="middle">Schedule · Headcount Sync</text>
+                <text id="lbl-chat" class="label" data-related="chat" x="450" y="540" text-anchor="middle">Voice · Push · AI</text>
+                <text id="lbl-cp" class="label" data-related="cp" x="450" y="180" text-anchor="middle" fill="#ffb547" font-style="italic">Trainees · Passport (Planned)</text>
+                <text id="lbl-post" class="label" data-related="post" x="715" y="200" text-anchor="start">Tracking Status</text>
+                <text id="lbl-card" class="label" data-related="card" x="400" y="370" text-anchor="middle">Thai ID Data</text>
+                <text id="lbl-ai" class="label" data-related="ai" x="1015" y="370" text-anchor="middle">OCR · AI Q&amp;A</text>
+                <text id="lbl-push" class="label" data-related="push" x="715" y="580" text-anchor="start">FCM · Web Push</text>
+              </g>
+
+              <!-- CENTER (ERP) -->
+              <g class="node" data-id="erp">
+                <circle cx="700" cy="380" r="100" fill="url(#centerGrad)" filter="url(#glow-strong)" stroke="#5e9eff" stroke-width="2" style="color:#5e9eff">
+                  <animate attributeName="r" values="95;104;95" dur="3s" repeatCount="indefinite"/>
+                </circle>
+                <text x="700" y="370" font-size="44" text-anchor="middle">🛡️</text>
+                <text x="700" y="408" font-size="15" font-weight="700" fill="#fff" text-anchor="middle" font-family="IBM Plex Sans Thai">NET Training</text>
+                <text x="700" y="426" font-size="12" fill="rgba(255,255,255,.8)" text-anchor="middle" font-family="IBM Plex Sans Thai">Platform · ERP</text>
+              </g>
+
+              <!-- DOCUMENT FLOW -->
+              <g class="node" data-id="docflow">
+                <rect x="1130" y="120" width="240" height="100" rx="18" fill="url(#nodeGrad)" stroke="#3ee0c1" stroke-width="2" filter="url(#glow)" style="color:#3ee0c1"/>
+                <text x="1250" y="158" font-size="30" text-anchor="middle">📄</text>
+                <text x="1250" y="186" font-size="14" font-weight="600" fill="#fff" text-anchor="middle" font-family="IBM Plex Sans Thai">Document Flow</text>
+                <text x="1250" y="204" font-size="11" fill="#5fdc9a" text-anchor="middle" font-family="IBM Plex Sans Thai">⚡ Bidirectional</text>
+              </g>
+
+              <!-- NETMER-FLOW -->
+              <g class="node" data-id="netmer">
+                <rect x="1130" y="540" width="240" height="100" rx="18" fill="url(#nodeGrad)" stroke="#ff7ab8" stroke-width="2" filter="url(#glow)" style="color:#ff7ab8"/>
+                <text x="1250" y="578" font-size="30" text-anchor="middle">👥</text>
+                <text x="1250" y="606" font-size="14" font-weight="600" fill="#fff" text-anchor="middle" font-family="IBM Plex Sans Thai">NETMER-Flow (HR)</text>
+                <text x="1250" y="624" font-size="11" fill="#5fdc9a" text-anchor="middle" font-family="IBM Plex Sans Thai">⚡ Schedule Sync</text>
+              </g>
+
+              <!-- CHAT MOBILE -->
+              <g class="node" data-id="chat">
+                <rect x="30" y="540" width="240" height="100" rx="18" fill="url(#nodeGrad)" stroke="#5fdc9a" stroke-width="2" filter="url(#glow)" style="color:#5fdc9a"/>
+                <text x="150" y="578" font-size="30" text-anchor="middle">💬</text>
+                <text x="150" y="606" font-size="14" font-weight="600" fill="#fff" text-anchor="middle" font-family="IBM Plex Sans Thai">Chat Mobile</text>
+                <text x="150" y="624" font-size="11" fill="#5fdc9a" text-anchor="middle" font-family="IBM Plex Sans Thai">⚡ Agora · FCM · AI</text>
+              </g>
+
+              <!-- CP PASSPORT (planned) -->
+              <g class="node" data-id="cp">
+                <rect x="30" y="120" width="240" height="100" rx="18" fill="url(#nodeGrad)" stroke="#ffb547" stroke-width="2" stroke-dasharray="6 4" filter="url(#glow)" style="color:#ffb547"/>
+                <text x="150" y="158" font-size="30" text-anchor="middle">🪪</text>
+                <text x="150" y="186" font-size="14" font-weight="600" fill="#fff" text-anchor="middle" font-family="IBM Plex Sans Thai">CP Safety Passport</text>
+                <text x="150" y="204" font-size="11" fill="#ffb547" text-anchor="middle" font-family="IBM Plex Sans Thai">📋 Planned Integration</text>
+              </g>
+
+              <!-- THAILAND POST -->
+              <g class="node" data-id="post">
+                <rect x="580" y="40" width="240" height="80" rx="18" fill="url(#nodeGrad)" stroke="#ffb547" stroke-width="2" filter="url(#glow)" style="color:#ffb547"/>
+                <text x="620" y="84" font-size="26" text-anchor="middle">📮</text>
+                <text x="700" y="76" font-size="13" font-weight="600" fill="#fff" text-anchor="middle" font-family="IBM Plex Sans Thai">Thailand Post API</text>
+                <text x="700" y="94" font-size="10.5" fill="#aab2dc" text-anchor="middle" font-family="IBM Plex Sans Thai">Tracking · Every 4 hours</text>
+              </g>
+
+              <!-- CARD READER -->
+              <g class="node" data-id="card">
+                <rect x="30" y="320" width="170" height="120" rx="18" fill="url(#nodeGrad)" stroke="#5e9eff" stroke-width="2" filter="url(#glow)" style="color:#5e9eff"/>
+                <text x="115" y="362" font-size="28" text-anchor="middle">🪪</text>
+                <text x="115" y="390" font-size="12.5" font-weight="600" fill="#fff" text-anchor="middle" font-family="IBM Plex Sans Thai">Smart Card Reader</text>
+                <text x="115" y="406" font-size="10" fill="#aab2dc" text-anchor="middle" font-family="IBM Plex Sans Thai">Local · Windows</text>
+                <text x="115" y="420" font-size="10" fill="#5fdc9a" text-anchor="middle" font-family="IBM Plex Sans Thai">⚡ Local Service</text>
+              </g>
+
+              <!-- AI -->
+              <g class="node" data-id="ai">
+                <rect x="1230" y="320" width="170" height="120" rx="18" fill="url(#nodeGrad)" stroke="#9b6eff" stroke-width="2" filter="url(#glow)" style="color:#9b6eff"/>
+                <text x="1315" y="362" font-size="28" text-anchor="middle">🤖</text>
+                <text x="1315" y="390" font-size="12.5" font-weight="600" fill="#fff" text-anchor="middle" font-family="IBM Plex Sans Thai">Gemini · Typhoon</text>
+                <text x="1315" y="406" font-size="10" fill="#aab2dc" text-anchor="middle" font-family="IBM Plex Sans Thai">Google AI · Vision</text>
+                <text x="1315" y="420" font-size="10" fill="#5fdc9a" text-anchor="middle" font-family="IBM Plex Sans Thai">⚡ OCR &amp; Chat</text>
+              </g>
+
+              <!-- PUSH -->
+              <g class="node" data-id="push">
+                <rect x="580" y="660" width="240" height="80" rx="18" fill="url(#nodeGrad)" stroke="#5fdc9a" stroke-width="2" filter="url(#glow)" style="color:#5fdc9a"/>
+                <text x="620" y="704" font-size="26" text-anchor="middle">🔔</text>
+                <text x="700" y="696" font-size="13" font-weight="600" fill="#fff" text-anchor="middle" font-family="IBM Plex Sans Thai">FCM + Web Push</text>
+                <text x="700" y="714" font-size="10.5" fill="#aab2dc" text-anchor="middle" font-family="IBM Plex Sans Thai">Cross-device Notifications</text>
+              </g>
+            </svg>
+            <div class="scale-hint">💡 Click any system to view details · Press ⛶ for fullscreen · Esc to exit</div>
+          </div>
+
+          <aside class="flow-side" id="flow-side"></aside>
+        </div>
+
+        <!-- Mini cards (shortcut) -->
+        <div class="flow-mini">
+          <div class="mc" data-id="docflow" style="--accent:#3ee0c1;--accent2:#5e9eff"><div class="e">📄</div><div class="t">Document Flow</div><div class="s">↔ Bidirectional</div></div>
+          <div class="mc" data-id="netmer" style="--accent:#ff7ab8;--accent2:#9b6eff"><div class="e">👥</div><div class="t">NETMER-Flow</div><div class="s">→ One-way</div></div>
+          <div class="mc" data-id="chat" style="--accent:#5fdc9a;--accent2:#3ee0c1"><div class="e">💬</div><div class="t">Chat Mobile</div><div class="s">↔ Bidirectional</div></div>
+          <div class="mc" data-id="cp" style="--accent:#ffb547;--accent2:#ff7ab8"><div class="e">🪪</div><div class="t">CP Passport</div><div class="s">📋 Planned</div></div>
+          <div class="mc" data-id="post" style="--accent:#ffb547;--accent2:#ff7ab8"><div class="e">📮</div><div class="t">Thailand Post</div><div class="s">← One-way</div></div>
+          <div class="mc" data-id="card" style="--accent:#5e9eff;--accent2:#3ee0c1"><div class="e">🪪</div><div class="t">Card Reader</div><div class="s">↔ Local</div></div>
+          <div class="mc" data-id="ai" style="--accent:#9b6eff;--accent2:#ff7ab8"><div class="e">🤖</div><div class="t">Google AI</div><div class="s">↔ Bidirectional</div></div>
+          <div class="mc" data-id="push" style="--accent:#5fdc9a;--accent2:#3ee0c1"><div class="e">🔔</div><div class="t">FCM/Push</div><div class="s">↔ Bidirectional</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. ERP WORKFLOW (STEP-BY-STEP) -->
+  <section class="slide" data-title="ERP Workflow" data-icon="🔄" data-desc="9 ขั้นตอนการทำงาน · มีข้อมูลตัวอย่าง">
+    <div class="slide-inner" style="height:100%; display:flex; flex-direction:column; max-width:1500px">
+      <div class="head" style="margin-bottom:12px">
+        <h2>🔄 ERP Workflow · ขั้นตอนการทำงาน End-to-End</h2>
+        <div class="sub">9 ขั้นตอนตั้งแต่<b style="color:var(--text)">สร้างรอบ → ลงทะเบียน → ชำระเงิน → อบรม → ออกใบประกาศ → จัดส่ง → ปิดงาน</b> · พร้อมข้อมูลตัวอย่างประกอบทุกขั้น</div>
+      </div>
+
+      <div class="wf-stage">
+        <div class="wf-stepper" id="wf-stepper"></div>
+        <div class="wf-content" id="wf-content"></div>
+        <div class="wf-controls">
+          <button class="wf-mini-btn" id="wf-prev">← Previous</button>
+          <div style="flex:1; display:flex; align-items:center; gap:14px">
+            <span class="wf-counter" id="wf-counter">Step 1 / 9</span>
+            <div class="wf-prog"><div class="fill" id="wf-prog-fill"></div></div>
+          </div>
+          <button class="wf-mini-btn" id="wf-next">Next →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. PHONE SYSTEM (OTHER WORKS) -->
+  <section class="slide" data-title="Cloud Phone System" data-icon="📞" data-desc="ระบบโทรศัพท์ของบริษัท">
+    <div class="slide-inner">
+      <div class="head">
+        <h2>📞 Cloud Phone System · ระบบโทรศัพท์ของบริษัท</h2>
+        <div class="sub">งาน IT นอกเหนือจากการพัฒนาระบบ — เพิ่มประสิทธิภาพการสื่อสารภายในและกับลูกค้า</div>
+      </div>
+
+      <div class="other-grid">
+        <div class="phone-feature">
+          <div class="phone-head">
+            <div class="icbox">📞</div>
+            <div>
+              <h3>Call On Cloud — Cloud PBX</h3>
+              <div class="sub">ระบบโทรศัพท์ผ่านอินเทอร์เน็ต · ไม่ต้องลงทุนตู้สาขา · ใช้งานได้ทุกที่</div>
+            </div>
+          </div>
+
+          <div class="phone-no">☎ 02 109 4264</div>
+
+          <div class="phone-stats">
+            <div class="phone-stat"><div class="v">5</div><div class="k">คู่สาย</div></div>
+            <div class="phone-stat"><div class="v">15</div><div class="k">User · Extension</div></div>
+            <div class="phone-stat"><div class="v">∞</div><div class="k">ใช้ได้ทุกที่</div></div>
+          </div>
+
+          <div class="phone-feats">
+            <div class="f"><span class="ic">☁️</span> Cloud-based — ไม่ต้องลงทุน Hardware</div>
+            <div class="f"><span class="ic">📱</span> รองรับ Mobile · Desktop · IP Phone</div>
+            <div class="f"><span class="ic">🔢</span> Extension แยกรายบุคคล</div>
+            <div class="f"><span class="ic">📨</span> Voice Mail ในตัว</div>
+            <div class="f"><span class="ic">📊</span> Call Analytics &amp; Reports</div>
+            <div class="f"><span class="ic">🔁</span> Call Transfer ระหว่างพนักงาน</div>
+            <div class="f"><span class="ic">🎙️</span> Call Recording (ตามนโยบาย)</div>
+            <div class="f"><span class="ic">💰</span> Subscription รายเดือน · ไม่มีค่าติดตั้ง</div>
+          </div>
+
+          <div style="margin-top:18px; padding:14px; background:rgba(94,158,255,.08); border:1px solid rgba(94,158,255,.25); border-radius:12px; font-size:13px; color:var(--text-soft); line-height:1.6">
+            <b style="color:var(--text)">ผลลัพธ์:</b> พนักงาน 15 คนสามารถรับ-โทรในนามบริษัทได้จากทุกสถานที่
+            ลูกค้าโทรเข้าเบอร์เดียว ระบบกระจายสายอัตโนมัติไปยัง Extension ที่ว่าง ลดอัตราการสายตก
+          </div>
+        </div>
+
+        <div class="phone-shot">
+          <img src="assets/screenshots/phone-system.jpg" alt="Call On Cloud Dashboard"/>
+          <div class="cap">
+            <span>📋 หน้า Dashboard ผู้ใช้งานทั้งหมด</span>
+            <span><b>NATURAL ENERGY TECH · 15 Users</b></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. SEO -->
+  <section class="slide" data-title="SEO &amp; AI Search" data-icon="🔎" data-desc="ปรับเว็บให้ลูกค้าค้นเจอ">
+    <div class="slide-inner">
+      <div class="head">
+        <h2>🔎 SEO &amp; AI Search Optimization</h2>
+        <div class="sub">ปรับเว็บไซต์ให้ติดอันดับ Google และให้ AI Search อย่าง ChatGPT, Gemini อ้างอิงในผลคำตอบ</div>
+      </div>
+
+      <div class="seo-grid">
+        <div>
+          <h3 style="font-size:20px; margin-bottom:10px">📈 ทำไมเรื่องนี้สำคัญ</h3>
+          <p style="color:var(--text-soft); font-size:14px; line-height:1.7">
+            พฤติกรรมลูกค้ายุคนี้ค้นหาข้อมูลก่อนตัดสินใจ — บางส่วนผ่าน Google
+            บางส่วนถาม AI Chatbot — การที่เว็บไซต์ติดอันดับและถูก AI อ้างอิง
+            คือช่องทางการตลาดที่ไม่มีค่าใช้จ่าย และทำงานตลอด 24 ชั่วโมง
+          </p>
+          <div class="seo-features">
+            <div class="seo-feature"><div class="ic">🗺️</div><h5>Dynamic Sitemap</h5><p>Google เห็นหน้าใหม่ทันที</p></div>
+            <div class="seo-feature"><div class="ic">📰</div><h5>RSS Feed</h5><p>Subscriber ติดตามเนื้อหาใหม่</p></div>
+            <div class="seo-feature"><div class="ic">🤖</div><h5>AI Citation</h5><p>ChatGPT, Gemini อ้างอิงเว็บเรา</p></div>
+            <div class="seo-feature"><div class="ic">🏷️</div><h5>Structured Data</h5><p>Rich Result บน Google Search</p></div>
+            <div class="seo-feature"><div class="ic">🔁</div><h5>301 Redirects</h5><p>URL เดิมยังใช้ได้ คง Ranking</p></div>
+            <div class="seo-feature"><div class="ic">🔗</div><h5>Related Posts</h5><p>เพิ่ม Time on Page</p></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="seo-visual">
+            <div style="margin-bottom:14px; font-weight:600; color:var(--b3)">🎯 4-Phase Optimization · ครบสมบูรณ์</div>
+            <div class="row"><span class="key">Phase 1 · Technical SEO</span><span class="val">100%</span></div>
+            <div class="seo-bar"><div class="fill" data-w="100"></div></div>
+            <div style="font-size:11.5px; color:var(--muted); padding:6px 0">Sitemap · Robots · Meta Tags · Performance</div>
+            <div class="row" style="margin-top:8px"><span class="key">Phase 2 · On-page SEO</span><span class="val">100%</span></div>
+            <div class="seo-bar"><div class="fill" data-w="100"></div></div>
+            <div style="font-size:11.5px; color:var(--muted); padding:6px 0">Title · Description · Keywords · Headings</div>
+            <div class="row" style="margin-top:8px"><span class="key">Phase 3 · Structured Data</span><span class="val">100%</span></div>
+            <div class="seo-bar"><div class="fill" data-w="100"></div></div>
+            <div style="font-size:11.5px; color:var(--muted); padding:6px 0">Course Schema · Organization · FAQ · Article</div>
+            <div class="row" style="margin-top:8px"><span class="key">Phase 4 · AI Citation</span><span class="val">100%</span></div>
+            <div class="seo-bar"><div class="fill" data-w="100"></div></div>
+            <div style="font-size:11.5px; color:var(--muted); padding:6px 0">RSS · JSON-LD · Open Graph · AI-friendly</div>
+            <div style="margin-top:18px; padding-top:14px; border-top:1px dashed var(--line); font-size:13px; color:var(--text-soft)">
+              <div style="display:flex; justify-content:space-between"><span>Schema Types:</span><span style="color:var(--b3); font-weight:600">5 ประเภท</span></div>
+              <div style="display:flex; justify-content:space-between; margin-top:4px"><span>Mobile Friendly:</span><span style="color:var(--b3); font-weight:600">✓</span></div>
+              <div style="display:flex; justify-content:space-between; margin-top:4px"><span>Page Speed:</span><span style="color:var(--b3); font-weight:600">3x faster (ISR)</span></div>
+              <div style="display:flex; justify-content:space-between; margin-top:4px"><span>AI Discovery:</span><span style="color:var(--b3); font-weight:600">ChatGPT · Gemini · Perplexity</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. SEO PERFORMANCE (REAL DATA) -->
+  <section class="slide" data-title="SEO Performance" data-icon="📊" data-desc="ผลลัพธ์จริงจาก Search Console">
+    <div class="slide-inner" style="height:100%; display:flex; flex-direction:column">
+      <div class="head" style="margin-bottom:14px">
+        <h2>📊 SEO Performance · ผลลัพธ์จริงจาก Search Console</h2>
+        <div class="sub">ข้อมูลจาก Google Search Console · ช่วง 3 เดือนที่ผ่านมา <span class="seoperf-note">📅 เริ่มเก็บข้อมูล 29 เม.ย. 2026 — เพิ่งเริ่ม Tracking</span></div>
+      </div>
+
+      <!-- 4 Key Metrics -->
+      <div class="seoperf-grid">
+        <div class="seoperf-stat" style="--accent:var(--b1);--accent2:var(--b2)">
+          <div class="lbl">การคลิกทั้งหมด · Total Clicks</div>
+          <div class="v">102</div>
+          <div class="sub">คลิกจากผลค้นหา Google</div>
+          <div class="trend">↗ ระยะเริ่มต้น</div>
+        </div>
+        <div class="seoperf-stat" style="--accent:var(--b2);--accent2:var(--b4)">
+          <div class="lbl">การแสดงผล · Impressions</div>
+          <div class="v">1,030</div>
+          <div class="sub">เว็บปรากฏในผลค้นหา</div>
+          <div class="trend">👁️ Visibility</div>
+        </div>
+        <div class="seoperf-stat" style="--accent:var(--b3);--accent2:var(--b1)">
+          <div class="lbl">CTR เฉลี่ย · Click-Through Rate</div>
+          <div class="v">9.9%</div>
+          <div class="sub">เกณฑ์ดี (Industry avg: 3-5%)</div>
+          <div class="trend">✓ สูงกว่ามาตรฐาน 2 เท่า</div>
+        </div>
+        <div class="seoperf-stat" style="--accent:var(--b6);--accent2:var(--b3)">
+          <div class="lbl">อันดับเฉลี่ย · Avg Position</div>
+          <div class="v">6.4</div>
+          <div class="sub">หน้าแรกของผลค้นหา</div>
+          <div class="trend">📍 Page 1 · Top 10</div>
+        </div>
+      </div>
+
+      <!-- Top Keywords + Devices -->
+      <div class="seoperf-main">
+        <div class="seoperf-card">
+          <h5>🔍 Top Keywords <span class="badge">124 คำค้นหา</span></h5>
+          <div class="kw-head"><div class="ttl">คำค้นหา</div><div class="ck">คลิก</div><div class="im">แสดง</div></div>
+          <div class="kw-list">
+            <div class="kw-row"><span class="kw">เนเชอรัล เอ็นเนอร์ยี เทค</span><span class="clk">5</span><span class="imp">10</span></div>
+            <div class="kw-row"><span class="kw en">net อบรม</span><span class="clk">3</span><span class="imp">3</span></div>
+            <div class="kw-row"><span class="kw">บริษัทเนเชอรัล เอ็นเนอร์ยี เทค จำกัด</span><span class="clk">2</span><span class="imp">3</span></div>
+            <div class="kw-row"><span class="kw en">natural energy tech co. ltd</span><span class="clk">2</span><span class="imp">2</span></div>
+            <div class="kw-row"><span class="kw">เนเชอรัล เอ็นเนอร์ยี เทค จำกัด</span><span class="clk">2</span><span class="imp">2</span></div>
+            <div class="kw-row"><span class="kw">เนเชอรัล</span><span class="clk">1</span><span class="imp">25</span></div>
+            <div class="kw-row"><span class="kw">อบรมโลตัส</span><span class="clk">1</span><span class="imp">2</span></div>
+            <div class="kw-row"><span class="kw">บ.เนเชอรัล เอ็นเนอร์ยี เทค จำกัด</span><span class="clk">1</span><span class="imp">1</span></div>
+            <div class="kw-row"><span class="kw">ผู้ปฏิบัติงานสถานที่ใช้ก๊าซปิโตรเลียมเหลว</span><span class="clk">1</span><span class="imp">1</span></div>
+            <div class="kw-row"><span class="kw">หลักสูตรช่างไฟฟ้าภายในอาคาร</span><span class="clk">1</span><span class="imp">1</span></div>
+          </div>
+        </div>
+
+        <div class="seoperf-card">
+          <h5>💻 Visitors by OS <span class="badge">200 Users</span></h5>
+          <div class="dev-list">
+            <div class="dev-row" style="--accent:var(--b1);--accent2:var(--b2)">
+              <span class="ico">🪟</span>
+              <span class="nm">Windows</span>
+              <div class="bar"><div class="fill" style="width:58.5%"></div></div>
+              <span class="pct">117</span>
+            </div>
+            <div class="dev-row" style="--accent:var(--b3);--accent2:var(--b1)">
+              <span class="ico">📱</span>
+              <span class="nm">iOS</span>
+              <div class="bar"><div class="fill" style="width:21%"></div></div>
+              <span class="pct">42</span>
+            </div>
+            <div class="dev-row" style="--accent:var(--b6);--accent2:var(--b3)">
+              <span class="ico">🤖</span>
+              <span class="nm">Android</span>
+              <div class="bar"><div class="fill" style="width:15.5%"></div></div>
+              <span class="pct">31</span>
+            </div>
+            <div class="dev-row" style="--accent:var(--b4);--accent2:var(--b2)">
+              <span class="ico">🍎</span>
+              <span class="nm">Macintosh</span>
+              <div class="bar"><div class="fill" style="width:3%"></div></div>
+              <span class="pct">6</span>
+            </div>
+            <div class="dev-row" style="--accent:var(--b5);--accent2:var(--b4)">
+              <span class="ico">🐧</span>
+              <span class="nm">Linux</span>
+              <div class="bar"><div class="fill" style="width:2%"></div></div>
+              <span class="pct">4</span>
+            </div>
+          </div>
+
+          <div style="margin-top:18px; padding:12px; background:rgba(94,158,255,.08); border:1px solid rgba(94,158,255,.2); border-radius:10px; font-size:12.5px; color:var(--text-soft); line-height:1.6">
+            <b style="color:var(--text)">Insight:</b>
+            ผู้ใช้ส่วนใหญ่ <b style="color:var(--b1)">58.5% บน Desktop (Windows)</b>
+            และ <b style="color:var(--b3)">36.5% บน Mobile (iOS + Android)</b> —
+            แสดงว่าการลงทุนทำ PWA Mobile-friendly ในรอบนี้สอดคล้องกับพฤติกรรมผู้ใช้จริง
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. TIMELINE -->
+  <section class="slide" data-title="Timeline" data-icon="📅" data-desc="ลำดับเหตุการณ์สำคัญ">
+    <div class="slide-inner" style="height:100%; display:flex; flex-direction:column">
+      <div class="head">
+        <h2>📅 Timeline · ลำดับเหตุการณ์สำคัญ</h2>
+        <div class="sub">สรุปการดำเนินงานในแต่ละช่วงของ 4 เดือนที่ผ่านมา</div>
+      </div>
+      <div class="timeline" style="flex:1">
+        <div class="tl-item"><div class="tl-card">
+          <span class="tl-month">มกราคม – มีนาคม 2026</span>
+          <div class="tl-title">🛠️ Maintain &amp; Improve · ดูแลและปรับปรุงระบบเดิม</div>
+          <div class="tl-desc">ดูแลและพัฒนาต่อยอดระบบที่มีอยู่หลายตัวพร้อมกัน — Training Platform, Document Flow, NETMER-Flow, CP Passport, Chat Mobile — ปรับปรุงคุณภาพให้พร้อมใช้งานในระดับ Production</div>
+          <div class="tl-pills"><span>🛡️ Training</span><span>📄 Document Flow</span><span>👥 NETMER-Flow</span><span>💬 Chat Mobile</span><span>🪪 CP Passport</span></div>
+        </div></div>
+        <div class="tl-item"><div class="tl-card">
+          <span class="tl-month">เมษายน 2026 (ต้นเดือน)</span>
+          <div class="tl-title">🎨 Redesign &amp; Enhance · ปรับ UI ใหม่ + เพิ่มความสามารถ</div>
+          <div class="tl-desc">ออกแบบ ERP UI ใหม่สไตล์ Enterprise · เพิ่ม PWA Mobile · AI Chat สำหรับลูกค้า · เชื่อม Thailand Post API · พัฒนา Desktop App · นำ Cloud PBX เข้าใช้งาน</div>
+          <div class="tl-pills"><span>📱 PWA</span><span>📷 Camera OCR</span><span>🤖 AI</span><span>🚚 Thailand Post</span><span>🖥️ Desktop App</span><span>📞 Cloud PBX</span></div>
+        </div></div>
+        <div class="tl-item"><div class="tl-card">
+          <span class="tl-month">เมษายน 2026 (กลางเดือน)</span>
+          <div class="tl-title">🚀 AI &amp; SEO Upgrade · ยกระดับระบบหลัก</div>
+          <div class="tl-desc">Migrate AI Stack ทั้งหมดให้แม่นยำขึ้น · ระบบ Cross-Round Matching ผ่านเลขบัตรประชาชน · Auto-Receipt Generation จากการอัปโหลดสลิป · SEO Optimization ครบ 4 Phases</div>
+          <div class="tl-pills"><span>🧠 AI Upgrade</span><span>🔗 Data Matching</span><span>💳 Slip Workflow</span><span>🔎 SEO 4 Phases</span></div>
+        </div></div>
+        <div class="tl-item"><div class="tl-card" style="border-color:var(--b5); box-shadow: 0 0 30px -10px var(--b5)">
+          <span class="tl-month" style="background:rgba(255,181,71,.15); color:var(--b5)">⭐ 25 เมษายน 2026</span>
+          <div class="tl-title">🎉 Production Launch · Training Platform Go-Live</div>
+          <div class="tl-desc"><b>Milestone สำคัญที่สุดของรอบนี้</b> — เปิดให้ลูกค้าและพนักงานใช้งานเต็มรูปแบบ ใช้งานจริงทุกวันตั้งแต่การลงทะเบียนจนถึงการจัดส่งเอกสาร</div>
+          <div class="tl-pills"><span>🌐 Public Site</span><span>📋 Registration</span><span>👤 ERP Backend</span><span>🏆 Certificate</span><span>💰 Billing</span></div>
+        </div></div>
+        <div class="tl-item"><div class="tl-card" style="border-color:var(--b3); box-shadow: 0 0 30px -10px var(--b3)">
+          <span class="tl-month" style="background:rgba(62,224,193,.15); color:var(--b3)">🆕 30 เมษายน 2026</span>
+          <div class="tl-title">💧 New Project Kickoff · ELMER Water Analysis</div>
+          <div class="tl-desc"><b>Greenfield Project</b> — พัฒนาระบบรายงานวิเคราะห์น้ำสำหรับทีมของ Elmer · เป้าหมายลด Manual Process</div>
+          <div class="tl-pills"><span>🆕 Greenfield</span><span>🏪 4 Store Types</span><span>📸 Photo Upload</span><span>🧪 Lab Results</span><span>📄 PDF Generation</span></div>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. ROADMAP -->
+  <section class="slide" data-title="Roadmap" data-icon="🛣️" data-desc="แผนการพัฒนาในอนาคต">
+    <div class="slide-inner">
+      <div class="head">
+        <h2>🛣️ Roadmap · แผนการพัฒนาในอนาคต</h2>
+        <div class="sub">ทิศทางการดำเนินงานตั้งแต่ พ.ค. 2026 เป็นต้นไป</div>
+      </div>
+      <div class="rm-grid">
+        <div class="rm-card" style="--accent:var(--b3);--accent2:var(--b1)"><div class="ico">💧</div><div class="when">กลางพฤษภาคม 2026</div><h4>ELMER Water · Phase 1 Prototype</h4><ul><li>เร่งทำ Phase 1 ที่ค้างให้เสร็จ</li><li>ปล่อย <b style="color:var(--text)">Prototype v1</b> ให้ทดลอง</li><li>เก็บ Feedback จากทีม ELMER</li><li>ปรับปรุงก่อนเข้าสู่ Phase 2</li></ul></div>
+        <div class="rm-card" style="--accent:var(--b6);--accent2:var(--b3)"><div class="ico">💬</div><div class="when">Q2 · พฤษภาคม 2026</div><h4>Chat Mobile · Production Launch</h4><ul><li>ทดสอบกับทีมขนาดเล็กก่อน</li><li>Roll out APK ให้ทีมงาน</li><li>เปิด Voice/Video Call เต็มรูปแบบ</li><li>Push Notification ข้ามอุปกรณ์</li></ul></div>
+        <div class="rm-card" style="--accent:var(--b5);--accent2:var(--b4)"><div class="ico">🪪</div><div class="when">ตามแผนของ CP</div><h4>CP Passport ↔ ERP Integration</h4><ul><li>Sync ข้อมูลผู้อบรมจาก ERP</li><li>Auto-issue Passport เมื่อจบหลักสูตร</li><li>Status Sync กลับสู่ ERP</li><li>Public QR Verification</li></ul></div>
+        <div class="rm-card" style="--accent:var(--b1);--accent2:var(--b2)"><div class="ico">🛡️</div><div class="when">Continuous</div><h4>Training Platform</h4><ul><li>เพิ่มฟีเจอร์ตาม Feature Request</li><li>Performance Optimization</li><li>Advanced Reporting Module</li><li>AI Knowledge Base ขยาย</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. THANKS -->
+  <section class="slide" data-title="Thank You" data-icon="🎉" data-desc="Q&amp;A">
+    <div class="slide-inner">
+      <div class="thanks">
+        <h1>Thank You</h1>
+        <p>ยินดีรับคำถามและข้อเสนอแนะ · Q&amp;A Session</p>
+        <div style="display:inline-flex; gap:14px; flex-wrap:wrap; justify-content:center">
+          <span class="qa-pill">📅 <b>4 เดือน</b> · 7 Systems · 90+ Features · Cloud PBX</span>
+          <span class="qa-pill">🎯 Ready for the Next Phase</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- BOTTOM BAR -->
+<div class="bottombar">
+  <button class="nav-btn" id="prev-btn">← Previous</button>
+  <div class="slide-info">
+    <span class="num" id="cur-num">1</span>
+    <span class="total">/ <span id="total-num">10</span></span>
+    <div class="dots" id="dots"></div>
+  </div>
+  <button class="nav-btn" id="next-btn">Next →</button>
+</div>
+
+<!-- HINT -->
+<div class="hint" id="hint">
+  <span>Navigate <kbd>←</kbd> <kbd>→</kbd> · Menu <kbd>M</kbd> · Fullscreen <kbd>F</kbd></span>
+</div>
+
+<!-- SIDE MENU -->
+<div class="menu-overlay" id="menu-overlay"></div>
+<aside class="side-menu" id="side-menu">
+  <h3>📑 Table of Contents</h3>
+  <div class="menu-sub">คลิกหัวข้อเพื่อข้ามไปยังสไลด์นั้น</div>
+  <div id="menu-list"></div>
+</aside>
+
+<!-- MODAL -->
+<div class="modal-bg" id="modal-bg">
+  <div class="modal-card" id="modal-card">
+    <button class="modal-close" id="modal-close">✕</button>
+    <div class="modal-hero" id="modal-hero"></div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="js/data.js"></script>
+<script src="js/flow.js"></script>
+<script src="js/workflow.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
