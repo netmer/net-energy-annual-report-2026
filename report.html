@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>รายงานสรุปผลการปฏิบัติงาน · ม.ค.–เม.ย. 2026 | NET Energy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0d1330;
+    --muted:#5a6480;
+    --soft:#8590ad;
+    --line:#e2e6f0;
+    --line-2:#c9d0e0;
+    --bg:#fafbff;
+    --paper:#ffffff;
+    --b1:#2563eb;
+    --b2:#7c3aed;
+    --b3:#0ea5e9;
+    --b4:#ec4899;
+    --b5:#f59e0b;
+    --b6:#10b981;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{
+    font-family:'IBM Plex Sans Thai','Inter',system-ui,sans-serif;
+    background:var(--bg); color:var(--ink);
+    line-height:1.6; font-size:13px;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* TOOLBAR (screen only) */
+  .toolbar{
+    position:sticky; top:0; z-index:10;
+    background:linear-gradient(135deg, #1e293b, #334155);
+    color:#fff; padding:14px 24px;
+    display:flex; justify-content:space-between; align-items:center;
+    box-shadow:0 4px 16px rgba(0,0,0,.15);
+  }
+  .toolbar .lbl{font-size:13px; opacity:.9}
+  .toolbar .lbl b{color:#fff}
+  .toolbar .btns{display:flex; gap:10px}
+  .btn{
+    padding:8px 18px; border-radius:8px;
+    background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.25);
+    color:#fff; cursor:pointer; font-family:inherit; font-size:13px; font-weight:500;
+    text-decoration:none; display:inline-flex; align-items:center; gap:6px;
+    transition: all .2s;
+  }
+  .btn:hover{background:rgba(255,255,255,.25)}
+  .btn.primary{background:linear-gradient(135deg, #3b82f6, #8b5cf6); border-color:transparent}
+  .btn.primary:hover{box-shadow:0 4px 14px rgba(59,130,246,.4)}
+
+  /* PAPER */
+  .paper{
+    max-width:210mm; min-height:297mm;
+    margin:24px auto;
+    background:var(--paper);
+    box-shadow:0 8px 30px rgba(15,23,42,.1);
+    padding:18mm 16mm;
+    position:relative;
+  }
+
+  /* HEADER */
+  .doc-head{
+    display:flex; justify-content:space-between; align-items:flex-start;
+    padding-bottom:14px; margin-bottom:18px;
+    border-bottom:3px solid var(--ink);
+    position:relative;
+  }
+  .doc-head::after{
+    content:""; position:absolute; left:0; bottom:-6px;
+    width:80px; height:3px;
+    background:linear-gradient(90deg, var(--b1), var(--b2));
+  }
+  .doc-head .left .brand{
+    display:inline-flex; align-items:center; gap:10px;
+    font-size:11.5px; color:var(--muted); margin-bottom:8px;
+    text-transform:uppercase; letter-spacing:.1em; font-weight:600;
+  }
+  .doc-head .left .brand .logo{
+    width:28px; height:28px; border-radius:6px;
+    background:linear-gradient(135deg, var(--b1), var(--b2));
+    display:flex; align-items:center; justify-content:center;
+    font-size:14px; color:#fff;
+  }
+  h1{
+    font-size:26px; font-weight:700; line-height:1.2;
+    color:var(--ink); letter-spacing:-0.02em;
+  }
+  h1 .sub{display:block; font-size:14px; color:var(--muted); font-weight:500; margin-top:4px}
+  .doc-head .right{text-align:right; font-size:11px; color:var(--muted)}
+  .doc-head .right b{color:var(--ink); font-size:13px; display:block; margin-bottom:2px}
+
+  /* SECTION */
+  section{margin-bottom:18px}
+  h2{
+    font-size:14px; font-weight:700; color:var(--ink);
+    text-transform:uppercase; letter-spacing:.08em;
+    padding-left:10px; border-left:4px solid var(--b1);
+    margin-bottom:10px;
+  }
+  h2 .num{
+    display:inline-block; color:var(--b1); font-family:'Inter';
+    margin-right:6px;
+  }
+
+  /* EXECUTIVE SUMMARY */
+  .exec{
+    background:linear-gradient(135deg, #eff6ff, #faf5ff);
+    border:1px solid var(--line); border-radius:10px;
+    padding:14px 16px; font-size:13px; color:var(--ink);
+    line-height:1.7;
+  }
+  .exec b{color:var(--b1)}
+
+  /* KPI ROW */
+  .kpi-row{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:8px;
+  }
+  .kpi{
+    background:var(--paper); border:1px solid var(--line);
+    border-left:4px solid var(--accent, var(--b1));
+    border-radius:8px; padding:10px 12px;
+  }
+  .kpi .lbl{font-size:10.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; font-weight:600}
+  .kpi .v{
+    font-family:'Inter'; font-weight:800; font-size:22px;
+    color:var(--accent, var(--b1)); line-height:1.1; margin-top:2px;
+  }
+  .kpi .ds{font-size:10.5px; color:var(--soft); margin-top:2px}
+
+  /* SYSTEMS TABLE */
+  table.sys{
+    width:100%; border-collapse:collapse; font-size:12px;
+    background:var(--paper); border:1px solid var(--line); border-radius:8px;
+    overflow:hidden;
+  }
+  table.sys thead{background:#f1f5f9}
+  table.sys th{
+    text-align:left; padding:8px 10px; font-weight:600; font-size:10.5px;
+    color:var(--muted); text-transform:uppercase; letter-spacing:.05em;
+    border-bottom:1px solid var(--line);
+  }
+  table.sys td{padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:middle}
+  table.sys tr:last-child td{border-bottom:0}
+  table.sys .nm{font-weight:600; color:var(--ink)}
+  table.sys .ic{
+    display:inline-flex; width:22px; height:22px; border-radius:5px;
+    background:linear-gradient(135deg, var(--accent, var(--b1)), var(--accent2, var(--b2)));
+    color:#fff; align-items:center; justify-content:center; font-size:12px;
+    margin-right:6px; vertical-align:middle;
+  }
+  table.sys .desc{font-size:11.5px; color:var(--muted)}
+  table.sys .pill{
+    display:inline-block; padding:2px 8px; border-radius:999px; font-size:10px; font-weight:600;
+  }
+  table.sys .pill.live{background:#d1fae5; color:#065f46}
+  table.sys .pill.dev{background:#fef3c7; color:#92400e}
+
+  /* HIGHLIGHTS */
+  .highlights{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+  .hl{
+    background:var(--paper); border:1px solid var(--line);
+    border-radius:8px; padding:10px 12px;
+  }
+  .hl .ti{
+    font-size:11px; color:var(--accent, var(--b1)); font-weight:700;
+    text-transform:uppercase; letter-spacing:.05em; margin-bottom:4px;
+    display:flex; align-items:center; gap:5px;
+  }
+  .hl ul{list-style:none; font-size:12px; color:var(--ink); line-height:1.65}
+  .hl li{padding:2px 0; padding-left:14px; position:relative}
+  .hl li::before{content:"·"; position:absolute; left:4px; color:var(--accent, var(--b1)); font-weight:900}
+
+  /* SEO BLOCK */
+  .seo-block{
+    display:grid; grid-template-columns:1.3fr 1fr; gap:10px;
+  }
+  .seo-stats{
+    background:linear-gradient(135deg, #f0f9ff, #fef3c7);
+    border:1px solid var(--line); border-radius:8px; padding:10px 12px;
+  }
+  .seo-stats .grid{display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin-bottom:6px}
+  .seo-stats .it{
+    background:rgba(255,255,255,.7); border-radius:6px; padding:6px 8px; text-align:center;
+  }
+  .seo-stats .it .v{font-family:'Inter'; font-weight:800; font-size:18px; color:var(--b1)}
+  .seo-stats .it .l{font-size:9.5px; color:var(--muted); margin-top:1px; text-transform:uppercase; letter-spacing:.04em; font-weight:600}
+  .seo-stats .note{font-size:11px; color:var(--ink); padding:6px 0 0; border-top:1px dashed var(--line-2)}
+  .seo-stats .note b{color:var(--b6)}
+  .seo-os{
+    background:var(--paper); border:1px solid var(--line); border-radius:8px;
+    padding:10px 12px; font-size:11.5px;
+  }
+  .seo-os h4{font-size:11px; font-weight:700; color:var(--ink); margin-bottom:6px}
+  .seo-os .row{display:grid; grid-template-columns:60px 1fr 30px; gap:6px; align-items:center; padding:3px 0}
+  .seo-os .row .nm{color:var(--ink); font-weight:500}
+  .seo-os .row .bar{height:6px; background:#e2e8f0; border-radius:3px; overflow:hidden}
+  .seo-os .row .bar .fill{height:100%; background:linear-gradient(90deg, var(--b1), var(--b3)); border-radius:3px}
+  .seo-os .row .pct{text-align:right; font-family:'Inter'; font-weight:700; color:var(--b1)}
+
+  /* ROADMAP */
+  .rm-list{display:grid; grid-template-columns:repeat(2,1fr); gap:8px}
+  .rm{
+    background:var(--paper); border:1px solid var(--line);
+    border-left:3px solid var(--accent, var(--b1));
+    border-radius:6px; padding:8px 10px;
+  }
+  .rm .when{font-size:10px; color:var(--accent, var(--b1)); font-weight:700; text-transform:uppercase; letter-spacing:.05em}
+  .rm .ti{font-size:12.5px; font-weight:600; color:var(--ink); margin-top:1px}
+  .rm .ds{font-size:11px; color:var(--muted); line-height:1.5; margin-top:3px}
+
+  /* PHONE BLOCK */
+  .phone-block{
+    background:linear-gradient(135deg, #ecfdf5, #f0f9ff);
+    border:1px solid var(--line); border-radius:8px; padding:10px 14px;
+    display:grid; grid-template-columns:1fr 1fr 1fr 1.4fr; gap:14px; align-items:center;
+  }
+  .phone-block .ph-no{font-family:'Inter'; font-weight:800; font-size:20px; color:var(--b1); letter-spacing:.02em}
+  .phone-block .ph-no .l{display:block; font-size:10px; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:.05em; margin-bottom:1px; font-family:'IBM Plex Sans Thai'}
+  .phone-block .ph-stat{text-align:center}
+  .phone-block .ph-stat .v{font-family:'Inter'; font-weight:800; font-size:22px; color:var(--b1)}
+  .phone-block .ph-stat .l{font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; font-weight:600}
+  .phone-block .ph-desc{font-size:11.5px; color:var(--ink); line-height:1.5}
+  .phone-block .ph-desc b{color:var(--b1)}
+
+  /* FOOTER */
+  .doc-foot{
+    margin-top:18px; padding-top:12px;
+    border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:10.5px; color:var(--soft);
+  }
+  .doc-foot .links{display:flex; gap:14px}
+  .doc-foot .links a{color:var(--b1); text-decoration:none; font-weight:500}
+  .doc-foot .links a:hover{text-decoration:underline}
+
+  /* PRINT */
+  @media print{
+    body{background:#fff}
+    .toolbar{display:none}
+    .paper{
+      box-shadow:none; margin:0;
+      max-width:none; width:100%;
+      padding:14mm 12mm;
+    }
+    @page{size:A4; margin:0}
+    section{break-inside:avoid}
+    .systems-table, .seo-block, .phone-block, .rm-list, .highlights{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="lbl">📄 <b>รายงานสรุปผลการปฏิบัติงาน</b> · ม.ค. – เม.ย. 2026</div>
+  <div class="btns">
+    <a href="index.html" class="btn">🎬 ดู Presentation แบบเต็ม</a>
+    <button class="btn primary" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+</div>
+
+<div class="paper">
+
+  <!-- HEADER -->
+  <div class="doc-head">
+    <div class="left">
+      <div class="brand"><span class="logo">🛡️</span> NET Energy · Annual Report 2026</div>
+      <h1>รายงานสรุปผลการปฏิบัติงาน
+        <span class="sub">มกราคม – เมษายน 2026 · ฝ่าย IT &amp; Digital Development</span>
+      </h1>
+    </div>
+    <div class="right">
+      <b>เอกสาร v1.0</b>
+      จัดทำ 2 พ.ค. 2026<br/>
+      บริษัท เนเชอรัล เอ็นเนอร์ยี เทค จำกัด
+    </div>
+  </div>
+
+  <!-- EXECUTIVE SUMMARY -->
+  <section>
+    <h2><span class="num">01</span> Executive Summary</h2>
+    <div class="exec">
+      ในรอบ 4 เดือนแรกของปี 2026 ฝ่าย IT ดูแลและพัฒนา <b>7 ระบบดิจิทัล</b>
+      ครอบคลุมงานฝึกอบรม เอกสารธุรกิจ HR การสื่อสารภายใน Safety Mindset และระบบของลูกค้ากลุ่ม CP
+      โดยมี <b>5 ระบบเปิดใช้งานจริง</b> และ <b>2 ระบบกำลังพัฒนา</b> ·
+      ไฮไลต์สำคัญคือการเปิดตัว <b>NET Training Platform</b> เมื่อ 25 เม.ย. 2026
+      และเริ่มโปรเจกต์ใหม่ <b>ELMER Water Analysis</b> เมื่อ 30 เม.ย. 2026 ·
+      นอกเหนือจากการพัฒนาระบบ ยังนำ <b>ระบบโทรศัพท์ Cloud PBX</b> เข้าใช้งานในบริษัท
+      และปรับปรุง <b>SEO ครบ 4 ระยะ</b> จนเริ่มมีผลลัพธ์เห็นชัดเจน
+    </div>
+  </section>
+
+  <!-- KPI -->
+  <section>
+    <h2><span class="num">02</span> ตัวเลขสำคัญ</h2>
+    <div class="kpi-row">
+      <div class="kpi" style="--accent:var(--b1)"><div class="lbl">ระบบที่ดูแล</div><div class="v">7</div><div class="ds">5 Live + 2 Dev</div></div>
+      <div class="kpi" style="--accent:var(--b3)"><div class="lbl">ฟีเจอร์ใช้งานจริง</div><div class="v">90+</div><div class="ds">ทั่วทุกระบบ</div></div>
+      <div class="kpi" style="--accent:var(--b4)"><div class="lbl">แพลตฟอร์ม</div><div class="v">3</div><div class="ds">เว็บ · มือถือ · เดสก์ท็อป</div></div>
+      <div class="kpi" style="--accent:var(--b5)"><div class="lbl">จุดเชื่อมต่อ</div><div class="v">9</div><div class="ds">ระหว่างระบบ + 3rd party</div></div>
+    </div>
+  </section>
+
+  <!-- SYSTEMS -->
+  <section>
+    <h2><span class="num">03</span> ระบบที่ดูแล (7 ระบบ)</h2>
+    <table class="sys">
+      <thead>
+        <tr>
+          <th style="width:32%">ระบบ</th>
+          <th>ประเภท</th>
+          <th style="width:18%">ผู้ใช้งาน</th>
+          <th style="width:12%; text-align:center">สถานะ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ic" style="--accent:var(--b1);--accent2:var(--b2)">🛡️</span><span class="nm">NET Training Platform</span><div class="desc">ระบบหลัก · ฝึกอบรมความปลอดภัยครบวงจร</div></td>
+          <td>ERP + Public Site</td>
+          <td>ลูกค้า + พนักงาน</td>
+          <td style="text-align:center"><span class="pill live">Live · 25 Apr</span></td>
+        </tr>
+        <tr>
+          <td><span class="ic" style="--accent:var(--b3);--accent2:var(--b1)">📄</span><span class="nm">NET Document Flow</span><div class="desc">เอกสารธุรกิจ · ใบเสนอราคา/ใบเสร็จ (Quotacraft)</div></td>
+          <td>Web App</td>
+          <td>คอลเซ็นเตอร์ + บัญชี</td>
+          <td style="text-align:center"><span class="pill live">Live</span></td>
+        </tr>
+        <tr>
+          <td><span class="ic" style="--accent:var(--b4);--accent2:var(--b2)">👥</span><span class="nm">NETMER-Flow</span><div class="desc">HR · เช็คอิน · ขอลา · จัดการรถ · IT Asset</div></td>
+          <td>Web + Android APK</td>
+          <td>พนักงานทุกคน</td>
+          <td style="text-align:center"><span class="pill live">Live</span></td>
+        </tr>
+        <tr>
+          <td><span class="ic" style="--accent:var(--b5);--accent2:var(--b4)">🪪</span><span class="nm">CP Safety Passport</span><div class="desc">ระบบ Passport ส่งมอบให้ลูกค้ากลุ่ม CP</div></td>
+          <td>Customer Portal</td>
+          <td>ศูนย์ฝึก + Trainer</td>
+          <td style="text-align:center"><span class="pill live">Live</span></td>
+        </tr>
+        <tr>
+          <td><span class="ic" style="--accent:var(--b1);--accent2:var(--b3)">🦸</span><span class="nm">NET Safety Hero (NET ZERO)</span><div class="desc">Gamification · Safety Mindset App (Standalone)</div></td>
+          <td>PWA + iOS + Android</td>
+          <td>Public</td>
+          <td style="text-align:center"><span class="pill live">Live</span></td>
+        </tr>
+        <tr>
+          <td><span class="ic" style="--accent:var(--b6);--accent2:var(--b3)">💬</span><span class="nm">NET Chat Mobile</span><div class="desc">แอปแชทภายในทีม · โทรเสียง/วิดีโอ + AI Bot</div></td>
+          <td>iOS + Android</td>
+          <td>ทีมงาน</td>
+          <td style="text-align:center"><span class="pill dev">In Dev</span></td>
+        </tr>
+        <tr>
+          <td><span class="ic" style="--accent:var(--b2);--accent2:var(--b3)">💧</span><span class="nm">ELMER Water Analysis</span><div class="desc">รายงานวิเคราะห์น้ำดื่มอัตโนมัติ (Greenfield)</div></td>
+          <td>Web App</td>
+          <td>พนักงาน Elmer</td>
+          <td style="text-align:center"><span class="pill dev">Kickoff · 30 Apr</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section>
+    <h2><span class="num">04</span> งานสำคัญที่เกิดขึ้น</h2>
+    <div class="highlights">
+      <div class="hl" style="--accent:var(--b1)">
+        <div class="ti">🎉 Production Launch</div>
+        <ul>
+          <li><b>25 เม.ย.</b> · NET Training Platform เปิดใช้งานจริง</li>
+          <li>ครอบคลุม Public Site + ลงทะเบียน + ERP Backend</li>
+          <li>ระบบเก็บเงิน ออกใบประกาศ และจัดส่งครบวงจร</li>
+        </ul>
+      </div>
+      <div class="hl" style="--accent:var(--b3)">
+        <div class="ti">🆕 New Project Kickoff</div>
+        <ul>
+          <li><b>30 เม.ย.</b> · เริ่ม ELMER Water Analysis</li>
+          <li>เป้าทดแทนงาน manual 200–1,000 รายงาน/เดือน</li>
+          <li>รองรับ 4 ประเภทร้าน · PDF อัตโนมัติ</li>
+        </ul>
+      </div>
+      <div class="hl" style="--accent:var(--b4)">
+        <div class="ti">🎨 ปรับปรุงครั้งใหญ่</div>
+        <ul>
+          <li>ออกแบบ ERP UI ใหม่สไตล์ Enterprise</li>
+          <li>เพิ่ม PWA Mobile + Camera OCR + Desktop App</li>
+          <li>Migrate AI Stack ใหม่ · Cross-Round Matching</li>
+        </ul>
+      </div>
+      <div class="hl" style="--accent:var(--b6)">
+        <div class="ti">🔗 ระบบเชื่อมโยงกัน</div>
+        <ul>
+          <li>9 จุดเชื่อมต่อ · ทุกระบบทำงานเรียลไทม์</li>
+          <li>Document Flow ↔ ERP · Webhook + Slip Workflow</li>
+          <li>NETMER-Flow ← ERP · Schedule Sync</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO PERFORMANCE -->
+  <section>
+    <h2><span class="num">05</span> SEO Performance · ผลลัพธ์จาก Search Console</h2>
+    <div class="seo-block">
+      <div class="seo-stats">
+        <div class="grid">
+          <div class="it"><div class="v">102</div><div class="l">Clicks</div></div>
+          <div class="it"><div class="v">1,030</div><div class="l">Impressions</div></div>
+          <div class="it"><div class="v">9.9%</div><div class="l">CTR</div></div>
+          <div class="it"><div class="v">6.4</div><div class="l">Avg Pos</div></div>
+        </div>
+        <div class="note">📅 เริ่มเก็บข้อมูล 29 เม.ย. 2026 · <b>CTR สูงกว่ามาตรฐาน 2 เท่า</b> (industry avg 3-5%) · อันดับเฉลี่ยอยู่ <b>หน้าแรก</b> ของ Google · มี <b>124 คำค้นหา</b>ที่ติดอันดับ</div>
+      </div>
+      <div class="seo-os">
+        <h4>Visitors by OS · 200 Users</h4>
+        <div class="row"><span class="nm">🪟 Windows</span><div class="bar"><div class="fill" style="width:58.5%"></div></div><span class="pct">117</span></div>
+        <div class="row"><span class="nm">📱 iOS</span><div class="bar"><div class="fill" style="width:21%"></div></div><span class="pct">42</span></div>
+        <div class="row"><span class="nm">🤖 Android</span><div class="bar"><div class="fill" style="width:15.5%"></div></div><span class="pct">31</span></div>
+        <div class="row"><span class="nm">🍎 Macintosh</span><div class="bar"><div class="fill" style="width:3%"></div></div><span class="pct">6</span></div>
+        <div class="row"><span class="nm">🐧 Linux</span><div class="bar"><div class="fill" style="width:2%"></div></div><span class="pct">4</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHONE -->
+  <section>
+    <h2><span class="num">06</span> งานนอกการพัฒนาระบบ · Cloud Phone</h2>
+    <div class="phone-block">
+      <div class="ph-no"><span class="l">เบอร์บริษัท</span>02 109 4264</div>
+      <div class="ph-stat"><div class="v">5</div><div class="l">คู่สาย</div></div>
+      <div class="ph-stat"><div class="v">15</div><div class="l">User · Extension</div></div>
+      <div class="ph-desc">นำ <b>Call On Cloud (Cloud PBX)</b> เข้าใช้งานในบริษัท · พนักงาน 15 คนรับ-โทรในนามบริษัทได้จากทุกที่ · มี Voice Mail · Call Analytics · Call Transfer · ลดอัตราสายตก</div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section>
+    <h2><span class="num">07</span> แผนการพัฒนาระยะถัดไป</h2>
+    <div class="rm-list">
+      <div class="rm" style="--accent:var(--b3)">
+        <div class="when">กลางพฤษภาคม 2026</div>
+        <div class="ti">💧 ELMER Water · Phase 1 Prototype</div>
+        <div class="ds">เร่งทำ Phase 1 ที่ค้างให้เสร็จ ปล่อย Prototype v1 ให้ทีม Lab ทดลอง เก็บ Feedback ก่อนเข้า Phase 2</div>
+      </div>
+      <div class="rm" style="--accent:var(--b6)">
+        <div class="when">Q2 · พฤษภาคม 2026</div>
+        <div class="ti">💬 Chat Mobile · Production Launch</div>
+        <div class="ds">ทดสอบกับทีมเล็กก่อน · Roll out APK ให้ทีมงาน · เปิด Voice/Video Call เต็มรูปแบบ</div>
+      </div>
+      <div class="rm" style="--accent:var(--b5)">
+        <div class="when">ตามแผนของ CP</div>
+        <div class="ti">🪪 CP Passport ↔ ERP Integration</div>
+        <div class="ds">Sync ข้อมูลผู้อบรม Auto-issue Passport เมื่อจบหลักสูตร Public QR Verification</div>
+      </div>
+      <div class="rm" style="--accent:var(--b1)">
+        <div class="when">Continuous</div>
+        <div class="ti">🛡️ Training Platform</div>
+        <div class="ds">เพิ่มฟีเจอร์ตาม Feature Request · Performance Optimization · Advanced Reporting · ขยาย AI Knowledge Base</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div class="doc-foot">
+    <div>© 2026 Natural Energy Tech Co., Ltd. · ฝ่าย IT &amp; Digital Development</div>
+    <div class="links">
+      <a href="https://netmer.github.io/net-energy-annual-report-2026/">🎬 Interactive Deck</a>
+      <a href="https://github.com/netmer/net-energy-annual-report-2026">📦 Source</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
