@@ -5,8 +5,7 @@
   // Node-to-connection mapping (which paths/labels relate to each node)
   const NODE_RELATIONS = {
     docflow: ['path-doc-out', 'path-doc-in', 'lbl-doc'],
-    netmer:  ['path-netmer', 'lbl-netmer'],
-    chat:    ['path-chat-out', 'path-chat-in', 'lbl-chat'],
+    netmer:  ['path-netmer-out', 'path-netmer-in', 'lbl-netmer'],
     cp:      ['path-cp', 'lbl-cp'],
     post:    ['path-post', 'lbl-post'],
     card:    ['path-card-in', 'path-card-out', 'lbl-card'],

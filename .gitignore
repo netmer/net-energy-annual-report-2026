@@ -14,3 +14,7 @@ desktop.ini
 
 # Original message attachment (renamed copy is in screenshots/)
 assets/messageImage_*.jpg
+
+# Word temp lock files + HTML source for the summary doc (not web content)
+~$*
+_summary_src.htm

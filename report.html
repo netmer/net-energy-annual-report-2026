@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>รายงานสรุปผลการปฏิบัติงาน · ม.ค.–เม.ย. 2026 | NET Energy</title>
+<title>รายงานสรุปผลการปฏิบัติงาน · พ.ค.–มิ.ย. 2026 | NET Energy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -202,17 +202,6 @@
   .seo-os .row .bar .fill{height:100%; background:linear-gradient(90deg, var(--b1), var(--b3)); border-radius:3px}
   .seo-os .row .pct{text-align:right; font-family:'Inter'; font-weight:700; color:var(--b1)}
 
-  /* ROADMAP */
-  .rm-list{display:grid; grid-template-columns:repeat(2,1fr); gap:8px}
-  .rm{
-    background:var(--paper); border:1px solid var(--line);
-    border-left:3px solid var(--accent, var(--b1));
-    border-radius:6px; padding:8px 10px;
-  }
-  .rm .when{font-size:10px; color:var(--accent, var(--b1)); font-weight:700; text-transform:uppercase; letter-spacing:.05em}
-  .rm .ti{font-size:12.5px; font-weight:600; color:var(--ink); margin-top:1px}
-  .rm .ds{font-size:11px; color:var(--muted); line-height:1.5; margin-top:3px}
-
   /* PHONE BLOCK */
   .phone-block{
     background:linear-gradient(135deg, #ecfdf5, #f0f9ff);
@@ -249,14 +238,14 @@
     }
     @page{size:A4; margin:0}
     section{break-inside:avoid}
-    .systems-table, .seo-block, .phone-block, .rm-list, .highlights{break-inside:avoid}
+    .systems-table, .seo-block, .phone-block, .highlights{break-inside:avoid}
   }
 </style>
 </head>
 <body>
 
 <div class="toolbar">
-  <div class="lbl">📄 <b>รายงานสรุปผลการปฏิบัติงาน</b> · ม.ค. – เม.ย. 2026</div>
+  <div class="lbl">📄 <b>รายงานสรุปผลการปฏิบัติงาน</b> · 1 พ.ค. – 6 มิ.ย. 2026</div>
   <div class="btns">
     <a href="index.html" class="btn">🎬 ดู Presentation แบบเต็ม</a>
     <button class="btn primary" onclick="window.print()">🖨️ Print / Save as PDF</button>
@@ -268,14 +257,14 @@
   <!-- HEADER -->
   <div class="doc-head">
     <div class="left">
-      <div class="brand"><span class="logo">🛡️</span> NET Energy · Annual Report 2026</div>
+      <div class="brand"><span class="logo">🛡️</span> NET Energy · Progress Report 2026</div>
       <h1>รายงานสรุปผลการปฏิบัติงาน
-        <span class="sub">มกราคม – เมษายน 2026 · ฝ่าย IT &amp; Digital Development</span>
+        <span class="sub">1 พฤษภาคม – 6 มิถุนายน 2026 · ฝ่าย IT &amp; Digital Development</span>
       </h1>
     </div>
     <div class="right">
-      <b>เอกสาร v1.0</b>
-      จัดทำ 2 พ.ค. 2026<br/>
+      <b>เอกสาร v2.0</b>
+      จัดทำ 6 มิ.ย. 2026<br/>
       บริษัท เนเชอรัล เอ็นเนอร์ยี เทค จำกัด
     </div>
   </div>
@@ -284,13 +273,12 @@
   <section>
     <h2><span class="num">01</span> Executive Summary</h2>
     <div class="exec">
-      ในรอบ 4 เดือนแรกของปี 2026 ฝ่าย IT ดูแลและพัฒนา <b>7 ระบบดิจิทัล</b>
-      ครอบคลุมงานฝึกอบรม เอกสารธุรกิจ HR การสื่อสารภายใน Safety Mindset และระบบของลูกค้ากลุ่ม CP
-      โดยมี <b>5 ระบบเปิดใช้งานจริง</b> และ <b>2 ระบบกำลังพัฒนา</b> ·
-      ไฮไลต์สำคัญคือการเปิดตัว <b>NET Training Platform</b> เมื่อ 25 เม.ย. 2026
-      และเริ่มโปรเจกต์ใหม่ <b>ELMER Water Analysis</b> เมื่อ 30 เม.ย. 2026 ·
-      นอกเหนือจากการพัฒนาระบบ ยังนำ <b>ระบบโทรศัพท์ Cloud PBX</b> เข้าใช้งานในบริษัท
-      และปรับปรุง <b>SEO ครบ 4 ระยะ</b> จนเริ่มมีผลลัพธ์เห็นชัดเจน
+      ในรอบ <b>5 สัปดาห์</b> (1 พ.ค. – 6 มิ.ย. 2026) ฝ่าย IT ส่งมอบงานพัฒนากว่า <b>285 commits</b> ใน <b>9 โปรเจกต์</b> (8 ระบบ + สื่อการสอน LPG) ·
+      ไฮไลต์สำคัญคือการเปิด <b>ระบบใหม่ 2 ระบบ</b> — <b>Online Inspector</b> (ตรวจความปลอดภัยให้ True)
+      และ <b>Elmer Wastewater</b> (งานน้ำเสีย Lotus/AXONS) จากศูนย์สู่ใช้งานได้ภายในไม่กี่วันพร้อมข้อมูลจริง ·
+      <b>NETMER-Flow</b> เชื่อมเครื่องสแกนลายนิ้วมือ ZKTeco จริง และนำแอป iOS เนทีฟเข้าสู่ Apple App Store (build VALID) ·
+      ระบบหลัก <b>NET Training Platform</b> เพิ่ม LINE Daily Brief, ทีมวิทยากรหลายคน, AI ตอบลูกค้า, ค้นหา 2 ชั้น และ SEO ครั้งใหญ่ ·
+      และ <b>ELMER Water Analysis</b> เปิดใช้งานจริง (Phase 1) ด้วยฐานสาขา Lotus กว่า 2,450 แห่ง
     </div>
   </section>
 
@@ -298,31 +286,37 @@
   <section>
     <h2><span class="num">02</span> ตัวเลขสำคัญ</h2>
     <div class="kpi-row">
-      <div class="kpi" style="--accent:var(--b1)"><div class="lbl">ระบบที่ดูแล</div><div class="v">7</div><div class="ds">5 Live + 2 Dev</div></div>
-      <div class="kpi" style="--accent:var(--b3)"><div class="lbl">ฟีเจอร์ใช้งานจริง</div><div class="v">90+</div><div class="ds">ทั่วทุกระบบ</div></div>
-      <div class="kpi" style="--accent:var(--b4)"><div class="lbl">แพลตฟอร์ม</div><div class="v">3</div><div class="ds">เว็บ · มือถือ · เดสก์ท็อป</div></div>
-      <div class="kpi" style="--accent:var(--b5)"><div class="lbl">จุดเชื่อมต่อ</div><div class="v">9</div><div class="ds">ระหว่างระบบ + 3rd party</div></div>
+      <div class="kpi" style="--accent:var(--b1)"><div class="lbl">การพัฒนา (commits)</div><div class="v">285</div><div class="ds">ใน 5 สัปดาห์ · 9 โปรเจกต์</div></div>
+      <div class="kpi" style="--accent:var(--b3)"><div class="lbl">ระบบใหม่</div><div class="v">2</div><div class="ds">True &amp; Lotus (Greenfield)</div></div>
+      <div class="kpi" style="--accent:var(--b6)"><div class="lbl">ระบบในพอร์ต</div><div class="v">8</div><div class="ds">Live / เสร็จแล้วทั้งหมด</div></div>
+      <div class="kpi" style="--accent:var(--b4)"><div class="lbl">เข้า App Store</div><div class="v">1</div><div class="ds">NETMER-Flow · build VALID</div></div>
     </div>
   </section>
 
   <!-- SYSTEMS -->
   <section>
-    <h2><span class="num">03</span> ระบบที่ดูแล (7 ระบบ)</h2>
+    <h2><span class="num">03</span> พอร์ตงาน (8 ระบบ + สื่อการสอน)</h2>
     <table class="sys">
       <thead>
         <tr>
           <th style="width:32%">ระบบ</th>
           <th>ประเภท</th>
           <th style="width:18%">ผู้ใช้งาน</th>
-          <th style="width:12%; text-align:center">สถานะ</th>
+          <th style="width:13%; text-align:center">สถานะ</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><span class="ic" style="--accent:var(--b1);--accent2:var(--b2)">🛡️</span><span class="nm">NET Training Platform</span><div class="desc">ระบบหลัก · ฝึกอบรมความปลอดภัยครบวงจร</div></td>
+          <td><span class="ic" style="--accent:var(--b1);--accent2:var(--b2)">🛡️</span><span class="nm">NET Training Platform</span><div class="desc">ระบบหลัก · ฝึกอบรมความปลอดภัยครบวงจร + LINE Brief</div></td>
           <td>ERP + Public Site</td>
           <td>ลูกค้า + พนักงาน</td>
-          <td style="text-align:center"><span class="pill live">Live · 25 Apr</span></td>
+          <td style="text-align:center"><span class="pill live">Live · ทุกวัน</span></td>
+        </tr>
+        <tr>
+          <td><span class="ic" style="--accent:var(--b4);--accent2:var(--b2)">👥</span><span class="nm">NETMER-Flow</span><div class="desc">HR + Biometric (ZKTeco) · เข้า Apple App Store</div></td>
+          <td>Web + iOS + Android</td>
+          <td>พนักงานทุกคน</td>
+          <td style="text-align:center"><span class="pill live">Live · App Store</span></td>
         </tr>
         <tr>
           <td><span class="ic" style="--accent:var(--b3);--accent2:var(--b1)">📄</span><span class="nm">NET Document Flow</span><div class="desc">เอกสารธุรกิจ · ใบเสนอราคา/ใบเสร็จ (Quotacraft)</div></td>
@@ -331,34 +325,40 @@
           <td style="text-align:center"><span class="pill live">Live</span></td>
         </tr>
         <tr>
-          <td><span class="ic" style="--accent:var(--b4);--accent2:var(--b2)">👥</span><span class="nm">NETMER-Flow</span><div class="desc">HR · เช็คอิน · ขอลา · จัดการรถ · IT Asset</div></td>
-          <td>Web + Android APK</td>
-          <td>พนักงานทุกคน</td>
-          <td style="text-align:center"><span class="pill live">Live</span></td>
-        </tr>
-        <tr>
-          <td><span class="ic" style="--accent:var(--b5);--accent2:var(--b4)">🪪</span><span class="nm">CP Safety Passport</span><div class="desc">ระบบ Passport ส่งมอบให้ลูกค้ากลุ่ม CP</div></td>
+          <td><span class="ic" style="--accent:var(--b5);--accent2:var(--b4)">🪪</span><span class="nm">CP Safety Passport</span><div class="desc">Passport กลุ่ม CP · โมดูล EE + Public Verify API</div></td>
           <td>Customer Portal</td>
           <td>ศูนย์ฝึก + Trainer</td>
           <td style="text-align:center"><span class="pill live">Live</span></td>
         </tr>
         <tr>
-          <td><span class="ic" style="--accent:var(--b1);--accent2:var(--b3)">🦸</span><span class="nm">NET Safety Hero (NET ZERO)</span><div class="desc">Gamification · Safety Mindset App (Standalone)</div></td>
+          <td><span class="ic" style="--accent:var(--b2);--accent2:var(--b3)">💧</span><span class="nm">ELMER Water Analysis</span><div class="desc">รายงานวิเคราะห์น้ำ Lotus · Merge-PDF + 2,450 สาขา</div></td>
+          <td>Web App</td>
+          <td>ทีม Elmer (Lotus)</td>
+          <td style="text-align:center"><span class="pill live">Live · Phase 1</span></td>
+        </tr>
+        <tr>
+          <td><span class="ic" style="--accent:var(--b3);--accent2:var(--b6)">🌊</span><span class="nm">Elmer Wastewater</span><div class="desc">งานน้ำเสีย CM+PM · ข้อมูลจริง 1,578 งาน (Greenfield)</div></td>
+          <td>Web App</td>
+          <td>ทีม Elmer (Lotus/AXONS)</td>
+          <td style="text-align:center"><span class="pill live">Live · รอ Feedback</span></td>
+        </tr>
+        <tr>
+          <td><span class="ic" style="--accent:var(--b1);--accent2:var(--b3)">🔎</span><span class="nm">Online Inspector</span><div class="desc">ตรวจความปลอดภัยออนไลน์ · พัฒนาเสร็จแล้ว (Greenfield)</div></td>
+          <td>Web App</td>
+          <td>ทีมตรวจ (True)</td>
+          <td style="text-align:center"><span class="pill live">เสร็จแล้ว</span></td>
+        </tr>
+        <tr>
+          <td><span class="ic" style="--accent:var(--b6);--accent2:var(--b3)">🦸</span><span class="nm">NET Safety Hero (NET ZERO)</span><div class="desc">Gamification · Safety Mindset App (Standalone)</div></td>
           <td>PWA + iOS + Android</td>
           <td>Public</td>
           <td style="text-align:center"><span class="pill live">Live</span></td>
         </tr>
         <tr>
-          <td><span class="ic" style="--accent:var(--b6);--accent2:var(--b3)">💬</span><span class="nm">NET Chat Mobile</span><div class="desc">แอปแชทภายในทีม · โทรเสียง/วิดีโอ + AI Bot</div></td>
-          <td>iOS + Android</td>
-          <td>ทีมงาน</td>
-          <td style="text-align:center"><span class="pill dev">In Dev</span></td>
-        </tr>
-        <tr>
-          <td><span class="ic" style="--accent:var(--b2);--accent2:var(--b3)">💧</span><span class="nm">ELMER Water Analysis</span><div class="desc">รายงานวิเคราะห์น้ำดื่มอัตโนมัติ (Greenfield)</div></td>
-          <td>Web App</td>
-          <td>พนักงาน Elmer</td>
-          <td style="text-align:center"><span class="pill dev">Kickoff · 30 Apr</span></td>
+          <td><span class="ic" style="--accent:var(--b5);--accent2:var(--b6)">🛢️</span><span class="nm">LPG Training Animation</span><div class="desc">สื่อการสอนแอนิเมชันโรงบรรจุ LPG · 16:9 ฝังใน PPT (รีวิวโดยผู้เชี่ยวชาญ)</div></td>
+          <td>เว็บ · GitHub Pages</td>
+          <td>ผู้อบรม LPG + วิทยากร</td>
+          <td style="text-align:center"><span class="pill live">สื่อการสอน</span></td>
         </tr>
       </tbody>
     </table>
@@ -366,38 +366,65 @@
 
   <!-- HIGHLIGHTS -->
   <section>
-    <h2><span class="num">04</span> งานสำคัญที่เกิดขึ้น</h2>
+    <h2><span class="num">04</span> งานสำคัญที่เกิดขึ้นในรอบนี้</h2>
     <div class="highlights">
-      <div class="hl" style="--accent:var(--b1)">
-        <div class="ti">🎉 Production Launch</div>
+      <div class="hl" style="--accent:var(--b6)">
+        <div class="ti">🚀 เปิดระบบใหม่ 2 ระบบ</div>
         <ul>
-          <li><b>25 เม.ย.</b> · NET Training Platform เปิดใช้งานจริง</li>
-          <li>ครอบคลุม Public Site + ลงทะเบียน + ERP Backend</li>
-          <li>ระบบเก็บเงิน ออกใบประกาศ และจัดส่งครบวงจร</li>
-        </ul>
-      </div>
-      <div class="hl" style="--accent:var(--b3)">
-        <div class="ti">🆕 New Project Kickoff</div>
-        <ul>
-          <li><b>30 เม.ย.</b> · เริ่ม ELMER Water Analysis</li>
-          <li>เป้าทดแทนงาน manual 200–1,000 รายงาน/เดือน</li>
-          <li>รองรับ 4 ประเภทร้าน · PDF อัตโนมัติ</li>
+          <li><b>27 พ.ค.</b> · Online Inspector (ตรวจความปลอดภัย True)</li>
+          <li><b>29 พ.ค.</b> · Elmer Wastewater (น้ำเสีย Lotus/AXONS)</li>
+          <li>จากศูนย์สู่ใช้งานได้ภายในไม่กี่วัน พร้อมข้อมูลจริง</li>
         </ul>
       </div>
       <div class="hl" style="--accent:var(--b4)">
-        <div class="ti">🎨 ปรับปรุงครั้งใหญ่</div>
+        <div class="ti">📲 Biometric + Apple App Store</div>
         <ul>
-          <li>ออกแบบ ERP UI ใหม่สไตล์ Enterprise</li>
-          <li>เพิ่ม PWA Mobile + Camera OCR + Desktop App</li>
-          <li>Migrate AI Stack ใหม่ · Cross-Round Matching</li>
+          <li>NETMER-Flow เชื่อมเครื่องสแกนนิ้ว ZKTeco จริง</li>
+          <li>แอป iOS เนทีฟ (Capacitor 7) · build VALID</li>
+          <li>Push ข้ามแพลตฟอร์ม + Sync 2 ทางกับ ERP</li>
         </ul>
       </div>
-      <div class="hl" style="--accent:var(--b6)">
-        <div class="ti">🔗 ระบบเชื่อมโยงกัน</div>
+      <div class="hl" style="--accent:var(--b1)">
+        <div class="ti">🛡️ ERP ยกระดับครั้งใหญ่</div>
         <ul>
-          <li>9 จุดเชื่อมต่อ · ทุกระบบทำงานเรียลไทม์</li>
-          <li>Document Flow ↔ ERP · Webhook + Slip Workflow</li>
-          <li>NETMER-Flow ← ERP · Schedule Sync</li>
+          <li>LINE Daily Training Brief (cron 17:45)</li>
+          <li>ทีมวิทยากรหลายคน · AI สาธารณะ · ค้นหา 2 ชั้น</li>
+          <li>PDPA · Cloudflare CDN · SEO ครั้งใหญ่</li>
+        </ul>
+      </div>
+      <div class="hl" style="--accent:var(--b3)">
+        <div class="ti">💧 ELMER Water เปิด Production</div>
+        <ul>
+          <li>เปลี่ยนเป็น Merge-PDF ตรงฟอร์มกระดาษเดิม</li>
+          <li>นำเข้าสาขา Lotus จริง 2,450+ แห่ง</li>
+          <li>Service-Plan Tracker + E-signature + Mobile PWA</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW CLIENT SYSTEMS -->
+  <section>
+    <h2><span class="num">05</span> ระบบใหม่ประจำรอบนี้ · รายละเอียด</h2>
+    <div class="highlights">
+      <div class="hl" style="--accent:var(--b1)">
+        <div class="ti">🔎 Online Inspector · ลูกค้า True</div>
+        <ul>
+          <li>แทน Canva + Data Studio + Excel เป็นระบบเดียว</li>
+          <li>นำเข้า Work Order หลาย Track + กรองอัจฉริยะ</li>
+          <li>ตรวจ binary + จับเวลา + รูป → Finding + SLA อัตโนมัติ</li>
+          <li>ดึง CP Passport modules + T-15 LINE Reminder</li>
+          <li>Export "W&amp;W 5P" 31 คอลัมน์ · <b>พัฒนาเสร็จแล้ว</b> (17 tests ผ่าน)</li>
+        </ul>
+      </div>
+      <div class="hl" style="--accent:var(--b3)">
+        <div class="ti">🌊 Elmer Wastewater · Lotus/AXONS</div>
+        <ul>
+          <li>งานน้ำเสีย CM+PM · สถานะ 2 สาย Exon/Elmer (13 ขั้น)</li>
+          <li>ข้อมูลจริง 1,578 งาน (CM 199 · PM 1,379)</li>
+          <li>แผนที่ Lotus ทั่วไทย + SLA + LINE Digest</li>
+          <li>ต้นทุน/กำไร + บัญชีงานยังไม่วางบิล</li>
+          <li>Live: elmer-wastewater.web.app · 245 tests · <b>รอ feedback เพื่อปรับปรุง</b></li>
         </ul>
       </div>
     </div>
@@ -405,62 +432,45 @@
 
   <!-- SEO PERFORMANCE -->
   <section>
-    <h2><span class="num">05</span> SEO Performance · ผลลัพธ์จาก Search Console</h2>
+    <h2><span class="num">06</span> SEO Performance · ผลลัพธ์จาก Google Search Console</h2>
     <div class="seo-block">
       <div class="seo-stats">
         <div class="grid">
-          <div class="it"><div class="v">102</div><div class="l">Clicks</div></div>
-          <div class="it"><div class="v">1,030</div><div class="l">Impressions</div></div>
-          <div class="it"><div class="v">9.9%</div><div class="l">CTR</div></div>
-          <div class="it"><div class="v">6.4</div><div class="l">Avg Pos</div></div>
+          <div class="it"><div class="v">1,954</div><div class="l">Clicks</div></div>
+          <div class="it"><div class="v">16,389</div><div class="l">Impressions</div></div>
+          <div class="it"><div class="v">11.9%</div><div class="l">CTR</div></div>
+          <div class="it"><div class="v">7.0</div><div class="l">Avg Pos</div></div>
         </div>
-        <div class="note">📅 เริ่มเก็บข้อมูล 29 เม.ย. 2026 · <b>CTR สูงกว่ามาตรฐาน 2 เท่า</b> (industry avg 3-5%) · อันดับเฉลี่ยอยู่ <b>หน้าแรก</b> ของ Google · มี <b>124 คำค้นหา</b>ที่ติดอันดับ</div>
+        <div class="note">📅 Google Search Console · 29 เม.ย. – 1 มิ.ย. 2026 · <b>CTR สูงกว่ามาตรฐาน ~3 เท่า</b> (avg 3–5%) · อันดับเฉลี่ย <b>หน้าแรก</b> · 560 คำค้นหา · หน้าแรก 1,064 คลิก (54%) · งาน พ.ค.: Location Pages · Slug Migration · Pillar · Sitemap · AI Citation</div>
       </div>
       <div class="seo-os">
-        <h4>Visitors by OS · 200 Users</h4>
-        <div class="row"><span class="nm">🪟 Windows</span><div class="bar"><div class="fill" style="width:58.5%"></div></div><span class="pct">117</span></div>
-        <div class="row"><span class="nm">📱 iOS</span><div class="bar"><div class="fill" style="width:21%"></div></div><span class="pct">42</span></div>
-        <div class="row"><span class="nm">🤖 Android</span><div class="bar"><div class="fill" style="width:15.5%"></div></div><span class="pct">31</span></div>
-        <div class="row"><span class="nm">🍎 Macintosh</span><div class="bar"><div class="fill" style="width:3%"></div></div><span class="pct">6</span></div>
-        <div class="row"><span class="nm">🐧 Linux</span><div class="bar"><div class="fill" style="width:2%"></div></div><span class="pct">4</span></div>
+        <h4>ผู้เข้าชมแยกตามอุปกรณ์ · 1,954 Clicks</h4>
+        <div class="row"><span class="nm">🖥️ Desktop</span><div class="bar"><div class="fill" style="width:67%"></div></div><span class="pct">1,317</span></div>
+        <div class="row"><span class="nm">📱 Mobile</span><div class="bar"><div class="fill" style="width:32%"></div></div><span class="pct">624</span></div>
+        <div class="row"><span class="nm">📲 Tablet</span><div class="bar"><div class="fill" style="width:2%"></div></div><span class="pct">13</span></div>
       </div>
     </div>
   </section>
 
-  <!-- PHONE -->
+  <!-- WEBSITE TRAFFIC -->
   <section>
-    <h2><span class="num">06</span> งานนอกการพัฒนาระบบ · Cloud Phone</h2>
-    <div class="phone-block">
-      <div class="ph-no"><span class="l">เบอร์บริษัท</span>02 109 4264</div>
-      <div class="ph-stat"><div class="v">5</div><div class="l">คู่สาย</div></div>
-      <div class="ph-stat"><div class="v">15</div><div class="l">User · Extension</div></div>
-      <div class="ph-desc">นำ <b>Call On Cloud (Cloud PBX)</b> เข้าใช้งานในบริษัท · พนักงาน 15 คนรับ-โทรในนามบริษัทได้จากทุกที่ · มี Voice Mail · Call Analytics · Call Transfer · ลดอัตราสายตก</div>
-    </div>
-  </section>
-
-  <!-- ROADMAP -->
-  <section>
-    <h2><span class="num">07</span> แผนการพัฒนาระยะถัดไป</h2>
-    <div class="rm-list">
-      <div class="rm" style="--accent:var(--b3)">
-        <div class="when">กลางพฤษภาคม 2026</div>
-        <div class="ti">💧 ELMER Water · Phase 1 Prototype</div>
-        <div class="ds">เร่งทำ Phase 1 ที่ค้างให้เสร็จ ปล่อย Prototype v1 ให้ทีม Lab ทดลอง เก็บ Feedback ก่อนเข้า Phase 2</div>
+    <h2><span class="num">07</span> ยอดเข้าใช้เว็บไซต์จริง · First-party Analytics</h2>
+    <div class="seo-block">
+      <div class="seo-stats">
+        <div class="grid">
+          <div class="it"><div class="v">65,156</div><div class="l">Page Views</div></div>
+          <div class="it"><div class="v">41,480</div><div class="l">30 วันล่าสุด</div></div>
+          <div class="it"><div class="v">~1,400</div><div class="l">เฉลี่ย/วัน</div></div>
+          <div class="it"><div class="v">237</div><div class="l">สมาชิกล็อกอิน</div></div>
+        </div>
+        <div class="note">📅 ส.ค. 2025 – 6 มิ.ย. 2026 · นับทุกช่องทาง (ไม่ใช่แค่ Google) · ใช้งานทุกวัน 1,000–2,500 ครั้ง · <b>หน้ายอดนิยม:</b> /courses (11,865) · หน้าแรก (10,254) · CP/AIS Safety Passport</div>
       </div>
-      <div class="rm" style="--accent:var(--b6)">
-        <div class="when">Q2 · พฤษภาคม 2026</div>
-        <div class="ti">💬 Chat Mobile · Production Launch</div>
-        <div class="ds">ทดสอบกับทีมเล็กก่อน · Roll out APK ให้ทีมงาน · เปิด Voice/Video Call เต็มรูปแบบ</div>
-      </div>
-      <div class="rm" style="--accent:var(--b5)">
-        <div class="when">ตามแผนของ CP</div>
-        <div class="ti">🪪 CP Passport ↔ ERP Integration</div>
-        <div class="ds">Sync ข้อมูลผู้อบรม Auto-issue Passport เมื่อจบหลักสูตร Public QR Verification</div>
-      </div>
-      <div class="rm" style="--accent:var(--b1)">
-        <div class="when">Continuous</div>
-        <div class="ti">🛡️ Training Platform</div>
-        <div class="ds">เพิ่มฟีเจอร์ตาม Feature Request · Performance Optimization · Advanced Reporting · ขยาย AI Knowledge Base</div>
+      <div class="seo-os">
+        <h4>ช่องทางที่นำผู้ใช้เข้ามา (External)</h4>
+        <div class="row"><span class="nm">🔍 Google</span><div class="bar"><div class="fill" style="width:100%"></div></div><span class="pct">11,836</span></div>
+        <div class="row"><span class="nm">💬 LINE</span><div class="bar"><div class="fill" style="width:7%"></div></div><span class="pct">766</span></div>
+        <div class="row"><span class="nm">📘 Facebook</span><div class="bar"><div class="fill" style="width:5%"></div></div><span class="pct">535</span></div>
+        <div class="row"><span class="nm">🔎 Bing</span><div class="bar"><div class="fill" style="width:4%"></div></div><span class="pct">453</span></div>
       </div>
     </div>
   </section>
@@ -469,8 +479,7 @@
   <div class="doc-foot">
     <div>© 2026 Natural Energy Tech Co., Ltd. · ฝ่าย IT &amp; Digital Development</div>
     <div class="links">
-      <a href="https://netmer.github.io/net-energy-annual-report-2026/">🎬 Interactive Deck</a>
-      <a href="https://github.com/netmer/net-energy-annual-report-2026">📦 Source</a>
+      <a href="index.html">🎬 Interactive Deck</a>
     </div>
   </div>
 </div>
