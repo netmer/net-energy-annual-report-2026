@@ -202,6 +202,45 @@
   .seo-os .row .bar .fill{height:100%; background:linear-gradient(90deg, var(--b1), var(--b3)); border-radius:3px}
   .seo-os .row .pct{text-align:right; font-family:'Inter'; font-weight:700; color:var(--b1)}
   .seo-os.wide .row{grid-template-columns:160px 1fr 34px}
+  .seo-os.med .row{grid-template-columns:86px 1fr 40px}
+
+  /* COMPACT DATA TABLE (SEO detail) */
+  table.data{
+    width:100%; border-collapse:collapse; font-size:11px;
+    background:var(--paper); border:1px solid var(--line); border-radius:8px;
+    overflow:hidden; margin-top:8px;
+  }
+  table.data thead{background:#f1f5f9}
+  table.data th{
+    text-align:right; padding:6px 8px; font-weight:600; font-size:10px;
+    color:var(--muted); text-transform:uppercase; letter-spacing:.04em;
+    border-bottom:1px solid var(--line); white-space:nowrap;
+  }
+  table.data th:first-child{text-align:left}
+  table.data td{padding:5px 8px; border-bottom:1px solid var(--line); text-align:right; white-space:nowrap}
+  table.data td:first-child{text-align:left; white-space:normal; color:var(--ink)}
+  table.data tr:last-child td{border-bottom:0}
+  table.data tbody tr:nth-child(even){background:#fafbff}
+  table.data .n{font-family:'Inter'; font-weight:600}
+  table.data .up{color:#047857; font-family:'Inter'; font-weight:700}
+  table.data .down{color:#b91c1c; font-family:'Inter'; font-weight:700}
+  table.data .flat{color:var(--soft); font-family:'Inter'; font-weight:600}
+  table.data tfoot td{
+    padding:6px 8px; font-weight:700; background:#f8fafc;
+    border-top:1px solid var(--line-2); font-family:'Inter';
+  }
+  table.data tfoot td:first-child{font-family:'IBM Plex Sans Thai'}
+  .sub-h{
+    font-size:11.5px; font-weight:700; color:var(--ink);
+    margin:12px 0 2px; display:flex; align-items:center; gap:6px;
+  }
+  .sub-h span.tag{
+    font-weight:600; font-size:10px; color:var(--muted);
+    text-transform:uppercase; letter-spacing:.04em;
+  }
+  .note-line{font-size:10.5px; color:var(--soft); line-height:1.55; margin-top:5px}
+  .note-line b{color:var(--muted)}
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:10px; align-items:start}
 
   /* PHONE BLOCK */
   .phone-block{
@@ -470,39 +509,208 @@
           <li>อันดับจังหวัดเรียงได้ทุกคอลัมน์ · แก้พื้นหลังการ์ด CP Passport ที่แสดงไม่ขึ้นข้ามโดเมน</li>
         </ul>
       </div>
-      <div class="hl" style="--accent:var(--b5)">
-        <div class="ti">📌 พร้อมขึ้นระบบ / ยังค้าง</div>
-        <ul>
-          <li><b>ชุดกู้อันดับ Google (รออนุมัติขึ้นระบบ)</b> — อันดับหน้าแรกหลายคำยังอยู่บนลิงก์เว็บรุ่นเก่า /course.php ที่เราปิดไม่ให้ Google เข้า · ทำทางเชื่อม 43 เส้นทาง + เมนูใหม่ + llms.txt สำหรับ AI</li>
-          <li><b>ย้ายข้อมูลเลขบัตรชุดเก่า</b> — พักไว้ตามที่ตกลง ระบบรองรับทั้ง 2 รูปแบบพร้อมกันอยู่แล้วจึงไม่กระทบการใช้งาน</li>
-          <li><b>KYT MOTTO</b> — คลังโปสเตอร์ความปลอดภัย KYT 55 แผ่น ค้นหาด้วย AI · แยกเป็นระบบของตัวเองและขึ้นใช้งานจริงแล้ว (8 ส.ค.)</li>
-        </ul>
-      </div>
     </div>
   </section>
 
   <!-- SEO PERFORMANCE -->
   <section>
     <h2><span class="num">07</span> SEO Performance · ผลลัพธ์จาก Google Search Console</h2>
-    <div class="seo-block">
-      <div class="seo-stats">
-        <div class="grid">
-          <div class="it"><div class="v">2,231</div><div class="l">Clicks</div></div>
-          <div class="it"><div class="v">27,013</div><div class="l">Impressions</div></div>
-          <div class="it"><div class="v">8.3%</div><div class="l">CTR</div></div>
-          <div class="it"><div class="v">7.7</div><div class="l">Avg Pos</div></div>
-        </div>
-        <div class="note">📅 <b>12 ก.ค. – 8 ส.ค. 2026</b> (28 วัน · เทียบกับ 8 มิ.ย. – 8 ก.ค. 31 วัน) · <b>การมองเห็นโต 31% ต่อวัน</b> (965 vs 737 ครั้ง/วัน) และ<b>อันดับเฉลี่ยดีขึ้นจาก 8.0 เป็น 7.7</b> · คลิกต่อวันทรงตัวที่ ~80 ครั้ง/วัน — CTR ที่ลดลงเป็นผลจากการติดอันดับในคำค้นที่กว้างขึ้น ไม่ใช่คลิกหาย · <b>คนเริ่มเจอเราจากชื่อหลักสูตรแทนชื่อบริษัท:</b> ช่างไฟฟ้าฯ ระดับ 1 116→197 คลิก · CP Safety Passport 114→179 · สถานีบริการน้ำมัน 44→88</div>
+
+    <div class="seo-stats">
+      <div class="grid">
+        <div class="it"><div class="v">2,231</div><div class="l">Clicks</div></div>
+        <div class="it"><div class="v">27,013</div><div class="l">Impressions</div></div>
+        <div class="it"><div class="v">8.26%</div><div class="l">CTR</div></div>
+        <div class="it"><div class="v">7.65</div><div class="l">Avg Pos</div></div>
       </div>
-      <div class="seo-os">
-        <h4>ผู้เข้าชมแยกตามอุปกรณ์ · 2,231 Clicks</h4>
-        <div class="row"><span class="nm">🖥️ Desktop</span><div class="bar"><div class="fill" style="width:67%"></div></div><span class="pct">1,490</span></div>
-        <div class="row"><span class="nm">📱 Mobile</span><div class="bar"><div class="fill" style="width:32%"></div></div><span class="pct">719</span></div>
-        <div class="row"><span class="nm">📲 Tablet</span><div class="bar"><div class="fill" style="width:1%"></div></div><span class="pct">22</span></div>
-        <div style="font-size:11px; color:var(--muted); margin-top:6px; padding-top:5px; border-top:1px dashed var(--line-2)">
-          ต่างประเทศเริ่มเห็นเรา: ญี่ปุ่น 352 การแสดงผล · สิงคโปร์ 122 · มาเลเซีย 64 (ผลจากเว็บ 4 ภาษาที่ทำไว้รอบก่อน)
-        </div>
-      </div>
+      <div class="note">📅 ข้อมูลจริงจาก Search Console ช่วง <b>12 ก.ค. – 8 ส.ค. 2026 (28 วัน)</b> เทียบกับรอบก่อน <b>8 มิ.ย. – 8 ก.ค. 2026 (31 วัน)</b> — ช่วงเวลาไม่เท่ากัน จึงเปรียบเทียบด้วย<b>ค่าเฉลี่ยต่อวัน</b>ทุกตัวชี้วัด</div>
+    </div>
+
+    <!-- 7.1 HEADLINE COMPARISON -->
+    <div class="sub-h">7.1 เทียบกับรอบก่อน <span class="tag">ค่าเฉลี่ยต่อวัน</span></div>
+    <table class="data">
+      <thead>
+        <tr>
+          <th style="width:26%">ตัวชี้วัด</th>
+          <th>รอบนี้ (28 วัน)</th>
+          <th>ต่อวัน</th>
+          <th>รอบก่อน (31 วัน)</th>
+          <th>ต่อวัน</th>
+          <th>เปลี่ยนแปลง/วัน</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>การคลิก · Clicks</td>
+          <td class="n">2,231</td><td class="n">79.7</td>
+          <td class="n">2,473</td><td class="n">79.8</td>
+          <td class="flat">ทรงตัว</td>
+        </tr>
+        <tr>
+          <td>การแสดงผล · Impressions</td>
+          <td class="n">27,013</td><td class="n">965</td>
+          <td class="n">22,853</td><td class="n">737</td>
+          <td class="up">+31%</td>
+        </tr>
+        <tr>
+          <td>CTR เฉลี่ย</td>
+          <td class="n">8.26%</td><td class="n">—</td>
+          <td class="n">10.82%</td><td class="n">—</td>
+          <td class="down">−2.56 จุด</td>
+        </tr>
+        <tr>
+          <td>อันดับเฉลี่ย · Avg Position</td>
+          <td class="n">7.65</td><td class="n">—</td>
+          <td class="n">8.00</td><td class="n">—</td>
+          <td class="up">ดีขึ้น 0.35</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note-line">
+      <b>อ่านตัวเลขนี้อย่างไร:</b> คลิกต่อวันเท่าเดิม แต่การมองเห็นโตขึ้น 31% และอันดับเฉลี่ยดีขึ้น
+      แปลว่าเว็บเริ่มติดอันดับใน<b>คำค้นที่กว้างขึ้นและมีคนค้นเยอะขึ้น</b> ซึ่งโดยธรรมชาติจะมี CTR ต่ำกว่าคำค้นชื่อบริษัท
+      CTR ที่ลดลงจึงเป็นผลของฐานการแสดงผลที่ใหญ่ขึ้น <b>ไม่ใช่คลิกที่หายไป</b> — และ 8.26% ยังสูงกว่าค่าเฉลี่ยอุตสาหกรรม (3–5%) ราว 2 เท่า
+    </div>
+
+    <!-- 7.2 STRUCTURAL SHIFT -->
+    <div class="sub-h">7.2 สัดส่วนคลิกเปลี่ยนจาก "หน้าแรก" ไปที่ "หน้าหลักสูตร" <span class="tag">สัญญาณคุณภาพทราฟฟิก</span></div>
+    <table class="data">
+      <thead>
+        <tr>
+          <th style="width:34%">กลุ่มหน้า</th>
+          <th>คลิก รอบนี้</th><th>สัดส่วน</th>
+          <th>คลิก รอบก่อน</th><th>สัดส่วน</th>
+          <th>เปลี่ยนแปลง</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>หน้าหลักสูตรรายตัว · /courses/course/*</td>
+          <td class="n">933</td><td class="n">40.6%</td>
+          <td class="n">796</td><td class="n">30.9%</td>
+          <td class="up">+17%</td>
+        </tr>
+        <tr>
+          <td>หน้าแรก · Home</td>
+          <td class="n">678</td><td class="n">29.5%</td>
+          <td class="n">1,039</td><td class="n">40.4%</td>
+          <td class="down">−35%</td>
+        </tr>
+        <tr>
+          <td>หน้าหมวดหลักสูตร · /courses, /courses/*</td>
+          <td class="n">385</td><td class="n">16.8%</td>
+          <td class="n">474</td><td class="n">18.4%</td>
+          <td class="down">−19%</td>
+        </tr>
+        <tr>
+          <td>หน้าอื่น (ติดต่อ · CP Passport · อื่น ๆ)</td>
+          <td class="n">300</td><td class="n">13.1%</td>
+          <td class="n">264</td><td class="n">10.3%</td>
+          <td class="up">+14%</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note-line">
+      คนที่เข้ามาจากหน้าแรกมักค้นด้วย<b>ชื่อบริษัท</b> (รู้จักเราอยู่แล้ว) ส่วนคนที่เข้าหน้าหลักสูตรโดยตรงคือคนที่ค้นหา<b>สิ่งที่อยากอบรม</b> —
+      สัดส่วนกลุ่มหลังโตจาก 31% เป็น 41% ในรอบเดียว คือทราฟฟิกที่มีโอกาสปิดการขายสูงกว่า ·
+      <b>หมายเหตุ:</b> ยอดรวมรายหน้า (2,296) ต่างจากยอดรวมของเว็บ (2,231) เล็กน้อย เพราะ Google นับ URL รูปแบบต่าง ๆ ของหน้าเดียวกันแยกกัน
+    </div>
+
+    <!-- 7.3 TOP PAGES -->
+    <div class="sub-h">7.3 หน้าที่ได้คลิกมากที่สุด <span class="tag">327 หน้าที่มีการแสดงผล</span></div>
+    <table class="data">
+      <thead>
+        <tr>
+          <th style="width:34%">หน้า</th>
+          <th>คลิก</th><th>รอบก่อน</th><th>เปลี่ยน</th>
+          <th>แสดงผล</th><th>CTR</th><th>อันดับ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>หน้าแรก · Home</td><td class="n">668</td><td class="n">1,026</td><td class="down">−35%</td><td class="n">8,759</td><td class="n">7.6%</td><td class="n">7.4</td></tr>
+        <tr><td>ช่างไฟฟ้าภายในอาคาร ระดับ 1</td><td class="n">197</td><td class="n">116</td><td class="up">+70%</td><td class="n">3,105</td><td class="n">6.3%</td><td class="n">5.5</td></tr>
+        <tr><td>CP Safety Passport (หน้าหลัก)</td><td class="n">179</td><td class="n">114</td><td class="up">+57%</td><td class="n">2,177</td><td class="n">8.2%</td><td class="n">2.7</td></tr>
+        <tr><td>ใบอนุญาตกรมธุรกิจพลังงาน · DOEB</td><td class="n">163</td><td class="n">268</td><td class="down">−39%</td><td class="n">2,063</td><td class="n">7.9%</td><td class="n">4.1</td></tr>
+        <tr><td>ผู้ปฏิบัติงานสถานที่ใช้ LPG</td><td class="n">140</td><td class="n">180</td><td class="down">−22%</td><td class="n">820</td><td class="n">17.1%</td><td class="n">4.7</td></tr>
+        <tr><td>ผู้ปฏิบัติงานสถานีบริการน้ำมัน</td><td class="n">88</td><td class="n">44</td><td class="up">+100%</td><td class="n">656</td><td class="n">13.4%</td><td class="n">4.1</td></tr>
+        <tr><td>สถานที่เก็บรักษาน้ำมัน</td><td class="n">85</td><td class="n">96</td><td class="down">−11%</td><td class="n">519</td><td class="n">16.4%</td><td class="n">4.1</td></tr>
+        <tr><td>แคตตาล็อกหลักสูตร · /courses</td><td class="n">72</td><td class="n">90</td><td class="down">−20%</td><td class="n">2,821</td><td class="n">2.6%</td><td class="n">11.1</td></tr>
+        <tr><td>ผู้ปฏิบัติงานสถานที่ใช้ NG</td><td class="n">56</td><td class="n">49</td><td class="up">+14%</td><td class="n">477</td><td class="n">11.7%</td><td class="n">4.3</td></tr>
+        <tr><td>AIS Safety Passport · ผู้รับเหมา</td><td class="n">48</td><td class="n">24</td><td class="up">+100%</td><td class="n">497</td><td class="n">9.7%</td><td class="n">4.4</td></tr>
+        <tr><td>ความปลอดภัยก๊าซแอมโมเนีย</td><td class="n">46</td><td class="n">13</td><td class="up">+254%</td><td class="n">214</td><td class="n">21.5%</td><td class="n">3.8</td></tr>
+        <tr><td>สถานที่บรรจุก๊าซ LPG</td><td class="n">45</td><td class="n">26</td><td class="up">+73%</td><td class="n">478</td><td class="n">9.4%</td><td class="n">5.7</td></tr>
+        <tr><td>ติดต่อเรา</td><td class="n">37</td><td class="n">42</td><td class="down">−12%</td><td class="n">2,100</td><td class="n">1.8%</td><td class="n">3.3</td></tr>
+        <tr><td>ADR / TSM</td><td class="n">35</td><td class="n">6</td><td class="up">+483%</td><td class="n">615</td><td class="n">5.7%</td><td class="n">5.8</td></tr>
+        <tr><td>จป. หัวหน้างาน</td><td class="n">27</td><td class="n">10</td><td class="up">+170%</td><td class="n">269</td><td class="n">10.0%</td><td class="n">5.5</td></tr>
+      </tbody>
+    </table>
+    <div class="note-line">
+      <b>หน้าที่โตแรงสุด</b> คือหน้าหลักสูตรเฉพาะทาง — แอมโมเนีย +254% · ADR/TSM +483% · จป.หัวหน้างาน +170% ·
+      หน้าเหล่านี้ CTR สูงมาก (17–22%) เพราะคนค้นตรงกับสิ่งที่ต้องการ ·
+      <b>หน้าที่ลดลง</b> คือ DOEB (−39%) กับ LPG (−22%) — ทั้งคู่เป็นหลักสูตรตามฤดูกาลของรอบยื่นใบอนุญาต ควรติดตามอีก 1 รอบก่อนสรุป ·
+      <b>หน้าที่ควรแก้:</b> /courses แสดงผล 2,821 ครั้งแต่ CTR แค่ 2.6% ที่อันดับ 11.1 และ /contact แสดงผล 2,100 ครั้ง CTR 1.8% — เป็นหน้าที่ Google เอาไปโชว์เยอะแต่คนไม่กด
+    </div>
+
+    <!-- 7.4 TOP QUERIES -->
+    <div class="sub-h">7.4 คำค้นหาที่พาคนเข้าเว็บ <span class="tag">1,000+ คำค้น (เพดาน export)</span></div>
+    <table class="data">
+      <thead>
+        <tr><th style="width:40%">คำค้นหา</th><th>คลิก</th><th>แสดงผล</th><th>CTR</th><th>อันดับ</th><th>ประเภท</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>เนเชอรัล เอ็นเนอร์ยี เทค</td><td class="n">139</td><td class="n">187</td><td class="n">74.3%</td><td class="n">1.0</td><td>ชื่อบริษัท</td></tr>
+        <tr><td>net อบรม</td><td class="n">42</td><td class="n">50</td><td class="n">84.0%</td><td class="n">1.0</td><td>ชื่อบริษัท</td></tr>
+        <tr><td>เนเชอรัล</td><td class="n">36</td><td class="n">575</td><td class="n">6.3%</td><td class="n">1.5</td><td>ชื่อบริษัท</td></tr>
+        <tr><td>natural energy tech co. ltd</td><td class="n">30</td><td class="n">46</td><td class="n">65.2%</td><td class="n">1.1</td><td>ชื่อบริษัท</td></tr>
+        <tr><td>net</td><td class="n">26</td><td class="n">2,891</td><td class="n">0.9%</td><td class="n">6.3</td><td>คำกว้าง</td></tr>
+        <tr><td>เนเชอรัล เอ็นเนอร์ยี เทค จำกัด</td><td class="n">25</td><td class="n">42</td><td class="n">59.5%</td><td class="n">1.1</td><td>ชื่อบริษัท</td></tr>
+        <tr><td>cp safety passport</td><td class="n">17</td><td class="n">288</td><td class="n">5.9%</td><td class="n">2.1</td><td>หลักสูตร</td></tr>
+        <tr><td>ผู้ปฏิบัติงานสถานที่ใช้ก๊าซธรรมชาติ</td><td class="n">17</td><td class="n">40</td><td class="n">42.5%</td><td class="n">1.0</td><td>หลักสูตร</td></tr>
+        <tr><td>อบรมช่างไฟฟ้าภายในอาคาร ระดับ 1</td><td class="n">14</td><td class="n">251</td><td class="n">5.6%</td><td class="n">3.4</td><td>หลักสูตร</td></tr>
+        <tr><td>ผู้ปฏิบัติงานสถานที่ใช้ก๊าซปิโตรเลียมเหลว</td><td class="n">11</td><td class="n">34</td><td class="n">32.4%</td><td class="n">1.1</td><td>หลักสูตร</td></tr>
+        <tr><td>อบรมดับเพลิงขั้นต้น ฟรี 2569</td><td class="n">10</td><td class="n">55</td><td class="n">18.2%</td><td class="n">5.7</td><td>หลักสูตร</td></tr>
+        <tr><td>cp safety passport มีกี่หลักสูตร</td><td class="n">10</td><td class="n">31</td><td class="n">32.3%</td><td class="n">1.3</td><td>คำถาม</td></tr>
+        <tr><td>อบรม adr</td><td class="n">9</td><td class="n">80</td><td class="n">11.3%</td><td class="n">6.0</td><td>หลักสูตร</td></tr>
+        <tr><td>อบรมโลตัส</td><td class="n">7</td><td class="n">50</td><td class="n">14.0%</td><td class="n">8.0</td><td>ลูกค้า</td></tr>
+        <tr><td>หากเข้าปฏิบัติงานโดยไม่มีบัตร safety passport จะมีค่าปรับเท่าใด</td><td class="n">5</td><td class="n">40</td><td class="n">12.5%</td><td class="n">1.0</td><td>คำถาม</td></tr>
+      </tbody>
+    </table>
+    <div class="note-line">
+      <b>คำค้นชื่อบริษัทยังครองอันดับต้น</b> (139+42+36+30+25 = 272 คลิก) และเราอยู่อันดับ 1 แทบทุกคำ — ฐานคนที่รู้จักเราอยู่แล้วแข็งแรง ·
+      <b>สิ่งที่ควรจับตา:</b> คำว่า "net" ให้การแสดงผลถึง <b>2,891 ครั้ง</b> แต่ได้แค่ 26 คลิก (CTR 0.9%) — เป็นคำกว้างที่ไม่ได้หมายถึงเรา จึงเป็นตัวถ่วง CTR รวมของทั้งเว็บ ·
+      <b>โอกาส:</b> เริ่มมีคำค้นแบบ<b>คำถาม</b>เข้ามา ("cp safety passport มีกี่หลักสูตร", "ไม่มีบัตร safety passport ปรับเท่าไร") และเราติดอันดับ 1 — เป็นกลุ่มที่ AI อย่าง ChatGPT ดึงไปตอบได้ง่าย
+    </div>
+
+    <!-- 7.5 DEVICE + COUNTRY -->
+    <div class="sub-h">7.5 อุปกรณ์ และ ประเทศ</div>
+    <div class="two-col">
+      <table class="data" style="margin-top:0">
+        <thead><tr><th style="width:34%">อุปกรณ์</th><th>คลิก</th><th>แสดงผล</th><th>CTR</th><th>อันดับ</th></tr></thead>
+        <tbody>
+          <tr><td>🖥️ Desktop</td><td class="n">1,490</td><td class="n">14,505</td><td class="n">10.3%</td><td class="n">9.0</td></tr>
+          <tr><td>📱 Mobile</td><td class="n">719</td><td class="n">12,053</td><td class="n">6.0%</td><td class="n">5.9</td></tr>
+          <tr><td>📲 Tablet</td><td class="n">22</td><td class="n">455</td><td class="n">4.8%</td><td class="n">11.8</td></tr>
+        </tbody>
+        <tfoot><tr><td>รวม</td><td>2,231</td><td>27,013</td><td>8.26%</td><td>7.65</td></tr></tfoot>
+      </table>
+      <table class="data" style="margin-top:0">
+        <thead><tr><th style="width:34%">ประเทศ</th><th>คลิก</th><th>แสดงผล</th><th>CTR</th><th>อันดับ</th></tr></thead>
+        <tbody>
+          <tr><td>🇹🇭 ไทย</td><td class="n">2,201</td><td class="n">25,279</td><td class="n">8.7%</td><td class="n">7.3</td></tr>
+          <tr><td>🇺🇸 สหรัฐอเมริกา</td><td class="n">0</td><td class="n">363</td><td class="n">0%</td><td class="n">8.8</td></tr>
+          <tr><td>🇯🇵 ญี่ปุ่น</td><td class="n">4</td><td class="n">352</td><td class="n">1.1%</td><td class="n">8.2</td></tr>
+          <tr><td>🇸🇬 สิงคโปร์</td><td class="n">8</td><td class="n">122</td><td class="n">6.6%</td><td class="n">6.1</td></tr>
+          <tr><td>อื่น ๆ (77 ประเทศ)</td><td class="n">18</td><td class="n">897</td><td class="n">2.0%</td><td class="n">—</td></tr>
+        </tbody>
+        <tfoot><tr><td>ต่างประเทศรวม (81)</td><td>30</td><td>1,734</td><td>1.73%</td><td>—</td></tr></tfoot>
+      </table>
+    </div>
+    <div class="note-line">
+      <b>Desktop</b> ได้คลิก 67% ที่ CTR 10.3% ขณะที่ <b>Mobile</b> อยู่อันดับดีกว่า (5.9 vs 9.0) แต่ CTR แค่ 6.0% —
+      มือถือเห็นเราสูงกว่าแต่กดน้อยกว่า เป็นจุดที่ปรับหัวข้อ/คำอธิบายในผลค้นหาให้สั้นลงน่าจะช่วยได้ ·
+      <b>ต่างประเทศ:</b> ปรากฏใน <b>81 ประเทศ</b> รวม 1,734 การแสดงผล แต่ได้แค่ 30 คลิก (CTR 1.7%) —
+      สหรัฐฯ เห็นเรา 363 ครั้งโดยไม่คลิกเลย ญี่ปุ่น 352 ครั้งคลิก 4 · เว็บ 4 ภาษาทำให้เราเริ่ม<b>ปรากฏ</b>ในตลาดต่างประเทศแล้ว
+      แต่ยังไม่ถึงขั้นได้ทราฟฟิกจริง ต้องใช้เวลาสะสมอันดับต่ออีกหลายรอบ
     </div>
   </section>
 
@@ -519,7 +727,7 @@
         </div>
         <div class="note">📅 <b>30 วันล่าสุด (11 ก.ค. – 10 ส.ค. 2026)</b> · นับทุกช่องทาง (ไม่ใช่แค่ Google) · ยอดรวมลดลง 13% จากรอบก่อน (47,429) เพราะช่วงปลาย ก.ค. เงียบผิดปกติ แต่ <b>8 วันล่าสุดกลับมาเฉลี่ย ~1,875 ครั้ง/วัน</b> สูงกว่าค่าเฉลี่ยรอบก่อน · <b>หน้ายอดนิยม:</b> /courses 6,373 · หน้าแรก 5,901 · CP ผู้รับเหมา 1,622 · AIS ผู้รับเหมา 1,461</div>
       </div>
-      <div class="seo-os">
+      <div class="seo-os med">
         <h4>ช่องทางที่นำผู้ใช้เข้ามา (External)</h4>
         <div class="row"><span class="nm">🔍 Google</span><div class="bar"><div class="fill" style="width:100%"></div></div><span class="pct">9,001</span></div>
         <div class="row"><span class="nm">🔎 Bing</span><div class="bar"><div class="fill" style="width:5%"></div></div><span class="pct">402</span></div>
