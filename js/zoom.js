@@ -4,7 +4,7 @@
 
 (function () {
   // องค์ประกอบที่ "โฟกัสได้" — การ์ดสรุป/แผงข้อมูล (ไม่รวมการ์ดที่มี action อยู่แล้ว เช่น system tile, agenda)
-  var SEL = '.stat-card, .ben-card, .tl-card, .phone-feature, .seoperf-stat, .seoperf-card, [data-zoomable]';
+  var SEL = '.kpi, .hl-row, .mini-row, .tl-card, .seoperf-stat, .seoperf-card, [data-zoomable]';
 
   var overlay, stage;
 
@@ -18,7 +18,7 @@
     overlay = document.createElement('div');
     overlay.className = 'zoom-overlay';
     overlay.innerHTML = '<div class="zoom-stage"></div>' +
-      '<div class="zoom-hint">🔍 คลิกที่ใดก็ได้ หรือกด <b>Esc</b> เพื่อปิด</div>';
+      '<div class="zoom-hint">คลิกที่ใดก็ได้ หรือกด <b>Esc</b> เพื่อปิด</div>';
     document.body.appendChild(overlay);
     stage = overlay.querySelector('.zoom-stage');
     overlay.addEventListener('click', close);
@@ -56,6 +56,9 @@
     var clone = el.cloneNode(true);
     clone.classList.remove('zoomable');
     clone.removeAttribute('data-zoomable');
+    // การ์ดที่มีระบบ reveal จะ opacity:0 นอกสไลด์ active — ถอดออกจากสำเนาที่ขยาย
+    clone.removeAttribute('data-reveal');
+    clone.querySelectorAll('[data-reveal]').forEach(function (c) { c.removeAttribute('data-reveal'); });
 
     // รูปภาพ: แสดงเต็มภาพ (ไม่ crop) พอดีจอ — ไม่ใช้ transform scale
     if (el.tagName === 'IMG') {

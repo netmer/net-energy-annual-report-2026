@@ -1,10 +1,13 @@
-# NET Energy · Progress Report (พ.ค. – มิ.ย. 2026)
+# NET Energy · Progress Report (ก.ค. – ส.ค. 2026)
 
-รายงานผลการปฏิบัติงานรอบ **1 พ.ค. – 6 มิ.ย. 2026** (5 สัปดาห์) ของบริษัท เนเชอรัล เอ็นเนอร์ยี เทค จำกัด
+รายงานผลการปฏิบัติงานรอบ **11 ก.ค. – 10 ส.ค. 2026** (5 สัปดาห์) ของบริษัท เนเชอรัล เอ็นเนอร์ยี เทค จำกัด
 
-สรุปไฮไลต์ของรอบนี้: เปิด **ระบบใหม่ 2 ระบบ** (Online Inspector — True, Elmer Wastewater — Lotus/AXONS),
-นำ **NETMER-Flow** เข้าสู่ Apple App Store พร้อมเชื่อมเครื่องสแกนลายนิ้วมือ (Biometric),
-และยกระดับระบบหลักครั้งใหญ่ — รวมกว่า **285 commits** ใน 9 โปรเจกต์ (8 ระบบ + สื่อการสอน LPG)
+สรุปไฮไลต์ของรอบนี้: เป็นรอบ **ลงลึกเพื่อความน่าเชื่อถือของข้อมูล** ไม่ใช่รอบเปิดของใหม่ —
+งานกว่า **76% ลงที่ CP Safety Passport**: ยกเครื่องให้เก็บ **เลขบัตรประชาชนแบบย้อนกลับไม่ได้ (PDPA)**
+และ **กู้ผู้อบรม 1,164 คน** ที่หายไปจากหน้าตรวจสอบบัตรกลับมา ·
+**NETMER-Flow** เปลี่ยนมาบังคับสิทธิ์การเข้าถึงจริง + เปิดศูนย์แจ้งปัญหา + รื้อรายงานผลการปฏิบัติงาน ·
+**เว็บไซต์หลัก** รื้อผู้ช่วย AI "โอบอ้อม" + แก้ฐานความรู้กฎหมาย 68 จุด —
+รวม **108 commits** ใน 5 โปรเจกต์
 
 🌐 **Live demo:** เปิด `index.html` ในเบราว์เซอร์ (หรือ deploy ผ่าน GitHub Pages)
 
@@ -14,15 +17,15 @@
 
 1. **Title** — ปกหน้า
 2. **Agenda** — สารบัญหัวข้อนำเสนอ (7 หัวข้อ)
-3. **Executive Highlights** — ภาพรวมความสำเร็จ 5 สัปดาห์ (285 commits · 2 ระบบใหม่ · App Store)
-4. **Systems Overview** — 8 ระบบ + สื่อการสอน LPG (Interactive · คลิกดูรายละเอียด)
+3. **ภาพรวมรอบนี้** — สรุป 5 สัปดาห์ (108 การพัฒนา · กู้ 1,164 คน · Impressions 27,013 · 9 ระบบ)
+4. **Systems Overview** — 10 ระบบ + สื่อการสอน LPG (Interactive · คลิกดูรายละเอียด · เรียงตามปริมาณงานรอบนี้)
 5. **System Integration** — การเชื่อมต่อระหว่างระบบ (Interactive · Sync 2 ทาง + LINE)
-6. **ระบบใหม่ประจำรอบนี้** — Online Inspector (True) + Elmer Wastewater (Lotus/AXONS)
-7. **NETMER-Flow** — Biometric (ZKTeco) + Apple App Store
-8. **ERP Highlights** — LINE Brief · ทีมวิทยากรหลายคน · AI · ค้นหา 2 ชั้น · CDN
-9. **SEO & AI Search** — ผลลัพธ์จริงจาก Google Search Console (1,954 clicks / 16,389 impr / 11.9% CTR)
-10. **Website Traffic** — ยอดเข้าใช้เว็บจริงทุกช่องทาง (first-party · 65,000+ page views)
-11. **Timeline** — ลำดับเหตุการณ์สำคัญรายสัปดาห์
+6. **งานใหญ่รอบนี้** — CP Safety Passport: PDPA เลขบัตรประชาชน + กู้ข้อมูลผู้อบรม
+7. **NETMER-Flow** — คุมสิทธิ์เข้าถึงจริง · ศูนย์แจ้งปัญหา · ตรวจรถประจำรอบ · รายงานผลงานใหม่
+8. **เว็บไซต์ + ผู้ช่วย AI** — โอบอ้อม (3/71 → แก้ครบ) · กฎหมาย 68 จุด · เว็บโหลดไวขึ้น · Inspector OFI
+9. **SEO & AI Search** — Google Search Console จริง 12 ก.ค.–8 ส.ค. (Clicks 2,231 · Impr 27,013 +31%/วัน · CTR 8.3% · Pos 7.7)
+10. **Website Traffic** — first-party 30 วัน (Page Views 41,244 · ผู้ใช้ล็อกอิน 219 · เริ่มมีคนมาจาก ChatGPT)
+11. **Timeline** — ลำดับเหตุการณ์สำคัญรายสัปดาห์ (11 ก.ค. – 10 ส.ค.)
 12. **Thank You** — Q&A
 
 นอกจากนี้มี `report.html` — รายงานสรุปแบบ A4 พิมพ์/บันทึก PDF ได้ (กดปุ่ม Print)
@@ -33,6 +36,8 @@
 ดับเบิลคลิก `index.html` หรือเปิดผ่าน Live Server · สำหรับเอกสารพิมพ์เปิด `report.html`
 
 💡 **ขยายเพื่อโฟกัส:** คลิกที่การ์ด/แผงข้อมูลที่มีเส้นกรอบไฮไลต์ตอน hover เพื่อขยายใหญ่กลางจอ (คลิกที่ใดก็ได้หรือกด Esc เพื่อปิด)
+
+🔗 **Deep-link:** เปิดสไลด์ที่ต้องการได้เลยด้วย hash เช่น `index.html#5` (URL อัปเดตตามสไลด์ที่ดูอยู่)
 
 ### Keyboard Shortcuts
 | Key | Action |
@@ -51,14 +56,15 @@ Present-NET-Report/
 ├── index.html              · สไลด์นำเสนอ (12 สไลด์)
 ├── report.html             · รายงานสรุป A4 (พิมพ์/PDF)
 ├── css/
-│   ├── base.css           · Reset, variables, animations
+│   ├── base.css           · Variables, พื้นหลัง aurora + grid, ระบบ reveal animation
 │   ├── ui.css             · Topbar, menu, modal
 │   ├── slides.css         · Slide-specific styles
 │   └── flow.css           · Interactive flow diagram
 ├── js/
-│   ├── data.js            · ข้อมูล 9 รายการ (8 ระบบ + สื่อ LPG) + flow nodes
+│   ├── icons.js           · ไลบรารีไอคอน SVG (สไตล์ lucide) แทน emoji ทั้งงาน
+│   ├── data.js            · ข้อมูล 11 รายการ (10 ระบบ + สื่อ LPG) + flow nodes
 │   ├── flow.js            · Interactive flow logic
-│   ├── app.js             · Slide navigation, modal, menu
+│   ├── app.js             · Slide navigation, count-up, hash deep-link, modal, menu
 │   └── zoom.js            · คลิกการ์ดเพื่อขยาย (focus zoom)
 └── assets/
     ├── icons/             · App icons
@@ -67,13 +73,26 @@ Present-NET-Report/
 
 ## หมายเหตุข้อมูล
 
-- ตัวเลข **285 commits** มาจาก git history (1 พ.ค. – 6 มิ.ย. 2026) ของ 9 repos (8 ระบบ + lpg-training)
-- สไลด์ SEO แสดง **ขอบเขตงานที่ครอบคลุม** (Technical / On-page / Schema / AI Citation) — ตัวเลขผล (Clicks / Impressions / อันดับ) ควรดึงสดจาก Search Console ก่อนนำเสนอจริง
+- ตัวเลข **108 commits** มาจาก git history จริง (11 ก.ค. – 10 ส.ค. 2026) ของ 5 repos ที่มีการพัฒนาในรอบนี้ —
+  CP Passport 82 · NET-workspace 11 · NETMER-Flow 9 · online-inspector 4 · kyt-motto 2
+  (repo ที่ไม่มี commit ในรอบนี้: line-csat, NET - Document Flow, NET-Safety-Hero, elmer-water-analysis,
+  elmer-wastewater, NET-workspace-chat-mobile — ระบุไว้ในสไลด์/รายงานว่า "เดินระบบตามปกติ")
+- **SEO**: Google Search Console export `netenergy-tech.com-Performance-on-Search-2026-08-10`
+  (ช่วง 12 ก.ค. – 8 ส.ค. 2026 · 28 วัน) เทียบกับ export รอบก่อน (8 มิ.ย. – 8 ก.ค. · 31 วัน)
+  — เพราะช่วงไม่เท่ากัน จึงเทียบด้วย **ค่าเฉลี่ยต่อวัน** ในสไลด์
+- **Website Traffic**: ดึงจาก `analyticsEvents` ของ NET-workspace โดยตรง (ตรรกะเดียวกับหน้า `/admin/analytics`)
+  ช่วง 11 ก.ค. – 10 ส.ค. 2026 · 30 วัน
+- ภาพหน้าจอที่ใช้ในสไลด์รอบนี้เป็นภาพเดิมจากรอบก่อน: `fleet-inspection.jpg` (ตรวจเช็ครถ),
+  `training-chat.png` (ผู้ช่วย AI โอบอ้อม) — งานหลักรอบนี้เป็นงานเบื้องหลัง (ข้อมูล/ความปลอดภัย)
+  จึงนำเสนอด้วยตัวเลขและตาราง ก่อน/หลัง แทนภาพหน้าจอ
 
-## เทคโนโลยี
+## เทคโนโลยี & ดีไซน์
 
 - HTML5 + CSS3 + Vanilla JavaScript (ไม่ใช้ Framework)
-- SVG animations สำหรับ Flow Diagram
+- ธีมมืดโทน aurora · ฟอนต์ IBM Plex Sans Thai + Space Grotesk (ตัวเลข/หัวข้ออังกฤษ)
+- ไอคอน SVG เส้น (สไตล์ lucide) ทั้งงาน — ไม่ใช้ emoji
+- แอนิเมชัน: reveal ทีละชิ้นเมื่อเข้าสไลด์ · ตัวเลข KPI นับขึ้น (count-up) · SVG animations ใน Flow Diagram · รองรับ prefers-reduced-motion
+- ขนาดตัวอักษรขั้นต่ำ ~13px (เนื้อหาหลัก 15–17px) เพื่อให้อ่านชัดตอน present
 - Responsive · Print-friendly
 
 ---

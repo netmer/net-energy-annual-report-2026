@@ -1,34 +1,40 @@
-// ========== APP: SLIDES · NAVIGATION · MENU · MODAL ==========
+// ========== APP: SLIDES · NAVIGATION · MENU · MODAL · COUNT-UP ==========
 
 (function(){
+  const ic = (name, cls) => (window.NetIcons ? NetIcons.svg(name, cls) : '');
+
+  // โหมดนิ่งสำหรับ export/screenshot: index.html?static=1#N
+  if (/[?&]static\b/.test(location.search)) document.documentElement.classList.add('no-anim');
+
   // ----- RENDER SYSTEM TILES -----
   const sysGrid = document.getElementById('sys-grid');
   if (sysGrid) {
-    SYSTEMS.forEach(s => {
+    SYSTEMS.forEach((s, i) => {
       const tile = document.createElement('div');
       tile.className = 'sys-tile';
-      tile.style.cssText = `--accent:${s.accent};--accent2:${s.accent2}`;
+      tile.style.cssText = `--accent:${s.accent};--accent2:${s.accent2};--d:${(i * 0.04).toFixed(2)}s`;
       tile.dataset.sys = s.id;
+      tile.setAttribute('data-reveal', '');
 
       let shotHTML = '';
       if (s.shot) {
-        shotHTML = `<img src="${s.shot}" alt="${s.name}" style="${s.shotPortrait ? 'width:auto;height:96%' : ''}"/>`;
+        shotHTML = `<img src="${s.shot}" alt="${s.name}" loading="lazy"/>`;
       } else if (s.iconLarge && s.icon) {
-        shotHTML = `<div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:120px;height:120px;background:#fff;border-radius:18px;display:flex;align-items:center;justify-content:center;padding:14px;box-shadow:0 12px 30px rgba(0,0,0,.3)"><img src="${s.icon}" style="width:100%;height:100%;object-fit:contain"/></div>`;
-      } else if (s.iconEmoji) {
-        shotHTML = `<div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:90px;height:90px;background:linear-gradient(135deg,${s.accent},${s.accent2});border-radius:22px;display:flex;align-items:center;justify-content:center;font-size:46px;box-shadow:0 20px 40px rgba(0,0,0,.4)">${s.iconEmoji}</div>`;
+        shotHTML = `<div class="sys-tile-bigicon white"><img src="${s.icon}" alt=""/></div>`;
+      } else if (s.iconName) {
+        shotHTML = `<div class="sys-tile-bigicon">${ic(s.iconName)}</div>`;
       }
 
       tile.innerHTML = `
         <div class="sys-tile-shot">
           ${shotHTML}
-          ${s.icon && !s.iconLarge ? `<div class="sys-tile-icon"><img src="${s.icon}" alt="ic"/></div>` : ''}
+          ${s.icon && !s.iconLarge ? `<div class="sys-tile-icon"><img src="${s.icon}" alt=""/></div>` : ''}
           <div class="sys-tile-status ${s.status}">${s.statusLabel}</div>
         </div>
         <div class="sys-tile-body">
           <div class="sys-tile-name">${s.name}</div>
           <div class="sys-tile-tag">${s.tag}</div>
-          <div class="sys-tile-cta">ดูรายละเอียด →</div>
+          <div class="sys-tile-cta">ดูรายละเอียด <span>${ic('arrow-right')}</span></div>
         </div>
       `;
       tile.addEventListener('click', () => openSystemModal(s));
@@ -45,14 +51,14 @@
   function openSystemModal(s){
     let heroHTML = `<div class="modal-status ${s.status}">${s.statusLabel}</div>`;
     if (s.shot) {
-      heroHTML += `<img class="shot" src="${s.shot}" alt="${s.name}" style="${s.shotPortrait ? 'width:auto;height:96%' : ''}"/>`;
-    } else if (s.iconEmoji) {
-      heroHTML += `<div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:120px;height:120px;background:linear-gradient(135deg,${s.accent},${s.accent2});border-radius:30px;display:flex;align-items:center;justify-content:center;font-size:64px;box-shadow:0 20px 50px rgba(0,0,0,.4)">${s.iconEmoji}</div>`;
+      heroHTML += `<img class="shot" src="${s.shot}" alt="${s.name}"/>`;
+    } else if (s.iconName) {
+      heroHTML += `<div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:120px;height:120px;background:linear-gradient(135deg,${s.accent},${s.accent2});border-radius:30px;display:flex;align-items:center;justify-content:center;font-size:60px;color:#fff;box-shadow:0 20px 50px rgba(0,0,0,.4)">${ic(s.iconName)}</div>`;
     } else if (s.iconLarge && s.icon) {
       heroHTML += `<div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:160px;height:160px;background:#fff;border-radius:24px;padding:20px;box-shadow:0 20px 50px rgba(0,0,0,.4)"><img src="${s.icon}" style="width:100%;height:100%;object-fit:contain"/></div>`;
     }
     if (s.icon && !s.iconLarge) {
-      heroHTML += `<div class="modal-icon"><img src="${s.icon}" alt="ic"/></div>`;
+      heroHTML += `<div class="modal-icon"><img src="${s.icon}" alt=""/></div>`;
     }
     modalHero.innerHTML = heroHTML;
     modalHero.style.cssText = `--accent:${s.accent};--accent2:${s.accent2}`;
@@ -64,12 +70,12 @@
       <div class="modal-section">
         <h5>ความสามารถทั้งหมด · ${s.feats.length} ฟีเจอร์</h5>
         <div class="modal-feats">
-          ${s.feats.map(([ic,t]) => `<div class="f"><span class="ic">${ic}</span><span>${t}</span></div>`).join('')}
+          ${s.feats.map(([icon,t]) => `<div class="f"><span data-icon>${ic(icon)}</span><span>${t}</span></div>`).join('')}
         </div>
       </div>
       <div class="modal-foot">
-        <div>👥 <b>${s.audience}</b></div>
-        <div>🌐 <b>${s.platform}</b></div>
+        <div><span data-icon>${ic('users')}</span> <b>${s.audience}</b></div>
+        <div><span data-icon>${ic('globe')}</span> <b>${s.platform}</b></div>
       </div>
     `;
     modalBg.classList.add('show');
@@ -101,13 +107,45 @@
     item.innerHTML = `
       <div class="num">${i+1}</div>
       <div style="flex:1; min-width:0">
-        <div class="ti"><span class="ic" style="margin-right:6px">${s.dataset.icon||''}</span>${s.dataset.title}</div>
+        <div class="ti"><span data-icon>${ic(s.dataset.navIcon || 'chevron-right')}</span>${s.dataset.title}</div>
         <div class="ds">${s.dataset.desc||''}</div>
       </div>
     `;
     item.addEventListener('click', () => { goTo(i); closeMenu(); });
     menuList.appendChild(item);
   });
+
+  // ----- COUNT-UP · ตัวเลขวิ่งเมื่อเข้าสไลด์ -----
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    || document.documentElement.classList.contains('no-anim');
+  function runCountUps(slide){
+    slide.querySelectorAll('[data-count]').forEach(el => {
+      const target = parseFloat(el.dataset.count);
+      if (isNaN(target)) return;
+      const useComma = el.hasAttribute('data-count-comma');
+      const fmt = v => useComma ? Math.round(v).toLocaleString('en-US') : String(Math.round(v));
+      if (reduceMotion) { el.textContent = fmt(target); return; }
+      const dur = 1100;
+      const t0 = performance.now();
+      if (el._countRaf) cancelAnimationFrame(el._countRaf);
+      const tick = (now) => {
+        const p = Math.min(1, (now - t0) / dur);
+        const eased = 1 - Math.pow(1 - p, 3); // easeOutCubic
+        el.textContent = fmt(target * eased);
+        if (p < 1) el._countRaf = requestAnimationFrame(tick);
+      };
+      el._countRaf = requestAnimationFrame(tick);
+    });
+  }
+
+  // ----- RESTART BAR FILLS (กราฟแท่งวิ่งใหม่ทุกครั้งที่เข้าสไลด์) -----
+  function restartBars(slide){
+    slide.querySelectorAll('.dev-row .fill').forEach(b => {
+      b.style.animation = 'none';
+      void b.offsetWidth; // force reflow
+      b.style.animation = '';
+    });
+  }
 
   function goTo(idx){
     if (idx < 0 || idx >= total) return;
@@ -127,15 +165,16 @@
     document.getElementById('prev-btn').disabled = (cur === 0);
     document.getElementById('next-btn').disabled = (cur === total - 1);
 
-    // SEO bar fill
-    if (slides[cur].id === 'seo' || slides[cur].querySelector('.seo-bar')) {
-      slides[cur].querySelectorAll('.seo-bar .fill').forEach(b => {
-        b.style.width = '0';
-        setTimeout(() => { b.style.transition = 'width 1.5s ease-out'; b.style.width = b.dataset.w + '%' }, 100);
-      });
-    }
+    // deep-link (#3 = สไลด์ 3) — ไม่ push history ซ้ำ
+    try { history.replaceState(null, '', '#' + (cur + 1)); } catch(e){}
+
+    runCountUps(slides[cur]);
+    restartBars(slides[cur]);
   }
-  goTo(0);
+
+  // เปิดตาม hash ถ้ามี (เช่น index.html#5)
+  const hashIdx = parseInt((location.hash || '').replace('#','')) - 1;
+  goTo(!isNaN(hashIdx) && hashIdx >= 0 && hashIdx < total ? hashIdx : 0);
 
   document.getElementById('prev-btn').addEventListener('click', () => goTo(cur - 1));
   document.getElementById('next-btn').addEventListener('click', () => goTo(cur + 1));
@@ -195,7 +234,7 @@
   document.addEventListener('wheel', (e) => {
     if (modalBg.classList.contains('show')) return;
     if (document.getElementById('flow-stage')?.classList.contains('fullscreen')) return;
-    if (e.target.closest('.flow-side, .timeline, .modal-body, .sys-tile-body')) return;
+    if (e.target.closest('.flow-side, .timeline, .modal-body, .sys-tile-body, .kw-list')) return;
     if (Math.abs(e.deltaY) < 30) return;
     if (wheelLock) return;
     wheelLock = true;

@@ -1,77 +1,124 @@
 /* ========== BASE / RESET / VARIABLES ========== */
 :root{
-  --bg:#050818;
-  --bg-2:#0a0f2e;
-  --card:#121a3a;
-  --card-hi:#1a2452;
-  --line:#2a3470;
-  --line-2:#3b478f;
-  --text:#eef1ff;
-  --text-soft:#aab2dc;
-  --muted:#7a82b3;
+  --bg:#05070f;
+  --bg-2:#0a0e22;
+  --card:#0f1531;
+  --card-hi:#171e42;
+  --glass:rgba(255,255,255,.045);
+  --line:#262f5f;
+  --line-2:#3a4590;
+  --text:#f2f5ff;
+  --text-soft:#b7c0ea;
+  --muted:#8b93c4;
   --b1:#5e9eff;
   --b2:#9b6eff;
   --b3:#3ee0c1;
   --b4:#ff7ab8;
   --b5:#ffb547;
   --b6:#5fdc9a;
+  --font-display:'Space Grotesk','Inter',sans-serif;
+  --font-body:'IBM Plex Sans Thai','Inter',system-ui,sans-serif;
+  --ease:cubic-bezier(.22,.8,.26,.99);
+  --shadow-card:0 20px 44px -18px rgba(0,0,0,.55);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{
   height:100vh; width:100vw;
   overflow:hidden;
-  font-family:'IBM Plex Sans Thai','Inter',system-ui,sans-serif;
+  font-family:var(--font-body);
   background:var(--bg); color:var(--text);
   -webkit-font-smoothing:antialiased;
   user-select:none;
 }
 
-/* GLOBAL BG */
+/* ===== GLOBAL BACKGROUND · aurora + grid ===== */
 body::before{
-  content:""; position:fixed; inset:0; z-index:-2;
+  content:""; position:fixed; inset:-25%; z-index:-2;
   background:
-    radial-gradient(900px 700px at 80% 10%, rgba(155,110,255,.18), transparent 60%),
-    radial-gradient(800px 600px at 10% 90%, rgba(94,158,255,.16), transparent 60%),
-    radial-gradient(700px 500px at 50% 50%, rgba(62,224,193,.06), transparent 60%);
+    radial-gradient(46% 42% at 78% 16%, rgba(155,110,255,.26), transparent 65%),
+    radial-gradient(42% 40% at 14% 82%, rgba(94,158,255,.24), transparent 65%),
+    radial-gradient(34% 34% at 56% 52%, rgba(62,224,193,.11), transparent 65%),
+    radial-gradient(30% 30% at 88% 78%, rgba(255,122,184,.10), transparent 65%);
+  filter:blur(6px);
+  animation: aurora 26s ease-in-out infinite alternate;
 }
 body::after{
   content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
   background-image:
-    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,.5), transparent),
-    radial-gradient(1px 1px at 70% 50%, rgba(255,255,255,.4), transparent),
-    radial-gradient(1px 1px at 40% 80%, rgba(255,255,255,.6), transparent),
-    radial-gradient(2px 2px at 85% 75%, rgba(62,224,193,.4), transparent),
-    radial-gradient(2px 2px at 15% 65%, rgba(155,110,255,.4), transparent);
-  background-size: 200px 200px, 250px 250px, 300px 300px, 400px 400px, 350px 350px;
-  animation: drift 80s linear infinite;
-  opacity:.6;
+    linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
+  background-size:64px 64px;
+  -webkit-mask-image:radial-gradient(ellipse 90% 75% at 50% 42%, #000 0%, transparent 82%);
+  mask-image:radial-gradient(ellipse 90% 75% at 50% 42%, #000 0%, transparent 82%);
 }
-@keyframes drift{from{transform:translate(0,0)} to{transform:translate(-200px,-200px)}}
+@keyframes aurora{
+  0%  {transform:translate(0,0) rotate(0deg) scale(1)}
+  50% {transform:translate(2.5%,-2%) rotate(2.5deg) scale(1.06)}
+  100%{transform:translate(-2%,2.5%) rotate(-2deg) scale(1.03)}
+}
 
-/* DECK */
+/* ===== DECK / SLIDES ===== */
 .deck{position:fixed; inset:0; overflow:hidden}
 .slide{
   position:absolute; inset:0;
   display:flex; align-items:center; justify-content:center;
-  padding: 60px 80px 100px;
+  padding: 64px 84px 104px;
   opacity:0; pointer-events:none;
-  transform: translateX(40px);
-  transition: opacity .6s ease, transform .7s cubic-bezier(.2,.8,.2,1);
+  transform: translateX(56px) scale(.985);
+  transition: opacity .55s ease, transform .65s var(--ease);
   overflow:hidden;
 }
 .slide.active{opacity:1; pointer-events:auto; transform:none}
-.slide.prev{transform:translateX(-40px)}
+.slide.prev{transform:translateX(-56px) scale(.985)}
 .slide-inner{
-  width:100%; max-width:1400px; max-height:calc(100vh - 160px);
+  width:100%; max-width:1400px; max-height:calc(100vh - 168px);
 }
 
+/* ===== REVEAL SYSTEM · องค์ประกอบทยอยโผล่ทีละชิ้นเมื่อเข้าสไลด์ ===== */
+[data-reveal]{opacity:0}
+.slide.active [data-reveal]{
+  animation: reveal .75s var(--ease) both;
+  animation-delay: var(--d, 0s);
+}
+@keyframes reveal{
+  from{opacity:0; transform:translateY(26px); filter:blur(5px)}
+  to  {opacity:1; transform:none; filter:blur(0)}
+}
+
+/* ===== SHARED KEYFRAMES ===== */
 @keyframes pulse{0%,100%{transform:scale(1); opacity:1} 50%{transform:scale(1.4); opacity:.5}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes slideUp{from{transform:translateY(40px); opacity:0}to{transform:none; opacity:1}}
 @keyframes gradMove{0%,100%{background-position:0% 50%} 50%{background-position:100% 50%}}
 @keyframes hintBob{0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)}}
 @keyframes pulseGlow{
-  0%,100%{box-shadow: 0 0 80px var(--b1), inset 0 0 40px rgba(255,255,255,.1)}
-  50%{box-shadow: 0 0 130px var(--b2), inset 0 0 60px rgba(255,255,255,.2)}
+  0%,100%{box-shadow: 0 0 70px -8px var(--b1), inset 0 0 40px rgba(255,255,255,.08)}
+  50%{box-shadow: 0 0 110px -6px var(--b2), inset 0 0 60px rgba(255,255,255,.16)}
 }
 @keyframes rotate{from{transform:rotate(0)} to{transform:rotate(360deg)}}
+@keyframes floaty{0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)}}
+@keyframes sheen{0%{background-position:200% 50%} 100%{background-position:-200% 50%}}
+
+/* ===== ICONS (lucide inline svg) ===== */
+[data-icon]{display:inline-flex; align-items:center; justify-content:center; line-height:1; flex-shrink:0}
+[data-icon] svg, svg.lucide{width:1em; height:1em; display:block}
+
+/* กล่องไอคอนไล่เฉดสี — ใช้ซ้ำทั้งงาน (คุมสีด้วย --accent / --accent2) */
+.itile{
+  display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  width:56px; height:56px; border-radius:17px; color:#fff; font-size:27px;
+  background:linear-gradient(135deg, var(--accent, var(--b1)), var(--accent2, var(--b2)));
+  box-shadow:0 10px 26px -9px var(--accent, var(--b1));
+}
+.itile.sm{width:46px; height:46px; border-radius:14px; font-size:22px}
+.itile.lg{width:66px; height:66px; border-radius:20px; font-size:32px}
+
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important}
+  [data-reveal]{opacity:1}
+}
+
+/* ===== STATIC MODE (?static=1) · ปิดแอนิเมชันทั้งหมด — ใช้ตอน export/screenshot ===== */
+html.no-anim *{animation:none !important; transition:none !important}
+html.no-anim [data-reveal]{opacity:1 !important}

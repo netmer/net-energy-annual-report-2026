@@ -2,6 +2,8 @@
 // Handles: node selection, side panel, fullscreen, mini cards
 
 (function(){
+  const ic = (name, cls) => (window.NetIcons ? NetIcons.svg(name, cls) : '');
+
   // Node-to-connection mapping (which paths/labels relate to each node)
   const NODE_RELATIONS = {
     docflow: ['path-doc-out', 'path-doc-in', 'lbl-doc'],
@@ -67,6 +69,8 @@
         toggleFullscreen();
       }
     });
+
+    renderEmptyPanel();
   }
 
   function selectNode(id){
@@ -103,10 +107,12 @@
   }
 
   function renderEmptyPanel(){
+    if (!sidePanel) sidePanel = document.getElementById('flow-side');
+    if (!sidePanel) return;
     sidePanel.innerHTML = `
       <div class="empty">
-        <div class="ico">👆</div>
-        <div class="ttl">Select a System</div>
+        <div class="ico">${ic('mouse-pointer-click')}</div>
+        <div class="ttl">เลือกดูระบบที่สนใจ</div>
         <div>คลิกที่กล่องระบบในแผนภาพ<br/>หรือเลือกจากการ์ดด้านล่าง<br/>เพื่อดูรายละเอียดการเชื่อมต่อ</div>
       </div>
     `;
@@ -116,22 +122,20 @@
     const data = FLOW_NODES[id];
     if (!data) return;
     const badges = [];
-    if (data.status === 'live') badges.push(`<span class="badge live">⚡ Live · Connected</span>`);
-    if (data.status === 'plan') badges.push(`<span class="badge plan">📋 Planned Integration</span>`);
+    if (data.status === 'live') badges.push(`<span class="badge live">Live · เชื่อมต่อแล้ว</span>`);
+    if (data.status === 'plan') badges.push(`<span class="badge plan">Planned Integration</span>`);
     if (data.dir) badges.push(`<span class="badge dir">${data.dir}</span>`);
 
     sidePanel.innerHTML = `
       <div class="head-card">
-        <div class="ic" style="--accent:${data.accent};--accent2:${data.accent2}">${data.icon}</div>
+        <div class="ic" style="--accent:${data.accent};--accent2:${data.accent2}">${ic(data.iconName)}</div>
         <div>
           <h4>${data.name}</h4>
           <div class="sub">${data.sub}</div>
         </div>
       </div>
       <div class="badge-row">${badges.join('')}</div>
-      <div style="font-size:13px; color:var(--text-soft); line-height:1.6; margin-bottom:14px">
-        ${data.desc}
-      </div>
+      <div class="desc">${data.desc}</div>
       ${data.rows.map(([lab,val]) => `
         <div class="row">
           <div class="lab">${lab}</div>
@@ -145,8 +149,9 @@
     stage.classList.toggle('fullscreen');
     const btn = document.getElementById('flow-fs');
     if (btn) {
-      btn.innerHTML = stage.classList.contains('fullscreen') ? '✕' : '⛶';
-      btn.title = stage.classList.contains('fullscreen') ? 'ปิดเต็มจอ (Esc)' : 'เต็มจอ';
+      const fs = stage.classList.contains('fullscreen');
+      btn.innerHTML = ic(fs ? 'x' : 'maximize');
+      btn.title = fs ? 'ปิดเต็มจอ (Esc)' : 'เต็มจอ';
     }
   }
 

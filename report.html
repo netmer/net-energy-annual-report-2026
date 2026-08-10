@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>รายงานสรุปผลการปฏิบัติงาน · พ.ค.–มิ.ย. 2026 | NET Energy</title>
+<title>รายงานสรุปผลการปฏิบัติงาน · ก.ค.–ส.ค. 2026 | NET Energy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -201,6 +201,7 @@
   .seo-os .row .bar{height:6px; background:#e2e8f0; border-radius:3px; overflow:hidden}
   .seo-os .row .bar .fill{height:100%; background:linear-gradient(90deg, var(--b1), var(--b3)); border-radius:3px}
   .seo-os .row .pct{text-align:right; font-family:'Inter'; font-weight:700; color:var(--b1)}
+  .seo-os.wide .row{grid-template-columns:160px 1fr 34px}
 
   /* PHONE BLOCK */
   .phone-block{
@@ -245,7 +246,7 @@
 <body>
 
 <div class="toolbar">
-  <div class="lbl">📄 <b>รายงานสรุปผลการปฏิบัติงาน</b> · 1 พ.ค. – 6 มิ.ย. 2026</div>
+  <div class="lbl">📄 <b>รายงานสรุปผลการปฏิบัติงาน</b> · 11 ก.ค. – 10 ส.ค. 2026</div>
   <div class="btns">
     <a href="index.html" class="btn">🎬 ดู Presentation แบบเต็ม</a>
     <button class="btn primary" onclick="window.print()">🖨️ Print / Save as PDF</button>
@@ -259,12 +260,12 @@
     <div class="left">
       <div class="brand"><span class="logo">🛡️</span> NET Energy · Progress Report 2026</div>
       <h1>รายงานสรุปผลการปฏิบัติงาน
-        <span class="sub">1 พฤษภาคม – 6 มิถุนายน 2026 · ฝ่าย IT &amp; Digital Development</span>
+        <span class="sub">11 กรกฎาคม – 10 สิงหาคม 2026 · ฝ่าย IT &amp; Digital Development</span>
       </h1>
     </div>
     <div class="right">
-      <b>เอกสาร v2.0</b>
-      จัดทำ 6 มิ.ย. 2026<br/>
+      <b>เอกสาร v4.0</b>
+      จัดทำ 10 ส.ค. 2026<br/>
       บริษัท เนเชอรัล เอ็นเนอร์ยี เทค จำกัด
     </div>
   </div>
@@ -273,12 +274,15 @@
   <section>
     <h2><span class="num">01</span> Executive Summary</h2>
     <div class="exec">
-      ในรอบ <b>5 สัปดาห์</b> (1 พ.ค. – 6 มิ.ย. 2026) ฝ่าย IT ส่งมอบงานพัฒนากว่า <b>285 commits</b> ใน <b>9 โปรเจกต์</b> (8 ระบบ + สื่อการสอน LPG) ·
-      ไฮไลต์สำคัญคือการเปิด <b>ระบบใหม่ 2 ระบบ</b> — <b>Online Inspector</b> (ตรวจความปลอดภัยให้ True)
-      และ <b>Elmer Wastewater</b> (งานน้ำเสีย Lotus/AXONS) จากศูนย์สู่ใช้งานได้ภายในไม่กี่วันพร้อมข้อมูลจริง ·
-      <b>NETMER-Flow</b> เชื่อมเครื่องสแกนลายนิ้วมือ ZKTeco จริง และนำแอป iOS เนทีฟเข้าสู่ Apple App Store (build VALID) ·
-      ระบบหลัก <b>NET Training Platform</b> เพิ่ม LINE Daily Brief, ทีมวิทยากรหลายคน, AI ตอบลูกค้า, ค้นหา 2 ชั้น และ SEO ครั้งใหญ่ ·
-      และ <b>ELMER Water Analysis</b> เปิดใช้งานจริง (Phase 1) ด้วยฐานสาขา Lotus กว่า 2,450 แห่ง
+      ในรอบ <b>5 สัปดาห์</b> (11 ก.ค. – 10 ส.ค. 2026) ฝ่าย IT ส่งมอบงานพัฒนา <b>108 commits</b> ใน <b>5 โปรเจกต์</b> ·
+      รอบนี้เป็นรอบ<b>ลงลึกเพื่อความน่าเชื่อถือของข้อมูล</b> ไม่ใช่รอบเปิดของใหม่ — งานกว่า <b>76% (82 commits) ลงที่ CP Safety Passport</b> ·
+      งานใหญ่ที่สุดคือการยกเครื่องให้ระบบเก็บ <b>เลขบัตรประชาชนแบบย้อนกลับไม่ได้ (PDPA)</b> — เก็บเพียง 10 หลักท้ายคู่กับรหัสเข้ารหัสทางเดียว
+      ผ่านการตรวจสอบ 4 รอบและมีเทสต์อัตโนมัติ ~665 รายการคุมไว้ ·
+      ควบคู่กับการแก้ปัญหาที่ลูกค้าแจ้งเข้ามาว่า "ค้นหาบัตรไม่เจอ" — พบผู้อบรม <b>1,364 คน</b> ที่มองไม่เห็นบนหน้าตรวจสอบบัตร
+      <b>กู้กลับมาได้ 1,164 คน</b> พร้อมล้างบัตรซ้ำ <b>1,112 ใบ</b> และเปลี่ยนวิธีค้นหาชื่อใหม่ทั้งหมด ·
+      <b>NETMER-Flow</b> เปลี่ยนจากการซ่อนเมนูมาเป็น<b>บังคับสิทธิ์การเข้าถึงจริง</b> พร้อมแก้บั๊ก 16 จุด, เปิด <b>ศูนย์แจ้งปัญหา</b> (IT/รถ/อาคาร)
+      และรื้อ <b>รายงานผลการปฏิบัติงาน</b> ให้วัดจากหลักฐานจริง ·
+      <b>เว็บไซต์หลัก</b> รื้อผู้ช่วย AI "โอบอ้อม" (เดิมตอบคำถามลูกค้าจริงถูกเพียง 3 จาก 71 ข้อ) และแก้ฐานความรู้กฎหมายความปลอดภัย <b>68 จุด</b>
     </div>
   </section>
 
@@ -286,16 +290,33 @@
   <section>
     <h2><span class="num">02</span> ตัวเลขสำคัญ</h2>
     <div class="kpi-row">
-      <div class="kpi" style="--accent:var(--b1)"><div class="lbl">การพัฒนา (commits)</div><div class="v">285</div><div class="ds">ใน 5 สัปดาห์ · 9 โปรเจกต์</div></div>
-      <div class="kpi" style="--accent:var(--b3)"><div class="lbl">ระบบใหม่</div><div class="v">2</div><div class="ds">True &amp; Lotus (Greenfield)</div></div>
-      <div class="kpi" style="--accent:var(--b6)"><div class="lbl">ระบบในพอร์ต</div><div class="v">8</div><div class="ds">Live / เสร็จแล้วทั้งหมด</div></div>
-      <div class="kpi" style="--accent:var(--b4)"><div class="lbl">เข้า App Store</div><div class="v">1</div><div class="ds">NETMER-Flow · build VALID</div></div>
+      <div class="kpi" style="--accent:var(--b1)"><div class="lbl">การพัฒนา (commits)</div><div class="v">108</div><div class="ds">ใน 5 สัปดาห์ · 5 โปรเจกต์</div></div>
+      <div class="kpi" style="--accent:var(--b5)"><div class="lbl">กู้กลับมาค้นเจอ</div><div class="v">1,164</div><div class="ds">คน · บนหน้าตรวจสอบบัตร CP</div></div>
+      <div class="kpi" style="--accent:var(--b2)"><div class="lbl">การมองเห็นบน Google</div><div class="v">27,013</div><div class="ds">+31% ต่อวันจากรอบก่อน</div></div>
+      <div class="kpi" style="--accent:var(--b6)"><div class="lbl">ระบบที่ใช้งานจริง</div><div class="v">9</div><div class="ds">เปิดใช้ทั้งหมด (+ พักไว้ 1)</div></div>
+    </div>
+  </section>
+
+  <!-- WORKLOAD SPLIT -->
+  <section>
+    <h2><span class="num">03</span> การกระจายงานพัฒนาในรอบนี้</h2>
+    <div class="seo-os wide">
+      <h4>108 commits · 11 ก.ค. – 10 ส.ค. 2026 (นับจาก git history จริง)</h4>
+      <div class="row"><span class="nm">CP Safety Passport</span><div class="bar"><div class="fill" style="width:100%"></div></div><span class="pct">82</span></div>
+      <div class="row"><span class="nm">NET-workspace (เว็บ+ERP)</span><div class="bar"><div class="fill" style="width:13%"></div></div><span class="pct">11</span></div>
+      <div class="row"><span class="nm">NETMER-Flow</span><div class="bar"><div class="fill" style="width:11%"></div></div><span class="pct">9</span></div>
+      <div class="row"><span class="nm">Online Inspector</span><div class="bar"><div class="fill" style="width:5%"></div></div><span class="pct">4</span></div>
+      <div class="row"><span class="nm">KYT MOTTO (ใหม่)</span><div class="bar"><div class="fill" style="width:2%"></div></div><span class="pct">2</span></div>
+      <div style="font-size:11px; color:var(--muted); margin-top:8px; padding-top:6px; border-top:1px dashed var(--line-2)">
+        ระบบที่<b>ไม่มีงานพัฒนาเพิ่ม</b>ในรอบนี้ (เดินระบบตามปกติ): LINE CSAT · Document Flow · ELMER Water · Elmer Wastewater · Safety Hero ·
+        ส่วนแอปแชตภายในพักงานพัฒนาไว้ชั่วคราวเพื่อทุ่มกำลังให้ CP Passport และเว็บไซต์หลัก
+      </div>
     </div>
   </section>
 
   <!-- SYSTEMS -->
   <section>
-    <h2><span class="num">03</span> พอร์ตงาน (8 ระบบ + สื่อการสอน)</h2>
+    <h2><span class="num">04</span> พอร์ตงาน (9 ใช้งานจริง + 1 พักไว้ + สื่อการสอน)</h2>
     <table class="sys">
       <thead>
         <tr>
@@ -307,52 +328,64 @@
       </thead>
       <tbody>
         <tr>
-          <td><span class="ic" style="--accent:var(--b1);--accent2:var(--b2)">🛡️</span><span class="nm">NET Training Platform</span><div class="desc">ระบบหลัก · ฝึกอบรมความปลอดภัยครบวงจร + LINE Brief</div></td>
+          <td><span class="ic" style="--accent:var(--b5);--accent2:var(--b4)">🪪</span><span class="nm">CP Safety Passport</span><div class="desc">Passport กลุ่ม CP · <b>82 งานพัฒนารอบนี้</b> — PDPA เลขบัตร + กู้ผู้อบรม 1,164 คน</div></td>
+          <td>Customer Portal</td>
+          <td>ศูนย์ฝึก + Trainer</td>
+          <td style="text-align:center"><span class="pill live">Live · 82 งาน</span></td>
+        </tr>
+        <tr>
+          <td><span class="ic" style="--accent:var(--b1);--accent2:var(--b2)">🛡️</span><span class="nm">NET Training Platform</span><div class="desc">ระบบหลัก · รอบนี้: ผู้ช่วย AI "โอบอ้อม" + ฐานความรู้กฎหมาย 68 จุด + เว็บโหลดไวขึ้น</div></td>
           <td>ERP + Public Site</td>
           <td>ลูกค้า + พนักงาน</td>
           <td style="text-align:center"><span class="pill live">Live · ทุกวัน</span></td>
         </tr>
         <tr>
-          <td><span class="ic" style="--accent:var(--b4);--accent2:var(--b2)">👥</span><span class="nm">NETMER-Flow</span><div class="desc">HR + Biometric (ZKTeco) · เข้า Apple App Store</div></td>
+          <td><span class="ic" style="--accent:var(--b4);--accent2:var(--b2)">🧭</span><span class="nm">NETMER-Flow</span><div class="desc">HR · รอบนี้: คุมสิทธิ์เข้าถึงจริง + ศูนย์แจ้งปัญหา + ตรวจรถประจำรอบ + รายงานผลงานใหม่</div></td>
           <td>Web + iOS + Android</td>
           <td>พนักงานทุกคน</td>
-          <td style="text-align:center"><span class="pill live">Live · App Store</span></td>
+          <td style="text-align:center"><span class="pill live">Live · Work Hub</span></td>
         </tr>
         <tr>
-          <td><span class="ic" style="--accent:var(--b3);--accent2:var(--b1)">📄</span><span class="nm">NET Document Flow</span><div class="desc">เอกสารธุรกิจ · ใบเสนอราคา/ใบเสร็จ (Quotacraft)</div></td>
+          <td><span class="ic" style="--accent:var(--b1);--accent2:var(--b3)">🔎</span><span class="nm">Online Inspector</span><div class="desc">ตรวจความปลอดภัยออนไลน์ True · รอบนี้: เพิ่มระดับ OFI + ปรับข้อมูล 603 รายการตรงไฟล์ลูกค้า</div></td>
+          <td>Web App</td>
+          <td>ทีมตรวจ (True)</td>
+          <td style="text-align:center"><span class="pill live">Live</span></td>
+        </tr>
+        <tr>
+          <td><span class="ic" style="--accent:var(--b3);--accent2:var(--b6)">⭐</span><span class="nm">LINE CSAT Survey</span><div class="desc">สำรวจความพึงพอใจในแชต LINE OA · เดินระบบตามปกติ ไม่มีงานพัฒนาเพิ่ม</div></td>
+          <td>LINE OA + Web</td>
+          <td>ลูกค้า + ทีมบริการ</td>
+          <td style="text-align:center"><span class="pill live">Live</span></td>
+        </tr>
+        <tr>
+          <td><span class="ic" style="--accent:var(--b3);--accent2:var(--b1)">📄</span><span class="nm">NET Document Flow</span><div class="desc">เอกสารธุรกิจ · ค้นหาเอกสาร + ต้นทุนอ่านข้อมูลต่ำ · เดินระบบตามปกติ</div></td>
           <td>Web App</td>
           <td>คอลเซ็นเตอร์ + บัญชี</td>
           <td style="text-align:center"><span class="pill live">Live</span></td>
         </tr>
         <tr>
-          <td><span class="ic" style="--accent:var(--b5);--accent2:var(--b4)">🪪</span><span class="nm">CP Safety Passport</span><div class="desc">Passport กลุ่ม CP · โมดูล EE + Public Verify API</div></td>
-          <td>Customer Portal</td>
-          <td>ศูนย์ฝึก + Trainer</td>
-          <td style="text-align:center"><span class="pill live">Live</span></td>
-        </tr>
-        <tr>
-          <td><span class="ic" style="--accent:var(--b2);--accent2:var(--b3)">💧</span><span class="nm">ELMER Water Analysis</span><div class="desc">รายงานวิเคราะห์น้ำ Lotus · Merge-PDF + 2,450 สาขา</div></td>
+          <td><span class="ic" style="--accent:var(--b2);--accent2:var(--b3)">💧</span><span class="nm">ELMER Water Analysis</span><div class="desc">รายงานวิเคราะห์น้ำ Lotus · Merge-PDF + แดชบอร์ดแผนที่ไทย · เดินระบบตามปกติ</div></td>
           <td>Web App</td>
           <td>ทีม Elmer (Lotus)</td>
           <td style="text-align:center"><span class="pill live">Live · Phase 1</span></td>
         </tr>
         <tr>
-          <td><span class="ic" style="--accent:var(--b3);--accent2:var(--b6)">🌊</span><span class="nm">Elmer Wastewater</span><div class="desc">งานน้ำเสีย CM+PM · ข้อมูลจริง 1,578 งาน (Greenfield)</div></td>
+          <td><span class="ic" style="--accent:var(--b3);--accent2:var(--b6)">🌊</span><span class="nm">Elmer Wastewater</span><div class="desc">งานน้ำเสีย CM+PM · ข้อมูลจริง 1,578 งาน · เดินระบบตามปกติ</div></td>
           <td>Web App</td>
           <td>ทีม Elmer (Lotus/AXONS)</td>
-          <td style="text-align:center"><span class="pill live">Live · รอ Feedback</span></td>
+          <td style="text-align:center"><span class="pill live">Live</span></td>
         </tr>
         <tr>
-          <td><span class="ic" style="--accent:var(--b1);--accent2:var(--b3)">🔎</span><span class="nm">Online Inspector</span><div class="desc">ตรวจความปลอดภัยออนไลน์ · พัฒนาเสร็จแล้ว (Greenfield)</div></td>
-          <td>Web App</td>
-          <td>ทีมตรวจ (True)</td>
-          <td style="text-align:center"><span class="pill live">เสร็จแล้ว</span></td>
-        </tr>
-        <tr>
-          <td><span class="ic" style="--accent:var(--b6);--accent2:var(--b3)">🦸</span><span class="nm">NET Safety Hero (NET ZERO)</span><div class="desc">Gamification · Safety Mindset App (Standalone)</div></td>
+          <td><span class="ic" style="--accent:var(--b6);--accent2:var(--b3)">🦸</span><span class="nm">NET Safety Hero (NET ZERO)</span><div class="desc">Gamification · เกมการ์ด v3 + ระบบกรอบโปรไฟล์ · เดินระบบตามปกติ</div></td>
           <td>PWA + iOS + Android</td>
           <td>Public</td>
           <td style="text-align:center"><span class="pill live">Live</span></td>
+        </tr>
+        <tr>
+          <td><span class="ic" style="--accent:var(--b1);--accent2:var(--b4)">💬</span><span class="nm">NET Chat &amp; Calling</span><div class="desc">แอปคุยงานภายในองค์กร · แชต+โทร — พักงานพัฒนาไว้ชั่วคราว ยังไม่เปิดใช้จริง</div></td>
+          <td>iOS + Android</td>
+          <td>พนักงานภายใน</td>
+          <td style="text-align:center"><span class="pill dev">พักไว้</span></td>
         </tr>
         <tr>
           <td><span class="ic" style="--accent:var(--b5);--accent2:var(--b6)">🛢️</span><span class="nm">LPG Training Animation</span><div class="desc">สื่อการสอนแอนิเมชันโรงบรรจุ LPG · 16:9 ฝังใน PPT (รีวิวโดยผู้เชี่ยวชาญ)</div></td>
@@ -366,65 +399,83 @@
 
   <!-- HIGHLIGHTS -->
   <section>
-    <h2><span class="num">04</span> งานสำคัญที่เกิดขึ้นในรอบนี้</h2>
+    <h2><span class="num">05</span> งานใหญ่รอบนี้ · CP Safety Passport (82 commits)</h2>
     <div class="highlights">
-      <div class="hl" style="--accent:var(--b6)">
-        <div class="ti">🚀 เปิดระบบใหม่ 2 ระบบ</div>
+      <div class="hl" style="--accent:var(--b5)">
+        <div class="ti">🔒 ปกป้องเลขบัตรประชาชน (PDPA)</div>
         <ul>
-          <li><b>27 พ.ค.</b> · Online Inspector (ตรวจความปลอดภัย True)</li>
-          <li><b>29 พ.ค.</b> · Elmer Wastewater (น้ำเสีย Lotus/AXONS)</li>
-          <li>จากศูนย์สู่ใช้งานได้ภายในไม่กี่วัน พร้อมข้อมูลจริง</li>
-        </ul>
-      </div>
-      <div class="hl" style="--accent:var(--b4)">
-        <div class="ti">📲 Biometric + Apple App Store</div>
-        <ul>
-          <li>NETMER-Flow เชื่อมเครื่องสแกนนิ้ว ZKTeco จริง</li>
-          <li>แอป iOS เนทีฟ (Capacitor 7) · build VALID</li>
-          <li>Push ข้ามแพลตฟอร์ม + Sync 2 ทางกับ ERP</li>
-        </ul>
-      </div>
-      <div class="hl" style="--accent:var(--b1)">
-        <div class="ti">🛡️ ERP ยกระดับครั้งใหญ่</div>
-        <ul>
-          <li>LINE Daily Training Brief (cron 17:45)</li>
-          <li>ทีมวิทยากรหลายคน · AI สาธารณะ · ค้นหา 2 ชั้น</li>
-          <li>PDPA · Cloudflare CDN · SEO ครั้งใหญ่</li>
+          <li>เก็บเพียง <b>10 หลักท้าย</b> คู่กับรหัสเข้ารหัสทางเดียว — ยืนยันตัวคนได้ แต่ถอดกลับเป็นเลขจริงไม่ได้</li>
+          <li>ปิดช่องรูปถ่าย/ใบรับรองที่เคยตั้งชื่อไฟล์ด้วยเลขบัตร (เดิมเดาชื่อไฟล์แล้วเปิดดูได้)</li>
+          <li>ล็อกสิทธิ์อ่านข้อมูลส่วนบุคคลไว้ที่ฝั่งเซิร์ฟเวอร์</li>
+          <li>ตรวจสอบซ้ำ <b>4 รอบ</b> · เทสต์อัตโนมัติ <b>~665 รายการ</b> ก่อนขึ้นระบบ</li>
         </ul>
       </div>
       <div class="hl" style="--accent:var(--b3)">
-        <div class="ti">💧 ELMER Water เปิด Production</div>
+        <div class="ti">🔍 กู้ผู้อบรมที่ค้นหาไม่เจอ</div>
         <ul>
-          <li>เปลี่ยนเป็น Merge-PDF ตรงฟอร์มกระดาษเดิม</li>
-          <li>นำเข้าสาขา Lotus จริง 2,450+ แห่ง</li>
-          <li>Service-Plan Tracker + E-signature + Mobile PWA</li>
+          <li>ตรวจพบ <b>1,364 คน</b> ที่มองไม่เห็นบนหน้าตรวจสอบบัตร — <b>กู้กลับมา 1,164 คน</b></li>
+          <li>อีก 200 คนถูกซ่อนอย่างถูกต้อง (ยังไม่อนุมัติ / ไม่มีบัตรที่ใช้ได้) จึงไม่เปิดเผย</li>
+          <li>ต้นเหตุคือบัตรซ้ำในระบบ — ลบออก <b>1,112 ใบ</b> พร้อมสำรองข้อมูลและย้อนกลับได้</li>
+          <li>ค้นชื่อแบบใหม่: พิมพ์บางส่วน สลับชื่อ-นามสกุล หรือมีคำนำหน้าก็เจอ (ไทย 100% · ต่างชาติ 92.4%)</li>
+        </ul>
+      </div>
+      <div class="hl" style="--accent:var(--b2)">
+        <div class="ti">🪪 วางกติกาบัตรให้ชัดเจน</div>
+        <ul>
+          <li>บัตรใบเดียวใช้ได้ทั้ง<b>พนักงาน + ผู้รับเหมา</b> · <b>เทรนเนอร์ต้องแยกเลข</b> (บัตรเดิมที่ปนกันอยู่ไม่ถูกแตะ)</li>
+          <li>บัตรและโมดูลเทรนเนอร์มีอายุ <b>5 ปี</b> — เดิมระบบสองส่วนขัดกันเองจนบันทึกไม่ได้</li>
+          <li>ย้อนสถานะรอบอบรมได้โดย<b>ไม่ลบข้อมูลส่วนตัว</b>ที่แก้ไปหลังอนุมัติ (รูป ชื่อ ที่อยู่)</li>
+        </ul>
+      </div>
+      <div class="hl" style="--accent:var(--b1)">
+        <div class="ti">🏢 งานที่ผู้ใช้ขอเพิ่ม</div>
+        <ul>
+          <li>ค้นหา/พิมพ์บัตร<b>ข้ามศูนย์</b>ได้ทุกผู้ดูแล (เดิมติดล็อกเห็นเฉพาะศูนย์ตัวเอง)</li>
+          <li>รายงานรายบริษัท: วางรายชื่อทีเดียวทั้งไฟล์ + จับคู่ชื่อไทย/อังกฤษ/ตัวย่อของบริษัทเดียวกันได้</li>
+          <li>กรองรายงานผู้อบรมตาม<b>ศูนย์/เทรนเนอร์</b> · ปรับสถานะพิมพ์บัตรได้ยืดหยุ่นขึ้น + ข้อความผิดพลาดเป็นภาษาไทย</li>
+          <li><b>คู่มือผู้ใช้ฉบับใหม่</b> — ปรับให้ตรงกับระบบจริงทั้งเล่ม</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- NEW CLIENT SYSTEMS -->
+  <!-- OTHER SYSTEMS -->
   <section>
-    <h2><span class="num">05</span> ระบบใหม่ประจำรอบนี้ · รายละเอียด</h2>
+    <h2><span class="num">06</span> งานสำคัญของระบบอื่น</h2>
     <div class="highlights">
-      <div class="hl" style="--accent:var(--b1)">
-        <div class="ti">🔎 Online Inspector · ลูกค้า True</div>
+      <div class="hl" style="--accent:var(--b4)">
+        <div class="ti">🧭 NETMER-Flow (9 commits)</div>
         <ul>
-          <li>แทน Canva + Data Studio + Excel เป็นระบบเดียว</li>
-          <li>นำเข้า Work Order หลาย Track + กรองอัจฉริยะ</li>
-          <li>ตรวจ binary + จับเวลา + รูป → Finding + SLA อัตโนมัติ</li>
-          <li>ดึง CP Passport modules + T-15 LINE Reminder</li>
-          <li>Export "W&amp;W 5P" 31 คอลัมน์ · <b>พัฒนาเสร็จแล้ว</b> (17 tests ผ่าน)</li>
+          <li><b>คุมสิทธิ์เข้าถึงจริง</b> ไม่ใช่แค่ซ่อนเมนู + แก้บั๊กที่ตรวจเจอ <b>16 จุด</b> (จุดใหญ่: สร้างพนักงานใหม่แล้วแอดมินหลุดจากระบบ)</li>
+          <li><b>ศูนย์แจ้งปัญหา</b> — IT / รถ / อาคาร รวมเมนูเดียว · ปัญหารถไปโผล่ในไทม์ไลน์รถคันนั้นอัตโนมัติ</li>
+          <li><b>ตรวจรถ 2 ระดับ</b> — คนขับตรวจก่อนใช้ 14 ข้อ (ตัดข้อที่คนขับตอบไม่ได้ออก) + ผู้ดูแลรถตรวจประจำรอบ 28 ข้อ พร้อมค่าที่วัดได้</li>
+          <li><b>รายงานผลการปฏิบัติงานใหม่</b> — วัดจากหลักฐานจริงเทียบกับเวลาทำงานจริง (เดิมวิทยากรที่สอนหนัก 36–43 วันได้คะแนนแย่สุด) + Excel 9 ชีตพร้อมวิธีคิด</li>
+          <li>LINE เบิกของ: ส่งเข้ากลุ่มเดียว + รวมคำขอในช่วง ~3 นาทีเป็นข้อความเดียว</li>
         </ul>
       </div>
-      <div class="hl" style="--accent:var(--b3)">
-        <div class="ti">🌊 Elmer Wastewater · Lotus/AXONS</div>
+      <div class="hl" style="--accent:var(--b1)">
+        <div class="ti">🌐 เว็บไซต์หลัก + ผู้ช่วย AI (11 commits)</div>
         <ul>
-          <li>งานน้ำเสีย CM+PM · สถานะ 2 สาย Exon/Elmer (13 ขั้น)</li>
-          <li>ข้อมูลจริง 1,578 งาน (CM 199 · PM 1,379)</li>
-          <li>แผนที่ Lotus ทั่วไทย + SLA + LINE Digest</li>
-          <li>ต้นทุน/กำไร + บัญชีงานยังไม่วางบิล</li>
-          <li>Live: elmer-wastewater.web.app · 245 tests · <b>รอ feedback เพื่อปรับปรุง</b></li>
+          <li><b>ผู้ช่วย AI "โอบอ้อม"</b> — ทดสอบด้วยคำถามลูกค้าจริง 71 ข้อ พบว่าตอบถูกแค่ 3 ข้อ · รื้อใหม่ทั้งชุดและย้ายไปโมเดลรุ่นใหม่</li>
+          <li><b>ฐานความรู้กฎหมายความปลอดภัย: แก้ 68 จุด</b> โดยตรวจกับตัวบทกฎหมายจริงทีละข้อ (เช่น การอบรมดับเพลิงไม่ได้จำกัดเฉพาะที่มีลูกจ้าง 10 คนขึ้นไป)</li>
+          <li>เว็บโหลดไวขึ้น — ย่อรูปบนเว็บจาก <b>120 MB เหลือ 7.4 MB</b> และแก้อาการหน้าขาวตอนโหลด</li>
+          <li>จัดระบบหน้าตาเว็บ: รวมการ์ด 4 แบบเหลือแบบเดียว · เหลือ 5 สีที่มีความหมาย · เพิ่มการตอบสนองเมื่อกดบนมือถือ</li>
+        </ul>
+      </div>
+      <div class="hl" style="--accent:var(--b6)">
+        <div class="ti">🔎 Online Inspector (4 commits)</div>
+        <ul>
+          <li>เพิ่มระดับ <b>OFI (ข้อเสนอแนะ)</b> เป็นระดับที่ 3 ที่ไม่นับเป็นข้อบกพร่อง ตามกระบวนการใหม่ของลูกค้า</li>
+          <li>ปรับข้อมูลผลตรวจ <b>603 รายการ</b> ให้ตรงกับไฟล์ 5P ต้นทางของลูกค้า (ย้อนกลับได้)</li>
+          <li>อันดับจังหวัดเรียงได้ทุกคอลัมน์ · แก้พื้นหลังการ์ด CP Passport ที่แสดงไม่ขึ้นข้ามโดเมน</li>
+        </ul>
+      </div>
+      <div class="hl" style="--accent:var(--b5)">
+        <div class="ti">📌 พร้อมขึ้นระบบ / ยังค้าง</div>
+        <ul>
+          <li><b>ชุดกู้อันดับ Google (รออนุมัติขึ้นระบบ)</b> — อันดับหน้าแรกหลายคำยังอยู่บนลิงก์เว็บรุ่นเก่า /course.php ที่เราปิดไม่ให้ Google เข้า · ทำทางเชื่อม 43 เส้นทาง + เมนูใหม่ + llms.txt สำหรับ AI</li>
+          <li><b>ย้ายข้อมูลเลขบัตรชุดเก่า</b> — พักไว้ตามที่ตกลง ระบบรองรับทั้ง 2 รูปแบบพร้อมกันอยู่แล้วจึงไม่กระทบการใช้งาน</li>
+          <li><b>KYT MOTTO</b> — คลังโปสเตอร์ความปลอดภัย KYT 55 แผ่น ค้นหาด้วย AI · แยกเป็นระบบของตัวเองและขึ้นใช้งานจริงแล้ว (8 ส.ค.)</li>
         </ul>
       </div>
     </div>
@@ -432,45 +483,52 @@
 
   <!-- SEO PERFORMANCE -->
   <section>
-    <h2><span class="num">06</span> SEO Performance · ผลลัพธ์จาก Google Search Console</h2>
+    <h2><span class="num">07</span> SEO Performance · ผลลัพธ์จาก Google Search Console</h2>
     <div class="seo-block">
       <div class="seo-stats">
         <div class="grid">
-          <div class="it"><div class="v">1,954</div><div class="l">Clicks</div></div>
-          <div class="it"><div class="v">16,389</div><div class="l">Impressions</div></div>
-          <div class="it"><div class="v">11.9%</div><div class="l">CTR</div></div>
-          <div class="it"><div class="v">7.0</div><div class="l">Avg Pos</div></div>
+          <div class="it"><div class="v">2,231</div><div class="l">Clicks</div></div>
+          <div class="it"><div class="v">27,013</div><div class="l">Impressions</div></div>
+          <div class="it"><div class="v">8.3%</div><div class="l">CTR</div></div>
+          <div class="it"><div class="v">7.7</div><div class="l">Avg Pos</div></div>
         </div>
-        <div class="note">📅 Google Search Console · 29 เม.ย. – 1 มิ.ย. 2026 · <b>CTR สูงกว่ามาตรฐาน ~3 เท่า</b> (avg 3–5%) · อันดับเฉลี่ย <b>หน้าแรก</b> · 560 คำค้นหา · หน้าแรก 1,064 คลิก (54%) · งาน พ.ค.: Location Pages · Slug Migration · Pillar · Sitemap · AI Citation</div>
+        <div class="note">📅 <b>12 ก.ค. – 8 ส.ค. 2026</b> (28 วัน · เทียบกับ 8 มิ.ย. – 8 ก.ค. 31 วัน) · <b>การมองเห็นโต 31% ต่อวัน</b> (965 vs 737 ครั้ง/วัน) และ<b>อันดับเฉลี่ยดีขึ้นจาก 8.0 เป็น 7.7</b> · คลิกต่อวันทรงตัวที่ ~80 ครั้ง/วัน — CTR ที่ลดลงเป็นผลจากการติดอันดับในคำค้นที่กว้างขึ้น ไม่ใช่คลิกหาย · <b>คนเริ่มเจอเราจากชื่อหลักสูตรแทนชื่อบริษัท:</b> ช่างไฟฟ้าฯ ระดับ 1 116→197 คลิก · CP Safety Passport 114→179 · สถานีบริการน้ำมัน 44→88</div>
       </div>
       <div class="seo-os">
-        <h4>ผู้เข้าชมแยกตามอุปกรณ์ · 1,954 Clicks</h4>
-        <div class="row"><span class="nm">🖥️ Desktop</span><div class="bar"><div class="fill" style="width:67%"></div></div><span class="pct">1,317</span></div>
-        <div class="row"><span class="nm">📱 Mobile</span><div class="bar"><div class="fill" style="width:32%"></div></div><span class="pct">624</span></div>
-        <div class="row"><span class="nm">📲 Tablet</span><div class="bar"><div class="fill" style="width:2%"></div></div><span class="pct">13</span></div>
+        <h4>ผู้เข้าชมแยกตามอุปกรณ์ · 2,231 Clicks</h4>
+        <div class="row"><span class="nm">🖥️ Desktop</span><div class="bar"><div class="fill" style="width:67%"></div></div><span class="pct">1,490</span></div>
+        <div class="row"><span class="nm">📱 Mobile</span><div class="bar"><div class="fill" style="width:32%"></div></div><span class="pct">719</span></div>
+        <div class="row"><span class="nm">📲 Tablet</span><div class="bar"><div class="fill" style="width:1%"></div></div><span class="pct">22</span></div>
+        <div style="font-size:11px; color:var(--muted); margin-top:6px; padding-top:5px; border-top:1px dashed var(--line-2)">
+          ต่างประเทศเริ่มเห็นเรา: ญี่ปุ่น 352 การแสดงผล · สิงคโปร์ 122 · มาเลเซีย 64 (ผลจากเว็บ 4 ภาษาที่ทำไว้รอบก่อน)
+        </div>
       </div>
     </div>
   </section>
 
   <!-- WEBSITE TRAFFIC -->
   <section>
-    <h2><span class="num">07</span> ยอดเข้าใช้เว็บไซต์จริง · First-party Analytics</h2>
+    <h2><span class="num">08</span> ยอดเข้าใช้เว็บไซต์จริง · First-party Analytics</h2>
     <div class="seo-block">
       <div class="seo-stats">
         <div class="grid">
-          <div class="it"><div class="v">65,156</div><div class="l">Page Views</div></div>
-          <div class="it"><div class="v">41,480</div><div class="l">30 วันล่าสุด</div></div>
-          <div class="it"><div class="v">~1,400</div><div class="l">เฉลี่ย/วัน</div></div>
-          <div class="it"><div class="v">237</div><div class="l">สมาชิกล็อกอิน</div></div>
+          <div class="it"><div class="v">41,244</div><div class="l">Page Views (30วัน)</div></div>
+          <div class="it"><div class="v">~1,375</div><div class="l">เฉลี่ย/วัน</div></div>
+          <div class="it"><div class="v">219</div><div class="l">ผู้ใช้ล็อกอิน</div></div>
+          <div class="it"><div class="v">G CP</div><div class="l">หลักสูตรฮิต (989)</div></div>
         </div>
-        <div class="note">📅 ส.ค. 2025 – 6 มิ.ย. 2026 · นับทุกช่องทาง (ไม่ใช่แค่ Google) · ใช้งานทุกวัน 1,000–2,500 ครั้ง · <b>หน้ายอดนิยม:</b> /courses (11,865) · หน้าแรก (10,254) · CP/AIS Safety Passport</div>
+        <div class="note">📅 <b>30 วันล่าสุด (11 ก.ค. – 10 ส.ค. 2026)</b> · นับทุกช่องทาง (ไม่ใช่แค่ Google) · ยอดรวมลดลง 13% จากรอบก่อน (47,429) เพราะช่วงปลาย ก.ค. เงียบผิดปกติ แต่ <b>8 วันล่าสุดกลับมาเฉลี่ย ~1,875 ครั้ง/วัน</b> สูงกว่าค่าเฉลี่ยรอบก่อน · <b>หน้ายอดนิยม:</b> /courses 6,373 · หน้าแรก 5,901 · CP ผู้รับเหมา 1,622 · AIS ผู้รับเหมา 1,461</div>
       </div>
       <div class="seo-os">
         <h4>ช่องทางที่นำผู้ใช้เข้ามา (External)</h4>
-        <div class="row"><span class="nm">🔍 Google</span><div class="bar"><div class="fill" style="width:100%"></div></div><span class="pct">11,836</span></div>
-        <div class="row"><span class="nm">💬 LINE</span><div class="bar"><div class="fill" style="width:7%"></div></div><span class="pct">766</span></div>
-        <div class="row"><span class="nm">📘 Facebook</span><div class="bar"><div class="fill" style="width:5%"></div></div><span class="pct">535</span></div>
-        <div class="row"><span class="nm">🔎 Bing</span><div class="bar"><div class="fill" style="width:4%"></div></div><span class="pct">453</span></div>
+        <div class="row"><span class="nm">🔍 Google</span><div class="bar"><div class="fill" style="width:100%"></div></div><span class="pct">9,001</span></div>
+        <div class="row"><span class="nm">🔎 Bing</span><div class="bar"><div class="fill" style="width:5%"></div></div><span class="pct">402</span></div>
+        <div class="row"><span class="nm">📘 Facebook</span><div class="bar"><div class="fill" style="width:3%"></div></div><span class="pct">256</span></div>
+        <div class="row"><span class="nm">💬 LINE</span><div class="bar"><div class="fill" style="width:2%"></div></div><span class="pct">205</span></div>
+        <div class="row"><span class="nm">✨ ChatGPT</span><div class="bar"><div class="fill" style="width:1%"></div></div><span class="pct">65</span></div>
+        <div style="font-size:11px; color:var(--muted); margin-top:6px; padding-top:5px; border-top:1px dashed var(--line-2)">
+          Direct (พิมพ์ URL / บุ๊กมาร์ก / เปิดในแอป) ใหญ่สุดที่ 26,905 · <b>เริ่มมีคนเข้ามาจาก ChatGPT แล้ว</b> — สัญญาณว่า AI ส่งลูกค้ามาหาเราจริง
+        </div>
       </div>
     </div>
   </section>
