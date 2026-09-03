@@ -1,101 +1,51 @@
-# NET Energy · Progress Report (ก.ค. – ส.ค. 2026)
+# NET Energy · Progress Report (ส.ค. 2026)
 
-รายงานผลการปฏิบัติงานรอบ **11 ก.ค. – 10 ส.ค. 2026** (5 สัปดาห์) ของบริษัท เนเชอรัล เอ็นเนอร์ยี เทค จำกัด
+รายงานผลการปฏิบัติงานรอบ **11 ส.ค. – 3 ก.ย. 2026** (3.5 สัปดาห์) ของบริษัท เนเชอรัล เอ็นเนอร์ยี เทค จำกัด — **ออกแบบใหม่ทั้งชุด (v5)**
 
-สรุปไฮไลต์ของรอบนี้: เป็นรอบ **ลงลึกเพื่อความน่าเชื่อถือของข้อมูล** ไม่ใช่รอบเปิดของใหม่ —
-งานกว่า **76% ลงที่ CP Safety Passport**: ยกเครื่องให้เก็บ **เลขบัตรประชาชนแบบย้อนกลับไม่ได้ (PDPA)**
-และ **กู้ผู้อบรม 1,164 คน** ที่หายไปจากหน้าตรวจสอบบัตรกลับมา ·
-**NETMER-Flow** เปลี่ยนมาบังคับสิทธิ์การเข้าถึงจริง + เปิดศูนย์แจ้งปัญหา + รื้อรายงานผลการปฏิบัติงาน ·
-**เว็บไซต์หลัก** รื้อผู้ช่วย AI "โอบอ้อม" + แก้ฐานความรู้กฎหมาย 68 จุด —
-รวม **108 commits** ใน 5 โปรเจกต์
+สรุปไฮไลต์ของรอบ: เป็นรอบ **ขยายพอร์ต** — เปิด **ระบบใหม่ 4 ระบบ** (ELMER ใบเสนอราคา+ใบสั่งซื้อ · NET-ID Photo Studio · นามบัตร NFC · KYT MOTTO),
+ทำให้ระบบหลัก "ขายได้จริง" มากขึ้น (ใบประกาศพิมพ์ได้จริง · E-Learning พร้อมขาย · ERP เร็วขึ้น 9 เท่า · หน้าหลักสูตรโฉมใหม่ · ระบบสถิติเว็บใหม่)
+ขณะที่ธุรกิจอบรมเดินปกติ (ส.ค. อบรม 1,155 คน / 94 รอบ · เข้าเว็บ 45,357 ครั้ง สูงสุดตั้งแต่เปิดเว็บใหม่) — รวม **175 commits** ใน 9 โปรเจกต์
 
-🌐 **Live demo:** เปิด `index.html` ในเบราว์เซอร์ (หรือ deploy ผ่าน GitHub Pages)
+🌐 **Live:** https://netmer.github.io/net-energy-annual-report-2026/ (GitHub Pages จาก `main`)
 
-## เนื้อหา
+## ไฟล์
 
-นำเสนอแบบ slide-based · 12 สไลด์:
-
-1. **Title** — ปกหน้า
-2. **Agenda** — สารบัญหัวข้อนำเสนอ (7 หัวข้อ)
-3. **ภาพรวมรอบนี้** — สรุป 5 สัปดาห์ (108 การพัฒนา · กู้ 1,164 คน · Impressions 27,013 · 9 ระบบ)
-4. **Systems Overview** — 10 ระบบ + สื่อการสอน LPG (Interactive · คลิกดูรายละเอียด · เรียงตามปริมาณงานรอบนี้)
-5. **System Integration** — การเชื่อมต่อระหว่างระบบ (Interactive · Sync 2 ทาง + LINE)
-6. **งานใหญ่รอบนี้** — CP Safety Passport: PDPA เลขบัตรประชาชน + กู้ข้อมูลผู้อบรม
-7. **NETMER-Flow** — คุมสิทธิ์เข้าถึงจริง · ศูนย์แจ้งปัญหา · ตรวจรถประจำรอบ · รายงานผลงานใหม่
-8. **เว็บไซต์ + ผู้ช่วย AI** — โอบอ้อม (3/71 → แก้ครบ) · กฎหมาย 68 จุด · เว็บโหลดไวขึ้น · Inspector OFI
-9. **SEO & AI Search** — Google Search Console จริง 12 ก.ค.–8 ส.ค. (Clicks 2,231 · Impr 27,013 +31%/วัน · CTR 8.3% · Pos 7.7)
-10. **Website Traffic** — first-party 30 วัน (Page Views 41,244 · ผู้ใช้ล็อกอิน 219 · เริ่มมีคนมาจาก ChatGPT)
-11. **Timeline** — ลำดับเหตุการณ์สำคัญรายสัปดาห์ (11 ก.ค. – 10 ส.ค.)
-12. **Thank You** — Q&A
-
-นอกจากนี้มี `report.html` — รายงานสรุปแบบ A4 พิมพ์/บันทึก PDF ได้ (กดปุ่ม Print)
+```
+index.html            · สไลด์นำเสนอ 16 สไลด์ (เวที 1600×900 ย่อ/ขยายตามจอ)
+report.html           · รายงาน A4 พิมพ์/บันทึก PDF ได้ (ตาราง SEO ละเอียด)
+css/deck.css          · ระบบดีไซน์ (ธีมสว่าง editorial · NET blue)
+js/report-data.js     · ตัวเลขทั้งหมดของรอบ (business · dev · traffic · seo) — แก้ที่นี่ที่เดียว
+js/charts.js          · ชุดกราฟ SVG/HTML เล็ก ๆ (คอลัมน์ · เส้น · แท่งนอน · แท่งซ้อน · sparkline) + tooltip + ปุ่ม "ตาราง"
+js/renderers.js       · จับคู่ <figure data-chart="…"> กับข้อมูล
+js/seo-slides.js      · เรนเดอร์สไลด์ SEO 3 หน้าจาก REPORT.seo
+js/deck.js            · เลื่อนสไลด์ · reveal · count-up · เมนู · เต็มจอ · deep-link (#n) · โหมด ?static=1
+js/icons.js           · ไอคอน SVG สไตล์ lucide
+assets/screenshots/   · ภาพหน้าจอจริง (หน้าเว็บ NET · KYT MOTTO · นามบัตร NFC)
+```
 
 ## การใช้งาน
 
-### เปิดใช้งานในเครื่อง
-ดับเบิลคลิก `index.html` หรือเปิดผ่าน Live Server · สำหรับเอกสารพิมพ์เปิด `report.html`
+- เปิด `index.html` — `←/→` เลื่อน · `M` สารบัญ · `F` เต็มจอ · ลิงก์ตรงไปสไลด์ที่ต้องการด้วย `index.html#5`
+- ทุกกราฟมีปุ่ม **"ตาราง"** สลับเป็นตารางตัวเลขเต็ม และมี tooltip เมื่อชี้
+- `index.html?static=1` = ปิดแอนิเมชันทั้งหมด (ใช้ตอนถ่ายภาพหน้าจอ/พิมพ์)
+- `report.html` — กด Print / Save as PDF
 
-💡 **ขยายเพื่อโฟกัส:** คลิกที่การ์ด/แผงข้อมูลที่มีเส้นกรอบไฮไลต์ตอน hover เพื่อขยายใหญ่กลางจอ (คลิกที่ใดก็ได้หรือกด Esc เพื่อปิด)
+## ที่มาของตัวเลข (ทำซ้ำได้)
 
-🔗 **Deep-link:** เปิดสไลด์ที่ต้องการได้เลยด้วย hash เช่น `index.html#5` (URL อัปเดตตามสไลด์ที่ดูอยู่)
-
-### Keyboard Shortcuts
-| Key | Action |
+| ส่วน | ที่มา |
 |---|---|
-| `←` / `→` | Previous / Next slide |
-| `Space` | Next slide |
-| `M` | Toggle menu |
-| `F` | Fullscreen |
-| `Esc` | Close modal/menu |
-| `Home` / `End` | First / Last slide |
+| งานพัฒนา 175 commits | `git log --all --no-merges --since=2026-08-11 --until=2026-09-04` ทุก repo ใน `E:\Devloper` — NET-workspace 63 · id-photo-studio 54 · Elmer - Document Flow 34 · NETMER-Flow 7 · CP PASSPORT 6 · aom-card 4 · kyt-motto 4 · line-csat 2 · NET - Document Flow 1 (repo ที่ไม่มี commit: elmer-water-analysis · elmer-wastewater · online-inspector · NET-Safety-Hero · chat-mobile · LPG-Training) |
+| ธุรกิจอบรม | Firestore (NET-workspace): `registrations` นับตามวันลงทะเบียน · `trainingRecords` status=completed นับตามวันจบอบรม · `trainingSchedules` นับตามวันเริ่มรอบ |
+| ยอดเข้าเว็บ | `analyticsMonthly` / `analyticsDaily` (ระบบสถิติใหม่ 2 ก.ย. — ตัวเลขเดียวกับ /admin/analytics · ตัดทราฟฟิกพนักงานออก) |
+| SEO | Google Search Console API (`searchanalytics.query`) — ดึงมิติ คีย์เวิร์ด × หน้า เพื่อจับคู่คีย์เวิร์ดกับหลักสูตรตามหน้าที่คนคลิกจริง · ต้องมี scope `webmasters.readonly` บน gcloud |
 
-## โครงสร้างไฟล์
+การเทียบรอบก่อน: ช่วงเวลาไม่เท่ากัน (23–24 วัน vs 31 วัน) จึงเทียบ **ต่อวัน** เสมอ
 
-```
-Present-NET-Report/
-├── index.html              · สไลด์นำเสนอ (12 สไลด์)
-├── report.html             · รายงานสรุป A4 (พิมพ์/PDF)
-├── css/
-│   ├── base.css           · Variables, พื้นหลัง aurora + grid, ระบบ reveal animation
-│   ├── ui.css             · Topbar, menu, modal
-│   ├── slides.css         · Slide-specific styles
-│   └── flow.css           · Interactive flow diagram
-├── js/
-│   ├── icons.js           · ไลบรารีไอคอน SVG (สไตล์ lucide) แทน emoji ทั้งงาน
-│   ├── data.js            · ข้อมูล 11 รายการ (10 ระบบ + สื่อ LPG) + flow nodes
-│   ├── flow.js            · Interactive flow logic
-│   ├── app.js             · Slide navigation, count-up, hash deep-link, modal, menu
-│   └── zoom.js            · คลิกการ์ดเพื่อขยาย (focus zoom)
-└── assets/
-    ├── icons/             · App icons
-    └── screenshots/       · UI screenshots
-```
+## ดีไซน์
 
-## หมายเหตุข้อมูล
-
-- ตัวเลข **108 commits** มาจาก git history จริง (11 ก.ค. – 10 ส.ค. 2026) ของ 5 repos ที่มีการพัฒนาในรอบนี้ —
-  CP Passport 82 · NET-workspace 11 · NETMER-Flow 9 · online-inspector 4 · kyt-motto 2
-  (repo ที่ไม่มี commit ในรอบนี้: line-csat, NET - Document Flow, NET-Safety-Hero, elmer-water-analysis,
-  elmer-wastewater, NET-workspace-chat-mobile — ระบุไว้ในสไลด์/รายงานว่า "เดินระบบตามปกติ")
-- **SEO**: Google Search Console export `netenergy-tech.com-Performance-on-Search-2026-08-10`
-  (ช่วง 12 ก.ค. – 8 ส.ค. 2026 · 28 วัน) เทียบกับ export รอบก่อน (8 มิ.ย. – 8 ก.ค. · 31 วัน)
-  — เพราะช่วงไม่เท่ากัน จึงเทียบด้วย **ค่าเฉลี่ยต่อวัน**
-  · สไลด์ #9 แสดงเฉพาะตัวเลขหลัก ส่วน **`report.html` หัวข้อ 07 มีรายละเอียดเต็ม** (7.1 เทียบรอบก่อน ·
-  7.2 สัดส่วนคลิกตามกลุ่มหน้า · 7.3 หน้ายอดนิยม 15 หน้าพร้อมเทียบรอบก่อน · 7.4 คำค้น 15 คำ · 7.5 อุปกรณ์+ประเทศ)
-- **Website Traffic**: ดึงจาก `analyticsEvents` ของ NET-workspace โดยตรง (ตรรกะเดียวกับหน้า `/admin/analytics`)
-  ช่วง 11 ก.ค. – 10 ส.ค. 2026 · 30 วัน
-- ภาพหน้าจอที่ใช้ในสไลด์รอบนี้เป็นภาพเดิมจากรอบก่อน: `fleet-inspection.jpg` (ตรวจเช็ครถ),
-  `training-chat.png` (ผู้ช่วย AI โอบอ้อม) — งานหลักรอบนี้เป็นงานเบื้องหลัง (ข้อมูล/ความปลอดภัย)
-  จึงนำเสนอด้วยตัวเลขและตาราง ก่อน/หลัง แทนภาพหน้าจอ
-
-## เทคโนโลยี & ดีไซน์
-
-- HTML5 + CSS3 + Vanilla JavaScript (ไม่ใช้ Framework)
-- ธีมมืดโทน aurora · ฟอนต์ IBM Plex Sans Thai + Space Grotesk (ตัวเลข/หัวข้ออังกฤษ)
-- ไอคอน SVG เส้น (สไตล์ lucide) ทั้งงาน — ไม่ใช้ emoji
-- แอนิเมชัน: reveal ทีละชิ้นเมื่อเข้าสไลด์ · ตัวเลข KPI นับขึ้น (count-up) · SVG animations ใน Flow Diagram · รองรับ prefers-reduced-motion
-- ขนาดตัวอักษรขั้นต่ำ ~13px (เนื้อหาหลัก 15–17px) เพื่อให้อ่านชัดตอน present
-- Responsive · Print-friendly
+- ธีมสว่างแบบ editorial · ฟอนต์ IBM Plex Sans Thai · สีข้อมูล 4 สีที่ผ่านตัวตรวจ CVD (blue `#2a78d6` · orange `#eb6834` · aqua `#1baf7a` · yellow `#eda100`)
+- กราฟ: แท่งบาง ≤ 24px ปลายมน · เส้นกริดบาง · ตัวเลขใช้สีหมึกไม่ใช้สีชุดข้อมูล · ป้ายค่าเฉพาะจุดสำคัญ · ทุกกราฟมีตารางคู่
+- ภาพหน้าจอเว็บถ่ายจากเว็บจริงด้วย headless Chrome (`--lang=th-TH`)
 
 ---
 

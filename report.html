@@ -3,752 +3,433 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>รายงานสรุปผลการปฏิบัติงาน · ก.ค.–ส.ค. 2026 | NET Energy</title>
+<title>รายงานสรุปผลการปฏิบัติงาน · ส.ค. 2026 | NET Energy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0d1330;
-    --muted:#5a6480;
-    --soft:#8590ad;
-    --line:#e2e6f0;
-    --line-2:#c9d0e0;
-    --bg:#fafbff;
-    --paper:#ffffff;
-    --b1:#2563eb;
-    --b2:#7c3aed;
-    --b3:#0ea5e9;
-    --b4:#ec4899;
-    --b5:#f59e0b;
-    --b6:#10b981;
+    --paper:#f4f4f0; --surface:#fff; --surface-2:#f8f8f5; --ink:#0f172a; --ink-2:#3d4657; --muted:#6b7280; --faint:#9aa0ab;
+    --line:#e5e6e1; --line-2:#d3d5cf; --accent:#2a78d6; --accent-ink:#0b3a6e; --accent-soft:#e8f0fb;
+    --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --good-ink:#006300; --warn-ink:#8a5a00;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html,body{
-    font-family:'IBM Plex Sans Thai','Inter',system-ui,sans-serif;
-    background:var(--bg); color:var(--ink);
-    line-height:1.6; font-size:13px;
-    -webkit-font-smoothing:antialiased;
-  }
+  html,body{font-family:'IBM Plex Sans Thai','IBM Plex Sans',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:12.5px;-webkit-font-smoothing:antialiased}
+  b,strong{font-weight:600}
+  .toolbar{position:sticky;top:0;z-index:10;background:var(--ink);color:#fff;padding:12px 24px;display:flex;justify-content:space-between;align-items:center}
+  .toolbar .lbl{font-size:13px;opacity:.9}
+  .toolbar .btns{display:flex;gap:10px}
+  .btn{padding:7px 14px;border-radius:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;cursor:pointer;font-family:inherit;font-size:13px;font-weight:500;text-decoration:none}
+  .btn.primary{background:var(--accent);border-color:transparent}
+  .paper{max-width:210mm;margin:22px auto;background:var(--surface);box-shadow:0 8px 30px rgba(15,23,42,.10);padding:16mm 15mm}
 
-  /* TOOLBAR (screen only) */
-  .toolbar{
-    position:sticky; top:0; z-index:10;
-    background:linear-gradient(135deg, #1e293b, #334155);
-    color:#fff; padding:14px 24px;
-    display:flex; justify-content:space-between; align-items:center;
-    box-shadow:0 4px 16px rgba(0,0,0,.15);
-  }
-  .toolbar .lbl{font-size:13px; opacity:.9}
-  .toolbar .lbl b{color:#fff}
-  .toolbar .btns{display:flex; gap:10px}
-  .btn{
-    padding:8px 18px; border-radius:8px;
-    background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.25);
-    color:#fff; cursor:pointer; font-family:inherit; font-size:13px; font-weight:500;
-    text-decoration:none; display:inline-flex; align-items:center; gap:6px;
-    transition: all .2s;
-  }
-  .btn:hover{background:rgba(255,255,255,.25)}
-  .btn.primary{background:linear-gradient(135deg, #3b82f6, #8b5cf6); border-color:transparent}
-  .btn.primary:hover{box-shadow:0 4px 14px rgba(59,130,246,.4)}
+  .doc-head{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:12px;margin-bottom:16px;border-bottom:3px solid var(--ink);position:relative}
+  .doc-head::after{content:"";position:absolute;left:0;bottom:-6px;width:70px;height:3px;background:var(--accent)}
+  .brand{display:inline-flex;align-items:center;gap:8px;font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin-bottom:6px}
+  .brand .logo{width:22px;height:22px;border-radius:6px;background:var(--accent);display:inline-block}
+  h1{font-size:24px;font-weight:700;line-height:1.2;letter-spacing:-.01em}
+  h1 .sub{display:block;font-size:13px;color:var(--muted);font-weight:500;margin-top:4px}
+  .doc-head .right{text-align:right;font-size:11px;color:var(--muted)}
+  .doc-head .right b{color:var(--ink);font-size:12.5px;display:block}
 
-  /* PAPER */
-  .paper{
-    max-width:210mm; min-height:297mm;
-    margin:24px auto;
-    background:var(--paper);
-    box-shadow:0 8px 30px rgba(15,23,42,.1);
-    padding:18mm 16mm;
-    position:relative;
-  }
-
-  /* HEADER */
-  .doc-head{
-    display:flex; justify-content:space-between; align-items:flex-start;
-    padding-bottom:14px; margin-bottom:18px;
-    border-bottom:3px solid var(--ink);
-    position:relative;
-  }
-  .doc-head::after{
-    content:""; position:absolute; left:0; bottom:-6px;
-    width:80px; height:3px;
-    background:linear-gradient(90deg, var(--b1), var(--b2));
-  }
-  .doc-head .left .brand{
-    display:inline-flex; align-items:center; gap:10px;
-    font-size:11.5px; color:var(--muted); margin-bottom:8px;
-    text-transform:uppercase; letter-spacing:.1em; font-weight:600;
-  }
-  .doc-head .left .brand .logo{
-    width:28px; height:28px; border-radius:6px;
-    background:linear-gradient(135deg, var(--b1), var(--b2));
-    display:flex; align-items:center; justify-content:center;
-    font-size:14px; color:#fff;
-  }
-  h1{
-    font-size:26px; font-weight:700; line-height:1.2;
-    color:var(--ink); letter-spacing:-0.02em;
-  }
-  h1 .sub{display:block; font-size:14px; color:var(--muted); font-weight:500; margin-top:4px}
-  .doc-head .right{text-align:right; font-size:11px; color:var(--muted)}
-  .doc-head .right b{color:var(--ink); font-size:13px; display:block; margin-bottom:2px}
-
-  /* SECTION */
   section{margin-bottom:18px}
-  h2{
-    font-size:14px; font-weight:700; color:var(--ink);
-    text-transform:uppercase; letter-spacing:.08em;
-    padding-left:10px; border-left:4px solid var(--b1);
-    margin-bottom:10px;
-  }
-  h2 .num{
-    display:inline-block; color:var(--b1); font-family:'Inter';
-    margin-right:6px;
-  }
+  h2{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding-left:10px;border-left:4px solid var(--accent);margin-bottom:10px}
+  h2 .num{color:var(--accent);margin-right:6px}
+  h3{font-size:12px;font-weight:700;margin:12px 0 4px;display:flex;align-items:center;gap:6px}
+  h3 .tag{font-weight:600;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+  p{color:var(--ink-2)}
+  .exec{background:linear-gradient(135deg,#eef4fc,#fbfbf8);border:1px solid var(--line);border-radius:10px;padding:13px 15px;font-size:12.5px;line-height:1.7;color:var(--ink)}
+  .exec b{color:var(--accent-ink)}
 
-  /* EXECUTIVE SUMMARY */
-  .exec{
-    background:linear-gradient(135deg, #eff6ff, #faf5ff);
-    border:1px solid var(--line); border-radius:10px;
-    padding:14px 16px; font-size:13px; color:var(--ink);
-    line-height:1.7;
-  }
-  .exec b{color:var(--b1)}
+  .kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  .kpi{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent-c,var(--accent));border-radius:8px;padding:9px 11px}
+  .kpi .lbl{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;font-weight:600}
+  .kpi .v{font-weight:700;font-size:22px;color:var(--ink);line-height:1.1;margin-top:2px}
+  .kpi .ds{font-size:10.5px;color:var(--muted);margin-top:2px;line-height:1.35}
 
-  /* KPI ROW */
-  .kpi-row{
-    display:grid; grid-template-columns:repeat(4,1fr); gap:8px;
-  }
-  .kpi{
-    background:var(--paper); border:1px solid var(--line);
-    border-left:4px solid var(--accent, var(--b1));
-    border-radius:8px; padding:10px 12px;
-  }
-  .kpi .lbl{font-size:10.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; font-weight:600}
-  .kpi .v{
-    font-family:'Inter'; font-weight:800; font-size:22px;
-    color:var(--accent, var(--b1)); line-height:1.1; margin-top:2px;
-  }
-  .kpi .ds{font-size:10.5px; color:var(--soft); margin-top:2px}
-
-  /* SYSTEMS TABLE */
-  table.sys{
-    width:100%; border-collapse:collapse; font-size:12px;
-    background:var(--paper); border:1px solid var(--line); border-radius:8px;
-    overflow:hidden;
-  }
-  table.sys thead{background:#f1f5f9}
-  table.sys th{
-    text-align:left; padding:8px 10px; font-weight:600; font-size:10.5px;
-    color:var(--muted); text-transform:uppercase; letter-spacing:.05em;
-    border-bottom:1px solid var(--line);
-  }
-  table.sys td{padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:middle}
-  table.sys tr:last-child td{border-bottom:0}
-  table.sys .nm{font-weight:600; color:var(--ink)}
-  table.sys .ic{
-    display:inline-flex; width:22px; height:22px; border-radius:5px;
-    background:linear-gradient(135deg, var(--accent, var(--b1)), var(--accent2, var(--b2)));
-    color:#fff; align-items:center; justify-content:center; font-size:12px;
-    margin-right:6px; vertical-align:middle;
-  }
-  table.sys .desc{font-size:11.5px; color:var(--muted)}
-  table.sys .pill{
-    display:inline-block; padding:2px 8px; border-radius:999px; font-size:10px; font-weight:600;
-  }
-  table.sys .pill.live{background:#d1fae5; color:#065f46}
-  table.sys .pill.dev{background:#fef3c7; color:#92400e}
-
-  /* HIGHLIGHTS */
-  .highlights{display:grid; grid-template-columns:1fr 1fr; gap:10px}
-  .hl{
-    background:var(--paper); border:1px solid var(--line);
-    border-radius:8px; padding:10px 12px;
-  }
-  .hl .ti{
-    font-size:11px; color:var(--accent, var(--b1)); font-weight:700;
-    text-transform:uppercase; letter-spacing:.05em; margin-bottom:4px;
-    display:flex; align-items:center; gap:5px;
-  }
-  .hl ul{list-style:none; font-size:12px; color:var(--ink); line-height:1.65}
-  .hl li{padding:2px 0; padding-left:14px; position:relative}
-  .hl li::before{content:"·"; position:absolute; left:4px; color:var(--accent, var(--b1)); font-weight:900}
-
-  /* SEO BLOCK */
-  .seo-block{
-    display:grid; grid-template-columns:1.3fr 1fr; gap:10px;
-  }
-  .seo-stats{
-    background:linear-gradient(135deg, #f0f9ff, #fef3c7);
-    border:1px solid var(--line); border-radius:8px; padding:10px 12px;
-  }
-  .seo-stats .grid{display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin-bottom:6px}
-  .seo-stats .it{
-    background:rgba(255,255,255,.7); border-radius:6px; padding:6px 8px; text-align:center;
-  }
-  .seo-stats .it .v{font-family:'Inter'; font-weight:800; font-size:18px; color:var(--b1)}
-  .seo-stats .it .l{font-size:9.5px; color:var(--muted); margin-top:1px; text-transform:uppercase; letter-spacing:.04em; font-weight:600}
-  .seo-stats .note{font-size:11px; color:var(--ink); padding:6px 0 0; border-top:1px dashed var(--line-2)}
-  .seo-stats .note b{color:var(--b6)}
-  .seo-os{
-    background:var(--paper); border:1px solid var(--line); border-radius:8px;
-    padding:10px 12px; font-size:11.5px;
-  }
-  .seo-os h4{font-size:11px; font-weight:700; color:var(--ink); margin-bottom:6px}
-  .seo-os .row{display:grid; grid-template-columns:60px 1fr 30px; gap:6px; align-items:center; padding:3px 0}
-  .seo-os .row .nm{color:var(--ink); font-weight:500}
-  .seo-os .row .bar{height:6px; background:#e2e8f0; border-radius:3px; overflow:hidden}
-  .seo-os .row .bar .fill{height:100%; background:linear-gradient(90deg, var(--b1), var(--b3)); border-radius:3px}
-  .seo-os .row .pct{text-align:right; font-family:'Inter'; font-weight:700; color:var(--b1)}
-  .seo-os.wide .row{grid-template-columns:160px 1fr 34px}
-  .seo-os.med .row{grid-template-columns:86px 1fr 40px}
-
-  /* COMPACT DATA TABLE (SEO detail) */
-  table.data{
-    width:100%; border-collapse:collapse; font-size:11px;
-    background:var(--paper); border:1px solid var(--line); border-radius:8px;
-    overflow:hidden; margin-top:8px;
-  }
-  table.data thead{background:#f1f5f9}
-  table.data th{
-    text-align:right; padding:6px 8px; font-weight:600; font-size:10px;
-    color:var(--muted); text-transform:uppercase; letter-spacing:.04em;
-    border-bottom:1px solid var(--line); white-space:nowrap;
-  }
+  table.data{width:100%;border-collapse:collapse;font-size:11px;background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:6px}
+  table.data thead{background:#f1f3f5}
+  table.data th{text-align:right;padding:6px 8px;font-weight:600;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--line);white-space:nowrap}
   table.data th:first-child{text-align:left}
-  table.data td{padding:5px 8px; border-bottom:1px solid var(--line); text-align:right; white-space:nowrap}
-  table.data td:first-child{text-align:left; white-space:normal; color:var(--ink)}
+  table.data td{padding:5px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+  table.data td:first-child{text-align:left;white-space:normal;color:var(--ink)}
   table.data tr:last-child td{border-bottom:0}
-  table.data tbody tr:nth-child(even){background:#fafbff}
-  table.data .n{font-family:'Inter'; font-weight:600}
-  table.data .up{color:#047857; font-family:'Inter'; font-weight:700}
-  table.data .down{color:#b91c1c; font-family:'Inter'; font-weight:700}
-  table.data .flat{color:var(--soft); font-family:'Inter'; font-weight:600}
-  table.data tfoot td{
-    padding:6px 8px; font-weight:700; background:#f8fafc;
-    border-top:1px solid var(--line-2); font-family:'Inter';
-  }
-  table.data tfoot td:first-child{font-family:'IBM Plex Sans Thai'}
-  .sub-h{
-    font-size:11.5px; font-weight:700; color:var(--ink);
-    margin:12px 0 2px; display:flex; align-items:center; gap:6px;
-  }
-  .sub-h span.tag{
-    font-weight:600; font-size:10px; color:var(--muted);
-    text-transform:uppercase; letter-spacing:.04em;
-  }
-  .note-line{font-size:10.5px; color:var(--soft); line-height:1.55; margin-top:5px}
-  .note-line b{color:var(--muted)}
-  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:10px; align-items:start}
+  table.data tbody tr:nth-child(even){background:#fafbfc}
+  table.data .n{font-weight:600}
+  table.data .up{color:var(--good-ink);font-weight:700}
+  table.data .down{color:#b91c1c;font-weight:700}
+  table.data .flat{color:var(--faint);font-weight:600}
+  table.data .dim{color:var(--faint)}
+  table.data .kw{display:block;font-size:10.5px;color:var(--muted);font-weight:400;white-space:normal}
+  table.data tfoot td{font-weight:700;background:#f8fafc;border-top:1px solid var(--line-2)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:start}
+  .three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;align-items:start}
+  .note{font-size:10.5px;color:var(--faint);line-height:1.5;margin-top:5px}
+  .note b{color:var(--muted)}
+  .callout{border-left:3px solid var(--accent);background:var(--accent-soft);padding:8px 12px;border-radius:0 8px 8px 0;font-size:11.5px;color:var(--ink-2);margin-top:8px}
+  .callout b{color:var(--ink)}
+  .callout.warn{border-color:var(--s4);background:#fff5da}
 
-  /* PHONE BLOCK */
-  .phone-block{
-    background:linear-gradient(135deg, #ecfdf5, #f0f9ff);
-    border:1px solid var(--line); border-radius:8px; padding:10px 14px;
-    display:grid; grid-template-columns:1fr 1fr 1fr 1.4fr; gap:14px; align-items:center;
-  }
-  .phone-block .ph-no{font-family:'Inter'; font-weight:800; font-size:20px; color:var(--b1); letter-spacing:.02em}
-  .phone-block .ph-no .l{display:block; font-size:10px; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:.05em; margin-bottom:1px; font-family:'IBM Plex Sans Thai'}
-  .phone-block .ph-stat{text-align:center}
-  .phone-block .ph-stat .v{font-family:'Inter'; font-weight:800; font-size:22px; color:var(--b1)}
-  .phone-block .ph-stat .l{font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; font-weight:600}
-  .phone-block .ph-desc{font-size:11.5px; color:var(--ink); line-height:1.5}
-  .phone-block .ph-desc b{color:var(--b1)}
+  /* css bars */
+  .bars{display:flex;flex-direction:column;gap:5px;margin-top:6px}
+  .bar{display:grid;grid-template-columns:150px 1fr 40px;gap:8px;align-items:center;font-size:11px}
+  .bar .l{color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .bar .l small{display:block;font-size:9.5px;color:var(--muted)}
+  .bar .t{height:9px;background:var(--surface-2);border-radius:3px;overflow:hidden}
+  .bar .t i{display:block;height:100%;background:var(--accent);border-radius:0 3px 3px 0}
+  .bar .t i.s2{background:var(--s2)}
+  .bar .v{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
 
-  /* FOOTER */
-  .doc-foot{
-    margin-top:18px; padding-top:12px;
-    border-top:1px solid var(--line);
-    display:flex; justify-content:space-between; align-items:center;
-    font-size:10.5px; color:var(--soft);
-  }
-  .doc-foot .links{display:flex; gap:14px}
-  .doc-foot .links a{color:var(--b1); text-decoration:none; font-weight:500}
-  .doc-foot .links a:hover{text-decoration:underline}
+  /* blocks */
+  .blocks{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .blk{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+  .blk .ti{font-size:11.5px;font-weight:700;margin-bottom:4px;display:flex;align-items:center;gap:6px}
+  .blk .ti .pill{font-size:9.5px;font-weight:600;padding:2px 7px;border-radius:999px;background:#fdeee7;color:#9a3b12;margin-left:auto}
+  .blk .ti .pill.live{background:#e9f7e9;color:var(--good-ink)}
+  .blk .ti .pill.wait{background:#fff5da;color:var(--warn-ink)}
+  .blk ul{list-style:none;font-size:11px;color:var(--ink);line-height:1.6}
+  .blk li{padding-left:12px;position:relative}
+  .blk li::before{content:"·";position:absolute;left:3px;color:var(--accent);font-weight:900}
+  .blk li b{color:var(--ink)}
+  .blk .meta{font-size:10px;color:var(--muted);margin-bottom:4px}
 
-  /* PRINT */
+  .weeks{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  .wk{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:9px 10px}
+  .wk .h{display:flex;justify-content:space-between;font-size:10.5px;color:var(--muted);font-weight:600}
+  .wk .h b{color:var(--accent-ink);font-size:13px}
+  .wk .t{font-size:11px;font-weight:700;margin:3px 0 4px;line-height:1.3}
+  .wk ul{list-style:none;font-size:10.5px;color:var(--ink-2);line-height:1.45}
+  .wk li{padding-left:9px;position:relative}
+  .wk li::before{content:"";position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:2px;background:var(--line-2)}
+  .wk.star{border-color:#f6cdb9;background:#fffaf7}
+
+  .doc-foot{margin-top:16px;padding-top:10px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:10px;color:var(--faint)}
+  .doc-foot a{color:var(--accent);text-decoration:none;font-weight:500}
+
   @media print{
-    body{background:#fff}
-    .toolbar{display:none}
-    .paper{
-      box-shadow:none; margin:0;
-      max-width:none; width:100%;
-      padding:14mm 12mm;
-    }
-    @page{size:A4; margin:0}
-    section{break-inside:avoid}
-    .systems-table, .seo-block, .phone-block, .highlights{break-inside:avoid}
+    body{background:#fff} .toolbar{display:none}
+    .paper{box-shadow:none;margin:0;max-width:none;width:100%;padding:12mm 11mm}
+    @page{size:A4;margin:0}
+    section{break-inside:avoid} .blk,.wk,table.data{break-inside:avoid}
+    section.seo{break-inside:auto} section.seo > .two, section.seo > table, section.seo > h3{break-inside:avoid}
   }
 </style>
 </head>
 <body>
 
 <div class="toolbar">
-  <div class="lbl">📄 <b>รายงานสรุปผลการปฏิบัติงาน</b> · 11 ก.ค. – 10 ส.ค. 2026</div>
+  <div class="lbl"><b>รายงานสรุปผลการปฏิบัติงาน</b> · 11 ส.ค. – 3 ก.ย. 2026</div>
   <div class="btns">
-    <a href="index.html" class="btn">🎬 ดู Presentation แบบเต็ม</a>
-    <button class="btn primary" onclick="window.print()">🖨️ Print / Save as PDF</button>
+    <a href="index.html" class="btn">ดู Presentation แบบเต็ม</a>
+    <button class="btn primary" onclick="window.print()">Print / Save as PDF</button>
   </div>
 </div>
 
 <div class="paper">
 
-  <!-- HEADER -->
   <div class="doc-head">
     <div class="left">
-      <div class="brand"><span class="logo">🛡️</span> NET Energy · Progress Report 2026</div>
+      <div class="brand"><span class="logo"></span> NET Energy · Progress Report 2026</div>
       <h1>รายงานสรุปผลการปฏิบัติงาน
-        <span class="sub">11 กรกฎาคม – 10 สิงหาคม 2026 · ฝ่าย IT &amp; Digital Development</span>
+        <span class="sub">รอบเดือนสิงหาคม · 11 สิงหาคม – 3 กันยายน 2026 · ฝ่าย IT &amp; Digital Development</span>
       </h1>
     </div>
     <div class="right">
-      <b>เอกสาร v4.0</b>
-      จัดทำ 10 ส.ค. 2026<br/>
-      บริษัท เนเชอรัล เอ็นเนอร์ยี เทค จำกัด
+      <b>เอกสาร v5.0</b>
+      จัดทำ 3 ก.ย. 2026<br>บริษัท เนเชอรัล เอ็นเนอร์ยี เทค จำกัด
     </div>
   </div>
 
-  <!-- EXECUTIVE SUMMARY -->
+  <!-- 01 -->
   <section>
     <h2><span class="num">01</span> Executive Summary</h2>
     <div class="exec">
-      ในรอบ <b>5 สัปดาห์</b> (11 ก.ค. – 10 ส.ค. 2026) ฝ่าย IT ส่งมอบงานพัฒนา <b>108 commits</b> ใน <b>5 โปรเจกต์</b> ·
-      รอบนี้เป็นรอบ<b>ลงลึกเพื่อความน่าเชื่อถือของข้อมูล</b> ไม่ใช่รอบเปิดของใหม่ — งานกว่า <b>76% (82 commits) ลงที่ CP Safety Passport</b> ·
-      งานใหญ่ที่สุดคือการยกเครื่องให้ระบบเก็บ <b>เลขบัตรประชาชนแบบย้อนกลับไม่ได้ (PDPA)</b> — เก็บเพียง 10 หลักท้ายคู่กับรหัสเข้ารหัสทางเดียว
-      ผ่านการตรวจสอบ 4 รอบและมีเทสต์อัตโนมัติ ~665 รายการคุมไว้ ·
-      ควบคู่กับการแก้ปัญหาที่ลูกค้าแจ้งเข้ามาว่า "ค้นหาบัตรไม่เจอ" — พบผู้อบรม <b>1,364 คน</b> ที่มองไม่เห็นบนหน้าตรวจสอบบัตร
-      <b>กู้กลับมาได้ 1,164 คน</b> พร้อมล้างบัตรซ้ำ <b>1,112 ใบ</b> และเปลี่ยนวิธีค้นหาชื่อใหม่ทั้งหมด ·
-      <b>NETMER-Flow</b> เปลี่ยนจากการซ่อนเมนูมาเป็น<b>บังคับสิทธิ์การเข้าถึงจริง</b> พร้อมแก้บั๊ก 16 จุด, เปิด <b>ศูนย์แจ้งปัญหา</b> (IT/รถ/อาคาร)
-      และรื้อ <b>รายงานผลการปฏิบัติงาน</b> ให้วัดจากหลักฐานจริง ·
-      <b>เว็บไซต์หลัก</b> รื้อผู้ช่วย AI "โอบอ้อม" (เดิมตอบคำถามลูกค้าจริงถูกเพียง 3 จาก 71 ข้อ) และแก้ฐานความรู้กฎหมายความปลอดภัย <b>68 จุด</b>
+      รอบนี้ (11 ส.ค. – 3 ก.ย. 2026 · 3.5 สัปดาห์) ฝ่าย IT ส่งมอบงานพัฒนา <b>175 commits ใน 9 โปรเจกต์</b> — มากกว่ารอบก่อน (108 ใน 5 สัปดาห์) ·
+      เป็นรอบ<b>ขยายพอร์ต</b>: เปิด<b>ระบบใหม่ 4 ระบบ</b> — ระบบใบเสนอราคา + ใบสั่งซื้อให้ธุรกิจในเครือ <b>ELMER</b> (ย้ายข้อมูลเก่า 1,132 ใบ / PO 35 ใบ),
+      แอปทำรูปติดบัตร <b>NET-ID Photo Studio</b> แทน Photoshop (~100 รูป/วัน), <b>นามบัตรดิจิทัล NFC</b> ของผู้บริหาร และคลังโปสเตอร์ความปลอดภัย <b>KYT MOTTO</b> 76 แผ่น ·
+      ระบบหลักถูกทำให้ "ขายได้จริง" มากขึ้น — ใบประกาศพิมพ์ได้จริงทั้งระบบ, E-Learning พร้อมขาย, ERP เร็วขึ้น 9 เท่า, หน้าหลักสูตรโฉมใหม่, ระบบสถิติเว็บสร้างใหม่ ·
+      ธุรกิจอบรมเดินปกติ: ส.ค. <b>ผู้ผ่านการอบรม 1,155 คน ใน 94 รอบ</b> (ลงทะเบียน 798 ใบ) และ<b>ยอดเข้าเว็บ 45,357 ครั้ง สูงสุดตั้งแต่เปิดเว็บใหม่</b> ·
+      <span id="exec-seo-line">SEO: ดูหัวข้อ 07 (คีย์เวิร์ดแยกตามหลักสูตร + หลักสูตรที่ยังไม่ติดอันดับ)</span>
     </div>
   </section>
 
-  <!-- KPI -->
+  <!-- 02 -->
   <section>
     <h2><span class="num">02</span> ตัวเลขสำคัญ</h2>
     <div class="kpi-row">
-      <div class="kpi" style="--accent:var(--b1)"><div class="lbl">การพัฒนา (commits)</div><div class="v">108</div><div class="ds">ใน 5 สัปดาห์ · 5 โปรเจกต์</div></div>
-      <div class="kpi" style="--accent:var(--b5)"><div class="lbl">กู้กลับมาค้นเจอ</div><div class="v">1,164</div><div class="ds">คน · บนหน้าตรวจสอบบัตร CP</div></div>
-      <div class="kpi" style="--accent:var(--b2)"><div class="lbl">การมองเห็นบน Google</div><div class="v">27,013</div><div class="ds">+31% ต่อวันจากรอบก่อน</div></div>
-      <div class="kpi" style="--accent:var(--b6)"><div class="lbl">ระบบที่ใช้งานจริง</div><div class="v">9</div><div class="ds">เปิดใช้ทั้งหมด (+ พักไว้ 1)</div></div>
+      <div class="kpi"><div class="lbl">งานพัฒนา (commits)</div><div class="v">175</div><div class="ds">9 โปรเจกต์ · 3.5 สัปดาห์ · รอบก่อน 108</div></div>
+      <div class="kpi" style="--accent-c:var(--s2)"><div class="lbl">ระบบใหม่ที่เปิดใช้จริง</div><div class="v">4</div><div class="ds">ELMER Quotation+PO · NET-ID Photo · NFC · KYT</div></div>
+      <div class="kpi" style="--accent-c:var(--s3)"><div class="lbl">ผู้ผ่านการอบรม · ส.ค.</div><div class="v">1,155</div><div class="ds">94 รอบ · 30 หลักสูตร · ก.ค. 1,198</div></div>
+      <div class="kpi" style="--accent-c:var(--s4)"><div class="lbl">ยอดเข้าเว็บ · ส.ค.</div><div class="v">45,357</div><div class="ds">Page Views · +5.5% จาก ก.ค. · สูงสุด</div></div>
     </div>
   </section>
 
-  <!-- WORKLOAD SPLIT -->
+  <!-- 03 -->
   <section>
-    <h2><span class="num">03</span> การกระจายงานพัฒนาในรอบนี้</h2>
-    <div class="seo-os wide">
-      <h4>108 commits · 11 ก.ค. – 10 ส.ค. 2026 (นับจาก git history จริง)</h4>
-      <div class="row"><span class="nm">CP Safety Passport</span><div class="bar"><div class="fill" style="width:100%"></div></div><span class="pct">82</span></div>
-      <div class="row"><span class="nm">NET-workspace (เว็บ+ERP)</span><div class="bar"><div class="fill" style="width:13%"></div></div><span class="pct">11</span></div>
-      <div class="row"><span class="nm">NETMER-Flow</span><div class="bar"><div class="fill" style="width:11%"></div></div><span class="pct">9</span></div>
-      <div class="row"><span class="nm">Online Inspector</span><div class="bar"><div class="fill" style="width:5%"></div></div><span class="pct">4</span></div>
-      <div class="row"><span class="nm">KYT MOTTO (ใหม่)</span><div class="bar"><div class="fill" style="width:2%"></div></div><span class="pct">2</span></div>
-      <div style="font-size:11px; color:var(--muted); margin-top:8px; padding-top:6px; border-top:1px dashed var(--line-2)">
-        ระบบที่<b>ไม่มีงานพัฒนาเพิ่ม</b>ในรอบนี้ (เดินระบบตามปกติ): LINE CSAT · Document Flow · ELMER Water · Elmer Wastewater · Safety Hero ·
-        ส่วนแอปแชตภายในพักงานพัฒนาไว้ชั่วคราวเพื่อทุ่มกำลังให้ CP Passport และเว็บไซต์หลัก
+    <h2><span class="num">03</span> ธุรกิจอบรมเดือน ส.ค. · ตัวเลขจริงจากระบบ</h2>
+    <div class="two">
+      <div>
+        <h3>รายเดือน 2569 <span class="tag">ลงทะเบียน · ผู้ผ่านการอบรม</span></h3>
+        <table class="data" id="t-months"></table>
+        <div class="note">ลงทะเบียนนับตามวันที่ลงทะเบียน (ทุกสถานะ) · ผู้ผ่านการอบรมนับ trainingRecords ที่ status=completed ตามวันจบอบรม</div>
+      </div>
+      <div>
+        <h3>รอบอบรม ส.ค. <span class="tag">94 รอบ · 30 หลักสูตร</span></h3>
+        <table class="data" id="t-rounds"></table>
+        <div class="note">ก.ย. เปิดแล้ว 86 รอบ · ต.ค. 20 รอบ · ลงทะเบียน ส.ค. 798 ใบ = ยืนยัน 645 · ยกเลิก 101 · รอ 52</div>
       </div>
     </div>
+    <h3>หลักสูตรที่มีผู้ผ่านการอบรมมากที่สุด · ส.ค. <span class="tag">10 อันดับ · จาก 1,155 คน</span></h3>
+    <div class="bars" id="b-top-trained"></div>
+    <div class="callout">ลงทะเบียน ส.ค. ต่ำกว่า ก.ค. ~12% แต่<b>ผู้ผ่านการอบรมทรงตัว</b>ที่ ~1,150–1,200 คน/เดือน ตลอด 4 เดือน · หลักสูตร CP + AIS ≈ 93% ของผู้ผ่านการอบรม</div>
   </section>
 
-  <!-- SYSTEMS -->
+  <!-- 04 -->
   <section>
-    <h2><span class="num">04</span> พอร์ตงาน (9 ใช้งานจริง + 1 พักไว้ + สื่อการสอน)</h2>
-    <table class="sys">
-      <thead>
-        <tr>
-          <th style="width:32%">ระบบ</th>
-          <th>ประเภท</th>
-          <th style="width:18%">ผู้ใช้งาน</th>
-          <th style="width:13%; text-align:center">สถานะ</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><span class="ic" style="--accent:var(--b5);--accent2:var(--b4)">🪪</span><span class="nm">CP Safety Passport</span><div class="desc">Passport กลุ่ม CP · <b>82 งานพัฒนารอบนี้</b> — PDPA เลขบัตร + กู้ผู้อบรม 1,164 คน</div></td>
-          <td>Customer Portal</td>
-          <td>ศูนย์ฝึก + Trainer</td>
-          <td style="text-align:center"><span class="pill live">Live · 82 งาน</span></td>
-        </tr>
-        <tr>
-          <td><span class="ic" style="--accent:var(--b1);--accent2:var(--b2)">🛡️</span><span class="nm">NET Training Platform</span><div class="desc">ระบบหลัก · รอบนี้: ผู้ช่วย AI "โอบอ้อม" + ฐานความรู้กฎหมาย 68 จุด + เว็บโหลดไวขึ้น</div></td>
-          <td>ERP + Public Site</td>
-          <td>ลูกค้า + พนักงาน</td>
-          <td style="text-align:center"><span class="pill live">Live · ทุกวัน</span></td>
-        </tr>
-        <tr>
-          <td><span class="ic" style="--accent:var(--b4);--accent2:var(--b2)">🧭</span><span class="nm">NETMER-Flow</span><div class="desc">HR · รอบนี้: คุมสิทธิ์เข้าถึงจริง + ศูนย์แจ้งปัญหา + ตรวจรถประจำรอบ + รายงานผลงานใหม่</div></td>
-          <td>Web + iOS + Android</td>
-          <td>พนักงานทุกคน</td>
-          <td style="text-align:center"><span class="pill live">Live · Work Hub</span></td>
-        </tr>
-        <tr>
-          <td><span class="ic" style="--accent:var(--b1);--accent2:var(--b3)">🔎</span><span class="nm">Online Inspector</span><div class="desc">ตรวจความปลอดภัยออนไลน์ True · รอบนี้: เพิ่มระดับ OFI + ปรับข้อมูล 603 รายการตรงไฟล์ลูกค้า</div></td>
-          <td>Web App</td>
-          <td>ทีมตรวจ (True)</td>
-          <td style="text-align:center"><span class="pill live">Live</span></td>
-        </tr>
-        <tr>
-          <td><span class="ic" style="--accent:var(--b3);--accent2:var(--b6)">⭐</span><span class="nm">LINE CSAT Survey</span><div class="desc">สำรวจความพึงพอใจในแชต LINE OA · เดินระบบตามปกติ ไม่มีงานพัฒนาเพิ่ม</div></td>
-          <td>LINE OA + Web</td>
-          <td>ลูกค้า + ทีมบริการ</td>
-          <td style="text-align:center"><span class="pill live">Live</span></td>
-        </tr>
-        <tr>
-          <td><span class="ic" style="--accent:var(--b3);--accent2:var(--b1)">📄</span><span class="nm">NET Document Flow</span><div class="desc">เอกสารธุรกิจ · ค้นหาเอกสาร + ต้นทุนอ่านข้อมูลต่ำ · เดินระบบตามปกติ</div></td>
-          <td>Web App</td>
-          <td>คอลเซ็นเตอร์ + บัญชี</td>
-          <td style="text-align:center"><span class="pill live">Live</span></td>
-        </tr>
-        <tr>
-          <td><span class="ic" style="--accent:var(--b2);--accent2:var(--b3)">💧</span><span class="nm">ELMER Water Analysis</span><div class="desc">รายงานวิเคราะห์น้ำ Lotus · Merge-PDF + แดชบอร์ดแผนที่ไทย · เดินระบบตามปกติ</div></td>
-          <td>Web App</td>
-          <td>ทีม Elmer (Lotus)</td>
-          <td style="text-align:center"><span class="pill live">Live · Phase 1</span></td>
-        </tr>
-        <tr>
-          <td><span class="ic" style="--accent:var(--b3);--accent2:var(--b6)">🌊</span><span class="nm">Elmer Wastewater</span><div class="desc">งานน้ำเสีย CM+PM · ข้อมูลจริง 1,578 งาน · เดินระบบตามปกติ</div></td>
-          <td>Web App</td>
-          <td>ทีม Elmer (Lotus/AXONS)</td>
-          <td style="text-align:center"><span class="pill live">Live</span></td>
-        </tr>
-        <tr>
-          <td><span class="ic" style="--accent:var(--b6);--accent2:var(--b3)">🦸</span><span class="nm">NET Safety Hero (NET ZERO)</span><div class="desc">Gamification · เกมการ์ด v3 + ระบบกรอบโปรไฟล์ · เดินระบบตามปกติ</div></td>
-          <td>PWA + iOS + Android</td>
-          <td>Public</td>
-          <td style="text-align:center"><span class="pill live">Live</span></td>
-        </tr>
-        <tr>
-          <td><span class="ic" style="--accent:var(--b1);--accent2:var(--b4)">💬</span><span class="nm">NET Chat &amp; Calling</span><div class="desc">แอปคุยงานภายในองค์กร · แชต+โทร — พักงานพัฒนาไว้ชั่วคราว ยังไม่เปิดใช้จริง</div></td>
-          <td>iOS + Android</td>
-          <td>พนักงานภายใน</td>
-          <td style="text-align:center"><span class="pill dev">พักไว้</span></td>
-        </tr>
-        <tr>
-          <td><span class="ic" style="--accent:var(--b5);--accent2:var(--b6)">🛢️</span><span class="nm">LPG Training Animation</span><div class="desc">สื่อการสอนแอนิเมชันโรงบรรจุ LPG · 16:9 ฝังใน PPT (รีวิวโดยผู้เชี่ยวชาญ)</div></td>
-          <td>เว็บ · GitHub Pages</td>
-          <td>ผู้อบรม LPG + วิทยากร</td>
-          <td style="text-align:center"><span class="pill live">สื่อการสอน</span></td>
-        </tr>
-      </tbody>
-    </table>
+    <h2><span class="num">04</span> งานพัฒนา · 175 commits</h2>
+    <div class="two">
+      <div>
+        <h3>แยกตามระบบ <span class="tag">สีส้ม = ระบบใหม่รอบนี้</span></h3>
+        <div class="bars" id="b-repos"></div>
+      </div>
+      <div>
+        <h3>รายสัปดาห์</h3>
+        <table class="data" id="t-weeks"></table>
+        <div class="callout" style="margin-top:8px">55% ของงาน (96 commits) ลงที่ระบบใหม่ 4 ระบบ · เว็บไซต์หลัก + ERP 63 · สัปดาห์ที่หนักสุด 25–31 ส.ค. (75) · ทุก repo มีงานที่ส่งมอบถึงผู้ใช้แล้ว</div>
+      </div>
+    </div>
   </section>
 
-  <!-- HIGHLIGHTS -->
+  <!-- 05 -->
   <section>
-    <h2><span class="num">05</span> งานใหญ่รอบนี้ · CP Safety Passport (82 commits)</h2>
-    <div class="highlights">
-      <div class="hl" style="--accent:var(--b5)">
-        <div class="ti">🔒 ปกป้องเลขบัตรประชาชน (PDPA)</div>
+    <h2><span class="num">05</span> ระบบใหม่ 4 ระบบ</h2>
+    <div class="blocks">
+      <div class="blk">
+        <div class="ti">ELMER ใบเสนอราคา + ใบสั่งซื้อ <span class="pill">ธุรกิจในเครือ · ใหม่</span></div>
+        <div class="meta">บริษัท เอลเมอร์ อินทิเกรชั่น จำกัด · production 24 ส.ค. · PO 2 ก.ย. · 34 commits</div>
         <ul>
-          <li>เก็บเพียง <b>10 หลักท้าย</b> คู่กับรหัสเข้ารหัสทางเดียว — ยืนยันตัวคนได้ แต่ถอดกลับเป็นเลขจริงไม่ได้</li>
-          <li>ปิดช่องรูปถ่าย/ใบรับรองที่เคยตั้งชื่อไฟล์ด้วยเลขบัตร (เดิมเดาชื่อไฟล์แล้วเปิดดูได้)</li>
-          <li>ล็อกสิทธิ์อ่านข้อมูลส่วนบุคคลไว้ที่ฝั่งเซิร์ฟเวอร์</li>
-          <li>ตรวจสอบซ้ำ <b>4 รอบ</b> · เทสต์อัตโนมัติ <b>~665 รายการ</b> ก่อนขึ้นระบบ</li>
+          <li>แทน Google Sheets + Apps Script — ย้ายใบเสนอราคาเก่า <b>1,132 ใบ / ลูกค้า 523 ราย</b> ครบ</li>
+          <li>ใบสั่งซื้อ ส.ค. 69 นำเข้า <b>35 ใบ · ผู้ขาย 7 ราย · 1.73 ล้านบาท</b> — พบสูตรรวมยอดในไฟล์เดิมผิด 33 ใบ, ส่วนลดหาย 17 ใบ</li>
+          <li>ออกเลขไม่ซ้ำ · คำนวณยอด/VAT/ส่วนลด · rev.NN เมื่อแก้ · รู้ว่าลูกค้าเปิดใบแล้ว · ต้นทุน/กำไร% ภายใน</li>
+          <li>ชุดตรวจอัตโนมัติ 7 ชุดก่อนขึ้นระบบ (กติกาใบ 22 เคส · ความเป็นส่วนตัว · พิมพ์ PDF จริง · index 77 ทรง)</li>
         </ul>
       </div>
-      <div class="hl" style="--accent:var(--b3)">
-        <div class="ti">🔍 กู้ผู้อบรมที่ค้นหาไม่เจอ</div>
+      <div class="blk">
+        <div class="ti">NET-ID Photo Studio <span class="pill">เครื่องมือของทีม · ใหม่</span></div>
+        <div class="meta">โปรแกรมเดสก์ท็อป Windows · ส่งชุดติดตั้ง 25 ส.ค. · 54 commits</div>
         <ul>
-          <li>ตรวจพบ <b>1,364 คน</b> ที่มองไม่เห็นบนหน้าตรวจสอบบัตร — <b>กู้กลับมา 1,164 คน</b></li>
-          <li>อีก 200 คนถูกซ่อนอย่างถูกต้อง (ยังไม่อนุมัติ / ไม่มีบัตรที่ใช้ได้) จึงไม่เปิดเผย</li>
-          <li>ต้นเหตุคือบัตรซ้ำในระบบ — ลบออก <b>1,112 ใบ</b> พร้อมสำรองข้อมูลและย้อนกลับได้</li>
-          <li>ค้นชื่อแบบใหม่: พิมพ์บางส่วน สลับชื่อ-นามสกุล หรือมีคำนำหน้าก็เจอ (ไทย 100% · ต่างชาติ 92.4%)</li>
+          <li>ทำรูปติดบัตร <b>~100 รูป/วัน</b> แทน Photoshop — ลบพื้นหลัง AI · จัดกรอบ/ต่อไหล่ · ปรับสีเฉพาะส่วน · ส่งออกเข้า Asure ID 7</li>
+          <li>ค่ามาตรฐานคาลิเบรตจากงานจริงของทีม <b>815 ใบ</b> · เทียบผลกับงานทีม 120 คู่ 5 มิติ</li>
+          <li>ออฟไลน์ 100% (รูปใบหน้า = ข้อมูลชีวมิติ) · ชุดติดตั้งไฟล์เดียวแถม Python · ด่านตรวจ ~140 ด่าน ตรวจซ้ำ 5 รอบ</li>
         </ul>
       </div>
-      <div class="hl" style="--accent:var(--b2)">
-        <div class="ti">🪪 วางกติกาบัตรให้ชัดเจน</div>
+      <div class="blk">
+        <div class="ti">นามบัตรดิจิทัล NFC <span class="pill">ใหม่</span></div>
+        <div class="meta">netenergy-card.web.app · 1 ก.ย. · 4 commits</div>
         <ul>
-          <li>บัตรใบเดียวใช้ได้ทั้ง<b>พนักงาน + ผู้รับเหมา</b> · <b>เทรนเนอร์ต้องแยกเลข</b> (บัตรเดิมที่ปนกันอยู่ไม่ถูกแตะ)</li>
-          <li>บัตรและโมดูลเทรนเนอร์มีอายุ <b>5 ปี</b> — เดิมระบบสองส่วนขัดกันเองจนบันทึกไม่ได้</li>
-          <li>ย้อนสถานะรอบอบรมได้โดย<b>ไม่ลบข้อมูลส่วนตัว</b>ที่แก้ไปหลังอนุมัติ (รูป ชื่อ ที่อยู่)</li>
+          <li>แตะบัตร NFC เปิดหน้านามบัตรกรรมการผู้จัดการ — หน้าเดียวครอบ NET + ELMER · LINE / โทร / อีเมล / TikTok / Instagram / แชร์</li>
+          <li>ออกแบบจากจอจริงของเบราว์เซอร์ใน LINE · โฮสต์แยกจากเว็บบริษัท · ไม่ขึ้นผลค้นหา (noindex) · เหลือผูกโดเมน card.netenergy-tech.com</li>
         </ul>
       </div>
-      <div class="hl" style="--accent:var(--b1)">
-        <div class="ti">🏢 งานที่ผู้ใช้ขอเพิ่ม</div>
+      <div class="blk">
+        <div class="ti">KYT MOTTO · คลังโปสเตอร์ความปลอดภัย <span class="pill">ใหม่</span></div>
+        <div class="meta">app--kyt-motto · แค็ตตาล็อก 76 แผ่น 13 ส.ค. · ค้นหาใหม่ 17 ส.ค. · 4 commits</div>
         <ul>
-          <li>ค้นหา/พิมพ์บัตร<b>ข้ามศูนย์</b>ได้ทุกผู้ดูแล (เดิมติดล็อกเห็นเฉพาะศูนย์ตัวเอง)</li>
-          <li>รายงานรายบริษัท: วางรายชื่อทีเดียวทั้งไฟล์ + จับคู่ชื่อไทย/อังกฤษ/ตัวย่อของบริษัทเดียวกันได้</li>
-          <li>กรองรายงานผู้อบรมตาม<b>ศูนย์/เทรนเนอร์</b> · ปรับสถานะพิมพ์บัตรได้ยืดหยุ่นขึ้น + ข้อความผิดพลาดเป็นภาษาไทย</li>
-          <li><b>คู่มือผู้ใช้ฉบับใหม่</b> — ปรับให้ตรงกับระบบจริงทั้งเล่ม</li>
+          <li>โปสเตอร์ KYT งานก่อสร้าง <b>76 แผ่น · 3 หมวดงาน</b> ใช้จากมือถือหน้างาน</li>
+          <li>ค้นหาตามลักษณะงานแม้พิมพ์ผิด/ย่อคำ — วัดกับ 105 คำค้นจริง: เจอคำแรก <b>100/105</b> (จาก 62) โดยไม่เรียก AI ตอนค้น</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- OTHER SYSTEMS -->
+  <!-- 06 -->
   <section>
-    <h2><span class="num">06</span> งานสำคัญของระบบอื่น</h2>
-    <div class="highlights">
-      <div class="hl" style="--accent:var(--b4)">
-        <div class="ti">🧭 NETMER-Flow (9 commits)</div>
+    <h2><span class="num">06</span> ระบบหลักที่ปรับดีขึ้น</h2>
+    <div class="blocks">
+      <div class="blk" style="grid-column:span 2">
+        <div class="ti">เว็บไซต์หลัก + ERP · NET Training Platform <span class="pill live">63 commits · ขึ้นระบบแล้ว</span></div>
         <ul>
-          <li><b>คุมสิทธิ์เข้าถึงจริง</b> ไม่ใช่แค่ซ่อนเมนู + แก้บั๊กที่ตรวจเจอ <b>16 จุด</b> (จุดใหญ่: สร้างพนักงานใหม่แล้วแอดมินหลุดจากระบบ)</li>
-          <li><b>ศูนย์แจ้งปัญหา</b> — IT / รถ / อาคาร รวมเมนูเดียว · ปัญหารถไปโผล่ในไทม์ไลน์รถคันนั้นอัตโนมัติ</li>
-          <li><b>ตรวจรถ 2 ระดับ</b> — คนขับตรวจก่อนใช้ 14 ข้อ (ตัดข้อที่คนขับตอบไม่ได้ออก) + ผู้ดูแลรถตรวจประจำรอบ 28 ข้อ พร้อมค่าที่วัดได้</li>
-          <li><b>รายงานผลการปฏิบัติงานใหม่</b> — วัดจากหลักฐานจริงเทียบกับเวลาทำงานจริง (เดิมวิทยากรที่สอนหนัก 36–43 วันได้คะแนนแย่สุด) + Excel 9 ชีตพร้อมวิธีคิด</li>
-          <li>LINE เบิกของ: ส่งเข้ากลุ่มเดียว + รวมคำขอในช่วง ~3 นาทีเป็นข้อความเดียว</li>
+          <li><b>ใบประกาศพิมพ์ได้จริงทั้งระบบ</b> — เลขที่ต่อหลักสูตร · ฟอนต์มาตรฐานไทย · อัปโหลดรูป/ลายเซ็นวิทยากรเลือกตอนพิมพ์ · ประวัติการอบรมรองรับข้อมูลใหญ่ (เดิม 4,138 จาก 4,718 คนที่ผ่านแล้วไม่มีเลขใบประกาศ)</li>
+          <li><b>E-Learning พร้อมขาย</b> — บังคับเกณฑ์ผ่านที่เคยตั้งไว้เฉย ๆ · ปิดทางเลี่ยงเครื่องเล่น · ย้ายสื่อคอร์สจ่ายเงินออกจากที่เก็บสาธารณะ · เขียนธรรมาภิบาลตามผลตรวจ</li>
+          <li><b>ERP เร็วขึ้นทุกหน้า</b> — billing 11.9 → 1.3 วิ · certificate 7.3 → 0.4 วิ · ทุกหน้า −143 KB · แก้บั๊ก 49 ข้อจากรอบตรวจ + 6 ข้อที่ผู้ใช้แจ้ง</li>
+          <li><b>กู้ผู้อบรม 53 คน</b>ที่หายจาก 2 รอบ H AIS โคราช (19 ส.ค.) — ต้นเหตุ: การเลื่อนรอบทิ้งรายชื่อเก่าไว้แล้วระบบนับว่า "มีแล้ว" · แก้ตัวเชื่อม ERP ↔ NETMER-Flow และซ่อมข้อมูล 168 รอบ</li>
+          <li><b>หน้าหลักสูตรโฉมใหม่ + แกลเลอรีภาพอบรม</b> (14 ส.ค.) · <b>เครื่องมือตรวจสอบหลักสูตรตามกฎหมาย</b> รื้อใหม่ + ชุดทดสอบความแม่นยำ 5 เคส · ส่งผู้รับเหมา True ไป CP</li>
+          <li><b>ระบบสถิติเว็บสร้างใหม่</b> (2 ก.ย.) — เก็บ → สรุปรายวัน/รายเดือน → รายงาน ไม่ต้องอ่าน 45,000 เหตุการณ์ทุกครั้ง · ตัดทราฟฟิกพนักงานออก</li>
+          <li><b>AI + ฐานความรู้กฎหมาย</b> — ย้ายทุก flow ไป Gemini 3.7 + แดชบอร์ดการใช้ AI + ตัวแนะนำหลักสูตร · ตรวจซ้ำข้อกฎหมาย 157 ข้อ พบอ้างอิงผิด 46 → แก้ 58 แถวจากตัวบทจริง · แชตตอบภาษาของผู้ถาม</li>
+          <li><b>SEO พื้นฐาน</b> — ลิงก์จังหวัดทั่วเว็บ · ใบรับรอง 11 ใบแบบ machine-readable · Google Business Profile · ที่อยู่/เวลาทำการ/พิกัดแผนที่ถูกต้อง · เนื้อหาพร้อมวางครบ 50 หลักสูตร</li>
+          <li><b>ช่างไฟฟ้า L1 → DSD</b> — ส่งออกข้อมูลผู้อบรมตามแบบกรมพัฒนาฝีมือแรงงาน: วางไฟล์ → ได้ไฟล์ตามสัญญาข้อมูล พร้อมตารางรหัสและด่านตรวจข้อมูลก่อนส่ง</li>
         </ul>
       </div>
-      <div class="hl" style="--accent:var(--b1)">
-        <div class="ti">🌐 เว็บไซต์หลัก + ผู้ช่วย AI (11 commits)</div>
+      <div class="blk">
+        <div class="ti">NETMER-Flow (HR) <span class="pill live">7 commits</span></div>
         <ul>
-          <li><b>ผู้ช่วย AI "โอบอ้อม"</b> — ทดสอบด้วยคำถามลูกค้าจริง 71 ข้อ พบว่าตอบถูกแค่ 3 ข้อ · รื้อใหม่ทั้งชุดและย้ายไปโมเดลรุ่นใหม่</li>
-          <li><b>ฐานความรู้กฎหมายความปลอดภัย: แก้ 68 จุด</b> โดยตรวจกับตัวบทกฎหมายจริงทีละข้อ (เช่น การอบรมดับเพลิงไม่ได้จำกัดเฉพาะที่มีลูกจ้าง 10 คนขึ้นไป)</li>
-          <li>เว็บโหลดไวขึ้น — ย่อรูปบนเว็บจาก <b>120 MB เหลือ 7.4 MB</b> และแก้อาการหน้าขาวตอนโหลด</li>
-          <li>จัดระบบหน้าตาเว็บ: รวมการ์ด 4 แบบเหลือแบบเดียว · เหลือ 5 สีที่มีความหมาย · เพิ่มการตอบสนองเมื่อกดบนมือถือ</li>
+          <li><b>OT 2 ครั้ง/วันแสดงครั้งเดียว</b> ในรายงานภาระงานทีม — แก้แล้ว + รวมตรรกะรายวันเป็นชุดเดียว (3 ก.ย.)</li>
+          <li>นัดเวลาเข้างานบนมือถือ · แก้หน้าล้นจอ/กล่องโต้ตอบบนโทรศัพท์</li>
+          <li>LINE รวมข้อความหัวข้อเดียวกัน + แจ้งคำขอลา (19 ส.ค.) · แก้บัญชีแอดมิน 3 คนที่สิทธิ์เพี้ยนจากข้อมูลเก่า</li>
         </ul>
       </div>
-      <div class="hl" style="--accent:var(--b6)">
-        <div class="ti">🔎 Online Inspector (4 commits)</div>
+      <div class="blk">
+        <div class="ti">CP Safety Passport <span class="pill live">6 commits</span></div>
         <ul>
-          <li>เพิ่มระดับ <b>OFI (ข้อเสนอแนะ)</b> เป็นระดับที่ 3 ที่ไม่นับเป็นข้อบกพร่อง ตามกระบวนการใหม่ของลูกค้า</li>
-          <li>ปรับข้อมูลผลตรวจ <b>603 รายการ</b> ให้ตรงกับไฟล์ 5P ต้นทางของลูกค้า (ย้อนกลับได้)</li>
-          <li>อันดับจังหวัดเรียงได้ทุกคอลัมน์ · แก้พื้นหลังการ์ด CP Passport ที่แสดงไม่ขึ้นข้ามโดเมน</li>
+          <li>อัปเกรด E → EE ในรอบเดียว แทนโมดูลเดิม + ต้องมีคุณสมบัติก่อน · ประวัติรวม E ที่ถูกแทนเข้ากับ EE</li>
+          <li>ย้อนสถานะรอบใดรอบหนึ่งได้ แม้มีรอบหลังใช้บัตรไปแล้ว (31 ส.ค.) · ย้าย AI อ่านบัตรไปรุ่นใหม่</li>
+        </ul>
+      </div>
+      <div class="blk">
+        <div class="ti">LINE CSAT <span class="pill wait">รอเลือกกลุ่ม</span></div>
+        <ul>
+          <li>สรุปคะแนนความพอใจรายวัน 08:00 เข้ากลุ่ม LINE ของทีม — ส่ง/ตอบ/ต้องติดตาม พร้อมข้อความลูกค้า (deploy 19 ส.ค.)</li>
+          <li>เปิดใช้ได้ทันทีเมื่อผู้จัดการเลือกกลุ่มในหน้าตั้งค่า · ระบบแสดงค่าใช้จ่าย LINE ต่อเดือนให้ก่อนเปิด</li>
+        </ul>
+      </div>
+      <div class="blk">
+        <div class="ti">NET Document Flow <span class="pill live">1 commit</span></div>
+        <ul>
+          <li>รายงานใบแจ้งหนี้ Excel แบบจัดรูปแบบ + ชีตสรุปตามหมวด (24 ส.ค.)</li>
+          <li>ไม่มีงานเพิ่มในรอบนี้ (เดินปกติ): ELMER Water Analysis · Elmer Wastewater · Online Inspector · Safety Hero</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- SEO PERFORMANCE -->
+  <!-- 07 SEO (rendered from REPORT.seo) -->
+  <section class="seo" id="sec-seo">
+    <h2><span class="num">07</span> SEO · Google Search Console</h2>
+    <div id="seo-body"><div class="callout warn">รอข้อมูล Google Search Console API</div></div>
+  </section>
+
+  <!-- 08 traffic -->
   <section>
-    <h2><span class="num">07</span> SEO Performance · ผลลัพธ์จาก Google Search Console</h2>
-
-    <div class="seo-stats">
-      <div class="grid">
-        <div class="it"><div class="v">2,231</div><div class="l">Clicks</div></div>
-        <div class="it"><div class="v">27,013</div><div class="l">Impressions</div></div>
-        <div class="it"><div class="v">8.26%</div><div class="l">CTR</div></div>
-        <div class="it"><div class="v">7.65</div><div class="l">Avg Pos</div></div>
+    <h2><span class="num">08</span> ยอดเข้าเว็บ · สถิติจากระบบของเราเอง</h2>
+    <div class="two">
+      <div>
+        <h3>Page Views รายเดือน <span class="tag">ตั้งแต่เปิดเว็บใหม่</span></h3>
+        <table class="data" id="t-pv"></table>
+        <div class="note">ระบบสถิติใหม่ (analyticsMonthly) · ตัดทราฟฟิกพนักงานออก · Page View = ครั้งที่เปิดหน้า ไม่ใช่จำนวนคน</div>
       </div>
-      <div class="note">📅 ข้อมูลจริงจาก Search Console ช่วง <b>12 ก.ค. – 8 ส.ค. 2026 (28 วัน)</b> เทียบกับรอบก่อน <b>8 มิ.ย. – 8 ก.ค. 2026 (31 วัน)</b> — ช่วงเวลาไม่เท่ากัน จึงเปรียบเทียบด้วย<b>ค่าเฉลี่ยต่อวัน</b>ทุกตัวชี้วัด</div>
+      <div>
+        <h3>ช่องทางที่พาคนเข้าเว็บ · ส.ค. <span class="tag">เทียบ ก.ค.</span></h3>
+        <table class="data" id="t-channels"></table>
+      </div>
     </div>
-
-    <!-- 7.1 HEADLINE COMPARISON -->
-    <div class="sub-h">7.1 เทียบกับรอบก่อน <span class="tag">ค่าเฉลี่ยต่อวัน</span></div>
-    <table class="data">
-      <thead>
-        <tr>
-          <th style="width:26%">ตัวชี้วัด</th>
-          <th>รอบนี้ (28 วัน)</th>
-          <th>ต่อวัน</th>
-          <th>รอบก่อน (31 วัน)</th>
-          <th>ต่อวัน</th>
-          <th>เปลี่ยนแปลง/วัน</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>การคลิก · Clicks</td>
-          <td class="n">2,231</td><td class="n">79.7</td>
-          <td class="n">2,473</td><td class="n">79.8</td>
-          <td class="flat">ทรงตัว</td>
-        </tr>
-        <tr>
-          <td>การแสดงผล · Impressions</td>
-          <td class="n">27,013</td><td class="n">965</td>
-          <td class="n">22,853</td><td class="n">737</td>
-          <td class="up">+31%</td>
-        </tr>
-        <tr>
-          <td>CTR เฉลี่ย</td>
-          <td class="n">8.26%</td><td class="n">—</td>
-          <td class="n">10.82%</td><td class="n">—</td>
-          <td class="down">−2.56 จุด</td>
-        </tr>
-        <tr>
-          <td>อันดับเฉลี่ย · Avg Position</td>
-          <td class="n">7.65</td><td class="n">—</td>
-          <td class="n">8.00</td><td class="n">—</td>
-          <td class="up">ดีขึ้น 0.35</td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="note-line">
-      <b>อ่านตัวเลขนี้อย่างไร:</b> คลิกต่อวันเท่าเดิม แต่การมองเห็นโตขึ้น 31% และอันดับเฉลี่ยดีขึ้น
-      แปลว่าเว็บเริ่มติดอันดับใน<b>คำค้นที่กว้างขึ้นและมีคนค้นเยอะขึ้น</b> ซึ่งโดยธรรมชาติจะมี CTR ต่ำกว่าคำค้นชื่อบริษัท
-      CTR ที่ลดลงจึงเป็นผลของฐานการแสดงผลที่ใหญ่ขึ้น <b>ไม่ใช่คลิกที่หายไป</b> — และ 8.26% ยังสูงกว่าค่าเฉลี่ยอุตสาหกรรม (3–5%) ราว 2 เท่า
-    </div>
-
-    <!-- 7.2 STRUCTURAL SHIFT -->
-    <div class="sub-h">7.2 สัดส่วนคลิกเปลี่ยนจาก "หน้าแรก" ไปที่ "หน้าหลักสูตร" <span class="tag">สัญญาณคุณภาพทราฟฟิก</span></div>
-    <table class="data">
-      <thead>
-        <tr>
-          <th style="width:34%">กลุ่มหน้า</th>
-          <th>คลิก รอบนี้</th><th>สัดส่วน</th>
-          <th>คลิก รอบก่อน</th><th>สัดส่วน</th>
-          <th>เปลี่ยนแปลง</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>หน้าหลักสูตรรายตัว · /courses/course/*</td>
-          <td class="n">933</td><td class="n">40.6%</td>
-          <td class="n">796</td><td class="n">30.9%</td>
-          <td class="up">+17%</td>
-        </tr>
-        <tr>
-          <td>หน้าแรก · Home</td>
-          <td class="n">678</td><td class="n">29.5%</td>
-          <td class="n">1,039</td><td class="n">40.4%</td>
-          <td class="down">−35%</td>
-        </tr>
-        <tr>
-          <td>หน้าหมวดหลักสูตร · /courses, /courses/*</td>
-          <td class="n">385</td><td class="n">16.8%</td>
-          <td class="n">474</td><td class="n">18.4%</td>
-          <td class="down">−19%</td>
-        </tr>
-        <tr>
-          <td>หน้าอื่น (ติดต่อ · CP Passport · อื่น ๆ)</td>
-          <td class="n">300</td><td class="n">13.1%</td>
-          <td class="n">264</td><td class="n">10.3%</td>
-          <td class="up">+14%</td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="note-line">
-      คนที่เข้ามาจากหน้าแรกมักค้นด้วย<b>ชื่อบริษัท</b> (รู้จักเราอยู่แล้ว) ส่วนคนที่เข้าหน้าหลักสูตรโดยตรงคือคนที่ค้นหา<b>สิ่งที่อยากอบรม</b> —
-      สัดส่วนกลุ่มหลังโตจาก 31% เป็น 41% ในรอบเดียว คือทราฟฟิกที่มีโอกาสปิดการขายสูงกว่า ·
-      <b>หมายเหตุ:</b> ยอดรวมรายหน้า (2,296) ต่างจากยอดรวมของเว็บ (2,231) เล็กน้อย เพราะ Google นับ URL รูปแบบต่าง ๆ ของหน้าเดียวกันแยกกัน
-    </div>
-
-    <!-- 7.3 TOP PAGES -->
-    <div class="sub-h">7.3 หน้าที่ได้คลิกมากที่สุด <span class="tag">327 หน้าที่มีการแสดงผล</span></div>
-    <table class="data">
-      <thead>
-        <tr>
-          <th style="width:34%">หน้า</th>
-          <th>คลิก</th><th>รอบก่อน</th><th>เปลี่ยน</th>
-          <th>แสดงผล</th><th>CTR</th><th>อันดับ</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>หน้าแรก · Home</td><td class="n">668</td><td class="n">1,026</td><td class="down">−35%</td><td class="n">8,759</td><td class="n">7.6%</td><td class="n">7.4</td></tr>
-        <tr><td>ช่างไฟฟ้าภายในอาคาร ระดับ 1</td><td class="n">197</td><td class="n">116</td><td class="up">+70%</td><td class="n">3,105</td><td class="n">6.3%</td><td class="n">5.5</td></tr>
-        <tr><td>CP Safety Passport (หน้าหลัก)</td><td class="n">179</td><td class="n">114</td><td class="up">+57%</td><td class="n">2,177</td><td class="n">8.2%</td><td class="n">2.7</td></tr>
-        <tr><td>ใบอนุญาตกรมธุรกิจพลังงาน · DOEB</td><td class="n">163</td><td class="n">268</td><td class="down">−39%</td><td class="n">2,063</td><td class="n">7.9%</td><td class="n">4.1</td></tr>
-        <tr><td>ผู้ปฏิบัติงานสถานที่ใช้ LPG</td><td class="n">140</td><td class="n">180</td><td class="down">−22%</td><td class="n">820</td><td class="n">17.1%</td><td class="n">4.7</td></tr>
-        <tr><td>ผู้ปฏิบัติงานสถานีบริการน้ำมัน</td><td class="n">88</td><td class="n">44</td><td class="up">+100%</td><td class="n">656</td><td class="n">13.4%</td><td class="n">4.1</td></tr>
-        <tr><td>สถานที่เก็บรักษาน้ำมัน</td><td class="n">85</td><td class="n">96</td><td class="down">−11%</td><td class="n">519</td><td class="n">16.4%</td><td class="n">4.1</td></tr>
-        <tr><td>แคตตาล็อกหลักสูตร · /courses</td><td class="n">72</td><td class="n">90</td><td class="down">−20%</td><td class="n">2,821</td><td class="n">2.6%</td><td class="n">11.1</td></tr>
-        <tr><td>ผู้ปฏิบัติงานสถานที่ใช้ NG</td><td class="n">56</td><td class="n">49</td><td class="up">+14%</td><td class="n">477</td><td class="n">11.7%</td><td class="n">4.3</td></tr>
-        <tr><td>AIS Safety Passport · ผู้รับเหมา</td><td class="n">48</td><td class="n">24</td><td class="up">+100%</td><td class="n">497</td><td class="n">9.7%</td><td class="n">4.4</td></tr>
-        <tr><td>ความปลอดภัยก๊าซแอมโมเนีย</td><td class="n">46</td><td class="n">13</td><td class="up">+254%</td><td class="n">214</td><td class="n">21.5%</td><td class="n">3.8</td></tr>
-        <tr><td>สถานที่บรรจุก๊าซ LPG</td><td class="n">45</td><td class="n">26</td><td class="up">+73%</td><td class="n">478</td><td class="n">9.4%</td><td class="n">5.7</td></tr>
-        <tr><td>ติดต่อเรา</td><td class="n">37</td><td class="n">42</td><td class="down">−12%</td><td class="n">2,100</td><td class="n">1.8%</td><td class="n">3.3</td></tr>
-        <tr><td>ADR / TSM</td><td class="n">35</td><td class="n">6</td><td class="up">+483%</td><td class="n">615</td><td class="n">5.7%</td><td class="n">5.8</td></tr>
-        <tr><td>จป. หัวหน้างาน</td><td class="n">27</td><td class="n">10</td><td class="up">+170%</td><td class="n">269</td><td class="n">10.0%</td><td class="n">5.5</td></tr>
-      </tbody>
-    </table>
-    <div class="note-line">
-      <b>หน้าที่โตแรงสุด</b> คือหน้าหลักสูตรเฉพาะทาง — แอมโมเนีย +254% · ADR/TSM +483% · จป.หัวหน้างาน +170% ·
-      หน้าเหล่านี้ CTR สูงมาก (17–22%) เพราะคนค้นตรงกับสิ่งที่ต้องการ ·
-      <b>หน้าที่ลดลง</b> คือ DOEB (−39%) กับ LPG (−22%) — ทั้งคู่เป็นหลักสูตรตามฤดูกาลของรอบยื่นใบอนุญาต ควรติดตามอีก 1 รอบก่อนสรุป ·
-      <b>หน้าที่ควรแก้:</b> /courses แสดงผล 2,821 ครั้งแต่ CTR แค่ 2.6% ที่อันดับ 11.1 และ /contact แสดงผล 2,100 ครั้ง CTR 1.8% — เป็นหน้าที่ Google เอาไปโชว์เยอะแต่คนไม่กด
-    </div>
-
-    <!-- 7.4 TOP QUERIES -->
-    <div class="sub-h">7.4 คำค้นหาที่พาคนเข้าเว็บ <span class="tag">1,000+ คำค้น (เพดาน export)</span></div>
-    <table class="data">
-      <thead>
-        <tr><th style="width:40%">คำค้นหา</th><th>คลิก</th><th>แสดงผล</th><th>CTR</th><th>อันดับ</th><th>ประเภท</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>เนเชอรัล เอ็นเนอร์ยี เทค</td><td class="n">139</td><td class="n">187</td><td class="n">74.3%</td><td class="n">1.0</td><td>ชื่อบริษัท</td></tr>
-        <tr><td>net อบรม</td><td class="n">42</td><td class="n">50</td><td class="n">84.0%</td><td class="n">1.0</td><td>ชื่อบริษัท</td></tr>
-        <tr><td>เนเชอรัล</td><td class="n">36</td><td class="n">575</td><td class="n">6.3%</td><td class="n">1.5</td><td>ชื่อบริษัท</td></tr>
-        <tr><td>natural energy tech co. ltd</td><td class="n">30</td><td class="n">46</td><td class="n">65.2%</td><td class="n">1.1</td><td>ชื่อบริษัท</td></tr>
-        <tr><td>net</td><td class="n">26</td><td class="n">2,891</td><td class="n">0.9%</td><td class="n">6.3</td><td>คำกว้าง</td></tr>
-        <tr><td>เนเชอรัล เอ็นเนอร์ยี เทค จำกัด</td><td class="n">25</td><td class="n">42</td><td class="n">59.5%</td><td class="n">1.1</td><td>ชื่อบริษัท</td></tr>
-        <tr><td>cp safety passport</td><td class="n">17</td><td class="n">288</td><td class="n">5.9%</td><td class="n">2.1</td><td>หลักสูตร</td></tr>
-        <tr><td>ผู้ปฏิบัติงานสถานที่ใช้ก๊าซธรรมชาติ</td><td class="n">17</td><td class="n">40</td><td class="n">42.5%</td><td class="n">1.0</td><td>หลักสูตร</td></tr>
-        <tr><td>อบรมช่างไฟฟ้าภายในอาคาร ระดับ 1</td><td class="n">14</td><td class="n">251</td><td class="n">5.6%</td><td class="n">3.4</td><td>หลักสูตร</td></tr>
-        <tr><td>ผู้ปฏิบัติงานสถานที่ใช้ก๊าซปิโตรเลียมเหลว</td><td class="n">11</td><td class="n">34</td><td class="n">32.4%</td><td class="n">1.1</td><td>หลักสูตร</td></tr>
-        <tr><td>อบรมดับเพลิงขั้นต้น ฟรี 2569</td><td class="n">10</td><td class="n">55</td><td class="n">18.2%</td><td class="n">5.7</td><td>หลักสูตร</td></tr>
-        <tr><td>cp safety passport มีกี่หลักสูตร</td><td class="n">10</td><td class="n">31</td><td class="n">32.3%</td><td class="n">1.3</td><td>คำถาม</td></tr>
-        <tr><td>อบรม adr</td><td class="n">9</td><td class="n">80</td><td class="n">11.3%</td><td class="n">6.0</td><td>หลักสูตร</td></tr>
-        <tr><td>อบรมโลตัส</td><td class="n">7</td><td class="n">50</td><td class="n">14.0%</td><td class="n">8.0</td><td>ลูกค้า</td></tr>
-        <tr><td>หากเข้าปฏิบัติงานโดยไม่มีบัตร safety passport จะมีค่าปรับเท่าใด</td><td class="n">5</td><td class="n">40</td><td class="n">12.5%</td><td class="n">1.0</td><td>คำถาม</td></tr>
-      </tbody>
-    </table>
-    <div class="note-line">
-      <b>คำค้นชื่อบริษัทยังครองอันดับต้น</b> (139+42+36+30+25 = 272 คลิก) และเราอยู่อันดับ 1 แทบทุกคำ — ฐานคนที่รู้จักเราอยู่แล้วแข็งแรง ·
-      <b>สิ่งที่ควรจับตา:</b> คำว่า "net" ให้การแสดงผลถึง <b>2,891 ครั้ง</b> แต่ได้แค่ 26 คลิก (CTR 0.9%) — เป็นคำกว้างที่ไม่ได้หมายถึงเรา จึงเป็นตัวถ่วง CTR รวมของทั้งเว็บ ·
-      <b>โอกาส:</b> เริ่มมีคำค้นแบบ<b>คำถาม</b>เข้ามา ("cp safety passport มีกี่หลักสูตร", "ไม่มีบัตร safety passport ปรับเท่าไร") และเราติดอันดับ 1 — เป็นกลุ่มที่ AI อย่าง ChatGPT ดึงไปตอบได้ง่าย
-    </div>
-
-    <!-- 7.5 DEVICE + COUNTRY -->
-    <div class="sub-h">7.5 อุปกรณ์ และ ประเทศ</div>
-    <div class="two-col">
-      <table class="data" style="margin-top:0">
-        <thead><tr><th style="width:34%">อุปกรณ์</th><th>คลิก</th><th>แสดงผล</th><th>CTR</th><th>อันดับ</th></tr></thead>
-        <tbody>
-          <tr><td>🖥️ Desktop</td><td class="n">1,490</td><td class="n">14,505</td><td class="n">10.3%</td><td class="n">9.0</td></tr>
-          <tr><td>📱 Mobile</td><td class="n">719</td><td class="n">12,053</td><td class="n">6.0%</td><td class="n">5.9</td></tr>
-          <tr><td>📲 Tablet</td><td class="n">22</td><td class="n">455</td><td class="n">4.8%</td><td class="n">11.8</td></tr>
-        </tbody>
-        <tfoot><tr><td>รวม</td><td>2,231</td><td>27,013</td><td>8.26%</td><td>7.65</td></tr></tfoot>
-      </table>
-      <table class="data" style="margin-top:0">
-        <thead><tr><th style="width:34%">ประเทศ</th><th>คลิก</th><th>แสดงผล</th><th>CTR</th><th>อันดับ</th></tr></thead>
-        <tbody>
-          <tr><td>🇹🇭 ไทย</td><td class="n">2,201</td><td class="n">25,279</td><td class="n">8.7%</td><td class="n">7.3</td></tr>
-          <tr><td>🇺🇸 สหรัฐอเมริกา</td><td class="n">0</td><td class="n">363</td><td class="n">0%</td><td class="n">8.8</td></tr>
-          <tr><td>🇯🇵 ญี่ปุ่น</td><td class="n">4</td><td class="n">352</td><td class="n">1.1%</td><td class="n">8.2</td></tr>
-          <tr><td>🇸🇬 สิงคโปร์</td><td class="n">8</td><td class="n">122</td><td class="n">6.6%</td><td class="n">6.1</td></tr>
-          <tr><td>อื่น ๆ (77 ประเทศ)</td><td class="n">18</td><td class="n">897</td><td class="n">2.0%</td><td class="n">—</td></tr>
-        </tbody>
-        <tfoot><tr><td>ต่างประเทศรวม (81)</td><td>30</td><td>1,734</td><td>1.73%</td><td>—</td></tr></tfoot>
-      </table>
-    </div>
-    <div class="note-line">
-      <b>Desktop</b> ได้คลิก 67% ที่ CTR 10.3% ขณะที่ <b>Mobile</b> อยู่อันดับดีกว่า (5.9 vs 9.0) แต่ CTR แค่ 6.0% —
-      มือถือเห็นเราสูงกว่าแต่กดน้อยกว่า เป็นจุดที่ปรับหัวข้อ/คำอธิบายในผลค้นหาให้สั้นลงน่าจะช่วยได้ ·
-      <b>ต่างประเทศ:</b> ปรากฏใน <b>81 ประเทศ</b> รวม 1,734 การแสดงผล แต่ได้แค่ 30 คลิก (CTR 1.7%) —
-      สหรัฐฯ เห็นเรา 363 ครั้งโดยไม่คลิกเลย ญี่ปุ่น 352 ครั้งคลิก 4 · เว็บ 4 ภาษาทำให้เราเริ่ม<b>ปรากฏ</b>ในตลาดต่างประเทศแล้ว
-      แต่ยังไม่ถึงขั้นได้ทราฟฟิกจริง ต้องใช้เวลาสะสมอันดับต่ออีกหลายรอบ
+    <div class="two" style="margin-top:8px">
+      <div>
+        <h3>หน้าหลักสูตรที่คนเปิดมากที่สุด · ส.ค.</h3>
+        <table class="data" id="t-topcourses"></table>
+      </div>
+      <div>
+        <h3>สัญญาณที่น่าจับตา</h3>
+        <table class="data" id="t-signals"></table>
+        <div class="note">"หน้าสมัคร" = ครั้งที่เปิด /register/[รอบ] · ภาษาต่างประเทศ = การเข้าชมหน้า EN/JA/ZH-Hans</div>
+      </div>
     </div>
   </section>
 
-  <!-- WEBSITE TRAFFIC -->
+  <!-- 09 timeline -->
   <section>
-    <h2><span class="num">08</span> ยอดเข้าใช้เว็บไซต์จริง · First-party Analytics</h2>
-    <div class="seo-block">
-      <div class="seo-stats">
-        <div class="grid">
-          <div class="it"><div class="v">41,244</div><div class="l">Page Views (30วัน)</div></div>
-          <div class="it"><div class="v">~1,375</div><div class="l">เฉลี่ย/วัน</div></div>
-          <div class="it"><div class="v">219</div><div class="l">ผู้ใช้ล็อกอิน</div></div>
-          <div class="it"><div class="v">G CP</div><div class="l">หลักสูตรฮิต (989)</div></div>
-        </div>
-        <div class="note">📅 <b>30 วันล่าสุด (11 ก.ค. – 10 ส.ค. 2026)</b> · นับทุกช่องทาง (ไม่ใช่แค่ Google) · ยอดรวมลดลง 13% จากรอบก่อน (47,429) เพราะช่วงปลาย ก.ค. เงียบผิดปกติ แต่ <b>8 วันล่าสุดกลับมาเฉลี่ย ~1,875 ครั้ง/วัน</b> สูงกว่าค่าเฉลี่ยรอบก่อน · <b>หน้ายอดนิยม:</b> /courses 6,373 · หน้าแรก 5,901 · CP ผู้รับเหมา 1,622 · AIS ผู้รับเหมา 1,461</div>
-      </div>
-      <div class="seo-os med">
-        <h4>ช่องทางที่นำผู้ใช้เข้ามา (External)</h4>
-        <div class="row"><span class="nm">🔍 Google</span><div class="bar"><div class="fill" style="width:100%"></div></div><span class="pct">9,001</span></div>
-        <div class="row"><span class="nm">🔎 Bing</span><div class="bar"><div class="fill" style="width:5%"></div></div><span class="pct">402</span></div>
-        <div class="row"><span class="nm">📘 Facebook</span><div class="bar"><div class="fill" style="width:3%"></div></div><span class="pct">256</span></div>
-        <div class="row"><span class="nm">💬 LINE</span><div class="bar"><div class="fill" style="width:2%"></div></div><span class="pct">205</span></div>
-        <div class="row"><span class="nm">✨ ChatGPT</span><div class="bar"><div class="fill" style="width:1%"></div></div><span class="pct">65</span></div>
-        <div style="font-size:11px; color:var(--muted); margin-top:6px; padding-top:5px; border-top:1px dashed var(--line-2)">
-          Direct (พิมพ์ URL / บุ๊กมาร์ก / เปิดในแอป) ใหญ่สุดที่ 26,905 · <b>เริ่มมีคนเข้ามาจาก ChatGPT แล้ว</b> — สัญญาณว่า AI ส่งลูกค้ามาหาเราจริง
-        </div>
-      </div>
+    <h2><span class="num">09</span> ไทม์ไลน์รายสัปดาห์</h2>
+    <div class="weeks">
+      <div class="wk"><div class="h"><span>11–17 ส.ค.</span><b>17</b></div><div class="t">SEO + ฐานความรู้กฎหมาย + หน้าหลักสูตรใหม่</div><ul><li>หน้าหลักสูตรโฉมใหม่ + แกลเลอรี (14 ส.ค.)</li><li>ตรวจซ้ำข้อกฎหมาย 157 ข้อ → แก้ 58 แถว</li><li>KYT MOTTO 76 แผ่น + ค้นหาทนสะกดผิด</li></ul></div>
+      <div class="wk star"><div class="h"><span>18–24 ส.ค.</span><b>66</b></div><div class="t">ELMER ขึ้นระบบ · ERP เร็วขึ้น · กู้ผู้อบรม 53 คน</div><ul><li>ELMER ใบเสนอราคา production (22–24 ส.ค.)</li><li>ERP เร็วขึ้น 9 เท่า + แก้บั๊ก 55 ข้อ</li><li>แก้ตัวเชื่อม ERP ↔ Flow · LINE CSAT สรุปรายวัน · Doc Flow Excel</li></ul></div>
+      <div class="wk star"><div class="h"><span>25–31 ส.ค.</span><b>75</b></div><div class="t">NET-ID Photo ส่งทีม · ใบประกาศ · E-Learning</div><ul><li>NET-ID Photo Studio ตั้งต้นจนส่งชุดติดตั้ง</li><li>ใบประกาศพิมพ์ได้จริง · E-Learning พร้อมขาย</li><li>AI Gemini 3.7 · เครื่องมือตรวจกฎหมายรื้อใหม่</li></ul></div>
+      <div class="wk"><div class="h"><span>1–3 ก.ย.</span><b>17</b></div><div class="t">ใบสั่งซื้อ · นามบัตร NFC · สถิติเว็บใหม่</div><ul><li>ELMER ใบสั่งซื้อ 35 ใบ (2 ก.ย.)</li><li>นามบัตร NFC deploy (1 ก.ย.)</li><li>ระบบสถิติเว็บใหม่ · NETMER แก้ OT/มือถือ</li></ul></div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <div class="doc-foot">
-    <div>© 2026 Natural Energy Tech Co., Ltd. · ฝ่าย IT &amp; Digital Development</div>
-    <div class="links">
-      <a href="index.html">🎬 Interactive Deck</a>
-    </div>
+    <div>© 2026 Natural Energy Tech Co., Ltd. · ฝ่าย IT &amp; Digital Development · ทุกตัวเลขดึงจาก git history · Firestore · Google Search Console API</div>
+    <div><a href="index.html">Interactive Deck</a></div>
   </div>
 </div>
 
+<script src="js/report-data.js"></script>
+<script>
+(function () {
+  const D = window.REPORT, f = n => Number(n).toLocaleString('en-US');
+  const $ = id => document.getElementById(id);
+  const h = (t, c, x) => { const e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; };
+  const pct = (a, b) => b ? (a - b) / b * 100 : 0;
+  const dtxt = v => (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v).toFixed(Math.abs(v) < 10 ? 1 : 0) + '%';
+  const dcls = v => Math.abs(v) < 0.5 ? 'flat' : v > 0 ? 'up' : 'down';
+  function table(el, head, rows, foot) {
+    el.replaceChildren();
+    const th = h('thead'), tr = h('tr'); head.forEach(x => tr.appendChild(h('th', null, x))); th.appendChild(tr); el.appendChild(th);
+    const tb = h('tbody');
+    rows.forEach(r => { const t = h('tr'); r.forEach(c => { const td = h('td'); if (c && typeof c === 'object') { td.className = c.cls || ''; if (c.html) td.innerHTML = c.html; else td.textContent = c.v; } else td.textContent = c; t.appendChild(td); }); tb.appendChild(t); });
+    el.appendChild(tb);
+    if (foot) { const tf = h('tfoot'), t = h('tr'); foot.forEach(c => t.appendChild(h('td', null, c))); tf.appendChild(t); el.appendChild(tf); }
+  }
+  function bars(el, rows, opts) {
+    el.replaceChildren(); const max = Math.max(...rows.map(r => r.v));
+    rows.forEach(r => { const b = h('div', 'bar'); const l = h('div', 'l'); l.appendChild(document.createTextNode(r.l)); if (r.sub) l.appendChild(h('small', null, r.sub)); b.appendChild(l);
+      const t = h('div', 't'); const i = h('i', r.cls || ''); i.style.width = (100 * r.v / max).toFixed(1) + '%'; t.appendChild(i); b.appendChild(t); b.appendChild(h('div', 'v', f(r.v))); el.appendChild(b); });
+  }
+
+  // 03
+  const months = ['เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.'];
+  table($('t-months'), ['เดือน', 'ลงทะเบียน (ใบ)', 'ผู้ผ่านการอบรม (คน)'], months.map(m => { const r = D.biz.regs.find(x => x.m === m), t = D.biz.trained.find(x => x.m === m); return [m, r ? f(r.v) : '—', t ? { v: f(t.v), cls: 'n' } : '—']; }));
+  const R = D.biz.augRounds;
+  table($('t-rounds'), ['รายการ', 'จำนวน', 'สัดส่วน'], [['เปิดรับสมัคร', f(R.open), Math.round(100 * R.open / R.total) + '%'], ['เต็ม', f(R.full), Math.round(100 * R.full / R.total) + '%'], ['ยกเลิก', f(R.cancelled), Math.round(100 * R.cancelled / R.total) + '%']].concat(D.biz.augMode.map(m => [m.label, f(m.value), Math.round(100 * m.value / R.total) + '%'])), ['รวมรอบ ส.ค.', f(R.total), '100%']);
+  bars($('b-top-trained'), D.biz.augTopTrained.map(([l, v]) => ({ l, v })));
+
+  // 04
+  bars($('b-repos'), D.dev.byRepo.map(r => ({ l: r.label, sub: r.sub, v: r.n, cls: r.kind === 'new' ? 's2' : '' })));
+  table($('t-weeks'), ['สัปดาห์', 'commits', 'สัดส่วน'], D.dev.weeks.map(w => [w.label, f(w.n), Math.round(100 * w.n / D.dev.total) + '%']), ['รวม', f(D.dev.total), '100%']);
+
+  // 08
+  table($('t-pv'), ['เดือน', 'Page Views', 'เปลี่ยนแปลง'], D.traffic.monthly.map((m, i, a) => [m.m, { v: f(m.v), cls: 'n' }, i ? { v: dtxt(pct(m.v, a[i - 1].v)), cls: dcls(pct(m.v, a[i - 1].v)) } : '—']));
+  const cj = D.traffic.channelsJul, chRows = [['Direct', 27406, cj.direct], ['ค้นหา Google / Bing', 11040, cj.search], ['ลิงก์ภายในเว็บ', 6030, cj.internal], ['โซเชียล (Facebook)', 304, cj.social], ['LINE', 229, cj.line], ['แชตองค์กร (Teams)', 137, cj.messaging], ['เว็บอื่นอ้างอิง', 114, cj.referral], ['AI (ChatGPT · Gemini)', 89, cj.ai]];
+  table($('t-channels'), ['ช่องทาง', 'ส.ค.', 'ก.ค.', 'เปลี่ยน'], chRows.map(([l, a, b]) => [l, { v: f(a), cls: 'n' }, f(b), { v: dtxt(pct(a, b)), cls: dcls(pct(a, b)) }]));
+  table($('t-topcourses'), ['หลักสูตร', 'ครั้ง'], D.traffic.topCourses.map(([l, v]) => [l, { v: f(v), cls: 'n' }]));
+  const L = D.traffic.locale, LJ = D.traffic.localeJul, fo = L.en + L.ja + L.zh, foJ = LJ.en + LJ.ja + LJ.zh;
+  table($('t-signals'), ['สัญญาณ', 'ส.ค.', 'ก.ค.', 'เปลี่ยน'], [
+    ['เปิดหน้าหลักสูตรรายตัว', { v: f(D.traffic.routesAug.coursePages), cls: 'n' }, f(11316), { v: dtxt(pct(D.traffic.routesAug.coursePages, 11316)), cls: 'up' }],
+    ['เปิดหน้าสมัคร (/register)', { v: f(D.traffic.routesAug.register), cls: 'n' }, f(4307), { v: dtxt(pct(D.traffic.routesAug.register, 4307)), cls: 'up' }],
+    ['หน้าภาษาต่างประเทศ (EN/JA/ZH)', { v: f(fo), cls: 'n' }, f(foJ), { v: dtxt(pct(fo, foJ)), cls: 'up' }],
+    ['เข้ามาจาก AI (ChatGPT + Gemini)', { v: f(89), cls: 'n' }, f(100), { v: dtxt(pct(89, 100)), cls: 'down' }],
+    ['ผู้ใช้ที่ล็อกอิน (page views)', { v: f(D.traffic.signedInAug), cls: 'n' }, f(8581), { v: dtxt(pct(D.traffic.signedInAug, 8581)), cls: 'down' }],
+  ]);
+
+  // 07 SEO
+  const S = D.seo; if (!S) return;
+  const body = $('seo-body'); body.replaceChildren();
+  const t = S.totals, p = S.prev, cpd = t.clicks / S.window.days, cpdP = p.clicks / S.prevWindow.days, ipd = t.impressions / S.window.days, ipdP = p.impressions / S.prevWindow.days;
+  const h3 = (txt, tag) => { const e = h('h3'); e.appendChild(document.createTextNode(txt)); if (tag) e.appendChild(h('span', 'tag', tag)); return e; };
+  body.appendChild(h3('7.1 ภาพรวมเทียบรอบก่อน', S.window.label + ' (' + S.window.days + ' วัน) vs ' + S.prevWindow.label + ' (' + S.prevWindow.days + ' วัน) · เทียบต่อวัน'));
+  const t1 = h('table', 'data'); body.appendChild(t1);
+  table(t1, ['ตัวชี้วัด', 'รอบนี้', 'ต่อวัน', 'รอบก่อน', 'ต่อวัน', 'เปลี่ยนแปลง/วัน'], [
+    ['การคลิก · Clicks', { v: f(t.clicks), cls: 'n' }, cpd.toFixed(1), f(p.clicks), cpdP.toFixed(1), { v: dtxt(pct(cpd, cpdP)), cls: dcls(pct(cpd, cpdP)) }],
+    ['การแสดงผล · Impressions', { v: f(t.impressions), cls: 'n' }, f(Math.round(ipd)), f(p.impressions), f(Math.round(ipdP)), { v: dtxt(pct(ipd, ipdP)), cls: dcls(pct(ipd, ipdP)) }],
+    ['CTR เฉลี่ย', { v: (t.ctr * 100).toFixed(2) + '%', cls: 'n' }, '—', (p.ctr * 100).toFixed(2) + '%', '—', { v: ((t.ctr - p.ctr) * 100 > 0 ? '+' : '−') + Math.abs((t.ctr - p.ctr) * 100).toFixed(2) + ' จุด', cls: dcls((t.ctr - p.ctr) * 100) }],
+    ['อันดับเฉลี่ย · Position', { v: t.position.toFixed(2), cls: 'n' }, '—', p.position.toFixed(2), '—', { v: (p.position - t.position > 0 ? 'ดีขึ้น ' : p.position - t.position < 0 ? 'แย่ลง ' : 'เท่าเดิม ') + Math.abs(p.position - t.position).toFixed(2), cls: dcls(p.position - t.position) }],
+  ]);
+  const ins = h('div', 'callout'); ins.innerHTML = (S.insights || []).join(' · '); body.appendChild(ins);
+
+  body.appendChild(h3('7.2 คลิกแยกตามประเภทหน้า และอุปกรณ์'));
+  const two = h('div', 'two'); body.appendChild(two);
+  const tg = h('table', 'data'); two.appendChild(tg); const gtot = S.groups.reduce((a, g) => a + g.value, 0);
+  table(tg, ['ประเภทหน้า', 'คลิก', 'สัดส่วน'], S.groups.map(g => [g.label, { v: f(g.value), cls: 'n' }, Math.round(100 * g.value / gtot) + '%']));
+  const td = h('table', 'data'); two.appendChild(td); const dtot = S.devices.reduce((a, g) => a + g.value, 0);
+  table(td, ['อุปกรณ์', 'คลิก', 'สัดส่วน', 'CTR', 'อันดับ'], S.devices.map(g => [g.label, { v: f(g.value), cls: 'n' }, Math.round(100 * g.value / dtot) + '%', g.ctr != null ? (g.ctr * 100).toFixed(1) + '%' : '—', g.position != null ? g.position.toFixed(1) : '—']));
+
+  body.appendChild(h3('7.3 คีย์เวิร์ดที่คนค้นแล้วเจอเรา แยกตามหลักสูตร', S.byCourse.length + ' หลักสูตรที่ได้คลิก · เรียงตามคลิก · จับคู่จากข้อมูล คีย์เวิร์ด × หน้า ของ Search Console'));
+  const tc = h('table', 'data'); body.appendChild(tc);
+  table(tc, ['หลักสูตร · คีย์เวิร์ดเด่น', 'คีย์เวิร์ด', 'คลิก', 'แสดงผล', 'CTR', 'อันดับ'], S.byCourse.slice(0, 20).map(c => [
+    { html: '<b>' + esc(c.course) + '</b><span class="kw">' + esc(c.topKw.slice(0, 3).map(k => k.q + ' (' + k.clicks + ')').join(' · ')) + '</span>' }, f(c.kwCount), { v: f(c.clicks), cls: 'n' }, f(c.impressions), (100 * c.clicks / c.impressions).toFixed(1) + '%', c.position.toFixed(1)]));
+
+  body.appendChild(h3('7.4 คำที่ลูกค้าใช้ค้นหา "หลักสูตร" แล้วเจอเรา', 'ไม่นับคำค้นชื่อบริษัท · 20 อันดับตามคลิก'));
+  const tk = h('table', 'data'); body.appendChild(tk);
+  table(tk, ['คีย์เวิร์ด', 'หลักสูตร / หน้าที่คนคลิก', 'คลิก', 'แสดงผล', 'อันดับ'], S.intentKw.slice(0, 20).map(k => [k.q, { v: k.course, cls: 'dim' }, { v: f(k.clicks), cls: 'n' }, f(k.impressions), { v: k.position.toFixed(1), cls: k.position <= 3 ? 'up' : k.position > 10 ? 'down' : '' }]));
+  const bn = h('div', 'callout'); bn.innerHTML = S.brandNote || ''; body.appendChild(bn);
+
+  body.appendChild(h3('7.5 หลักสูตรที่เปิดขายแต่ยังไม่ติดอันดับ', 'ติดดี ' + S.ranking.good + ' · เริ่มเห็น ' + S.ranking.mid + ' · ยังไม่ติด ' + S.ranking.none + ' จาก ' + (S.ranking.good + S.ranking.mid + S.ranking.none) + ' หลักสูตร'));
+  const tn = h('table', 'data'); body.appendChild(tn);
+  table(tn, ['หลักสูตร', 'หมวด', 'แสดงผล', 'คลิก', 'อันดับ', 'สถานะ'], S.notRanking.map(r => [r.course, { v: r.cat, cls: 'dim' }, { v: f(r.impressions), cls: r.impressions === 0 ? 'down' : '' }, f(r.clicks), r.position == null ? '—' : r.position.toFixed(1), r.tierLabel]));
+  const nn = h('div', 'callout warn'); nn.innerHTML = (S.notRankingNotes || []).join('<br>'); body.appendChild(nn);
+  const rule = h('div', 'note'); rule.innerHTML = '<b>เกณฑ์</b> ' + (S.tierRule || ''); body.appendChild(rule);
+  if (S.execLine) $('exec-seo-line').innerHTML = S.execLine;
+  function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+})();
+</script>
 </body>
 </html>

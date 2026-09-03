@@ -3,810 +3,548 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>NET Energy · Progress Report · ก.ค. – ส.ค. 2026</title>
+<title>NET Energy · Progress Report · ส.ค. 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/ui.css">
-<link rel="stylesheet" href="css/slides.css">
-<link rel="stylesheet" href="css/flow.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/deck.css">
 </head>
 <body>
 
-<!-- TOP BAR -->
-<div class="topbar">
-  <div class="brand">
-    <div class="logo" data-icon="shield-check"></div>
-    <span><b>NET Energy</b> · Progress Report · ก.ค. – ส.ค. 2026</span>
+<div class="viewport">
+<div class="stage" id="stage">
+
+  <div class="progress"><div class="fill" id="progress-fill"></div></div>
+  <div class="chrome-top">
+    <div class="brand"><span class="mark"><span data-icon="shield-check"></span></span> NET Energy · Progress Report · ส.ค. 2026</div>
+    <div class="right">
+      <span class="counter"><b id="cur-num">1</b> <span>/ <span id="total-num">16</span></span></span>
+      <button class="ibtn" id="menu-btn" title="สารบัญ (M)"><span data-icon="list"></span></button>
+      <button class="ibtn" id="fs-btn" title="เต็มจอ (F)"><span data-icon="maximize"></span></button>
+    </div>
   </div>
-  <div class="top-actions">
-    <button class="icon-btn" id="menu-btn" title="เมนู (M)" data-icon="menu"></button>
-    <button class="icon-btn" id="fs-btn" title="เต็มจอ (F)" data-icon="maximize"></button>
-  </div>
-</div>
 
-<!-- PROGRESS BAR -->
-<div class="progress-bar"><div class="fill" id="progress-fill"></div></div>
-
-<!-- DECK -->
-<div class="deck" id="deck">
-
-  <!-- 1. TITLE -->
-  <section class="slide active" data-title="ปกหน้า" data-nav-icon="presentation" data-desc="เริ่มต้นนำเสนอ">
-    <div class="slide-inner">
-      <div class="s-title-grid">
+  <!-- ============ 1 · COVER ============ -->
+  <section class="slide" data-title="ปกหน้า" data-nav-icon="presentation">
+    <div class="s-inner">
+      <div class="cover">
         <div>
-          <span class="eyebrow" data-reveal><span class="live-dot"></span> NET Energy · IT &amp; Digital Development</span>
-          <h1 class="title" data-reveal style="--d:.08s"><span class="grad">Progress Report</span><br/><span class="th">สรุปผลงานรอบ 5 สัปดาห์</span></h1>
-          <div class="title-date" data-reveal style="--d:.16s"><span data-icon="calendar"></span> 11 ก.ค. – 10 ส.ค. 2026</div>
-          <p class="lede" data-reveal style="--d:.24s">
-            รอบนี้เป็นรอบ<b>ลงลึก</b> ไม่ใช่รอบเปิดของใหม่ — ทุ่มกำลังไปที่
-            <b>ความปลอดภัยข้อมูลส่วนบุคคล</b>และ<b>การกู้ข้อมูลผู้อบรม</b>ของ CP Safety Passport
-            พร้อมยกเครื่องผู้ช่วย AI หน้าเว็บ รวมทั้งหมด <b>108 งานพัฒนา</b> ใน 5 โปรเจกต์
-          </p>
-          <div class="meta-row" data-reveal style="--d:.32s">
-            <span class="meta-pill" style="--accent:var(--b1)"><span data-icon="chart-column"></span> <b>108</b> งานพัฒนา</span>
-            <span class="meta-pill" style="--accent:var(--b5)"><span data-icon="lock"></span> <b>PDPA</b> เลขบัตร ปชช.</span>
-            <span class="meta-pill" style="--accent:var(--b3)"><span data-icon="circle-check"></span> กู้ <b>1,164 คน</b></span>
-            <span class="meta-pill" style="--accent:var(--b6)"><span data-icon="zap"></span> <b>9 ระบบ</b> live</span>
+          <div class="eyebrow" data-reveal>NET Energy · IT &amp; Digital Development</div>
+          <h1 data-reveal>Progress Report<span class="th">สรุปผลงานรอบเดือนสิงหาคม</span></h1>
+          <div class="date" data-reveal><span data-icon="calendar"></span> 11 ส.ค. – 3 ก.ย. 2026 · 3.5 สัปดาห์</div>
+          <p class="lede" data-reveal>รอบนี้เป็นรอบ<b>ขยายพอร์ต</b> — เปิด<b>ระบบใหม่ 4 ระบบ</b> (2 ระบบให้ธุรกิจในเครือ ELMER)
+            พร้อมทำให้ระบบหลักขายได้จริงมากขึ้น ทั้งใบประกาศ E-Learning และเว็บไซต์ · รวม <b>175 งานพัฒนา</b> ใน 9 โปรเจกต์</p>
+          <div class="pills" data-reveal>
+            <span class="pill"><span data-icon="rocket"></span> <b>4</b> ระบบใหม่</span>
+            <span class="pill"><span data-icon="graduation-cap"></span> อบรม <b>1,155</b> คนใน ส.ค.</span>
+            <span class="pill"><span data-icon="trending-up"></span> เข้าเว็บ <b>45,357</b> ครั้ง · สูงสุด</span>
           </div>
         </div>
-        <div data-reveal style="--d:.2s">
-          <div class="orbit-wrap">
-            <div class="orbit-ring"></div>
-            <div class="orbit-ring r2"></div>
-            <div class="orbit-center"><img src="assets/icons/training-platform.png" alt="NET"/></div>
-            <div class="orbit-node n1 tile" style="--accent:var(--b3);--accent2:var(--b1)"><span data-icon="file-text"></span></div>
-            <div class="orbit-node n2"><img src="assets/icons/netmer-flow.png" alt="NETMER"/></div>
-            <div class="orbit-node n3 tile" style="--accent:var(--b2);--accent2:var(--b3)"><span data-icon="waves"></span></div>
-            <div class="orbit-node n4"><img src="assets/icons/cp-passport.png" alt="CP"/></div>
-            <div class="orbit-node n5"><img src="assets/icons/safety-hero.png" alt="Safety Hero"/></div>
-            <div class="orbit-node n6 tile" style="--accent:var(--b2);--accent2:var(--b1)"><span data-icon="search"></span></div>
+        <div class="card accent cover-card" data-reveal>
+          <div>
+            <div class="hero-fig" data-count="175">175</div>
+            <div class="hero-fig-lbl">งานพัฒนา (commits) · 9 โปรเจกต์ · 3.5 สัปดาห์</div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 2. AGENDA -->
-  <section class="slide" data-title="Agenda" data-nav-icon="list" data-desc="หัวข้อนำเสนอ">
-    <div class="slide-inner">
-      <div class="head" data-reveal>
-        <h2><span class="h-ic" data-icon="list"></span> Agenda · หัวข้อวันนี้</h2>
-        <div class="sub">7 หัวข้อหลัก — คลิกการ์ดเพื่อข้ามไปหัวข้อนั้นได้เลย</div>
-      </div>
-
-      <div class="agenda-grid">
-        <div class="agenda-card" data-jump="4" style="--accent:var(--b1);--accent2:var(--b2)" data-reveal>
-          <div class="ag-top"><div class="ag-num">01</div><div class="ag-icon" data-icon="layers"></div></div>
-          <div class="ag-title">ระบบทั้งหมดในมือ</div>
-          <div class="ag-desc">9 ระบบที่ใช้งานจริง + สื่อการสอน LPG — รอบนี้แรงงานลงที่ CP Passport เป็นหลัก</div>
-        </div>
-        <div class="agenda-card" data-jump="5" style="--accent:var(--b3);--accent2:var(--b1); --d:.06s" data-reveal>
-          <div class="ag-top"><div class="ag-num">02</div><div class="ag-icon" data-icon="link"></div></div>
-          <div class="ag-title">System Integration</div>
-          <div class="ag-desc">ทุกระบบเชื่อมถึงกันโดยมี ERP เป็นศูนย์กลาง — sync 2 ทางกับ NETMER-Flow และ LINE</div>
-        </div>
-        <div class="agenda-card" data-jump="6" style="--accent:var(--b5);--accent2:var(--b4); --d:.12s" data-reveal>
-          <div class="ag-top"><div class="ag-num">03</div><div class="ag-icon" data-icon="lock"></div></div>
-          <div class="ag-title">งานใหญ่รอบนี้ · CP Passport</div>
-          <div class="ag-desc">ปกป้องเลขบัตรประชาชนตาม PDPA + กู้ผู้อบรม 1,164 คนที่หายไปจากหน้าตรวจสอบบัตร</div>
-        </div>
-        <div class="agenda-card" data-jump="7" style="--accent:var(--b4);--accent2:var(--b2); --d:.18s" data-reveal>
-          <div class="ag-top"><div class="ag-num">04</div><div class="ag-icon" data-icon="briefcase"></div></div>
-          <div class="ag-title">NETMER-Flow</div>
-          <div class="ag-desc">คุมสิทธิ์เข้าถึงจริง · ศูนย์แจ้งปัญหา IT/รถ/อาคาร · ตรวจรถประจำรอบ · รายงานผลงานใหม่</div>
-        </div>
-        <div class="agenda-card" data-jump="8" style="--accent:var(--b1);--accent2:var(--b3); --d:.24s" data-reveal>
-          <div class="ag-top"><div class="ag-num">05</div><div class="ag-icon" data-icon="wrench"></div></div>
-          <div class="ag-title">เว็บไซต์ + ผู้ช่วย AI</div>
-          <div class="ag-desc">รื้อ "โอบอ้อม" ให้ตอบได้จริง · แก้ฐานความรู้กฎหมาย 68 จุด · เว็บโหลดไวขึ้น</div>
-        </div>
-        <div class="agenda-card" data-jump="9" style="--accent:var(--b5);--accent2:var(--b4); --d:.3s" data-reveal>
-          <div class="ag-top"><div class="ag-num">06</div><div class="ag-icon" data-icon="trending-up"></div></div>
-          <div class="ag-title">SEO &amp; ยอดเข้าเว็บ</div>
-          <div class="ag-desc">ตัวเลขจริงจาก Google Search Console + สถิติเข้าเว็บทุกช่องทาง — เริ่มมีคนมาจาก ChatGPT</div>
-        </div>
-        <div class="agenda-card" data-jump="11" style="--accent:var(--b2);--accent2:var(--b4)" data-span="2" data-reveal style="--d:.36s">
-          <div class="ag-top"><div class="ag-num">07</div><div class="ag-icon" data-icon="calendar"></div></div>
-          <div class="ag-title">Timeline</div>
-          <div class="ag-desc">ไล่เหตุการณ์สำคัญทีละสัปดาห์ ตั้งแต่ 11 ก.ค. ถึง 10 ส.ค. 2026</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. OVERVIEW -->
-  <section class="slide" data-title="ภาพรวมรอบนี้" data-nav-icon="chart-pie" data-desc="สรุปภาพรวม 5 สัปดาห์">
-    <div class="slide-inner" style="height:100%; display:flex; flex-direction:column">
-      <div class="head" style="margin-bottom:22px" data-reveal>
-        <h2><span class="h-ic" data-icon="chart-pie"></span> ภาพรวมรอบนี้</h2>
-        <div class="sub">ธีมหลักคือ<b>ความน่าเชื่อถือของข้อมูล</b> — ปกป้องข้อมูลส่วนบุคคล กู้ข้อมูลที่หาย และทำให้ตัวเลขที่ใช้ตัดสินใจเชื่อถือได้</div>
-      </div>
-
-      <!-- KPI band -->
-      <div class="kpi-row">
-        <div class="kpi" style="--accent:var(--b1);--accent2:var(--b2); --d:.05s" data-reveal>
-          <div class="v" data-count="108">108</div>
-          <div class="k">งานพัฒนา</div>
-          <div class="s">ใน 5 โปรเจกต์ · 5 สัปดาห์</div>
-        </div>
-        <div class="kpi" style="--accent:var(--b5);--accent2:var(--b4); --d:.1s" data-reveal>
-          <div class="v" data-count="1164" data-count-comma>1,164</div>
-          <div class="k">คนที่กู้กลับมาค้นเจอ</div>
-          <div class="s">บนหน้าตรวจสอบบัตร CP</div>
-        </div>
-        <div class="kpi" style="--accent:var(--b2);--accent2:var(--b4); --d:.15s" data-reveal>
-          <div class="v" data-count="27013" data-count-comma>27,013</div>
-          <div class="k">การมองเห็นบน Google</div>
-          <div class="s">+31% ต่อวันจากรอบก่อน</div>
-        </div>
-        <div class="kpi" style="--accent:var(--b6);--accent2:var(--b3); --d:.2s" data-reveal>
-          <div class="v" data-count="9">9</div>
-          <div class="k">ระบบใช้งานจริง</div>
-          <div class="s">live ครบทุกตัว</div>
-        </div>
-      </div>
-
-      <!-- highlight rows -->
-      <div class="hl-list">
-        <div class="hl-row" data-reveal style="--d:.25s">
-          <div class="itile" style="--accent:var(--b5);--accent2:var(--b4)" data-icon="lock"></div>
-          <div style="min-width:0">
-            <h4>เลขบัตรประชาชนไม่ถูกเก็บเต็มใบอีกต่อไป</h4>
-            <p>ยกเครื่อง CP Passport ให้เก็บแค่ <b>10 หลักท้าย + รหัสเข้ารหัสทางเดียว</b> ใช้ยืนยันตัวคนได้เหมือนเดิมแต่ย้อนกลับเป็นเลขจริงไม่ได้ ปิดช่องรูปถ่าย/ไฟล์แนบที่เคยตั้งชื่อด้วยเลขบัตร ผ่านการตรวจ 4 รอบและมีเทสต์อัตโนมัติ ~665 รายการคุมไว้</p>
+          <div class="mini">
+            <div><div class="v">63</div><div class="l">เว็บไซต์หลัก + ERP</div></div>
+            <div><div class="v">96</div><div class="l">ระบบใหม่ 4 ระบบ</div></div>
+            <div><div class="v">16</div><div class="l">ระบบเดิมอีก 4 ระบบ</div></div>
           </div>
-        </div>
-        <div class="hl-row" data-reveal style="--d:.32s">
-          <div class="itile" style="--accent:var(--b3);--accent2:var(--b1)" data-icon="circle-check"></div>
-          <div style="min-width:0">
-            <h4>แก้ปัญหาลูกค้าโทรมาบอก "ค้นหาบัตรไม่เจอ"</h4>
-            <p>ไล่หาต้นเหตุจนพบว่ามีคน <b>1,364 คน</b> ที่มองไม่เห็นบนหน้าตรวจสอบบัตร — กู้กลับมาได้ <b>1,164 คน</b> (อีก 200 ถูกซ่อนถูกต้องแล้ว) พร้อมล้างบัตรซ้ำ <b>1,112 ใบ</b> และเปลี่ยนวิธีค้นชื่อใหม่ให้พิมพ์บางส่วนหรือสลับชื่อ-นามสกุลก็เจอ</p>
-          </div>
-        </div>
-        <div class="hl-row" data-reveal style="--d:.39s">
-          <div class="itile" style="--accent:var(--b1);--accent2:var(--b3)" data-icon="sparkles"></div>
-          <div style="min-width:0">
-            <h4>ผู้ช่วย AI หน้าเว็บ + สิทธิ์เข้าถึงใน NETMER</h4>
-            <p>"โอบอ้อม" เดิมตอบคำถามลูกค้าถูกแค่ <b>3 จาก 71 คำถาม</b> — รอบนี้รื้อใหม่ทั้งชุดพร้อมแก้ฐานความรู้กฎหมาย 68 จุด · ฝั่ง NETMER-Flow เปลี่ยนจาก "ซ่อนเมนู" มาเป็น<b>บังคับสิทธิ์จริง</b> พร้อมแก้บั๊กที่ตรวจเจอ 16 จุด</p>
+          <div class="spark">
+            <figure data-chart="coverSpark"></figure>
+            <div class="cap">ยอดเข้าเว็บรายวัน 11 ส.ค. – 2 ก.ย. · 31,581 ครั้ง</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. SYSTEMS -->
-  <section class="slide" data-title="Systems Overview" data-nav-icon="layers" data-desc="9 ระบบใช้งานจริง + สื่อการสอน LPG">
-    <div class="slide-inner">
-      <div class="head" data-reveal>
-        <h2><span class="h-ic" data-icon="layers"></span> Systems Overview <small>— คลิกการ์ดเพื่อดูรายละเอียด</small></h2>
-        <div class="sub">9 ระบบที่ใช้งานจริง + แอปแชตที่พักไว้ + สื่อการสอน LPG — เรียงตามปริมาณงานในรอบนี้ (<b>CP Passport 82 จาก 108 งานพัฒนา</b>)</div>
+  <!-- ============ 2 · AGENDA ============ -->
+  <section class="slide" data-title="หัวข้อวันนี้" data-nav-icon="list">
+    <div class="s-inner">
+      <div class="s-head">
+        <div class="eyebrow" data-reveal>Agenda</div>
+        <h2 class="h" data-reveal>หัวข้อวันนี้ — 6 เรื่อง</h2>
       </div>
-      <div class="sys-grid" id="sys-grid"></div>
-    </div>
-  </section>
-
-  <!-- 5. FLOW (INTERACTIVE) -->
-  <section class="slide" data-title="System Integration" data-nav-icon="link" data-desc="การเชื่อมต่อระหว่างระบบ · Interactive">
-    <div class="slide-inner" style="height:100%; display:flex; flex-direction:column; max-width:1500px">
-      <div class="head" style="margin-bottom:12px" data-reveal>
-        <h2><span class="h-ic" data-icon="link"></span> System Integration · ระบบคุยกันเองแบบ real-time</h2>
-        <div class="sub">ERP อยู่ตรงกลาง ส่งข้อมูลถึงกันกับระบบรอบ ๆ — <b>คลิกที่กล่องระบบ</b>เพื่อดูรายละเอียด หรือกดปุ่มขยายเพื่อดูเต็มจอ</div>
-      </div>
-
-      <div class="flow-stage" id="flow-stage" style="flex:1; --d:.1s" data-reveal>
-        <div class="flow-toolbar">
-          <div class="flow-legend-pills">
-            <span class="lp live"><span class="dot"></span>Live · เชื่อมต่อแล้ว</span>
-            <span class="lp plan"><span class="dot"></span>Planned</span>
-            <span class="lp two">↔ สองทาง</span>
-            <span class="lp">→ ทางเดียว</span>
-          </div>
-          <div class="flow-tools">
-            <button class="flow-tool-btn" id="flow-reset" title="ล้างการเลือก" data-icon="rotate-ccw"></button>
-            <button class="flow-tool-btn active" id="flow-toggle-panel" title="เปิด/ปิดแผงรายละเอียด" data-icon="panel-right"></button>
-            <button class="flow-tool-btn" id="flow-fs" title="เต็มจอ" data-icon="maximize"></button>
-          </div>
-        </div>
-
-        <div class="flow-canvas" id="flow-canvas">
-          <div class="flow-svg-wrap">
-            <svg id="flow-svg" viewBox="0 0 1400 760" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-              <defs>
-                <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#1a2452"/>
-                  <stop offset="100%" stop-color="#0d1330"/>
-                </linearGradient>
-                <linearGradient id="liveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="#5e9eff" stop-opacity="0.3"/>
-                  <stop offset="50%" stop-color="#5e9eff" stop-opacity="0.95"/>
-                  <stop offset="100%" stop-color="#3ee0c1" stop-opacity="0.3"/>
-                </linearGradient>
-                <linearGradient id="liveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="#9b6eff" stop-opacity="0.3"/>
-                  <stop offset="50%" stop-color="#ff7ab8" stop-opacity="0.95"/>
-                  <stop offset="100%" stop-color="#9b6eff" stop-opacity="0.3"/>
-                </linearGradient>
-                <linearGradient id="planGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="#ffb547" stop-opacity="0.5"/>
-                  <stop offset="50%" stop-color="#ffb547" stop-opacity="0.95"/>
-                  <stop offset="100%" stop-color="#ffb547" stop-opacity="0.5"/>
-                </linearGradient>
-                <radialGradient id="centerGrad" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stop-color="#5e9eff"/>
-                  <stop offset="100%" stop-color="#9b6eff"/>
-                </radialGradient>
-                <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-                <filter id="glow-strong"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-                <!-- Arrow markers (auto-orient along path) -->
-                <marker id="arrow-cyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#3ee0c1"/></marker>
-                <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#5e9eff"/></marker>
-                <marker id="arrow-pink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#ff7ab8"/></marker>
-                <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#5fdc9a"/></marker>
-                <marker id="arrow-orange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#ffb547"/></marker>
-                <marker id="arrow-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#9b6eff"/></marker>
-              </defs>
-
-              <!-- PULSE RINGS -->
-              <circle cx="700" cy="380" r="100" fill="none" stroke="#5e9eff" stroke-width="2" opacity="0">
-                <animate attributeName="r" from="100" to="220" dur="3s" repeatCount="indefinite"/>
-                <animate attributeName="opacity" from="0.6" to="0" dur="3s" repeatCount="indefinite"/>
-              </circle>
-              <circle cx="700" cy="380" r="100" fill="none" stroke="#9b6eff" stroke-width="2" opacity="0">
-                <animate attributeName="r" from="100" to="220" dur="3s" begin="1s" repeatCount="indefinite"/>
-                <animate attributeName="opacity" from="0.6" to="0" dur="3s" begin="1s" repeatCount="indefinite"/>
-              </circle>
-              <circle cx="700" cy="380" r="100" fill="none" stroke="#3ee0c1" stroke-width="2" opacity="0">
-                <animate attributeName="r" from="100" to="220" dur="3s" begin="2s" repeatCount="indefinite"/>
-                <animate attributeName="opacity" from="0.6" to="0" dur="3s" begin="2s" repeatCount="indefinite"/>
-              </circle>
-
-              <!-- CONNECTIONS — paths drawn from source → destination, marker-end shows arrow at destination -->
-              <path id="path-doc-out" class="conn" d="M 770 320 Q 950 240, 1122 178" fill="none" stroke="url(#liveGrad)" stroke-width="3" marker-end="url(#arrow-cyan)"/>
-              <path id="path-doc-in"  class="conn" d="M 1190 222 Q 970 290, 808 358" fill="none" stroke="url(#liveGrad)" stroke-width="3" marker-end="url(#arrow-blue)"/>
-              <path id="path-netmer-out" class="conn" d="M 775 435 Q 950 525, 1122 582" fill="none" stroke="url(#liveGrad2)" stroke-width="3" marker-end="url(#arrow-pink)"/>
-              <path id="path-netmer-in"  class="conn" d="M 1185 612 Q 985 540, 805 432" fill="none" stroke="url(#liveGrad2)" stroke-width="3" marker-end="url(#arrow-purple)"/>
-              <path id="path-cp" class="conn" d="M 630 320 Q 450 250, 278 178" fill="none" stroke="url(#planGrad)" stroke-width="3" stroke-dasharray="10 6" marker-end="url(#arrow-orange)"/>
-              <path id="path-post" class="conn" d="M 700 122 L 700 282" fill="none" stroke="url(#liveGrad2)" stroke-width="3" marker-end="url(#arrow-orange)"/>
-              <path id="path-card-in"  class="conn" d="M 208 375 L 595 375" fill="none" stroke="url(#liveGrad)" stroke-width="3" marker-end="url(#arrow-blue)"/>
-              <path id="path-card-out" class="conn" d="M 605 387 L 212 387" fill="none" stroke="url(#liveGrad)" stroke-width="3" marker-end="url(#arrow-blue)"/>
-              <path id="path-ai-out" class="conn" d="M 805 375 L 1222 375" fill="none" stroke="url(#liveGrad2)" stroke-width="3" marker-end="url(#arrow-purple)"/>
-              <path id="path-ai-in"  class="conn" d="M 1222 387 L 808 387" fill="none" stroke="url(#liveGrad2)" stroke-width="3" marker-end="url(#arrow-purple)"/>
-              <path id="path-push-out" class="conn" d="M 695 482 L 695 658" fill="none" stroke="url(#liveGrad)" stroke-width="3" marker-end="url(#arrow-green)"/>
-              <path id="path-push-in"  class="conn" d="M 705 658 L 705 484" fill="none" stroke="url(#liveGrad)" stroke-width="3" marker-end="url(#arrow-green)"/>
-
-              <!-- ANIMATED DOTS — all flow forward along their paths -->
-              <circle class="anim-dot" data-related="docflow" r="6" fill="#3ee0c1" filter="url(#glow-strong)"><animateMotion dur="3s" repeatCount="indefinite"><mpath href="#path-doc-out"/></animateMotion></circle>
-              <circle class="anim-dot" data-related="docflow" r="5" fill="#5e9eff" filter="url(#glow)"><animateMotion dur="3.4s" begin="1.5s" repeatCount="indefinite"><mpath href="#path-doc-in"/></animateMotion></circle>
-              <circle class="anim-dot" data-related="netmer" r="6" fill="#ff7ab8" filter="url(#glow-strong)"><animateMotion dur="3s" repeatCount="indefinite"><mpath href="#path-netmer-out"/></animateMotion></circle>
-              <circle class="anim-dot" data-related="netmer" r="5" fill="#9b6eff" filter="url(#glow)"><animateMotion dur="3.4s" begin="1.5s" repeatCount="indefinite"><mpath href="#path-netmer-in"/></animateMotion></circle>
-              <circle class="anim-dot" data-related="cp" r="5" fill="#ffb547" opacity="0.75" filter="url(#glow)"><animateMotion dur="4.5s" repeatCount="indefinite"><mpath href="#path-cp"/></animateMotion></circle>
-              <circle class="anim-dot" data-related="post" r="5" fill="#ffb547" filter="url(#glow)"><animateMotion dur="2.5s" repeatCount="indefinite"><mpath href="#path-post"/></animateMotion></circle>
-              <circle class="anim-dot" data-related="card" r="5" fill="#5e9eff" filter="url(#glow)"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#path-card-in"/></animateMotion></circle>
-              <circle class="anim-dot" data-related="card" r="4" fill="#3ee0c1" filter="url(#glow)" opacity=".7"><animateMotion dur="2.6s" begin="1.2s" repeatCount="indefinite"><mpath href="#path-card-out"/></animateMotion></circle>
-              <circle class="anim-dot" data-related="ai" r="5" fill="#9b6eff" filter="url(#glow)"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#path-ai-out"/></animateMotion></circle>
-              <circle class="anim-dot" data-related="ai" r="4" fill="#ff7ab8" filter="url(#glow)" opacity=".7"><animateMotion dur="2.6s" begin="1.2s" repeatCount="indefinite"><mpath href="#path-ai-in"/></animateMotion></circle>
-              <circle class="anim-dot" data-related="push" r="5" fill="#5fdc9a" filter="url(#glow)"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#path-push-out"/></animateMotion></circle>
-              <circle class="anim-dot" data-related="push" r="4" fill="#3ee0c1" filter="url(#glow)" opacity=".7"><animateMotion dur="2.6s" begin="1.2s" repeatCount="indefinite"><mpath href="#path-push-in"/></animateMotion></circle>
-
-              <!-- LABELS -->
-              <g font-family="IBM Plex Sans Thai" font-size="13" fill="#b7c0ea">
-                <text id="lbl-doc" class="label" data-related="docflow" x="970" y="240" text-anchor="middle">Quotation · Invoice · Receipt</text>
-                <text id="lbl-netmer" class="label" data-related="netmer" x="978" y="520" text-anchor="middle">Roster · Schedule · 2-way Sync</text>
-                <text id="lbl-cp" class="label" data-related="cp" x="450" y="180" text-anchor="middle" fill="#ffb547" font-style="italic">Trainees · Passport (Planned)</text>
-                <text id="lbl-post" class="label" data-related="post" x="715" y="200" text-anchor="start">Tracking Status</text>
-                <text id="lbl-card" class="label" data-related="card" x="400" y="368" text-anchor="middle">Thai ID Data</text>
-                <text id="lbl-ai" class="label" data-related="ai" x="1015" y="368" text-anchor="middle">OCR · AI Q&amp;A</text>
-                <text id="lbl-push" class="label" data-related="push" x="715" y="580" text-anchor="start">LINE · FCM · Web Push</text>
-              </g>
-
-              <!-- CENTER (ERP) -->
-              <g class="node" data-id="erp">
-                <circle cx="700" cy="380" r="100" fill="url(#centerGrad)" filter="url(#glow-strong)" stroke="#5e9eff" stroke-width="2" style="color:#5e9eff">
-                  <animate attributeName="r" values="95;104;95" dur="3s" repeatCount="indefinite"/>
-                </circle>
-                <g transform="translate(676,324) scale(2)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></g>
-                <text x="700" y="404" font-size="16" font-weight="700" fill="#fff" text-anchor="middle" font-family="IBM Plex Sans Thai">NET Training</text>
-                <text x="700" y="424" font-size="12.5" fill="rgba(255,255,255,.85)" text-anchor="middle" font-family="IBM Plex Sans Thai">Platform · ERP</text>
-              </g>
-
-              <!-- DOCUMENT FLOW -->
-              <g class="node" data-id="docflow">
-                <rect x="1130" y="120" width="240" height="100" rx="18" fill="url(#nodeGrad)" stroke="#3ee0c1" stroke-width="2" filter="url(#glow)" style="color:#3ee0c1"/>
-                <g transform="translate(1233.2,132) scale(1.4)" fill="none" stroke="#3ee0c1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></g>
-                <text x="1250" y="188" font-size="15" font-weight="600" fill="#fff" text-anchor="middle" font-family="IBM Plex Sans Thai">Document Flow</text>
-                <text x="1250" y="207" font-size="12" fill="#5fdc9a" text-anchor="middle" font-family="IBM Plex Sans Thai">↔ Bidirectional</text>
-              </g>
-
-              <!-- NETMER-FLOW -->
-              <g class="node" data-id="netmer">
-                <rect x="1130" y="540" width="240" height="100" rx="18" fill="url(#nodeGrad)" stroke="#ff7ab8" stroke-width="2" filter="url(#glow)" style="color:#ff7ab8"/>
-                <g transform="translate(1233.2,552) scale(1.4)" fill="none" stroke="#ff7ab8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></g>
-                <text x="1250" y="608" font-size="15" font-weight="600" fill="#fff" text-anchor="middle" font-family="IBM Plex Sans Thai">NETMER-Flow (HR)</text>
-                <text x="1250" y="627" font-size="12" fill="#5fdc9a" text-anchor="middle" font-family="IBM Plex Sans Thai">↔ Bidirectional Sync</text>
-              </g>
-
-              <!-- CP PASSPORT (planned) -->
-              <g class="node" data-id="cp">
-                <rect x="30" y="120" width="240" height="100" rx="18" fill="url(#nodeGrad)" stroke="#ffb547" stroke-width="2" stroke-dasharray="6 4" filter="url(#glow)" style="color:#ffb547"/>
-                <g transform="translate(133.2,132) scale(1.4)" fill="none" stroke="#ffb547" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 10h2"/><path d="M16 14h2"/><path d="M6.17 15a3 3 0 0 1 5.66 0"/><circle cx="9" cy="11" r="2"/><rect x="2" y="5" width="20" height="14" rx="2"/></g>
-                <text x="150" y="188" font-size="15" font-weight="600" fill="#fff" text-anchor="middle" font-family="IBM Plex Sans Thai">CP Safety Passport</text>
-                <text x="150" y="207" font-size="12" fill="#ffb547" text-anchor="middle" font-family="IBM Plex Sans Thai">Planned (Verify API Live)</text>
-              </g>
-
-              <!-- THAILAND POST -->
-              <g class="node" data-id="post">
-                <rect x="580" y="40" width="240" height="80" rx="18" fill="url(#nodeGrad)" stroke="#ffb547" stroke-width="2" filter="url(#glow)" style="color:#ffb547"/>
-                <g transform="translate(597,65) scale(1.25)" fill="none" stroke="#ffb547" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></g>
-                <text x="716" y="76" font-size="14" font-weight="600" fill="#fff" text-anchor="middle" font-family="IBM Plex Sans Thai">Thailand Post API</text>
-                <text x="716" y="96" font-size="11.5" fill="#b7c0ea" text-anchor="middle" font-family="IBM Plex Sans Thai">Tracking · ทุก 4 ชั่วโมง</text>
-              </g>
-
-              <!-- CARD READER -->
-              <g class="node" data-id="card">
-                <rect x="30" y="320" width="170" height="120" rx="18" fill="url(#nodeGrad)" stroke="#5e9eff" stroke-width="2" filter="url(#glow)" style="color:#5e9eff"/>
-                <g transform="translate(99.4,340) scale(1.3)" fill="none" stroke="#5e9eff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></g>
-                <text x="115" y="394" font-size="13.5" font-weight="600" fill="#fff" text-anchor="middle" font-family="IBM Plex Sans Thai">Smart Card Reader</text>
-                <text x="115" y="411" font-size="11" fill="#b7c0ea" text-anchor="middle" font-family="IBM Plex Sans Thai">Local · Windows</text>
-                <text x="115" y="426" font-size="11" fill="#5fdc9a" text-anchor="middle" font-family="IBM Plex Sans Thai">Local Service</text>
-              </g>
-
-              <!-- AI -->
-              <g class="node" data-id="ai">
-                <rect x="1230" y="320" width="170" height="120" rx="18" fill="url(#nodeGrad)" stroke="#9b6eff" stroke-width="2" filter="url(#glow)" style="color:#9b6eff"/>
-                <g transform="translate(1299.4,340) scale(1.3)" fill="none" stroke="#9b6eff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></g>
-                <text x="1315" y="394" font-size="13.5" font-weight="600" fill="#fff" text-anchor="middle" font-family="IBM Plex Sans Thai">Gemini · Typhoon</text>
-                <text x="1315" y="411" font-size="11" fill="#b7c0ea" text-anchor="middle" font-family="IBM Plex Sans Thai">Google AI · Vision</text>
-                <text x="1315" y="426" font-size="11" fill="#5fdc9a" text-anchor="middle" font-family="IBM Plex Sans Thai">OCR &amp; Chat</text>
-              </g>
-
-              <!-- LINE / PUSH -->
-              <g class="node" data-id="push">
-                <rect x="580" y="660" width="240" height="80" rx="18" fill="url(#nodeGrad)" stroke="#5fdc9a" stroke-width="2" filter="url(#glow)" style="color:#5fdc9a"/>
-                <g transform="translate(597,684) scale(1.25)" fill="none" stroke="#5fdc9a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></g>
-                <text x="716" y="696" font-size="14" font-weight="600" fill="#fff" text-anchor="middle" font-family="IBM Plex Sans Thai">LINE · FCM · Push</text>
-                <text x="716" y="716" font-size="11.5" fill="#b7c0ea" text-anchor="middle" font-family="IBM Plex Sans Thai">LINE Daily Brief · Cross-device</text>
-              </g>
-            </svg>
-            <div class="scale-hint"><span data-icon="mouse-pointer-click"></span> คลิกที่ระบบเพื่อดูรายละเอียด · กด <b>Esc</b> เพื่อออกจากเต็มจอ</div>
-          </div>
-
-          <aside class="flow-side" id="flow-side"></aside>
-        </div>
-
-        <!-- Mini cards (shortcut) -->
-        <div class="flow-mini">
-          <div class="mc" data-id="docflow" style="--accent:#3ee0c1;--accent2:#5e9eff"><div class="e" data-icon="file-text"></div><div class="t">Document Flow</div><div class="s">↔ สองทาง</div></div>
-          <div class="mc" data-id="netmer" style="--accent:#ff7ab8;--accent2:#9b6eff"><div class="e" data-icon="users"></div><div class="t">NETMER-Flow</div><div class="s">↔ สองทาง</div></div>
-          <div class="mc" data-id="cp" style="--accent:#ffb547;--accent2:#ff7ab8"><div class="e" data-icon="id-card"></div><div class="t">CP Passport</div><div class="s">Verify API Live</div></div>
-          <div class="mc" data-id="post" style="--accent:#ffb547;--accent2:#ff7ab8"><div class="e" data-icon="truck"></div><div class="t">Thailand Post</div><div class="s">← ทางเดียว</div></div>
-          <div class="mc" data-id="card" style="--accent:#5e9eff;--accent2:#3ee0c1"><div class="e" data-icon="credit-card"></div><div class="t">Card Reader</div><div class="s">↔ Local</div></div>
-          <div class="mc" data-id="ai" style="--accent:#9b6eff;--accent2:#ff7ab8"><div class="e" data-icon="sparkles"></div><div class="t">Google AI</div><div class="s">↔ สองทาง</div></div>
-          <div class="mc" data-id="push" style="--accent:#5fdc9a;--accent2:#3ee0c1"><div class="e" data-icon="bell"></div><div class="t">LINE / Push</div><div class="s">↔ สองทาง</div></div>
-        </div>
+      <div class="s-body agenda">
+        <div class="card ag" data-jump="3" data-reveal><div class="itile"><span data-icon="chart-pie"></span></div><div class="num">01</div><div class="t">สรุปสำหรับผู้บริหาร</div><div class="d">ตัวเลขหลักของรอบ และ 3 ประเด็นที่ต้องรู้</div><div class="ag-go"><span data-icon="arrow-right"></span> ไปที่สไลด์ 3</div></div>
+        <div class="card ag" data-jump="4" data-reveal><div class="itile aqua"><span data-icon="graduation-cap"></span></div><div class="num">02</div><div class="t">ธุรกิจอบรมเดือน ส.ค.</div><div class="d">ลงทะเบียน · ผู้ผ่านการอบรม · รอบอบรม — ตัวเลขจริงจากระบบ</div><div class="ag-go"><span data-icon="arrow-right"></span> ไปที่สไลด์ 4</div></div>
+        <div class="card ag" data-jump="6" data-reveal><div class="itile orange"><span data-icon="rocket"></span></div><div class="num">03</div><div class="t">ระบบใหม่ 4 ระบบ</div><div class="d">ELMER ใบเสนอราคา+PO · NET-ID Photo · นามบัตร NFC · KYT MOTTO</div><div class="ag-go"><span data-icon="arrow-right"></span> ไปที่สไลด์ 6</div></div>
+        <div class="card ag" data-jump="9" data-reveal><div class="itile"><span data-icon="wrench"></span></div><div class="num">04</div><div class="t">ระบบหลักที่ปรับดีขึ้น</div><div class="d">เว็บไซต์ + ERP · NETMER-Flow · CP Passport · LINE CSAT</div><div class="ag-go"><span data-icon="arrow-right"></span> ไปที่สไลด์ 9</div></div>
+        <div class="card ag" data-jump="11" data-reveal><div class="itile yellow"><span data-icon="search"></span></div><div class="num">05</div><div class="t">SEO — คีย์เวิร์ดแยกตามหลักสูตร</div><div class="d">หลักสูตรไหนติดอันดับ Google แล้ว · หลักสูตรไหนยัง</div><div class="ag-go"><span data-icon="arrow-right"></span> ไปที่สไลด์ 11</div></div>
+        <div class="card ag" data-jump="14" data-reveal><div class="itile dark"><span data-icon="chart-column"></span></div><div class="num">06</div><div class="t">ยอดเข้าเว็บ + ไทม์ไลน์</div><div class="d">สถิติจากระบบของเราเอง และลำดับงานรายสัปดาห์</div><div class="ag-go"><span data-icon="arrow-right"></span> ไปที่สไลด์ 14</div></div>
       </div>
     </div>
   </section>
 
-  <!-- 6. BIG WORK THIS ROUND · CP SAFETY PASSPORT -->
-  <section class="slide" data-title="งานใหญ่รอบนี้" data-nav-icon="lock" data-desc="CP Passport · PDPA + กู้ข้อมูลผู้อบรม">
-    <div class="slide-inner" style="height:100%; display:flex; flex-direction:column">
-      <div class="head" style="margin-bottom:14px" data-reveal>
-        <h2><span class="h-ic" style="--accent:var(--b5);--accent2:var(--b4)" data-icon="lock"></span> งานใหญ่รอบนี้ · CP Safety Passport</h2>
-        <div class="sub">ทำ 2 เรื่องพร้อมกัน — <b>ปกป้องเลขบัตรประชาชนของผู้อบรม</b> และ <b>กู้คนที่หายไปจากหน้าตรวจสอบบัตรกลับมา</b> <span class="seoperf-note"><span data-icon="chart-column"></span> 82 จาก 108 งานพัฒนาทั้งรอบ</span></div>
+  <!-- ============ 3 · EXECUTIVE SUMMARY ============ -->
+  <section class="slide" data-title="สรุปสำหรับผู้บริหาร" data-nav-icon="chart-pie">
+    <div class="s-inner">
+      <div class="s-head">
+        <div class="eyebrow" data-reveal>01 · Executive summary</div>
+        <h2 class="h" data-reveal>รอบนี้ <em>ขยายพอร์ต</em> — เปิด 4 ระบบใหม่ ขณะที่ธุรกิจอบรมเดินปกติ</h2>
       </div>
-
-      <!-- 4 key numbers -->
-      <div class="seoperf-grid">
-        <div class="seoperf-stat" style="--accent:var(--b5);--accent2:var(--b4)" data-reveal>
-          <div class="lbl">กู้กลับมาค้นเจอ</div>
-          <div class="v" data-count="1164" data-count-comma>1,164</div>
-          <div class="sub">คน · จากที่ตรวจพบว่าหายไป 1,364</div>
-          <div class="trend"><span data-icon="check"></span> อีก 200 คนถูกซ่อนถูกต้องแล้ว</div>
+      <div class="s-body stack">
+        <div class="grid g4">
+          <div class="card stat" data-reveal><div class="label">งานพัฒนา (commits)</div><div class="value" data-count="175">175</div><div class="sub">9 โปรเจกต์ · 11 ส.ค. – 3 ก.ย.</div><div class="delta up"><span data-icon="trending-up"></span> รอบก่อน 108 ใน 5 สัปดาห์</div></div>
+          <div class="card stat" data-reveal><div class="label">ระบบใหม่ที่เปิดใช้จริง</div><div class="value" data-count="4">4</div><div class="sub">ELMER · NET-ID Photo · NFC · KYT</div><div class="delta note"><span data-icon="rocket"></span> 2 ระบบให้ธุรกิจในเครือ</div></div>
+          <div class="card stat" data-reveal><div class="label">ผู้ผ่านการอบรม · ส.ค.</div><div class="value" data-count="1155">1,155</div><div class="sub">94 รอบอบรม · 30 หลักสูตร</div><div class="delta flat"><span data-icon="check"></span> ก.ค. 1,198 · ทรงตัว</div></div>
+          <div class="card stat" data-reveal><div class="label">ยอดเข้าเว็บ · ส.ค.</div><div class="value" data-count="45357">45,357</div><div class="sub">Page Views (ทุกช่องทาง)</div><div class="delta up"><span data-icon="trending-up"></span> +5.5% จาก ก.ค. · สูงสุดตั้งแต่เปิดเว็บใหม่</div></div>
         </div>
-        <div class="seoperf-stat" style="--accent:var(--b3);--accent2:var(--b1); --d:.06s" data-reveal>
-          <div class="lbl">บัตรซ้ำที่ล้างออก</div>
-          <div class="v" data-count="1112" data-count-comma>1,112</div>
-          <div class="sub">ใบ · ต้นเหตุที่ทำให้ค้นไม่เจอ</div>
-          <div class="trend"><span data-icon="database"></span> สำรองข้อมูล + ย้อนกลับได้</div>
-        </div>
-        <div class="seoperf-stat" style="--accent:var(--b2);--accent2:var(--b4); --d:.12s" data-reveal>
-          <div class="lbl">เทสต์อัตโนมัติ</div>
-          <div class="v">~665</div>
-          <div class="sub">รายการ · กันไม่ให้ผูกข้อมูลผิดคน</div>
-          <div class="trend"><span data-icon="shield-check"></span> ตรวจซ้ำ 4 รอบก่อนขึ้นระบบ</div>
-        </div>
-        <div class="seoperf-stat" style="--accent:var(--b6);--accent2:var(--b3); --d:.18s" data-reveal>
-          <div class="lbl">ค้นชื่อไทยแล้วเจอ</div>
-          <div class="v">100%</div>
-          <div class="sub">ชื่อต่างชาติ 92.4%</div>
-          <div class="trend"><span data-icon="search"></span> วัดจากการค้นจริงทั้งฐานข้อมูล</div>
-        </div>
-      </div>
-
-      <div class="seoperf-main" style="grid-template-columns:1fr 1fr; height:auto; flex:1; min-height:0">
-        <!-- WHAT WE DID -->
-        <div class="mini-list" style="justify-content:center">
-          <div class="mini-row" data-reveal style="--d:.22s">
-            <div class="itile sm" style="--accent:var(--b5);--accent2:var(--b4)" data-icon="lock"></div>
-            <div><h4>เก็บเลขบัตรประชาชนแบบย้อนกลับไม่ได้</h4><p>เก็บแค่ <b>10 หลักท้าย</b> คู่กับรหัสเข้ารหัสทางเดียว — ยังเช็คได้ว่าเป็นคนเดียวกันไหม แต่ถอดกลับเป็นเลขจริงไม่ได้ · ปิดช่องรูปถ่าย/ใบรับรองที่เคยตั้งชื่อไฟล์ด้วยเลขบัตร</p></div>
+        <div class="grid g3 fill">
+          <div class="card" data-reveal>
+            <div class="card-head"><div class="itile orange"><span data-icon="rocket"></span></div><div><div class="t">1 · ส่งมอบระบบใหม่ 4 ระบบ</div><div class="s">ใน 3.5 สัปดาห์ · 96 commits</div></div></div>
+            <ul class="blist">
+              <li><div class="itile sm orange"><span data-icon="file-text"></span></div><div><b>ELMER ใบเสนอราคา + ใบสั่งซื้อ</b> — แทน Google Sheets · ย้ายของเก่า 1,132 ใบ · PO 35 ใบ (ธุรกิจในเครือ)</div></li>
+              <li><div class="itile sm orange"><span data-icon="image"></span></div><div><b>NET-ID Photo Studio</b> — ทำรูปติดบัตร ~100 รูป/วัน แทน Photoshop · ส่งชุดติดตั้งให้ทีมแล้ว</div></li>
+              <li><div class="itile sm orange"><span data-icon="credit-card"></span></div><div><b>นามบัตร NFC</b> ผู้บริหาร + <b>KYT MOTTO</b> คลังโปสเตอร์ 76 แผ่น ค้นหาทนสะกดผิด</div></li>
+            </ul>
           </div>
-          <div class="mini-row" data-reveal style="--d:.28s">
-            <div class="itile sm" style="--accent:var(--b3);--accent2:var(--b1)" data-icon="search"></div>
-            <div><h4>ค้นชื่อใหม่ — พิมพ์บางส่วนก็เจอ</h4><p>รองรับพิมพ์ไม่ครบ สลับชื่อ-นามสกุล มีคำนำหน้า หรือมีช่องว่างเกิน · ของเดิมต้องพิมพ์ตรงเป๊ะทุกตัวอักษรถึงจะเจอ</p></div>
+          <div class="card" data-reveal>
+            <div class="card-head"><div class="itile"><span data-icon="wrench"></span></div><div><div class="t">2 · ระบบหลัก "ขายได้จริง" มากขึ้น</div><div class="s">เว็บไซต์ + ERP · 63 commits</div></div></div>
+            <ul class="blist">
+              <li><div class="itile sm"><span data-icon="graduation-cap"></span></div><div><b>ใบประกาศพิมพ์ได้จริงทั้งระบบ</b> · <b>E-Learning พร้อมขาย</b> — ปิดช่องโหว่และบังคับเกณฑ์ผ่าน</div></li>
+              <li><div class="itile sm"><span data-icon="zap"></span></div><div><b>ERP เร็วขึ้น 9 เท่า</b> (billing 11.9 → 1.3 วิ) · แก้บั๊ก 55 ข้อ · กู้ผู้อบรม 53 คนที่หายจากระบบ</div></li>
+              <li><div class="itile sm"><span data-icon="chart-column"></span></div><div><b>หน้าหลักสูตรโฉมใหม่</b> + แกลเลอรี · <b>ระบบสถิติเว็บสร้างใหม่</b> · AI ย้ายรุ่นใหม่ + ฐานกฎหมายตรวจซ้ำ</div></li>
+            </ul>
           </div>
-          <div class="mini-row" data-reveal style="--d:.34s">
-            <div class="itile sm" style="--accent:var(--b2);--accent2:var(--b4)" data-icon="id-card"></div>
-            <div><h4>วางกติกาบัตรให้ชัด</h4><p>บัตรใบเดียวใช้ได้ทั้ง<b>พนักงาน + ผู้รับเหมา</b> แต่<b>เทรนเนอร์ต้องแยก</b> · บัตรและโมดูลเทรนเนอร์มีอายุ 5 ปีชัดเจน (เดิมระบบขัดกันเอง)</p></div>
+          <div class="card" data-reveal>
+            <div class="card-head"><div class="itile yellow"><span data-icon="search"></span></div><div><div class="t">3 · SEO: หลักสูตรไหนติด-ไม่ติด</div><div class="s">Google Search Console · คีย์เวิร์ด × หลักสูตร</div></div></div>
+            <div id="exec-seo"><ul class="blist"><li><div class="itile sm yellow"><span data-icon="clock"></span></div><div>รอข้อมูล Search Console API</div></li></ul></div>
           </div>
         </div>
-
-        <!-- BUSINESS IMPACT -->
-        <div class="seoperf-card" data-reveal style="--d:.3s">
-          <h5><span data-icon="trending-up"></span> ผลที่ลูกค้าและทีมได้รับ <span class="badge">ขึ้นระบบแล้ว</span></h5>
-          <div class="kw-head"><div class="ttl">เรื่อง</div><div class="ck">ก่อน</div><div class="im">หลัง</div></div>
-          <div class="kw-list">
-            <div class="kw-row"><span class="kw">คนที่ค้นบัตรตัวเองไม่เจอ</span><span class="clk">1,364</span><span class="imp">200</span></div>
-            <div class="kw-row"><span class="kw">บัตรซ้ำค้างในระบบ</span><span class="clk">1,112</span><span class="imp">0</span></div>
-            <div class="kw-row"><span class="kw">เลขบัตร ปชช. เต็มใบในฐานข้อมูล</span><span class="clk">มี</span><span class="imp">ไม่มี</span></div>
-            <div class="kw-row"><span class="kw">ค้นชื่อไม่ตรงเป๊ะ / ข้ามศูนย์</span><span class="clk">ไม่ได้</span><span class="imp">ได้</span></div>
-          </div>
-          <div class="foot-note">* ผู้อบรมในระบบมีเกือบ <b>47,000 คน</b> — เลขบัตรประชาชนคือข้อมูลอ่อนไหวที่สุดที่เราถือไว้ และหน้าตรวจสอบบัตรคือหน้าที่ลูกค้าปลายทางใช้จริงทุกวัน</div>
-        </div>
-      </div>
-
-      <div class="note-strip" data-reveal style="--d:.4s">
-        <span data-icon="hard-hat"></span>
-        <div><b>ยังเหลือ:</b> การย้ายข้อมูลเลขบัตรชุดเก่าทั้งหมดให้เป็นรูปแบบใหม่ — พักไว้ก่อนตามที่ตกลง เพราะระบบรองรับทั้ง 2 รูปแบบพร้อมกันอยู่แล้ว จึงไม่กระทบการใช้งาน</div>
-      </div>
+      <div class="s-foot"><b>ที่มา</b> git history 9 repos · Firestore (registrations / trainingRecords / trainingSchedules / analyticsMonthly) · Google Search Console API</div>
     </div>
   </section>
 
-  <!-- 7. NETMER-FLOW SPOTLIGHT -->
-  <section class="slide" data-title="NETMER-Flow" data-nav-icon="briefcase" data-desc="คุมสิทธิ์จริง + ศูนย์แจ้งปัญหา">
-    <div class="slide-inner" style="height:100%; display:flex; flex-direction:column">
-      <div class="head" style="margin-bottom:18px" data-reveal>
-        <h2><span class="h-ic" style="--accent:var(--b4);--accent2:var(--b2)" data-icon="briefcase"></span> NETMER-Flow · คุมสิทธิ์จริง + ศูนย์แจ้งปัญหา</h2>
-        <div class="sub">แอปที่พนักงานทุกคนเปิดใช้ทุกวัน — รอบนี้เก็บงาน<b>ความปลอดภัยและความน่าเชื่อถือ</b> (<b>9 งานพัฒนา</b> แต่ละงานใหญ่)</div>
+  <!-- ============ 4 · BUSINESS ============ -->
+  <section class="slide" data-title="ธุรกิจอบรมเดือน ส.ค." data-nav-icon="graduation-cap">
+    <div class="s-inner">
+      <div class="s-head">
+        <div class="eyebrow aqua" data-reveal>02 · ธุรกิจอบรม</div>
+        <h2 class="h" data-reveal>ส.ค. อบรม <em>1,155 คน</em> ใน 94 รอบ — และ ก.ย. จองไว้แล้ว 86 รอบ</h2>
       </div>
-
-      <div class="split" style="grid-template-columns:0.82fr 1.18fr">
-        <!-- LEFT: fleet periodic inspection -->
-        <div class="spot-card" style="--accent:var(--b6);--accent2:var(--b3); --d:.1s" data-reveal>
-          <div class="spot-head">
-            <div class="itile sm" style="--accent:var(--b6);--accent2:var(--b3)" data-icon="clipboard-check"></div>
-            <div style="flex:1; min-width:0">
-              <div class="t">ตรวจรถ 2 ระดับแล้ว</div>
-              <div class="s">คนขับตรวจก่อนใช้ · ผู้ดูแลรถตรวจประจำรอบ</div>
+      <div class="s-body stack">
+        <div class="grid g3">
+          <div class="card" data-reveal><figure data-chart="regsByMonth" style="height:225px"></figure></div>
+          <div class="card" data-reveal><figure data-chart="trainedByMonth" style="height:225px"></figure></div>
+          <div class="card stat" data-reveal>
+            <div class="label">รอบอบรมเดือน ส.ค.</div>
+            <div class="value" data-count="94">94</div>
+            <div class="sub">เปิดรับ 66 · เต็ม 24 · ยกเลิก 4 · 30 หลักสูตร</div>
+            <div style="margin-top:14px"><figure data-chart="augMode"></figure></div>
+          </div>
+        </div>
+        <div class="grid g3 fill">
+          <div class="card" style="grid-column:span 2" data-reveal><figure data-chart="augTopTrained" style="height:100%"></figure></div>
+          <div class="card soft" data-reveal>
+            <h4>อ่านตัวเลขนี้อย่างไร</h4>
+            <p style="font-size:16px">ลงทะเบียน ส.ค. <b>798 ใบ</b> (ยืนยัน 645 · ยกเลิก 101 · รอ 52) ต่ำกว่า ก.ค. ~12% แต่<b>ผู้ผ่านการอบรมยังทรงตัว</b>ที่ ~1,150–1,200 คน/เดือน ตลอด 4 เดือน</p>
+            <div style="margin-top:10px">
+              <div class="kv"><span>รอบที่เปิดใน ก.ย.</span><b>86 รอบ</b></div>
+              <div class="kv"><span>รอบที่เปิดใน ต.ค.</span><b>20 รอบ</b></div>
+              <div class="kv"><span>หลักสูตร CP + AIS ใน ส.ค.</span><b>≈ 93% ของผู้ผ่าน</b></div>
             </div>
           </div>
-          <img class="spot-img" style="object-position:top" src="assets/screenshots/fleet-inspection.jpg" alt="หน้าตรวจเช็ครถ" data-zoomable>
-          <div class="spot-body">
-            <p>ของเดิมถามคนขับเรื่องที่คนขับตอบไม่ได้ (น้ำหล่อเย็น น้ำมันเบรก แบตเตอรี่) — <b>ตัดออกเหลือ 14 ข้อ</b> แล้วย้ายไปอยู่ใน<b>รอบตรวจของผู้ดูแลรถ 28 ข้อ</b> พร้อมบันทึกค่าที่วัดได้ เช่น ลมยาง แรงดันแบต เพื่อดูแนวโน้มย้อนหลัง</p>
-          </div>
-        </div>
-
-        <!-- RIGHT: the rest -->
-        <div class="mini-list" style="justify-content:center">
-          <div class="mini-row" data-reveal style="--d:.16s">
-            <div class="itile sm" style="--accent:var(--b5);--accent2:var(--b4)" data-icon="lock"></div>
-            <div><h4>คุมสิทธิ์เข้าถึงจริง ไม่ใช่แค่ซ่อนเมนู</h4><p>เดิมแค่ซ่อนเมนู แต่ข้อมูลยังเปิดอยู่ · รอบนี้ล็อกที่ตัวฐานข้อมูลและ API จริง พร้อม<b>แก้บั๊กที่ตรวจเจอ 16 จุด</b> — จุดใหญ่สุดคือการสร้างพนักงานใหม่เคยทำให้แอดมินหลุดออกจากระบบ</p></div>
-          </div>
-          <div class="mini-row" data-reveal style="--d:.22s">
-            <div class="itile sm" style="--accent:var(--b3);--accent2:var(--b6)" data-icon="triangle-alert"></div>
-            <div><h4>ศูนย์แจ้งปัญหา — IT / รถ / อาคาร</h4><p>แจ้งปัญหาเมนูเดียวจบ เลือกหมวดแล้วกดรูป กดชิป ไม่ต้องพิมพ์เยอะ · ปัญหารถที่แจ้งเข้ามาไปโผล่ในไทม์ไลน์ของรถคันนั้นเองอัตโนมัติ</p></div>
-          </div>
-          <div class="mini-row" data-reveal style="--d:.28s">
-            <div class="itile sm" style="--accent:var(--b1);--accent2:var(--b2)" data-icon="chart-column"></div>
-            <div><h4>รายงานผลการปฏิบัติงานที่เชื่อถือได้</h4><p>รายงานเดิมนับผิด — วิทยากรที่สอนหนัก 36–43 วันกลับได้คะแนนแย่สุด · รอบนี้เปลี่ยนมาวัดจาก<b>หลักฐานจริง</b> เทียบกับ<b>เวลาทำงานจริง</b> (หักวันหยุด/วันลา) และเทียบเฉพาะในกลุ่มงานเดียวกัน + ออกไฟล์ Excel 9 ชีตพร้อมวิธีคิด</p></div>
-          </div>
-          <div class="mini-row" data-reveal style="--d:.34s">
-            <div class="itile sm" style="--accent:var(--b2);--accent2:var(--b4)" data-icon="bell"></div>
-            <div><h4>LINE เบิกของ เลิกสแปม</h4><p>เดิมส่งซ้ำ 2 รอบและยิงทีละชิ้น · ตอนนี้ส่งเข้ากลุ่มเดียวและ<b>รวมคำขอในช่วง ~3 นาทีเป็นข้อความเดียว</b></p></div>
-          </div>
         </div>
       </div>
+      <div class="s-foot"><b>ที่มา</b> Firestore: registrations (นับตามวันลงทะเบียน) · trainingRecords status=completed (นับตามวันจบอบรม) · trainingSchedules (นับตามวันเริ่มรอบ)</div>
     </div>
   </section>
 
-  <!-- 8. WEBSITE + AI ASSISTANT -->
-  <section class="slide" data-title="เว็บไซต์ + ผู้ช่วย AI" data-nav-icon="wrench" data-desc="โอบอ้อม · กฎหมาย 68 จุด · ความเร็ว · SEO">
-    <div class="slide-inner" style="height:100%; display:flex; flex-direction:column">
-      <div class="head" style="margin-bottom:18px" data-reveal>
-        <h2><span class="h-ic" style="--accent:var(--b2);--accent2:var(--b4)" data-icon="wrench"></span> เว็บไซต์หลัก + ผู้ช่วย AI "โอบอ้อม"</h2>
-        <div class="sub">ทดลองถามด้วยคำถามลูกค้าจริง 71 ข้อ แล้วพบว่า<b>ตอบถูกแค่ 3 ข้อ</b> — รอบนี้เลยรื้อใหม่ทั้งชุด</div>
+  <!-- ============ 5 · DEV WORK ============ -->
+  <section class="slide" data-title="งานพัฒนา 175 งาน" data-nav-icon="chart-column">
+    <div class="s-inner">
+      <div class="s-head">
+        <div class="eyebrow" data-reveal>03 · งานพัฒนา</div>
+        <h2 class="h" data-reveal>175 งานพัฒนา — <em>ครึ่งหนึ่ง</em>ไปกับระบบใหม่ อีกครึ่งทำให้ระบบหลักแข็งขึ้น</h2>
       </div>
+      <div class="s-body grid g-12">
+        <div class="card span-7" data-reveal><figure data-chart="devByRepo" style="height:100%"></figure></div>
+        <div class="span-5 stack">
+          <div class="card" data-reveal><figure data-chart="devWeeks" style="height:230px"></figure></div>
+          <div class="facts" data-reveal style="grid-template-columns:1fr 1fr">
+            <div class="fact"><div class="v">96</div><div class="l">commits บน 4 ระบบใหม่ (55%)</div></div>
+            <div class="fact"><div class="v">63</div><div class="l">commits เว็บไซต์หลัก + ERP</div></div>
+            <div class="fact"><div class="v">9 / 9</div><div class="l">ทุกโปรเจกต์มีงานที่ส่งมอบถึงผู้ใช้แล้วในรอบนี้</div></div>
+            <div class="fact"><div class="v">75</div><div class="l">commits ในสัปดาห์ที่หนักสุด (25–31 ส.ค.)</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot"><b>ที่มา</b> git log ทุก repo ใน E:\Devloper · 11 ส.ค. – 3 ก.ย. 2026 · ไม่นับ merge commit</div>
+    </div>
+  </section>
 
-      <div class="split" style="grid-template-columns:0.92fr 1.08fr">
-        <!-- AI ASSISTANT (image) -->
-        <div class="spot-card" style="--accent:var(--b2);--accent2:var(--b4); --d:.08s" data-reveal>
-          <div class="spot-head">
-            <div class="itile sm" style="--accent:var(--b2);--accent2:var(--b4)" data-icon="sparkles"></div>
-            <div style="flex:1; min-width:0">
-              <div class="t">ผู้ช่วย AI "โอบอ้อม" บนหน้าเว็บ</div>
-              <div class="s">ตอบเรื่องหลักสูตร · รอบอบรม · ข้อกฎหมาย</div>
+  <!-- ============ 6 · NEW: ELMER QUOTATION + PO ============ -->
+  <section class="slide" data-title="ใหม่ · ELMER ใบเสนอราคา + ใบสั่งซื้อ" data-nav-icon="file-text">
+    <div class="s-inner">
+      <div class="s-head">
+        <div class="eyebrow orange" data-reveal>04 · ระบบใหม่ 1/4 · ธุรกิจในเครือ</div>
+        <h2 class="h" data-reveal>ELMER: ระบบใบเสนอราคา + ใบสั่งซื้อ <em>แทน Google Sheets</em></h2>
+      </div>
+      <div class="s-body sys">
+        <div class="copy">
+          <div class="pitch" data-reveal>ทีม Elmer ออกใบเสนอราคาและใบสั่งซื้อจากระบบเดียว — ย้ายของเก่า 1,132 ใบเข้ามาครบ
+            <span>บริษัท เอลเมอร์ อินทิเกรชั่น จำกัด — งานน้ำ/น้ำเสียในเครือ · ขึ้น production 24 ส.ค. · เพิ่มใบสั่งซื้อ 2 ก.ย.</span></div>
+          <div class="facts" data-reveal>
+            <div class="fact"><div class="v">1,132</div><div class="l">ใบเสนอราคาเก่าย้ายเข้าระบบครบ · ลูกค้า 523 ราย</div></div>
+            <div class="fact"><div class="v">35</div><div class="l">ใบสั่งซื้อ ส.ค. 69 นำเข้า · ผู้ขาย 7 ราย · 1.73 ล้านบาท</div></div>
+            <div class="fact"><div class="v">7</div><div class="l">ชุดตรวจอัตโนมัติก่อนขึ้นระบบ (สูตรเงิน · พิมพ์ PDF จริง · ความเป็นส่วนตัว)</div></div>
+          </div>
+          <ul class="blist tight" data-reveal>
+            <li><div class="itile sm orange"><span data-icon="triangle-alert"></span></div><div><b>เจอข้อผิดพลาดในไฟล์เดิม</b> — สูตรรวมยอด PO บวกแค่แถวแรก 33 จาก 35 ใบ · ส่วนลดหาย 17 ใบ · ระบบใหม่คำนวณให้เอง</div></li>
+            <li><div class="itile sm orange"><span data-icon="banknote"></span></div><div><b>ต้นทุน / ราคาเสนอ / กำไร % ต่อรายการ</b> เห็นเฉพาะภายใน — ตัวตรวจกันไม่ให้หลุดไปถึงลูกค้า</div></li>
+            <li><div class="itile sm orange"><span data-icon="send"></span></div><div><b>รู้ว่าลูกค้าเปิดใบเสนอราคาแล้วหรือยัง</b> · เอกสาร A4 ตรงฟอร์มกระดาษเดิม · ค้นหารวม Ctrl+K</div></li>
+          </ul>
+        </div>
+        <div class="media" data-reveal>
+          <div class="card flush" style="flex:1;display:flex;flex-direction:column;background:linear-gradient(160deg,#fff6f5,#fff)">
+            <div style="padding:22px 26px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px">
+              <div class="itile" style="background:#fbe3e0;color:#b3261e"><span data-icon="file-text"></span></div>
+              <div><div style="font-weight:700;font-size:18px">ใบเสนอราคา · ใบสั่งซื้อ</div><div class="card-sub">Next.js + Firebase (asia-southeast1) · app--elmer-quotation-flow</div></div>
+              <span class="badge live" style="margin-left:auto"><span data-icon="check"></span> Production</span>
             </div>
-            <span class="spot-badge"><span data-icon="check"></span> 3/71 → แก้ครบ</span>
-          </div>
-          <img class="spot-img" src="assets/screenshots/training-chat.png" alt="ผู้ช่วย AI โอบอ้อม บนหน้าเว็บ NET" data-zoomable style="border-bottom:1px solid var(--line)">
-          <div class="spot-body">
-            <p>ปัญหาที่เจอเช่น <b>คุยเกิน 10 คำถามแล้วบอตพัง</b>โดยระบบยังบันทึกว่า "สำเร็จ", ตอบว่า "ยังไม่มีรอบ" ทั้งที่มีรอบอยู่ (เพราะเทียบชื่อหลักสูตรแบบลูกค้าพูดไม่ได้) และเผลอโชว์หลักสูตรที่ตั้งใจซ่อนไว้</p>
-          </div>
-        </div>
-
-        <!-- OTHER UPGRADES -->
-        <div class="mini-list" style="justify-content:center">
-          <div class="mini-row" data-reveal style="--d:.14s">
-            <div class="itile sm" style="--accent:var(--b5);--accent2:var(--b4)" data-icon="book-open"></div>
-            <div><h4>แก้ฐานความรู้กฎหมาย 68 จุด</h4><p>ตรวจข้อความกฎหมาย 122 ข้อกับตัวบทจริงทีละข้อ · ตัวอย่างที่แก้: การอบรมดับเพลิง<b>ไม่ได้</b>บังคับเฉพาะที่มีลูกจ้าง 10 คนขึ้นไป — ของเดิมทำให้เราตอบลูกค้ารายเล็กผิด</p></div>
-          </div>
-          <div class="mini-row" data-reveal style="--d:.2s">
-            <div class="itile sm" style="--accent:var(--b1);--accent2:var(--b3)" data-icon="zap"></div>
-            <div><h4>เว็บโหลดไวขึ้น</h4><p>ย่อรูปบนเว็บจาก <b>120 MB เหลือ 7.4 MB</b> (โลโก้ลูกค้าเคยเป็นไฟล์ 6,250 พิกเซลในกรอบ 130 พิกเซล) และแก้อาการหน้าขาวตอนโหลด</p></div>
-          </div>
-          <div class="mini-row" data-reveal style="--d:.26s">
-            <div class="itile sm" style="--accent:var(--b3);--accent2:var(--b6)" data-icon="palette"></div>
-            <div><h4>จัดระบบหน้าตาเว็บใหม่</h4><p>รวมการ์ด 4 แบบให้เหลือแบบเดียว ลดสีที่ใช้เหลือ 5 สีที่มีความหมาย และเพิ่มการตอบสนองเวลากดบนมือถือ (เดิมกดแล้วไม่มีอะไรเกิดขึ้น)</p></div>
-          </div>
-          <div class="mini-row" data-reveal style="--d:.32s">
-            <div class="itile sm" style="--accent:var(--b6);--accent2:var(--b3)" data-icon="target"></div>
-            <div><h4>Online Inspector: เพิ่มระดับ OFI</h4><p>เพิ่ม "ข้อเสนอแนะ (OFI)" เป็นระดับที่ 3 ที่ไม่นับเป็นข้อบกพร่อง ตามกระบวนการใหม่ของลูกค้า + ปรับข้อมูลผลตรวจ <b>603 รายการ</b>ให้ตรงกับไฟล์ต้นทาง</p></div>
+            <div style="padding:22px 26px;display:grid;grid-template-columns:1fr 1fr;gap:14px;flex:1">
+              <div class="card soft" style="padding:16px 18px"><div style="font-size:13px;color:var(--muted);font-weight:600">เลขที่ใบเสนอราคา</div><div style="font-size:24px;font-weight:700">Q-260806-0612</div><div class="small muted">rev.01 · ต่อท้ายเลขเดิมเมื่อแก้ไข</div></div>
+              <div class="card soft" style="padding:16px 18px"><div style="font-size:13px;color:var(--muted);font-weight:600">เลขที่ใบสั่งซื้อ</div><div style="font-size:24px;font-weight:700">6909/001</div><div class="small muted">ปี พ.ศ. + เดือน + ลำดับ รีเซ็ตรายเดือน</div></div>
+              <div class="card soft" style="padding:16px 18px;grid-column:span 2">
+                <div style="font-size:13px;color:var(--muted);font-weight:600;margin-bottom:8px">สิ่งที่ระบบทำแทนคน</div>
+                <div class="kv"><span>ออกเลขที่เอกสารไม่ซ้ำ (transaction)</span><b>อัตโนมัติ</b></div>
+                <div class="kv"><span>คำนวณยอด · VAT · ส่วนลด · บาทเป็นตัวอักษร</span><b>อัตโนมัติ</b></div>
+                <div class="kv"><span>เปลี่ยนสถานะเป็นชุด · บันทึกภายใน · ต้องตามงาน</span><b>ในระบบ</b></div>
+                <div class="kv"><span>สิทธิ์ผู้ใช้ · กติกาบังคับที่ฐานข้อมูล</span><b>rules</b></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <div class="s-foot"><b>สถานะ</b> ขึ้นระบบแล้ว · รอทีม Elmer เริ่มคีย์ใบจริง · การอัปเดตจากชีตรอบถัดไปใช้โหมด "เฉพาะของใหม่" เท่านั้น</div>
+    </div>
+  </section>
 
-      <div class="note-strip" data-reveal style="--d:.4s">
-        <span data-icon="hard-hat"></span>
-        <div><b>พร้อมขึ้นระบบ (รออนุมัติ):</b> ชุดกู้อันดับ Google — พบว่าอันดับหน้าแรกของเราหลายคำยังอยู่บนลิงก์เว็บรุ่นเก่า <b>/course.php</b> ที่เราปิดไม่ให้ Google เข้า · ทำทางเชื่อม <b>43 เส้นทาง</b> ไปหน้าหลักสูตรจริง + เมนูใหม่ + ไฟล์ <b>llms.txt</b> สำหรับ AI</div>
+  <!-- ============ 7 · NEW: NET-ID PHOTO STUDIO ============ -->
+  <section class="slide" data-title="ใหม่ · NET-ID Photo Studio" data-nav-icon="image">
+    <div class="s-inner">
+      <div class="s-head">
+        <div class="eyebrow orange" data-reveal>04 · ระบบใหม่ 2/4 · เครื่องมือของทีม</div>
+        <h2 class="h" data-reveal>NET-ID Photo Studio: ทำรูปติดบัตร <em>~100 รูป/วัน</em> ไม่ต้องเปิด Photoshop</h2>
+      </div>
+      <div class="s-body sys">
+        <div class="media" data-reveal>
+          <div class="card" style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:14px">
+            <div style="font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.04em">ขั้นตอนที่โปรแกรมทำให้ · ออฟไลน์ 100%</div>
+            <div class="grid" style="grid-template-columns:repeat(4,1fr);gap:12px">
+              <div class="card soft" style="padding:16px 14px;text-align:center"><div class="itile" style="margin:0 auto 10px"><span data-icon="image"></span></div><b>ลากรูปเข้าทั้งโฟลเดอร์</b><div class="small muted">ต้นฉบับจากกล้อง/มือถือ</div></div>
+              <div class="card soft" style="padding:16px 14px;text-align:center"><div class="itile orange" style="margin:0 auto 10px"><span data-icon="sparkles"></span></div><b>ลบพื้นหลังด้วย AI</b><div class="small muted">ขอบผมฟุ้งตามจริง</div></div>
+              <div class="card soft" style="padding:16px 14px;text-align:center"><div class="itile aqua" style="margin:0 auto 10px"><span data-icon="scan-line"></span></div><b>จัดกรอบ · ต่อไหล่ · ปรับสี</b><div class="small muted">ค่ามาตรฐานจากงานทีม 815 ใบ</div></div>
+              <div class="card soft" style="padding:16px 14px;text-align:center"><div class="itile dark" style="margin:0 auto 10px"><span data-icon="id-card"></span></div><b>ส่งออกเข้าเครื่องพิมพ์บัตร</b><div class="small muted">Asure ID 7 · บันทึกทีละใบ</div></div>
+            </div>
+            <div class="callout" style="margin-top:6px"><b>รูปใบหน้า = ข้อมูลชีวมิติ (PDPA)</b> — โปรแกรมประมวลผลบนเครื่องของทีมเท่านั้น ไม่มีรูปออกไปนอกเครื่อง</div>
+          </div>
+        </div>
+        <div class="copy">
+          <div class="pitch" data-reveal>งานพ่วงหลังจบคอร์สที่กินเวลาทีมทุกวัน กลายเป็นงานกดปุ่ม
+            <span>โปรแกรมเดสก์ท็อป (Windows) ส่งชุดติดตั้งไฟล์เดียวให้ทีมแล้ว — แถม Python ไปในชุด ติดตั้งเองได้ทุกเครื่อง</span></div>
+          <div class="facts" data-reveal>
+            <div class="fact"><div class="v">815</div><div class="l">ใบงานจริงของทีมที่ใช้คาลิเบรตค่ามาตรฐานทุกตัว</div></div>
+            <div class="fact"><div class="v">120 คู่</div><div class="l">เทียบผลโปรแกรมกับงานทีม 5 มิติ (กรอบ · ไหล่ · สี · ผิว · ผม)</div></div>
+            <div class="fact"><div class="v">~140</div><div class="l">ด่านตรวจอัตโนมัติของชุดติดตั้ง · ตรวจซ้ำ 5 รอบก่อนส่ง</div></div>
+          </div>
+          <ul class="blist tight" data-reveal>
+            <li><div class="itile sm"><span data-icon="palette"></span></div><div><b>ปรับสีเฉพาะส่วน</b> ทั้งภาพ · ผิว · เสื้อ · ผม · ปาก และแปรงแก้เฉพาะจุด ย้อนกลับได้ทุกขั้น</div></li>
+            <li><div class="itile sm"><span data-icon="zap"></span></div><div><b>ใช้การ์ดจอเมื่อมี</b> ไม่มีก็ทำงานบน CPU ได้ (เร็วขึ้น 3 เท่าจากรุ่นแรก)</div></li>
+            <li><div class="itile sm"><span data-icon="shield"></span></div><div><b>กันงานหาย</b> — ล็อกไฟล์งาน กันเปิดซ้อน กันบันทึกทับต้นฉบับ บันทึกปัญหาอัตโนมัติเมื่อผิดพลาด</div></li>
+          </ul>
+        </div>
+      </div>
+      <div class="s-foot"><b>สถานะ</b> ส่งชุดติดตั้งให้ทีมแล้ว (25 ส.ค. · ปรับคุณภาพรอบล่าสุด 2 ก.ย.) · 54 commits</div>
+    </div>
+  </section>
+
+  <!-- ============ 8 · NEW: NFC CARD + KYT MOTTO ============ -->
+  <section class="slide" data-title="ใหม่ · นามบัตร NFC + KYT MOTTO" data-nav-icon="id-card">
+    <div class="s-inner">
+      <div class="s-head">
+        <div class="eyebrow orange" data-reveal>04 · ระบบใหม่ 3–4/4</div>
+        <h2 class="h" data-reveal>สองระบบเล็กที่ใช้ได้ทันที: นามบัตร <em>NFC</em> และคลังโปสเตอร์ <em>KYT MOTTO</em></h2>
+      </div>
+      <div class="s-body half">
+        <div class="card" data-reveal style="display:grid;grid-template-columns:230px 1fr;gap:24px;align-items:center">
+          <div class="shot-phone"><img src="assets/screenshots/aom-card.png" alt="นามบัตรดิจิทัล NFC"></div>
+          <div class="stack" style="gap:12px">
+            <div class="row"><div class="itile"><span data-icon="credit-card"></span></div><div><h4>นามบัตรดิจิทัล NFC</h4><div class="card-sub">netenergy-card.web.app · 1 ก.ย.</div></div></div>
+            <p>แตะบัตร NFC แล้วเปิดหน้านามบัตรของ<b>กรรมการผู้จัดการ</b>ได้ทันที — หน้าเดียวครอบทั้ง <b>NET</b> และ <b>ELMER</b> พร้อมปุ่ม LINE · โทร · อีเมล · TikTok · Instagram · แชร์</p>
+            <ul class="blist tight">
+              <li><div class="itile sm"><span data-icon="smartphone"></span></div><div>ออกแบบจากจอจริงของเบราว์เซอร์ใน LINE (375×553) — ไม่ล้น ไม่ตัด</div></li>
+              <li><div class="itile sm"><span data-icon="cloud"></span></div><div>โฮสต์แยกจากเว็บบริษัท แก้นามบัตรได้โดยไม่ต้อง deploy เว็บทั้งเว็บ</div></li>
+              <li><div class="itile sm"><span data-icon="lock"></span></div><div>ไม่ขึ้นผลค้นหา Google (noindex) — เปิดได้เฉพาะคนที่มีบัตร/ลิงก์</div></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card flush" data-reveal style="display:flex;flex-direction:column">
+          <div class="shot" style="height:300px;border:0;border-radius:0"><img src="assets/screenshots/kyt-motto.png" alt="KYT MOTTO"></div>
+          <div style="padding:20px 24px;display:flex;flex-direction:column;gap:10px;flex:1">
+            <div class="row"><div class="itile yellow"><span data-icon="hard-hat"></span></div><div><h4>KYT MOTTO · คลังโปสเตอร์ความปลอดภัยงานก่อสร้าง</h4><div class="card-sub">76 แผ่น · 3 หมวดงาน · ใช้จากมือถือหน้างาน</div></div></div>
+            <p>ค้นหาโปสเตอร์ตาม<b>ลักษณะงาน</b> (นั่งร้าน ไฟฟ้า หลังคา) แม้พิมพ์ผิดหรือย่อคำ — วัดกับ 105 คำค้นจริง: เจอคำแรก <b>100/105</b> (จาก 62) โดยไม่ต้องเรียก AI ตอนค้น · AI อ่านโปสเตอร์ให้ครั้งเดียวตอนนำเข้า</p>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot"><b>สถานะ</b> ทั้งสองระบบใช้งานได้จริง · นามบัตรเหลือผูกโดเมน card.netenergy-tech.com</div>
+    </div>
+  </section>
+
+  <!-- ============ 9 · CORE: WEBSITE + ERP ============ -->
+  <section class="slide" data-title="เว็บไซต์หลัก + ERP" data-nav-icon="wrench">
+    <div class="s-inner">
+      <div class="s-head">
+        <div class="eyebrow" data-reveal>05 · ระบบหลัก · NET Training Platform (63 commits)</div>
+        <h2 class="h" data-reveal>เว็บไซต์ + ERP: ทำของที่ "มีอยู่แต่ใช้ไม่ได้จริง" ให้<em>ใช้ได้จริง</em></h2>
+      </div>
+      <div class="s-body grid g-12">
+        <div class="span-5 stack" data-reveal>
+          <div class="shot" style="height:272px"><img src="assets/screenshots/net-course-electrician.png" alt="หน้าหลักสูตรโฉมใหม่"><div class="cap">หน้าหลักสูตรโฉมใหม่ + เมนูใหม่ + แกลเลอรีภาพอบรม</div></div>
+          <div class="shot" style="height:272px"><img src="assets/screenshots/net-compliance.png" alt="เครื่องมือตรวจสอบหลักสูตรตามกฎหมาย"><div class="cap">เครื่องมือตรวจสอบหลักสูตรตามกฎหมาย รื้อใหม่ + ชุดทดสอบความแม่นยำ</div></div>
+        </div>
+        <div class="span-7 card" data-reveal>
+          <ul class="blist">
+            <li><div class="itile sm"><span data-icon="graduation-cap"></span></div><div><span class="k">ใบประกาศพิมพ์ได้จริงทั้งระบบ</span>เลขที่ต่อหลักสูตร · ฟอนต์มาตรฐานไทย · อัปโหลดรูป/ลายเซ็นวิทยากรเลือกตอนพิมพ์ · ประวัติการอบรมรองรับข้อมูลใหญ่ — เดิม 4,138 จาก 4,718 คนที่ผ่านแล้วไม่มีเลขใบประกาศ</div></li>
+            <li><div class="itile sm"><span data-icon="video"></span></div><div><span class="k">E-Learning พร้อมขาย</span>บังคับเกณฑ์ผ่านที่เคยตั้งไว้เฉย ๆ · ปิดทางเลี่ยงเครื่องเล่น · ย้ายสื่อคอร์สจ่ายเงินออกจากที่เก็บสาธารณะ · เขียนธรรมาภิบาลตามผลตรวจ</div></li>
+            <li><div class="itile sm"><span data-icon="zap"></span></div><div><span class="k">ERP เร็วขึ้นทุกหน้า</span>billing 11.9 → 1.3 วิ · certificate 7.3 → 0.4 วิ · ทุกหน้า −143 KB · แก้บั๊ก 49 ข้อจากรอบตรวจ + 6 ข้อที่ผู้ใช้แจ้ง</div></li>
+            <li><div class="itile sm"><span data-icon="users"></span></div><div><span class="k">กู้ผู้อบรม 53 คนที่หายจาก 2 รอบ H AIS โคราช (19 ส.ค.)</span>ต้นเหตุ: การเลื่อนรอบทิ้งรายชื่อเก่าไว้แล้วระบบนับว่า "มีแล้ว" — แก้ที่ตัวเชื่อม ERP ↔ NETMER-Flow และซ่อมข้อมูล 168 รอบ</div></li>
+            <li><div class="itile sm"><span data-icon="chart-column"></span></div><div><span class="k">ระบบสถิติเว็บสร้างใหม่ (2 ก.ย.)</span>เก็บ → สรุปรายวัน/รายเดือน → รายงาน ไม่ต้องอ่าน 45,000 เหตุการณ์ทุกครั้งที่เปิด · ตัดทราฟฟิกพนักงานออก · ตัวเลขในสไลด์นี้มาจากระบบนี้</div></li>
+            <li><div class="itile sm"><span data-icon="sparkles"></span></div><div><span class="k">AI + ฐานความรู้กฎหมาย</span>ย้ายทุก flow ไป Gemini 3.7 + แดชบอร์ดการใช้ AI · ตรวจซ้ำข้อกฎหมาย 157 ข้อ พบอ้างอิงผิด 46 → แก้ 58 แถวจากตัวบทจริง · ตอบลูกค้าต่างชาติในภาษาของเขา</div></li>
+          </ul>
+        </div>
+      </div>
+      <div class="s-foot"><b>ขึ้นระบบแล้วเช่นกัน</b> ช่างไฟฟ้า L1 → ส่งออกข้อมูลผู้อบรมตามแบบกรมพัฒนาฝีมือแรงงาน (DSD): วางไฟล์ → ได้ไฟล์ตามสัญญาข้อมูล พร้อมตารางรหัสและด่านตรวจข้อมูลก่อนส่ง</div>
+    </div>
+  </section>
+
+  <!-- ============ 10 · OTHER CORE SYSTEMS ============ -->
+  <section class="slide" data-title="NETMER · CP · CSAT · Doc Flow" data-nav-icon="layers">
+    <div class="s-inner">
+      <div class="s-head">
+        <div class="eyebrow" data-reveal>05 · ระบบหลักอื่น ๆ</div>
+        <h2 class="h" data-reveal>ระบบที่ใช้ทุกวัน: แก้จุดที่ทำให้<em>ตัวเลขผิด</em>และจุดที่ใช้บนมือถือลำบาก</h2>
+      </div>
+      <div class="s-body grid g2">
+        <div class="card" data-reveal>
+          <div class="card-head"><div class="itile"><span data-icon="briefcase"></span></div><div><div class="t">NETMER-Flow (HR)</div><div class="s">7 commits · ขึ้นระบบแล้ว</div></div><span class="badge live"><span data-icon="check"></span> Live</span></div>
+          <ul class="blist tight">
+            <li><div class="itile sm"><span data-icon="clock"></span></div><div><b>OT 2 ครั้งในวันเดียวแสดงแค่ครั้งเดียว</b> ในรายงานภาระงานทีม — แก้แล้ว และรวมตรรกะรายวันให้ทุกหน้าใช้ชุดเดียวกัน (3 ก.ย.)</div></li>
+            <li><div class="itile sm"><span data-icon="smartphone"></span></div><div><b>นัดเวลาเข้างาน</b> ทำบนมือถือได้ · แก้หน้าล้นจอ/กล่องโต้ตอบบนโทรศัพท์</div></li>
+            <li><div class="itile sm"><span data-icon="bell"></span></div><div>LINE รวมข้อความหัวข้อเดียวกันเป็นข้อความเดียว + แจ้งคำขอลา (19 ส.ค.) · แก้บัญชีแอดมิน 3 คนที่สิทธิ์เพี้ยนจากข้อมูลเก่า</div></li>
+          </ul>
+        </div>
+        <div class="card" data-reveal>
+          <div class="card-head"><div class="itile yellow"><span data-icon="id-card"></span></div><div><div class="t">CP Safety Passport</div><div class="s">6 commits · ขึ้นระบบแล้ว</div></div><span class="badge live"><span data-icon="check"></span> Live</span></div>
+          <ul class="blist tight">
+            <li><div class="itile sm yellow"><span data-icon="zap"></span></div><div><b>อัปเกรด E → EE ในรอบเดียว</b> แทนที่โมดูลเดิมและต้องมีคุณสมบัติก่อน · ประวัติรวม E ที่ถูกแทนเข้ากับ EE ไม่โชว์ซ้ำ</div></li>
+            <li><div class="itile sm yellow"><span data-icon="rotate-ccw"></span></div><div><b>ย้อนสถานะรอบใดรอบหนึ่งได้</b> แม้มีรอบหลังใช้บัตรไปแล้ว (31 ส.ค.)</div></li>
+            <li><div class="itile sm yellow"><span data-icon="sparkles"></span></div><div>ย้าย AI อ่านบัตรไปรุ่นใหม่ · เครื่องมือซ่อมเส้นทางไฟล์ใบรับรอง</div></li>
+          </ul>
+        </div>
+        <div class="card" data-reveal>
+          <div class="card-head"><div class="itile aqua"><span data-icon="star"></span></div><div><div class="t">LINE CSAT</div><div class="s">2 commits · ขึ้นระบบแล้ว</div></div><span class="badge wait"><span data-icon="clock"></span> รอเลือกกลุ่ม</span></div>
+          <ul class="blist tight">
+            <li><div class="itile sm aqua"><span data-icon="bell"></span></div><div><b>สรุปคะแนนความพอใจรายวัน 08:00 เข้ากลุ่ม LINE</b> ของทีม — ส่ง/ตอบ/ต้องติดตาม พร้อมข้อความลูกค้า (19 ส.ค.)</div></li>
+            <li><div class="itile sm aqua"><span data-icon="settings"></span></div><div>เปิดใช้ได้ทันทีเมื่อผู้จัดการเลือกกลุ่มในหน้าตั้งค่า · ระบบแสดงค่าใช้จ่าย LINE ต่อเดือนให้ก่อนเปิด</div></li>
+          </ul>
+        </div>
+        <div class="card" data-reveal>
+          <div class="card-head"><div class="itile"><span data-icon="receipt"></span></div><div><div class="t">NET Document Flow</div><div class="s">1 commit · ขึ้นระบบแล้ว</div></div><span class="badge live"><span data-icon="check"></span> Live</span></div>
+          <ul class="blist tight">
+            <li><div class="itile sm"><span data-icon="download"></span></div><div><b>รายงานใบแจ้งหนี้ Excel แบบจัดรูปแบบ</b> + ชีตสรุปตามหมวด (24 ส.ค.) — ส่งบัญชีได้เลยไม่ต้องแต่งไฟล์</div></li>
+            <li><div class="itile sm"><span data-icon="check"></span></div><div>ระบบอื่นที่ไม่มีงานเพิ่มในรอบนี้ (เดินปกติ): ELMER Water Analysis · Elmer Wastewater · Online Inspector · Safety Hero</div></li>
+          </ul>
+        </div>
+      </div>
+      <div class="s-foot"><b>ที่มา</b> git log NETMER-Flow · CP PASSPORT · line-csat · NET - Document Flow</div>
+    </div>
+  </section>
+
+  <!-- ============ 11 · SEO OVERVIEW ============ -->
+  <section class="slide" data-title="SEO · ภาพรวม" data-nav-icon="search">
+    <div class="s-inner">
+      <div class="s-head">
+        <div class="eyebrow" data-reveal>06 · SEO · Google Search Console</div>
+        <h2 class="h" data-reveal id="seo-h1">SEO ภาพรวมรอบนี้</h2>
+      </div>
+      <div class="s-body stack" id="seo-overview">
+        <div class="grid g4" id="seo-stats"></div>
+        <div class="grid g-12 fill">
+          <div class="card span-8" data-reveal><figure data-chart="seoDaily" style="height:100%"></figure></div>
+          <div class="card span-4" data-reveal><figure data-chart="seoGroups"></figure></div>
+        </div>
+        <div class="callout" id="seo-insight" data-reveal></div>
+      </div>
+      <div class="s-foot" id="seo-foot"><b>ที่มา</b> Google Search Console API</div>
+    </div>
+  </section>
+
+  <!-- ============ 12 · SEO BY COURSE ============ -->
+  <section class="slide" data-title="SEO · คีย์เวิร์ดแยกตามหลักสูตร" data-nav-icon="search">
+    <div class="s-inner">
+      <div class="s-head">
+        <div class="eyebrow" data-reveal>06 · SEO · คีย์เวิร์ดที่คนค้นแล้วเจอเรา แยกตามหลักสูตร</div>
+        <h2 class="h" data-reveal id="seo-h2">หลักสูตรที่ติดอันดับ Google แล้ว</h2>
+      </div>
+      <div class="s-body grid g-12">
+        <div class="card span-7" data-reveal><figure data-chart="seoByCourse" style="height:100%"></figure></div>
+        <div class="card span-5" data-reveal id="seo-kwtable"></div>
+      </div>
+      <div class="s-foot" id="seo-foot2"><b>วิธีจับคู่</b> ใช้ข้อมูล คีย์เวิร์ด × หน้าที่ Google แสดง จาก Search Console API — คีย์เวิร์ดถูกนับให้หลักสูตรที่คนคลิกเข้าจริง ไม่ใช่การเดาจากคำ</div>
+    </div>
+  </section>
+
+  <!-- ============ 13 · SEO NOT RANKING ============ -->
+  <section class="slide" data-title="SEO · หลักสูตรที่ยังไม่ติดอันดับ" data-nav-icon="triangle-alert">
+    <div class="s-inner">
+      <div class="s-head">
+        <div class="eyebrow orange" data-reveal>06 · SEO · หลักสูตรที่ยังไม่ติดอันดับ</div>
+        <h2 class="h" data-reveal id="seo-h3">หลักสูตรที่ Google ยังแทบไม่แสดง</h2>
+      </div>
+      <div class="s-body grid g-12" id="seo-notranking"></div>
+      <div class="s-foot" id="seo-foot3"><b>เกณฑ์</b> หลักสูตรที่เปิดขายบนเว็บ 52 หลักสูตร เทียบกับการแสดงผลของหน้าหลักสูตรนั้นใน Search Console</div>
+    </div>
+  </section>
+
+  <!-- ============ 14 · TRAFFIC ============ -->
+  <section class="slide" data-title="ยอดเข้าเว็บ" data-nav-icon="chart-column">
+    <div class="s-inner">
+      <div class="s-head">
+        <div class="eyebrow" data-reveal>07 · ยอดเข้าเว็บ · สถิติจากระบบของเราเอง</div>
+        <h2 class="h" data-reveal>ส.ค. คนเข้าเว็บ<em>มากที่สุด</em>ตั้งแต่เปิดเว็บใหม่ — และหน้าที่โตคือหน้าหลักสูตร</h2>
+      </div>
+      <div class="s-body grid g-12">
+        <div class="card span-4" data-reveal><figure data-chart="pvMonthly" style="height:250px"></figure></div>
+        <div class="card span-8" data-reveal><figure data-chart="pvDaily" style="height:250px"></figure></div>
+        <div class="card span-6" data-reveal><figure data-chart="channelsAug" style="height:100%"></figure></div>
+        <div class="span-6 stack" data-reveal>
+          <div class="facts">
+            <div class="fact"><div class="v">13,757</div><div class="l">ครั้งที่เปิดหน้าหลักสูตรรายตัวใน ส.ค. (+22% จาก ก.ค.)</div></div>
+            <div class="fact"><div class="v">4,795</div><div class="l">ครั้งที่เปิดหน้าสมัคร (/register) ใน ส.ค.</div></div>
+            <div class="fact"><div class="v">2,940</div><div class="l">การเข้าชมหน้าภาษาต่างประเทศ (EN/JA/ZH) · +55% จาก ก.ค.</div></div>
+          </div>
+          <div class="card soft fill">
+            <h4>ที่น่าจับตา</h4>
+            <p>คนที่มาจาก <b>ChatGPT + Gemini</b> รวม 89 ครั้งในเดือน ส.ค. (ก.ค. 100) — ยังเล็กแต่มาสม่ำเสมอทุกเดือน · Direct ยังเป็นก้อนใหญ่สุด (60%) = คนที่รู้จักเราอยู่แล้ว เปิดจากบุ๊กมาร์ก/แอป · <b>Google ยังเป็นช่องทางที่พาคนใหม่มามากที่สุด</b> 11,040 ครั้ง (+5%)</p>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot"><b>ที่มา</b> analyticsMonthly / analyticsDaily (ระบบสถิติใหม่ · ตัดทราฟฟิกพนักงานออก) · Page View = ครั้งที่เปิดหน้า ไม่ใช่จำนวนคน</div>
+    </div>
+  </section>
+
+  <!-- ============ 15 · TIMELINE ============ -->
+  <section class="slide" data-title="ไทม์ไลน์รายสัปดาห์" data-nav-icon="calendar">
+    <div class="s-inner">
+      <div class="s-head">
+        <div class="eyebrow" data-reveal>08 · Timeline</div>
+        <h2 class="h" data-reveal>ลำดับงาน 11 ส.ค. – 3 ก.ย. — สองสัปดาห์กลางคือช่วงส่งมอบระบบใหม่</h2>
+      </div>
+      <div class="s-body weeks">
+        <div class="card wk" data-reveal>
+          <div class="wk-h"><span class="t">11–17 ส.ค.</span><span class="n">17<small>commits</small></span></div>
+          <div class="wk-bar"><i data-w="23%"></i></div>
+          <div class="wk-title">SEO + ฐานความรู้กฎหมาย + หน้าหลักสูตรใหม่</div>
+          <ul>
+            <li><b>หน้าหลักสูตรโฉมใหม่</b> + แกลเลอรีภาพอบรม (14 ส.ค.)</li>
+            <li>ตรวจซ้ำข้อกฎหมาย 157 ข้อ → แก้อ้างอิง 58 แถวจากตัวบทจริง</li>
+            <li>ลิงก์จังหวัดทั่วเว็บ · เอกลักษณ์บริษัทใน entity graph · แชตตอบภาษาของผู้ถาม</li>
+            <li>KYT MOTTO: แค็ตตาล็อก 76 แผ่น + ค้นหาแบบทนสะกดผิด (100/105)</li>
+          </ul>
+        </div>
+        <div class="card wk star" data-reveal>
+          <div class="wk-h"><span class="t">18–24 ส.ค.</span><span class="n">66<small>commits</small></span></div>
+          <div class="wk-bar"><i data-w="88%"></i></div>
+          <div class="wk-title">ELMER ขึ้นระบบ · ERP เร็วขึ้น · กู้ผู้อบรม 53 คน</div>
+          <ul>
+            <li><b>ELMER ใบเสนอราคา</b> สร้างครบทั้งระบบและขึ้น production (22–24 ส.ค.)</li>
+            <li><b>ERP เร็วขึ้น 9 เท่า</b> + แก้บั๊ก 55 ข้อ (18 ส.ค.)</li>
+            <li>แก้ตัวเชื่อม ERP ↔ Flow — กู้ 53 คนที่หายจากรอบ H AIS โคราช</li>
+            <li>LINE CSAT สรุปรายวัน · NETMER รวมข้อความ LINE · Doc Flow รายงาน Excel</li>
+            <li>SEO: ใบรับรอง 11 ใบแบบ machine-readable · Google Business Profile · ใบประกาศเตือนหมดอายุ</li>
+          </ul>
+        </div>
+        <div class="card wk star" data-reveal>
+          <div class="wk-h"><span class="t">25–31 ส.ค.</span><span class="n">75<small>commits</small></span></div>
+          <div class="wk-bar"><i data-w="100%"></i></div>
+          <div class="wk-title">NET-ID Photo ส่งทีม · ใบประกาศ · E-Learning</div>
+          <ul>
+            <li><b>NET-ID Photo Studio</b> ตั้งแต่ตั้งต้นจนส่งชุดติดตั้ง ตรวจ 5 รอบ (25–31 ส.ค.)</li>
+            <li><b>ใบประกาศพิมพ์ได้จริง</b> — เลขต่อหลักสูตร ฟอนต์ไทย รูป/ลายเซ็น (25–31 ส.ค.)</li>
+            <li><b>E-Learning พร้อมขาย</b> — เกณฑ์ผ่าน · ปิดช่องเลี่ยง · สื่อออกจากที่สาธารณะ (26 ส.ค.)</li>
+            <li>ย้าย AI ไป Gemini 3.7 + แดชบอร์ด · เครื่องมือตรวจกฎหมายรื้อใหม่ · เนื้อหาพร้อมวาง 50 หลักสูตร</li>
+          </ul>
+        </div>
+        <div class="card wk" data-reveal>
+          <div class="wk-h"><span class="t">1–3 ก.ย.</span><span class="n">17<small>commits</small></span></div>
+          <div class="wk-bar"><i data-w="23%"></i></div>
+          <div class="wk-title">ใบสั่งซื้อ · นามบัตร NFC · สถิติเว็บใหม่</div>
+          <ul>
+            <li><b>ELMER ใบสั่งซื้อ</b> ขึ้นระบบ นำเข้า 35 ใบ (2 ก.ย.)</li>
+            <li><b>นามบัตรดิจิทัล NFC</b> ผู้บริหาร deploy (1 ก.ย.)</li>
+            <li><b>ระบบสถิติเว็บสร้างใหม่</b> beacon → rollup → รายงาน (2 ก.ย.)</li>
+            <li>NETMER: แก้ OT 2 ครั้ง/วัน · นัดเวลาเข้างานบนมือถือ (3 ก.ย.) · NET-ID Photo ปรับคุณภาพ 5 มิติ</li>
+          </ul>
+        </div>
+      </div>
+      <div class="s-foot"><b>ที่มา</b> git log ทุก repo · นับตามวันที่ commit</div>
+    </div>
+  </section>
+
+  <!-- ============ 16 · CLOSING ============ -->
+  <section class="slide" data-title="ปิดท้าย" data-nav-icon="sparkles">
+    <div class="s-inner">
+      <div class="closing">
+        <div>
+          <div class="eyebrow" data-reveal>ขอบคุณครับ</div>
+          <h1 data-reveal>Q&amp;A</h1>
+          <p data-reveal>มีคำถามหรืออยากดูตัวเลขไหนเจาะลึก บอกได้เลยครับ — ทุกตัวเลขในชุดนี้ดึงจากระบบจริงและมีตารางประกอบ (กดปุ่ม "ตาราง" บนกราฟ)</p>
+          <div class="pills" data-reveal style="margin-top:22px;display:flex;gap:10px;flex-wrap:wrap">
+            <span class="pill"><span data-icon="chart-pie"></span> <b>175</b> งานพัฒนา</span>
+            <span class="pill"><span data-icon="rocket"></span> <b>4</b> ระบบใหม่</span>
+            <span class="pill"><span data-icon="graduation-cap"></span> อบรม <b>1,155</b> คน</span>
+          </div>
+        </div>
+        <div class="card" data-reveal>
+          <div class="card-head"><div class="itile"><span data-icon="compass"></span></div><div><div class="t">รอบถัดไป · สิ่งที่จะเดินต่อ</div><div class="s">ก.ย. 2026</div></div></div>
+          <ul class="blist">
+            <li><div class="itile sm"><span data-icon="search"></span></div><div><b>SEO หลักสูตรที่ยังไม่ติดอันดับ</b> — เติมเนื้อหาหน้าหลักสูตรตามลำดับที่ขายจริง (เนื้อหาร่าง 50 หลักสูตรพร้อมแล้ว)</div></li>
+            <li><div class="itile sm"><span data-icon="file-text"></span></div><div><b>ELMER</b> — ทีมเริ่มคีย์ใบจริง · เปิดสำรองข้อมูลอัตโนมัติ · ตัดสินผู้ขายที่ที่อยู่ซ้ำ</div></li>
+            <li><div class="itile sm"><span data-icon="graduation-cap"></span></div><div><b>ใบประกาศ</b> — ผูกแม่แบบให้ครบ 62 หลักสูตร แล้วออกเลขย้อนหลัง 4,135 ใบ</div></li>
+            <li><div class="itile sm"><span data-icon="star"></span></div><div><b>LINE CSAT</b> — เลือกกลุ่มทีมแล้วเปิดสรุปรายวัน</div></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 9. SEO PERFORMANCE -->
-  <section class="slide" data-title="SEO &amp; AI Search" data-nav-icon="search" data-desc="ผลจริงจาก Google Search Console">
-    <div class="slide-inner" style="height:100%; display:flex; flex-direction:column">
-      <div class="head" style="margin-bottom:14px" data-reveal>
-        <h2><span class="h-ic" style="--accent:var(--b1);--accent2:var(--b2)" data-icon="search"></span> SEO &amp; AI Search</h2>
-        <div class="sub">ตัวเลขจริงจาก Google Search Console — <b>การมองเห็นโตแรง อันดับดีขึ้น</b> คลิกต่อวันทรงตัว <span class="seoperf-note"><span data-icon="calendar"></span> 12 ก.ค. – 8 ส.ค. 2026 · 28 วัน</span></div>
-      </div>
-
-      <!-- 4 Key Metrics (real data) -->
-      <div class="seoperf-grid">
-        <div class="seoperf-stat" style="--accent:var(--b1);--accent2:var(--b2)" data-reveal>
-          <div class="lbl">การคลิกทั้งหมด · Clicks</div>
-          <div class="v" data-count="2231" data-count-comma>2,231</div>
-          <div class="sub">คลิกเข้าเว็บจากผลค้นหา Google</div>
-          <div class="trend"><span data-icon="check"></span> เฉลี่ย 80 คลิก/วัน — เท่ารอบก่อน</div>
-        </div>
-        <div class="seoperf-stat" style="--accent:var(--b2);--accent2:var(--b4); --d:.06s" data-reveal>
-          <div class="lbl">การแสดงผล · Impressions</div>
-          <div class="v" data-count="27013" data-count-comma>27,013</div>
-          <div class="sub">จำนวนครั้งที่เว็บโผล่ในผลค้นหา</div>
-          <div class="trend"><span data-icon="trending-up"></span> +31% ต่อวัน (965 vs 737)</div>
-        </div>
-        <div class="seoperf-stat" style="--accent:var(--b3);--accent2:var(--b1); --d:.12s" data-reveal>
-          <div class="lbl">CTR เฉลี่ย · Click-Through</div>
-          <div class="v">8.3%</div>
-          <div class="sub">สูงกว่าค่าเฉลี่ยอุตสาหกรรม (3–5%)</div>
-          <div class="trend"><span data-icon="check"></span> ยังดีกว่ามาตรฐาน ~2 เท่า</div>
-        </div>
-        <div class="seoperf-stat" style="--accent:var(--b6);--accent2:var(--b3); --d:.18s" data-reveal>
-          <div class="lbl">อันดับเฉลี่ย · Avg Position</div>
-          <div class="v">7.7</div>
-          <div class="sub">อยู่หน้าแรกของผลค้นหา</div>
-          <div class="trend"><span data-icon="trending-up"></span> ดีขึ้นจาก 8.0 รอบก่อน</div>
-        </div>
-      </div>
-
-      <!-- Top Keywords + Devices (real data · Google Search Console) -->
-      <div class="seoperf-main">
-        <div class="seoperf-card" data-reveal style="--d:.22s">
-          <h5><span data-icon="search"></span> Top Keywords · คำค้นที่พาคนเข้าเว็บ <span class="badge">1,000+ คำค้นหา</span></h5>
-          <div class="kw-head"><div class="ttl">คำค้นหา</div><div class="ck">คลิก</div><div class="im">แสดง</div></div>
-          <div class="kw-list">
-            <div class="kw-row"><span class="kw">เนเชอรัล เอ็นเนอร์ยี เทค</span><span class="clk">139</span><span class="imp">187</span></div>
-            <div class="kw-row"><span class="kw en">net อบรม</span><span class="clk">42</span><span class="imp">50</span></div>
-            <div class="kw-row"><span class="kw">เนเชอรัล</span><span class="clk">36</span><span class="imp">575</span></div>
-            <div class="kw-row"><span class="kw en">natural energy tech co. ltd</span><span class="clk">30</span><span class="imp">46</span></div>
-            <div class="kw-row"><span class="kw en">net</span><span class="clk">26</span><span class="imp">2,891</span></div>
-            <div class="kw-row"><span class="kw">เนเชอรัล เอ็นเนอร์ยี เทค จำกัด</span><span class="clk">25</span><span class="imp">42</span></div>
-            <div class="kw-row"><span class="kw en">cp safety passport</span><span class="clk">17</span><span class="imp">288</span></div>
-            <div class="kw-row"><span class="kw">บริษัท เนเชอรัล เอ็นเนอร์ยี เทค จำกัด</span><span class="clk">17</span><span class="imp">57</span></div>
-            <div class="kw-row"><span class="kw">ผู้ปฏิบัติงานสถานที่ใช้ก๊าซธรรมชาติ</span><span class="clk">17</span><span class="imp">40</span></div>
-            <div class="kw-row"><span class="kw en">net training</span><span class="clk">15</span><span class="imp">23</span></div>
-            <div class="kw-row"><span class="kw">อบรมช่างไฟฟ้าภายในอาคาร ระดับ 1</span><span class="clk">14</span><span class="imp">251</span></div>
-            <div class="kw-row"><span class="kw">ผู้ปฏิบัติงานสถานที่ใช้ก๊าซปิโตรเลียมเหลว</span><span class="clk">11</span><span class="imp">34</span></div>
-          </div>
-        </div>
-
-        <div class="seoperf-card" data-reveal style="--d:.28s">
-          <h5><span data-icon="monitor"></span> ผู้เข้าชมแยกตามอุปกรณ์ <span class="badge">2,231 clicks</span></h5>
-          <div class="dev-list">
-            <div class="dev-row" style="--accent:var(--b1);--accent2:var(--b2)"><span class="ico" data-icon="monitor"></span><span class="nm">Desktop</span><div class="bar"><div class="fill" style="width:67%"></div></div><span class="pct">1,490</span></div>
-            <div class="dev-row" style="--accent:var(--b3);--accent2:var(--b1)"><span class="ico" data-icon="smartphone"></span><span class="nm">Mobile</span><div class="bar"><div class="fill" style="width:32%"></div></div><span class="pct">719</span></div>
-            <div class="dev-row" style="--accent:var(--b6);--accent2:var(--b3)"><span class="ico" data-icon="tablet"></span><span class="nm">Tablet</span><div class="bar"><div class="fill" style="width:1%"></div></div><span class="pct">22</span></div>
-          </div>
-
-          <div class="insight-box">
-            <b style="color:var(--b3)">คนเริ่มเจอเราจากชื่อหลักสูตร ไม่ใช่แค่ชื่อบริษัท</b> — ช่างไฟฟ้าฯ ระดับ 1 <b>116 → 197</b> คลิก · CP Safety Passport <b>114 → 179</b> · สถานีบริการน้ำมัน <b>44 → 88</b> (หน้าแรกลดจาก 1,026 → 668 คลิก)
-          </div>
-          <div class="foot-note">* ต่างประเทศเริ่มเห็นเรา: ญี่ปุ่น 352 การแสดงผล · สิงคโปร์ 122 · มาเลเซีย 64 — ผลจากการทำเว็บ 4 ภาษาไว้รอบก่อน</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 10. WEBSITE TRAFFIC (first-party analytics) -->
-  <section class="slide" data-title="Website Traffic" data-nav-icon="chart-column" data-desc="ยอดเข้าเว็บจริงทุกช่องทาง">
-    <div class="slide-inner" style="height:100%; display:flex; flex-direction:column">
-      <div class="head" style="margin-bottom:14px" data-reveal>
-        <h2><span class="h-ic" style="--accent:var(--b3);--accent2:var(--b1)" data-icon="chart-column"></span> ยอดเข้าใช้เว็บไซต์จริง</h2>
-        <div class="sub">สถิติจากระบบของเราเอง — นับ<b>ทุกช่องทาง</b> ไม่ใช่แค่ Google <span class="seoperf-note"><span data-icon="calendar"></span> 30 วันล่าสุด · 11 ก.ค. – 10 ส.ค. 2026</span></div>
-      </div>
-
-      <div class="seoperf-grid">
-        <div class="seoperf-stat" style="--accent:var(--b1);--accent2:var(--b2)" data-reveal>
-          <div class="lbl">Page Views (30 วัน)</div>
-          <div class="v" data-count="41244" data-count-comma>41,244</div>
-          <div class="sub">ยอดเข้าชมใน 30 วันล่าสุด</div>
-          <div class="trend" style="background:rgba(255,181,71,.12); color:var(--b5)"><span data-icon="activity"></span> −13% จากรอบก่อน (47,429)</div>
-        </div>
-        <div class="seoperf-stat" style="--accent:var(--b3);--accent2:var(--b1); --d:.06s" data-reveal>
-          <div class="lbl">เฉลี่ยต่อวัน</div>
-          <div class="v">~1,375</div>
-          <div class="sub">หน้า/วัน (ทั้ง 30 วัน)</div>
-          <div class="trend"><span data-icon="trending-up"></span> 8 วันล่าสุด ~1,875/วัน</div>
-        </div>
-        <div class="seoperf-stat" style="--accent:var(--b6);--accent2:var(--b3); --d:.12s" data-reveal>
-          <div class="lbl">ผู้ใช้ที่ล็อกอิน</div>
-          <div class="v" data-count="219">219</div>
-          <div class="sub">บัญชีที่ล็อกอินใช้งานจริง</div>
-          <div class="trend"><span data-icon="users"></span> Unique (30 วัน)</div>
-        </div>
-        <div class="seoperf-stat" style="--accent:var(--b4);--accent2:var(--b2); --d:.18s" data-reveal>
-          <div class="lbl">หลักสูตรยอดนิยม</div>
-          <div class="v" style="font-size:34px">G CP</div>
-          <div class="sub">ดูมากสุด 989 ครั้ง</div>
-          <div class="trend"><span data-icon="book-open"></span> Top Course (30 วัน)</div>
-        </div>
-      </div>
-
-      <div class="seoperf-main">
-        <div class="seoperf-card" data-reveal style="--d:.22s">
-          <h5><span data-icon="file-text"></span> หน้าที่คนเข้าชมมากที่สุด <span class="badge">30 วันล่าสุด</span></h5>
-          <div class="kw-head"><div class="ttl">หน้า</div><div class="ck">เข้าชม</div><div class="im">สัดส่วน</div></div>
-          <div class="kw-list">
-            <div class="kw-row"><span class="kw">แคตตาล็อกหลักสูตร · /courses</span><span class="clk">6,373</span><span class="imp">15.5%</span></div>
-            <div class="kw-row"><span class="kw">หน้าแรก · Home</span><span class="clk">5,901</span><span class="imp">14.3%</span></div>
-            <div class="kw-row"><span class="kw">CP Safety Passport · ผู้รับเหมา</span><span class="clk">1,622</span><span class="imp">3.9%</span></div>
-            <div class="kw-row"><span class="kw">AIS Safety Passport · ผู้รับเหมา</span><span class="clk">1,461</span><span class="imp">3.5%</span></div>
-            <div class="kw-row"><span class="kw">CP Safety Passport</span><span class="clk">1,342</span><span class="imp">3.3%</span></div>
-            <div class="kw-row"><span class="kw">ใบอนุญาตพลังงาน · DOEB</span><span class="clk">1,021</span><span class="imp">2.5%</span></div>
-            <div class="kw-row"><span class="kw">หลักสูตร G CP (สถานที่ใช้ก๊าซ)</span><span class="clk">989</span><span class="imp">2.4%</span></div>
-            <div class="kw-row"><span class="kw">AIS Safety Passport</span><span class="clk">982</span><span class="imp">2.4%</span></div>
-            <div class="kw-row"><span class="kw">หลักสูตร ช่างไฟฟ้า ระดับ 1</span><span class="clk">785</span><span class="imp">1.9%</span></div>
-            <div class="kw-row"><span class="kw">หลักสูตร สถานที่ใช้ LPG</span><span class="clk">765</span><span class="imp">1.9%</span></div>
-            <div class="kw-row"><span class="kw">ประวัติการอบรม · /training-history</span><span class="clk">760</span><span class="imp">1.8%</span></div>
-          </div>
-        </div>
-
-        <div class="seoperf-card" data-reveal style="--d:.28s">
-          <h5><span data-icon="globe"></span> ช่องทางที่พาคนเข้ามา <span class="badge">External · 30 วัน</span></h5>
-          <div class="dev-list">
-            <div class="dev-row" style="--accent:var(--b1);--accent2:var(--b2)"><span class="ico" data-icon="search"></span><span class="nm">Google</span><div class="bar"><div class="fill" style="width:100%"></div></div><span class="pct">9,001</span></div>
-            <div class="dev-row" style="--accent:var(--b3);--accent2:var(--b1)"><span class="ico" data-icon="globe"></span><span class="nm">Bing</span><div class="bar"><div class="fill" style="width:5%"></div></div><span class="pct">402</span></div>
-            <div class="dev-row" style="--accent:var(--b4);--accent2:var(--b2)"><span class="ico" data-icon="thumbs-up"></span><span class="nm">Facebook</span><div class="bar"><div class="fill" style="width:3%"></div></div><span class="pct">256</span></div>
-            <div class="dev-row" style="--accent:var(--b6);--accent2:var(--b3)"><span class="ico" data-icon="message-circle"></span><span class="nm">LINE</span><div class="bar"><div class="fill" style="width:2%"></div></div><span class="pct">205</span></div>
-            <div class="dev-row" style="--accent:var(--b2);--accent2:var(--b4)"><span class="ico" data-icon="sparkles"></span><span class="nm">ChatGPT</span><div class="bar"><div class="fill" style="width:1%"></div></div><span class="pct">65</span></div>
-          </div>
-
-          <div class="insight-box">
-            <b style="color:var(--b2)">เริ่มมีคนเข้าเว็บมาจาก ChatGPT แล้ว (65 ครั้ง)</b> — สัญญาณว่า AI ส่งลูกค้ามาหาเราจริง · <b style="color:var(--b1)">Google 9,001</b> ยังเป็นช่องทางค้นหาหลัก · <b>Direct</b> (พิมพ์ URL / บุ๊กมาร์ก / เปิดในแอป) ใหญ่สุดที่ <b>26,905</b>
-          </div>
-          <div class="foot-note">* Page Views = ยอดเข้าชมทั้งหมด (รวมการดูซ้ำและทราฟฟิกภายในบางส่วน) ไม่ใช่จำนวนคนไม่ซ้ำ · ยอดรวมรอบนี้ลดลงเพราะช่วงปลาย ก.ค. เงียบผิดปกติ แต่ต้น ส.ค. กลับมาสูงกว่าค่าเฉลี่ยเดิมแล้ว</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 11. TIMELINE -->
-  <section class="slide" data-title="Timeline" data-nav-icon="calendar" data-desc="ลำดับเหตุการณ์สำคัญ">
-    <div class="slide-inner" style="height:100%; display:flex; flex-direction:column">
-      <div class="head" data-reveal>
-        <h2><span class="h-ic" style="--accent:var(--b2);--accent2:var(--b4)" data-icon="calendar"></span> ไล่งานทีละสัปดาห์</h2>
-        <div class="sub">ตั้งแต่ 11 ก.ค. ถึง 10 ส.ค. 2026 · 108 งานพัฒนา</div>
-      </div>
-      <div class="timeline" style="flex:1">
-        <div class="tl-item" data-reveal style="--d:.05s"><div class="tl-card" style="border-color:var(--b5); box-shadow: 0 0 30px -10px var(--b5)">
-          <span class="tl-month" style="background:rgba(255,181,71,.15); color:var(--b5)">★ สัปดาห์ที่ 1 · 11–17 ก.ค.</span>
-          <div class="tl-title">สัปดาห์ที่หนักที่สุด — PDPA + กู้ข้อมูลผู้อบรม</div>
-          <div class="tl-desc"><b>63 งานพัฒนาในสัปดาห์เดียว</b> · ขึ้นระบบเก็บเลขบัตรประชาชนแบบเข้ารหัสทางเดียว (ตรวจซ้ำ 4 รอบ · เทสต์ ~665 รายการ) · แล้วลุยแก้เรื่องลูกค้าค้นบัตรไม่เจอ — <b>กู้กลับมา 1,164 คน</b>, ล้างบัตรซ้ำ 1,112 ใบ, เปลี่ยนวิธีค้นชื่อใหม่ · เปิดให้ค้นหา/พิมพ์บัตรข้ามศูนย์ได้ · หน้า "ผู้ผ่านการอบรม" ของศูนย์เท่ากับของแอดมิน</div>
-          <div class="tl-pills"><span>PDPA เลขบัตร</span><span>กู้ 1,164 คน</span><span>ล้างบัตรซ้ำ</span><span>ค้นชื่อใหม่</span><span>ข้ามศูนย์</span></div>
-        </div></div>
-        <div class="tl-item" data-reveal style="--d:.12s"><div class="tl-card">
-          <span class="tl-month">สัปดาห์ที่ 2 · 18–24 ก.ค.</span>
-          <div class="tl-title">กติกาบัตร + คุมสิทธิ์ใน NETMER</div>
-          <div class="tl-desc">CP: บัตรใบเดียว<b>ใช้ได้ 2 ประเภท</b>, บัตร/โมดูล<b>เทรนเนอร์อายุ 5 ปี</b>, แก้โมดูลที่แสดงผิดใบ · NETMER-Flow: <b>บังคับสิทธิ์เข้าถึงจริง</b>ทั้งระบบ + แก้บั๊ก 16 จุด, เพิ่ม<b>ตรวจรถประจำรอบ</b>สำหรับผู้ดูแลรถ · Online Inspector: เพิ่มระดับ <b>OFI</b> เป็นระดับที่ 3</div>
-          <div class="tl-pills"><span>บัตร 2 ประเภท</span><span>เทรนเนอร์ 5 ปี</span><span>RBAC + 16 บั๊ก</span><span>ตรวจรถประจำรอบ</span><span>OFI</span></div>
-        </div></div>
-        <div class="tl-item" data-reveal style="--d:.19s"><div class="tl-card">
-          <span class="tl-month">สัปดาห์ที่ 3 · 25–31 ก.ค.</span>
-          <div class="tl-title">เว็บเร็วขึ้น + ศูนย์แจ้งปัญหา + รายงานผลงาน</div>
-          <div class="tl-desc">เว็บหลัก: <b>โหลดไวขึ้น</b> (ย่อรูป 120MB→7.4MB) + จัดระบบการ์ด/สีใหม่ · NETMER: เปิด<b>ศูนย์แจ้งปัญหา</b> IT/รถ/อาคาร, LINE เบิกของรวมเป็นข้อความเดียว, รื้อ<b>รายงานผลการปฏิบัติงาน</b>ให้วัดจากหลักฐานจริง · CP: กติกาใช้เลขบัตรร่วม + <b>คู่มือผู้ใช้ฉบับใหม่</b> + รายงานรายบริษัทค้นทีละหลายชื่อ · Inspector: ปรับผลตรวจ 603 รายการให้ตรงไฟล์ลูกค้า</div>
-          <div class="tl-pills"><span>เว็บเร็วขึ้น</span><span>ศูนย์แจ้งปัญหา</span><span>รายงานผลงาน</span><span>คู่มือ CP</span><span>รายงานบริษัท</span></div>
-        </div></div>
-        <div class="tl-item" data-reveal style="--d:.26s"><div class="tl-card">
-          <span class="tl-month">สัปดาห์ที่ 4 · 1–7 ส.ค.</span>
-          <div class="tl-title">ผู้ช่วย AI "โอบอ้อม" + ฐานความรู้กฎหมาย</div>
-          <div class="tl-desc">รื้อผู้ช่วย AI หน้าเว็บใหม่ทั้งชุด (จากที่ตอบถูก <b>3 จาก 71 คำถาม</b>) + ย้ายไปโมเดลรุ่นใหม่ · <b>แก้ฐานความรู้กฎหมาย 68 จุด</b>โดยตรวจกับตัวบทจริง · CP: ปรับสถานะพิมพ์บัตรให้ยืดหยุ่น + ข้อความผิดพลาดเป็นภาษาไทยที่เข้าใจได้, กรองรายงานตามศูนย์/เทรนเนอร์, <b>ย้อนสถานะโดยไม่ลบข้อมูลส่วนตัว</b></div>
-          <div class="tl-pills"><span>โอบอ้อม</span><span>กฎหมาย 68 จุด</span><span>พิมพ์บัตร</span><span>ย้อนสถานะปลอดภัย</span></div>
-        </div></div>
-        <div class="tl-item" data-reveal style="--d:.33s"><div class="tl-card">
-          <span class="tl-month">สัปดาห์ที่ 5 · 8–10 ส.ค.</span>
-          <div class="tl-title">คลังโปสเตอร์ KYT + ชุดกู้อันดับ Google</div>
-          <div class="tl-desc">เปิด <b>KYT MOTTO</b> — คลังโปสเตอร์ความปลอดภัย KYT 55 แผ่น ที่ให้ AI อ่านภาพแล้วสร้างคำค้นให้เอง (แยกออกมาเป็นระบบของตัวเอง ขึ้นใช้งานจริงแล้ว) · เว็บหลัก: ทำชุด<b>กู้อันดับ Google จากลิงก์เว็บรุ่นเก่า</b> 43 เส้นทาง + เมนูใหม่ + ไฟล์ llms.txt สำหรับ AI — <b>พร้อมขึ้นระบบ รออนุมัติ</b></div>
-          <div class="tl-pills"><span>KYT MOTTO</span><span>กู้อันดับ 43 ลิงก์</span><span>เมนูใหม่</span><span>llms.txt</span></div>
-        </div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 12. THANKS -->
-  <section class="slide" data-title="Thank You" data-nav-icon="sparkles" data-desc="Q&amp;A">
-    <div class="slide-inner">
-      <div class="thanks">
-        <h1 data-reveal>ขอบคุณครับ</h1>
-        <p data-reveal style="--d:.12s">มีคำถามหรืออยากดูตรงไหนแบบเจาะลึก บอกได้เลยครับ</p>
-        <div style="display:inline-flex; gap:14px; flex-wrap:wrap; justify-content:center; --d:.22s" data-reveal>
-          <span class="qa-pill"><span data-icon="chart-pie"></span> <b>5 สัปดาห์</b> · 108 งานพัฒนา · PDPA เลขบัตร · กู้ผู้อบรม 1,164 คน</span>
-          <span class="qa-pill"><span data-icon="rocket"></span> พร้อมลุยรอบถัดไป</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</div>
-
-<!-- BOTTOM BAR -->
-<div class="bottombar">
-  <button class="nav-btn" id="prev-btn"><span data-icon="chevron-left"></span> Back</button>
-  <div class="slide-info">
-    <span class="num" id="cur-num">1</span>
-    <span class="total">/ <span id="total-num">12</span></span>
+  <div class="chrome-bottom">
     <div class="dots" id="dots"></div>
+    <div class="navbtns">
+      <button class="navbtn" id="prev-btn"><span data-icon="chevron-left"></span> ก่อนหน้า</button>
+      <button class="navbtn" id="next-btn">ถัดไป <span data-icon="chevron-right"></span></button>
+    </div>
   </div>
-  <button class="nav-btn" id="next-btn">Next <span data-icon="chevron-right"></span></button>
+  <div class="hint" id="hint">เลื่อนสไลด์ <kbd>←</kbd> <kbd>→</kbd> · สารบัญ <kbd>M</kbd> · เต็มจอ <kbd>F</kbd> · กด "ตาราง" บนกราฟเพื่อดูตัวเลขเต็ม</div>
+
+</div>
 </div>
 
-<!-- HINT -->
-<div class="hint" id="hint">
-  <span>เลื่อนสไลด์ <kbd>←</kbd> <kbd>→</kbd> · เมนู <kbd>M</kbd> · เต็มจอ <kbd>F</kbd></span>
-</div>
-
-<!-- SIDE MENU -->
 <div class="menu-overlay" id="menu-overlay"></div>
 <aside class="side-menu" id="side-menu">
   <h3><span data-icon="list"></span> สารบัญ</h3>
-  <div class="menu-sub">คลิกหัวข้อเพื่อข้ามไปสไลด์นั้น</div>
+  <div class="sub">คลิกหัวข้อเพื่อข้ามไปสไลด์นั้น</div>
   <div id="menu-list"></div>
 </aside>
 
-<!-- MODAL -->
-<div class="modal-bg" id="modal-bg">
-  <div class="modal-card" id="modal-card">
-    <button class="modal-close" id="modal-close" data-icon="x"></button>
-    <div class="modal-hero" id="modal-hero"></div>
-    <div class="modal-body" id="modal-body"></div>
-  </div>
-</div>
-
-<!-- SCRIPTS -->
 <script src="js/icons.js"></script>
-<script src="js/data.js"></script>
-<script src="js/flow.js"></script>
-<script src="js/app.js"></script>
-<script src="js/zoom.js"></script>
-
+<script src="js/report-data.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/renderers.js"></script>
+<script src="js/seo-slides.js"></script>
+<script src="js/deck.js"></script>
 </body>
 </html>
