@@ -36,7 +36,7 @@
     { label: 'คลิกจาก Google', value: f(t.clicks), sub: 'เฉลี่ย ' + cpd.toFixed(0) + ' คลิก/วัน', delta: pctDelta(cpd, cpdPrev), note: 'ต่อวัน vs รอบก่อน (' + cpdPrev.toFixed(0) + ')' },
     { label: 'การแสดงผล', value: f(t.impressions), sub: 'เฉลี่ย ' + f(Math.round(ipd)) + ' ครั้ง/วัน', delta: pctDelta(ipd, ipdPrev), note: 'ต่อวัน vs รอบก่อน (' + f(Math.round(ipdPrev)) + ')' },
     { label: 'CTR เฉลี่ย', value: (t.ctr * 100).toFixed(1) + '%', sub: 'รอบก่อน ' + (p.ctr * 100).toFixed(1) + '%', delta: (t.ctr - p.ctr) * 100, note: 'จุด', unit: 'pt' },
-    { label: 'อันดับเฉลี่ย', value: t.position.toFixed(1), sub: 'รอบก่อน ' + p.position.toFixed(1), delta: p.position - t.position, note: 'ดีขึ้น = เลขน้อยลง', unit: 'pos' },
+    { label: 'อันดับเฉลี่ย (ทุกคำค้น)', value: t.position.toFixed(1), sub: 'รอบก่อน ' + p.position.toFixed(1), delta: p.position - t.position, note: 'ดีขึ้น = เลขน้อยลง', unit: 'pos' },
   ];
   $('seo-stats').replaceChildren();
   stats.forEach(s => {
@@ -64,32 +64,30 @@
   const brandNote = h('div', 'callout'); brandNote.style.marginTop = '12px'; brandNote.innerHTML = S.brandNote || ''; kt.appendChild(brandNote);
   $('seo-foot2').innerHTML = '<b>วิธีจับคู่</b> คีย์เวิร์ด × หน้าที่ Google แสดง จาก Search Console API — คีย์เวิร์ดนับให้หลักสูตรที่คนคลิกเข้าจริง ไม่ใช่การเดาจากคำ · ' + f(S.byCourse.length) + ' หลักสูตรได้คลิกในรอบนี้';
 
-  // ---------- slide 13 · not ranking
-  $('seo-h3').textContent = S.headline3 || 'หลักสูตรที่ Google ยังแทบไม่แสดง'; $('seo-h3').classList.add('long');
+  // ---------- slide 13 · generic-keyword gaps + course tiers
+  $('seo-h3').textContent = S.headline3 || ''; $('seo-h3').classList.add('long');
   const nr = $('seo-notranking'); nr.replaceChildren();
   const left = h('div', 'card span-7'); left.setAttribute('data-reveal', '');
   const lh = h('div', 'card-head'); const li = h('div', 'itile orange'); li.innerHTML = '<span data-icon="triangle-alert"></span>'; lh.appendChild(li);
-  const lhd = h('div'); lhd.appendChild(h('div', 't', 'หลักสูตรที่เปิดขายแต่ยังไม่ติดอันดับ')); lhd.appendChild(h('div', 's', 'เรียงจากที่ยังมองไม่เห็นเลย → เริ่มเห็นบ้าง')); lh.appendChild(lhd); left.appendChild(lh);
-  const t2 = h('table', 'ktable'); const th2 = h('thead'); const trh2 = h('tr'); ['หลักสูตร', 'หมวด', 'แสดงผล', 'คลิก', 'อันดับ', 'สถานะ'].forEach(x => trh2.appendChild(h('th', null, x))); th2.appendChild(trh2); t2.appendChild(th2);
+  const lhd = h('div'); lhd.appendChild(h('div', 't', 'คำทั่วไปที่ลูกค้าค้น แต่เรายังอยู่หน้า 2 ขึ้นไป')); lhd.appendChild(h('div', 's', 'เรียงตามจำนวนครั้งที่ Google แสดงเรา · อันดับ = ตำแหน่งเฉลี่ยของเราสำหรับคำนั้น')); lh.appendChild(lhd); left.appendChild(lh);
+  const t2 = h('table', 'ktable'); const th2 = h('thead'); const trh2 = h('tr'); ['คำค้น', 'แสดงผล', 'อันดับเรา', 'หน้าที่ Google แสดง'].forEach(x => trh2.appendChild(h('th', null, x))); th2.appendChild(trh2); t2.appendChild(th2);
   const tb2 = h('tbody');
-  (S.notRanking || []).slice(0, 9).forEach(r => {
-    const tr = h('tr'); tr.appendChild(h('td', null, r.course)); tr.appendChild(h('td', 'dim', r.cat));
-    tr.appendChild(h('td', r.impressions === 0 ? 'down' : null, f(r.impressions))); tr.appendChild(h('td', null, f(r.clicks))); tr.appendChild(h('td', null, r.position == null ? '—' : r.position.toFixed(1)));
-    const td = h('td'); const b = h('span', 'badge ' + (r.tier === 'none' ? 'new' : 'wait'), r.tierLabel); td.appendChild(b); tr.appendChild(td); tb2.appendChild(tr);
+  (S.gapKwThai || S.gapKw || []).slice(0, 10).forEach(k => {
+    const tr = h('tr'); tr.appendChild(h('td', null, k.q)); tr.appendChild(h('td', 'n', f(k.impressions)));
+    tr.appendChild(h('td', k.position > 30 ? 'down' : null, Math.round(k.position) + ' (หน้า ' + Math.ceil(k.position / 10) + ')')); tr.appendChild(h('td', 'dim', k.page)); tb2.appendChild(tr);
   });
   t2.appendChild(tb2); left.appendChild(t2); nr.appendChild(left);
 
   const right = h('div', 'span-5 stack'); right.setAttribute('data-reveal', '');
-  const facts = h('div', 'facts'); facts.style.gridTemplateColumns = 'repeat(3,1fr)';
-  [['good', 'ติดอันดับดี', 'มีคลิก + อยู่หน้าแรก'], ['mid', 'เริ่มเห็น', 'มีการแสดงผลแต่คลิกน้อย/อันดับหลัง'], ['none', 'ยังไม่ติด', 'แทบไม่มีการแสดงผล']].forEach(([k, l, s]) => {
+  const facts = h('div', 'facts'); facts.style.gridTemplateColumns = 'repeat(4,1fr)';
+  [['good', 'ติดอันดับดี', 'ได้คลิก / คำค้นอันดับ ≤3'], ['page1', 'หน้าแรก', 'คลิกยังน้อย'], ['low', 'ไม่ติดหน้าแรก', 'มีการแสดงผลแต่อยู่หน้า 2+'], ['none', 'ยังไม่ปรากฏ', 'แสดงผล < 30']].forEach(([k, l, s]) => {
     const fc = h('div', 'fact'); fc.appendChild(h('div', 'v', String(S.ranking[k]))); fc.appendChild(h('div', 'l', l + ' — ' + s)); facts.appendChild(fc);
   });
   right.appendChild(facts);
-  const why = h('div', 'card soft fill'); why.appendChild(h('h4', null, 'ทำไมถึงยังไม่ติด และจะทำอะไร'));
-  (S.notRankingNotes || []).forEach(x => { const pp = h('p'); pp.style.marginTop = '8px'; pp.innerHTML = x; why.appendChild(pp); });
+  const why = h('div', 'card soft fill'); why.appendChild(h('h4', null, 'อ่านอย่างไร และจะทำอะไรต่อ'));
+  (S.notRankingNotes || []).forEach(x => { const pp = h('p'); pp.style.marginTop = '8px'; pp.style.fontSize = '15.5px'; pp.innerHTML = x; why.appendChild(pp); });
   right.appendChild(why); nr.appendChild(right);
   $('seo-foot3').innerHTML = '<b>เกณฑ์</b> ' + (S.tierRule || '');
 
-  // exec summary line
   if ($('exec-seo') && S.execLine) $('exec-seo').innerHTML = S.execLine;
 })();

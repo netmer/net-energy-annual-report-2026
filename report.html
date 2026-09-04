@@ -62,6 +62,9 @@
   table.data .dim{color:var(--faint)}
   table.data .kw{display:block;font-size:10.5px;color:var(--muted);font-weight:400;white-space:normal}
   table.data tfoot td{font-weight:700;background:#f8fafc;border-top:1px solid var(--line-2)}
+  table.data.wide{font-size:10px;table-layout:fixed}
+  table.data.wide td,table.data.wide th{white-space:normal;padding:4px 6px;word-break:break-word}
+  table.data.wide td:first-child,table.data.wide th:first-child{width:30%}
   .two{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:start}
   .three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;align-items:start}
   .note{font-size:10.5px;color:var(--faint);line-height:1.5;margin-top:5px}
@@ -413,20 +416,25 @@
   table(td, ['อุปกรณ์', 'คลิก', 'สัดส่วน', 'CTR', 'อันดับ'], S.devices.map(g => [g.label, { v: f(g.value), cls: 'n' }, Math.round(100 * g.value / dtot) + '%', g.ctr != null ? (g.ctr * 100).toFixed(1) + '%' : '—', g.position != null ? g.position.toFixed(1) : '—']));
 
   body.appendChild(h3('7.3 คีย์เวิร์ดที่คนค้นแล้วเจอเรา แยกตามหลักสูตร', S.byCourse.length + ' หลักสูตรที่ได้คลิก · เรียงตามคลิก · จับคู่จากข้อมูล คีย์เวิร์ด × หน้า ของ Search Console'));
-  const tc = h('table', 'data'); body.appendChild(tc);
-  table(tc, ['หลักสูตร · คีย์เวิร์ดเด่น', 'คีย์เวิร์ด', 'คลิก', 'แสดงผล', 'CTR', 'อันดับ'], S.byCourse.slice(0, 20).map(c => [
-    { html: '<b>' + esc(c.course) + '</b><span class="kw">' + esc(c.topKw.slice(0, 3).map(k => k.q + ' (' + k.clicks + ')').join(' · ')) + '</span>' }, f(c.kwCount), { v: f(c.clicks), cls: 'n' }, f(c.impressions), (100 * c.clicks / c.impressions).toFixed(1) + '%', c.position.toFixed(1)]));
+  const tc = h('table', 'data wide'); body.appendChild(tc);
+  table(tc, ['หลักสูตร · คีย์เวิร์ดเด่น', 'คีย์เวิร์ด', 'คลิก', 'แสดงผล', 'CTR', 'อันดับเฉลี่ย', 'คำค้นที่ติดดีสุด'], S.byCourse.slice(0, 20).map(c => [
+    { html: '<b>' + esc(c.course) + '</b><span class="kw">' + esc(c.topKw.slice(0, 3).map(k => k.q + ' (' + k.clicks + ')').join(' · ')) + '</span>' }, f(c.kwCount), { v: f(c.clicks), cls: 'n' }, f(c.impressions), (100 * c.clicks / c.impressions).toFixed(1) + '%', c.position.toFixed(1), c.bestQ ? { html: esc(c.bestQ.q) + ' <b>@' + c.bestQ.position.toFixed(1) + '</b>' } : '—']));
 
   body.appendChild(h3('7.4 คำที่ลูกค้าใช้ค้นหา "หลักสูตร" แล้วเจอเรา', 'ไม่นับคำค้นชื่อบริษัท · 20 อันดับตามคลิก'));
   const tk = h('table', 'data'); body.appendChild(tk);
   table(tk, ['คีย์เวิร์ด', 'หลักสูตร / หน้าที่คนคลิก', 'คลิก', 'แสดงผล', 'อันดับ'], S.intentKw.slice(0, 20).map(k => [k.q, { v: k.course, cls: 'dim' }, { v: f(k.clicks), cls: 'n' }, f(k.impressions), { v: k.position.toFixed(1), cls: k.position <= 3 ? 'up' : k.position > 10 ? 'down' : '' }]));
   const bn = h('div', 'callout'); bn.innerHTML = S.brandNote || ''; body.appendChild(bn);
 
-  body.appendChild(h3('7.5 หลักสูตรที่เปิดขายแต่ยังไม่ติดอันดับ', 'ติดดี ' + S.ranking.good + ' · เริ่มเห็น ' + S.ranking.mid + ' · ยังไม่ติด ' + S.ranking.none + ' จาก ' + (S.ranking.good + S.ranking.mid + S.ranking.none) + ' หลักสูตร'));
-  const tn = h('table', 'data'); body.appendChild(tn);
-  table(tn, ['หลักสูตร', 'หมวด', 'แสดงผล', 'คลิก', 'อันดับ', 'สถานะ'], S.notRanking.map(r => [r.course, { v: r.cat, cls: 'dim' }, { v: f(r.impressions), cls: r.impressions === 0 ? 'down' : '' }, f(r.clicks), r.position == null ? '—' : r.position.toFixed(1), r.tierLabel]));
+  body.appendChild(h3('7.5 หลักสูตรแยกตามสถานะการติดอันดับ (วัดจากคำค้นที่ดีที่สุดของแต่ละหน้า ไม่ใช่อันดับเฉลี่ย)', 'ติดอันดับดี ' + S.ranking.good + ' · หน้าแรก คลิกยังน้อย ' + S.ranking.page1 + ' · ยังไม่ติดหน้าแรก ' + S.ranking.low + ' · ยังไม่ปรากฏ ' + S.ranking.none + ' จาก 52'));
+  const tn = h('table', 'data wide'); body.appendChild(tn);
+  const qcell = q => q ? { html: esc(q.q) + ' <b>@' + q.position.toFixed(1) + '</b> <span class="dim">(' + q.impressions + ')</span>' } : { v: '—', cls: 'dim' };
+  table(tn, ['หลักสูตร', 'หมวด', 'แสดงผล', 'คลิก', 'เฉลี่ย', 'คำค้นที่ติดดีสุด (อันดับ · แสดงผล)', 'คำค้นที่คนใช้มากสุด (อันดับ · แสดงผล)', 'สถานะ'], S.notRanking.map(r => [r.course, { v: r.cat, cls: 'dim' }, { v: f(r.impressions), cls: r.impressions === 0 ? 'down' : '' }, f(r.clicks), r.position == null ? '—' : r.position.toFixed(1), qcell(r.bestQ), qcell(r.topQ), r.tierLabel]));
+  const rule = h('div', 'note'); rule.innerHTML = '<b>เกณฑ์</b> ' + (S.tierRule || '') + ' · ตารางนี้แสดงเฉพาะหลักสูตรที่ยังไม่ถึงเกณฑ์ "ติดอันดับดี" (' + S.notRanking.length + ' หลักสูตร) · หลักสูตรที่ติดอันดับดีอยู่ในตาราง 7.3'; body.appendChild(rule);
+
+  body.appendChild(h3('7.6 คำทั่วไปที่ลูกค้าค้น แต่เรายังอยู่หน้า 2 ขึ้นไป', 'โอกาสที่ควรทำเนื้อหาก่อน · เรียงตามจำนวนครั้งที่ Google แสดงเรา'));
+  const tg2 = h('table', 'data'); body.appendChild(tg2);
+  table(tg2, ['คำค้น', 'แสดงผล', 'คลิก', 'อันดับเรา', 'หน้า', 'หน้าที่ Google แสดง'], (S.gapKw || []).map(k => [k.q, { v: f(k.impressions), cls: 'n' }, f(k.clicks), { v: k.position.toFixed(1), cls: k.position > 30 ? 'down' : '' }, 'หน้า ' + Math.ceil(k.position / 10), { v: k.page, cls: 'dim' }]));
   const nn = h('div', 'callout warn'); nn.innerHTML = (S.notRankingNotes || []).join('<br>'); body.appendChild(nn);
-  const rule = h('div', 'note'); rule.innerHTML = '<b>เกณฑ์</b> ' + (S.tierRule || ''); body.appendChild(rule);
   if (S.execLine) $('exec-seo-line').innerHTML = S.execLine;
   function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
 })();
