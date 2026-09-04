@@ -435,7 +435,7 @@
   const tg2 = h('table', 'data'); body.appendChild(tg2);
   table(tg2, ['คำค้น', 'แสดงผล', 'คลิก', 'อันดับเรา', 'หน้า', 'หน้าที่ Google แสดง'], (S.gapKw || []).map(k => [k.q, { v: f(k.impressions), cls: 'n' }, f(k.clicks), { v: k.position.toFixed(1), cls: k.position > 30 ? 'down' : '' }, 'หน้า ' + Math.ceil(k.position / 10), { v: k.page, cls: 'dim' }]));
   const nn = h('div', 'callout warn'); nn.innerHTML = (S.notRankingNotes || []).join('<br>'); body.appendChild(nn);
-  if (S.execLine) $('exec-seo-line').innerHTML = S.execLine;
+  if (S.execText) $('exec-seo-line').innerHTML = S.execText;
   function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
 })();
 </script>

@@ -76,8 +76,8 @@ window.Renderers = (function () {
   R.seoByCourse = (fig, D) => {
     if (!D.seo) return seoPlaceholder(fig, 'คีย์เวิร์ดแยกตามหลักสูตร');
     Charts.hbars(fig, {
-      title: 'หลักสูตรที่ได้คลิกจาก Google มากที่สุด', sub: 'คลิกในรอบนี้ · ตัวเลขเล็ก = จำนวนคีย์เวิร์ดที่ติดอันดับ', labelWidth: 300, valueWidth: 70, valueLabel: 'คลิก',
-      rows: D.seo.byCourse.slice(0, 8).map(c => ({ label: c.course, sub: c.topKw.slice(0, 2).map(k => k.q).join(' · '), value: c.clicks, note: c.kwCount + ' คีย์เวิร์ด', extra: [{ label: 'การแสดงผล', value: f(c.impressions) }, { label: 'อันดับเฉลี่ย', value: c.position.toFixed(1) }] })),
+      title: 'หลักสูตรที่ได้คลิกจาก Google มากที่สุด', sub: 'คลิกในรอบนี้ · ตัวเลขเล็ก = จำนวนคำค้นที่ Google แสดงหน้านี้', labelWidth: 300, valueWidth: 70, valueLabel: 'คลิก',
+      rows: D.seo.byCourse.slice(0, 8).map(c => ({ label: c.course, sub: c.topKw.slice(0, 2).map(k => k.q).join(' · '), value: c.clicks, note: c.kwCount + ' คีย์เวิร์ด', extra: [{ label: 'การแสดงผล', value: f(c.impressions) }, { label: 'อันดับเฉลี่ย (ทุกคำ)', value: c.position.toFixed(1) }].concat(c.bestQ ? [{ label: 'คำค้นดีสุด', value: c.bestQ.q + ' @' + c.bestQ.position.toFixed(1) }] : []) })),
     });
   };
   R.seoDevice = (fig, D) => {

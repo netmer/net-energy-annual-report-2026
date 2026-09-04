@@ -37,7 +37,7 @@ assets/screenshots/   · ภาพหน้าจอจริง (หน้า�
 | งานพัฒนา 175 commits | `git log --all --no-merges --since=2026-08-11 --until=2026-09-04` ทุก repo ใน `E:\Devloper` — NET-workspace 63 · id-photo-studio 54 · Elmer - Document Flow 34 · NETMER-Flow 7 · CP PASSPORT 6 · aom-card 4 · kyt-motto 4 · line-csat 2 · NET - Document Flow 1 (repo ที่ไม่มี commit: elmer-water-analysis · elmer-wastewater · online-inspector · NET-Safety-Hero · chat-mobile · LPG-Training) |
 | ธุรกิจอบรม | Firestore (NET-workspace): `registrations` นับตามวันลงทะเบียน · `trainingRecords` status=completed นับตามวันจบอบรม · `trainingSchedules` นับตามวันเริ่มรอบ |
 | ยอดเข้าเว็บ | `analyticsMonthly` / `analyticsDaily` (ระบบสถิติใหม่ 2 ก.ย. — ตัวเลขเดียวกับ /admin/analytics · ตัดทราฟฟิกพนักงานออก) |
-| SEO | Google Search Console API (`searchanalytics.query`) — ดึงมิติ คีย์เวิร์ด × หน้า เพื่อจับคู่คีย์เวิร์ดกับหลักสูตรตามหน้าที่คนคลิกจริง · ต้องมี scope `webmasters.readonly` บน gcloud |
+| SEO | Google Search Console API (`searchanalytics.query`) — ดึงมิติ คีย์เวิร์ด × หน้า เพื่อจับคู่คีย์เวิร์ดกับหลักสูตรตามหน้าที่คนคลิกจริง · สถานะการติดอันดับของแต่ละหลักสูตรวัดจาก **คำค้นที่ดีที่สุดของหน้านั้น** (ไม่ใช่อันดับเฉลี่ย ซึ่ง Google ถัวรวมคำกว้าง ๆ ที่เราอยู่หน้า 5 เข้ามาด้วย) · ต้องมี scope `webmasters.readonly` (ADC) + quota project — ดู memory `gsc-api-access` |
 
 การเทียบรอบก่อน: ช่วงเวลาไม่เท่ากัน (23–24 วัน vs 31 วัน) จึงเทียบ **ต่อวัน** เสมอ
 
