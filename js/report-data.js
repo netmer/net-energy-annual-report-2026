@@ -1,3015 +1,1596 @@
 // ============================================================
-// REPORT DATA — รอบ ส.ค. 2026 (11 ส.ค. – 3 ก.ย. 2026)
-// ทุกตัวเลขมีที่มา: git history · Firestore (NET-workspace) · Google Search Console API
+// REPORT DATA — รอบ ก.ย.–ต.ค. 2569 (4 ก.ย. – 15 ต.ค. 2569)
+// ทุกตัวเลขมีที่มา: git history 12 repos · Firestore (NET-workspace) · Google Search Console API
+// ส่วน seo สร้างจากสคริปต์วิเคราะห์ Search Console (ดู README) — ข้อความบรรยายแก้ได้ที่ seoText
 // ============================================================
 window.REPORT = {
-  period: { label: '11 ส.ค. – 3 ก.ย. 2026', short: 'ส.ค. 2026', start: '2026-08-11', end: '2026-09-03', days: 24 },
+  period: { label: '4 ก.ย. – 15 ต.ค. 2569', short: 'ก.ย.–ต.ค. 2569', start: '2026-09-04', end: '2026-10-15', days: 42, weeks: 6 },
 
-  // ---- งานพัฒนา (git, 9 repos)
+  // ---- งานพัฒนา (git log --all --no-merges ทุก repo ใน E:\Devloper · ไม่นับ stash)
   dev: {
-    total: 175, repos: 9, prevTotal: 108, prevWeeks: 5,
+    total: 327, repos: 12, prevTotal: 175, prevDays: 24,
     byRepo: [
-      { label: 'เว็บไซต์หลัก + ERP', sub: 'NET-workspace', n: 63, kind: 'core' },
-      { label: 'NET-ID Photo Studio', sub: 'id-photo-studio · ใหม่', n: 54, kind: 'new' },
-      { label: 'ELMER ใบเสนอราคา + PO', sub: 'elmer-quotation-flow · ใหม่', n: 34, kind: 'new' },
-      { label: 'NETMER-Flow (HR)', sub: 'netmer-flow', n: 7, kind: 'core' },
-      { label: 'CP Safety Passport', sub: 'cp-passport', n: 6, kind: 'core' },
-      { label: 'นามบัตรดิจิทัล NFC', sub: 'aom-card · ใหม่', n: 4, kind: 'new' },
-      { label: 'KYT MOTTO', sub: 'kyt-motto · ใหม่', n: 4, kind: 'new' },
-      { label: 'LINE CSAT', sub: 'line-csat', n: 2, kind: 'core' },
-      { label: 'NET Document Flow', sub: 'quotacraft', n: 1, kind: 'core' },
+      { label: 'เว็บไซต์ NET + ERP', sub: 'NET-workspace', n: 104, kind: 'core' },
+      { label: 'NETMER-Flow', sub: 'HR · จอผู้บริหาร · ป้ายดิจิทัล', n: 75, kind: 'core' },
+      { label: 'NET × AXTRA SHE Audit', sub: 'cp-axtra-audit · ใหม่', n: 40, kind: 'new' },
+      { label: 'เว็บไซต์ ELMER', sub: 'elmer-int.com · ใหม่', n: 29, kind: 'new' },
+      { label: 'NET LMS (SDS)', sub: 'net-lms · ใหม่', n: 23, kind: 'new' },
+      { label: 'CP Safety Passport', sub: 'cp-passport', n: 15, kind: 'core' },
+      { label: 'NET-ID Photo Studio', sub: 'id-photo-studio', n: 13, kind: 'core' },
+      { label: 'ELMER Water Analysis', sub: 'elmer-water-analysis', n: 9, kind: 'core' },
+      { label: 'NET Document Flow', sub: 'ใบเสนอราคา · ใบเสร็จ', n: 9, kind: 'core' },
+      { label: 'ELMER ใบเสนอราคา + PO', sub: 'elmer-quotation-flow', n: 8, kind: 'core' },
+      { label: 'อื่น ๆ 2 ระบบ', sub: 'Online Inspector · ELMER Wastewater', n: 2, kind: 'core' },
     ],
     weeks: [
-      { label: '11–17 ส.ค.', n: 17 }, { label: '18–24', n: 66 }, { label: '25–31', n: 75 }, { label: '1–3 ก.ย.', n: 17 },
+      { label: '4–10 ก.ย.', n: 46 }, { label: '11–17', n: 53 }, { label: '18–24', n: 50 },
+      { label: '25 ก.ย.–1 ต.ค.', n: 43 }, { label: '2–8 ต.ค.', n: 76 }, { label: '9–15', n: 59 },
     ],
   },
 
-  // ---- ธุรกิจ (Firestore: registrations · trainingRecords · trainingSchedules)
+  // ---- ธุรกิจอบรม (Firestore ณ 15 ต.ค. 2569)
+  //  registrations นับตามวันลงทะเบียน · trainingRecords status=completed นับตามวันจบอบรม · trainingSchedules นับตามวันเริ่มรอบ
   biz: {
-    regs: [{ m: 'เม.ย.', v: 486 }, { m: 'พ.ค.', v: 917 }, { m: 'มิ.ย.', v: 893 }, { m: 'ก.ค.', v: 906 }, { m: 'ส.ค.', v: 798 }],
-    trained: [{ m: 'พ.ค.', v: 1208 }, { m: 'มิ.ย.', v: 1051 }, { m: 'ก.ค.', v: 1198 }, { m: 'ส.ค.', v: 1155 }],
-    augRounds: { total: 94, open: 66, full: 24, cancelled: 4, courses: 30, withCompletions: 45, sep: 86, oct: 20 },
-    augMode: [
-      { label: 'Public ที่ศูนย์ฯ', value: 47 }, { label: 'Public ออนไลน์', value: 28 },
-      { label: 'In-house ที่ลูกค้า', value: 15 }, { label: 'In-house ออนไลน์', value: 4 },
+    regs: [{ m: 'เม.ย.', v: 486 }, { m: 'พ.ค.', v: 917 }, { m: 'มิ.ย.', v: 893 }, { m: 'ก.ค.', v: 906 }, { m: 'ส.ค.', v: 798 }, { m: 'ก.ย.', v: 967 }, { m: 'ต.ค.*', v: 407, partial: true }],
+    trained: [{ m: 'พ.ค.', v: 1207 }, { m: 'มิ.ย.', v: 1051 }, { m: 'ก.ค.', v: 1212 }, { m: 'ส.ค.', v: 1297 }, { m: 'ก.ย.', v: 1375 }, { m: 'ต.ค.*', v: 466, partial: true }],
+    rounds: [{ m: 'พ.ค.', v: 89 }, { m: 'มิ.ย.', v: 99 }, { m: 'ก.ค.', v: 102 }, { m: 'ส.ค.', v: 94 }, { m: 'ก.ย.', v: 91 }, { m: 'ต.ค.', v: 114 }, { m: 'พ.ย.', v: 83, ahead: true }],
+    sep: { rounds: 91, open: 60, full: 27, cancelled: 4, courses: 29, regs: 967, confirmed: 822, regCancelled: 106, pending: 39, trained: 1375, companies: 248, roundsWithCompletions: 42 },
+    oct: { rounds: 114, open: 105, full: 9, courses: 36, inhouse: 47, hybrid: 1, regs: 407, regCancelled: 27, trained: 466 },
+    sepMode: [
+      { label: 'Public ที่ศูนย์ฯ', value: 43 }, { label: 'Public ออนไลน์', value: 29 },
+      { label: 'In-house ที่ลูกค้า', value: 17 }, { label: 'In-house ออนไลน์', value: 2 },
     ],
-    augReg: { confirmed: 645, cancelled: 101, pending: 52 },
-    augTopTrained: [
-      ['G CP · ปลูกจิตสำนึกความปลอดภัย', 362], ['G AIS · ผู้รับเหมา', 221], ['E/EE CP · ไฟฟ้า', 188], ['E AIS · ไฟฟ้า', 87],
-      ['T CP · เสาทาวเวอร์', 66], ['T AIS · เสาส่งสัญญาณ', 45], ['SP CP · ที่สูง', 43], ['โซล่าเซลล์ · ที่สูง', 25], ['H AIS · ที่สูง', 24], ['ดับเพลิงขั้นต้น', 24],
+    octMode: [
+      { label: 'Public ที่ศูนย์ฯ', value: 43 }, { label: 'Public ออนไลน์', value: 23 },
+      { label: 'In-house ที่ลูกค้า', value: 42 }, { label: 'In-house ออนไลน์ + Hybrid', value: 6 },
     ],
+    sepTopTrained: [
+      ['G CP · ปลูกจิตสำนึกความปลอดภัย', 477], ['E/EE CP · ไฟฟ้า', 232], ['G AIS · ผู้รับเหมา', 204], ['H AIS · ที่สูง', 171],
+      ['R CP · หลังคา', 104], ['E AIS · ไฟฟ้า', 84], ['T AIS · เสาส่งสัญญาณ', 27], ['T CP · เสาทาวเวอร์', 26], ['อับอากาศ 4 ผู้', 20], ['SP CP · ที่สูง', 12],
+    ],
+    augRevised: { before: 1155, after: 1297 },
   },
 
-  // ---- ยอดเข้าเว็บ (analyticsMonthly/analyticsDaily rollup = ตัวเลขเดียวกับ /admin/analytics)
-  traffic: {
-    monthly: [{ m: 'เม.ย.', v: 13290 }, { m: 'พ.ค.', v: 42831 }, { m: 'มิ.ย.', v: 42608 }, { m: 'ก.ค.', v: 43011 }, { m: 'ส.ค.', v: 45357 }],
-    dailyLabels: ['11 ส.ค.', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '1 ก.ย.', '2 ก.ย.'],
-    dailyThis: [2001, 733, 1589, 1795, 769, 415, 1653, 1601, 1664, 1828, 1392, 927, 484, 1536, 1603, 1372, 2027, 1839, 927, 581, 1708, 1465, 1672],
-    dailyPrev: [315, 1338, 1994, 1698, 1836, 1651, 748, 387, 1177, 411, 587, 1635, 1107, 881, 421, 1761, 2064, 1857, 1636, 1904, 1750, 2003, 2636],
-    thisTotal: 31581, prevTotal: 31797, augTotal: 45357, julTotal: 43011,
-    channelsAug: [
-      { label: 'Direct (พิมพ์ URL / บุ๊กมาร์ก / แอป)', value: 27406 }, { label: 'ค้นหา Google / Bing', value: 11040 },
-      { label: 'ลิงก์ภายในเว็บ', value: 6030 }, { label: 'โซเชียล + LINE', value: 533 },
-      { label: 'Teams · เว็บอื่น · อีเมล', value: 259 }, { label: 'AI (ChatGPT · Gemini)', value: 89 },
-    ],
-    channelsJul: { direct: 26592, search: 10544, internal: 4867, social: 371, referral: 252, line: 197, ai: 100, messaging: 88 },
-    refsAug: [['Google', 10504], ['Bing', 461], ['Facebook', 304], ['LINE', 229], ['Microsoft Teams', 137], ['ChatGPT', 55], ['Gemini', 32]],
-    locale: { th: 42417, en: 1233, ja: 877, zh: 830 }, localeJul: { th: 41109, en: 783, ja: 589, zh: 530 },
-    topCourses: [['G CP', 1244], ['ช่างไฟฟ้า ระดับ 1', 971], ['สถานที่ใช้ LPG', 907], ['G AIS', 742], ['H AIS', 679], ['E CP', 589], ['สถานีบริการน้ำมัน', 587], ['สถานที่ใช้ NG', 473], ['สถานที่เก็บน้ำมัน', 465], ['T AIS', 447]],
-    routesAug: { coursePages: 13757, category: 9712, home: 5434, courses: 5373, register: 4795, locations: 1495, history: 788, blog: 659 },
-    signedInAug: 7485,
-  },
+  // ---- ระบบสถิติเว็บของเรา (analyticsEvents) — แทบไม่ได้บันทึกหลัง 2 ก.ย.
+  webStats: { aug: 45375, sep1to17: 3095, sep18toOct15: 55, lastGoodDay: '2 ก.ย. 2569' },
 
-  // ---- SEO (Google Search Console API) — เติมเมื่อได้สิทธิ์ API
+  // ---- SEO (Google Search Console API · 4 ก.ย. – 13 ต.ค. เทียบ 40 วันก่อนหน้า) — เติมโดยสคริปต์
   seo: {
-    "window": {
-      "label": "11 ส.ค. – 2 ก.ย. 2026",
-      "days": 23
+   "window": {
+    "label": "4 ก.ย. – 13 ต.ค. 2569",
+    "days": 40
+   },
+   "prevWindow": {
+    "label": "26 ก.ค. – 3 ก.ย. 2569",
+    "days": 40
+   },
+   "totals": {
+    "clicks": 4498,
+    "impressions": 79040,
+    "ctr": 0.0569,
+    "position": 6.3
+   },
+   "prev": {
+    "clicks": 3870,
+    "impressions": 61049,
+    "ctr": 0.0634,
+    "position": 7.6
+   },
+   "dailyLabels": [
+    "4 ก.ย.",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
+    "1 ต.ค.",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "dailyTip": [
+    "4 ก.ย.",
+    "5 ก.ย.",
+    "6 ก.ย.",
+    "7 ก.ย.",
+    "8 ก.ย.",
+    "9 ก.ย.",
+    "10 ก.ย.",
+    "11 ก.ย.",
+    "12 ก.ย.",
+    "13 ก.ย.",
+    "14 ก.ย.",
+    "15 ก.ย.",
+    "16 ก.ย.",
+    "17 ก.ย.",
+    "18 ก.ย.",
+    "19 ก.ย.",
+    "20 ก.ย.",
+    "21 ก.ย.",
+    "22 ก.ย.",
+    "23 ก.ย.",
+    "24 ก.ย.",
+    "25 ก.ย.",
+    "26 ก.ย.",
+    "27 ก.ย.",
+    "28 ก.ย.",
+    "29 ก.ย.",
+    "30 ก.ย.",
+    "1 ต.ค.",
+    "2 ต.ค.",
+    "3 ต.ค.",
+    "4 ต.ค.",
+    "5 ต.ค.",
+    "6 ต.ค.",
+    "7 ต.ค.",
+    "8 ต.ค.",
+    "9 ต.ค.",
+    "10 ต.ค.",
+    "11 ต.ค.",
+    "12 ต.ค.",
+    "13 ต.ค."
+   ],
+   "dailyClicks": [
+    99,
+    51,
+    96,
+    156,
+    130,
+    168,
+    153,
+    113,
+    53,
+    121,
+    152,
+    152,
+    144,
+    141,
+    116,
+    59,
+    108,
+    187,
+    164,
+    148,
+    138,
+    81,
+    32,
+    80,
+    130,
+    112,
+    125,
+    115,
+    86,
+    46,
+    96,
+    148,
+    153,
+    141,
+    128,
+    73,
+    38,
+    81,
+    75,
+    109
+   ],
+   "dailyClicksPrev": [
+    46,
+    38,
+    39,
+    74,
+    85,
+    66,
+    33,
+    83,
+    109,
+    129,
+    109,
+    109,
+    72,
+    27,
+    64,
+    91,
+    75,
+    82,
+    113,
+    76,
+    39,
+    81,
+    156,
+    134,
+    177,
+    144,
+    75,
+    54,
+    81,
+    140,
+    151,
+    160,
+    154,
+    102,
+    46,
+    87,
+    141,
+    130,
+    151,
+    147
+   ],
+   "monthly": [
+    {
+     "m": "พ.ค.",
+     "clicks": 1775,
+     "impressions": 14384,
+     "days": 31,
+     "partial": false
     },
-    "prevWindow": {
-      "label": "19 ก.ค. – 10 ส.ค. 2026",
-      "days": 23
+    {
+     "m": "มิ.ย.",
+     "clicks": 2110,
+     "impressions": 19570,
+     "days": 30,
+     "partial": false
     },
-    "totals": {
-      "clicks": 2459,
-      "impressions": 40835,
-      "ctr": 0.060217950287743356,
-      "position": 7.5786702583568015
+    {
+     "m": "ก.ค.",
+     "clicks": 2441,
+     "impressions": 26919,
+     "days": 31,
+     "partial": false
     },
-    "prev": {
-      "clicks": 1794,
-      "impressions": 23266,
-      "ctr": 0.07710822659675062,
-      "position": 7.825238545517063
+    {
+     "m": "ส.ค.",
+     "clicks": 3094,
+     "impressions": 48053,
+     "days": 31,
+     "partial": false
     },
-    "dailyLabels": [
-      "11 ส.ค.",
-      "12",
-      "13",
-      "14",
-      "15",
-      "16",
-      "17",
-      "18",
-      "19",
-      "20",
-      "21",
-      "22",
-      "23",
-      "24",
-      "25",
-      "26",
-      "27",
-      "28",
-      "29",
-      "30",
-      "31",
-      "1 ก.ย.",
-      "2"
-    ],
-    "dailyClicks": [
-      75,
-      82,
-      113,
-      76,
-      39,
-      81,
-      156,
-      134,
-      177,
-      144,
-      75,
-      54,
-      81,
-      140,
-      151,
-      160,
-      154,
-      102,
-      46,
-      87,
-      141,
-      129,
-      62
-    ],
-    "dailyClicksPrev": [
-      77,
-      110,
-      116,
-      102,
-      112,
-      64,
-      39,
-      46,
-      38,
-      39,
-      74,
-      85,
-      66,
-      33,
-      83,
-      109,
-      129,
-      109,
-      109,
-      72,
-      27,
-      64,
-      91
-    ],
-    "queriesTotal": 1347,
-    "pagesTotal": 336,
-    "groups": [
-      {
-        "label": "หน้าหลักสูตรรายตัว",
-        "value": 1296
-      },
-      {
-        "label": "หน้าแรก",
-        "value": 533
-      },
-      {
-        "label": "หน้าหมวด + หน้าจังหวัด",
-        "value": 460
-      },
-      {
-        "label": "หน้า CP Passport · ติดต่อ · อื่น ๆ",
-        "value": 255
-      }
-    ],
-    "devices": [
-      {
-        "label": "Desktop",
-        "value": 1559,
-        "ctr": 0.076328029375765,
-        "position": 8.972533659730722
-      },
-      {
-        "label": "Mobile",
-        "value": 875,
-        "ctr": 0.04421648390519986,
-        "position": 6.1669109101015716
-      },
-      {
-        "label": "Tablet",
-        "value": 25,
-        "ctr": 0.040257648953301126,
-        "position": 6.721417069243156
-      }
-    ],
-    "byCourse": [
-      {
-        "course": "ช่างไฟฟ้า ระดับ 1",
-        "cat": "ช่างไฟฟ้า & ช่างแอร์",
-        "clicks": 226,
-        "prevClicks": 168,
-        "impressions": 5409,
-        "position": 6.6173044925124795,
-        "bestQ": {
-          "q": "ช่างไฟฟ้ามีกี่ระดับ",
-          "clicks": 0,
-          "impressions": 5,
-          "position": 1
-        },
-        "kwCount": 170,
-        "topKw": [
-          {
-            "q": "อบรมช่างไฟฟ้าภายในอาคาร ระดับ 1",
-            "clicks": 20,
-            "impressions": 206,
-            "position": 4.359223300970873
-          },
-          {
-            "q": "อบรมไฟฟ้าภายในอาคาร ระดับ 1",
-            "clicks": 12,
-            "impressions": 92,
-            "position": 3.3043478260869565
-          },
-          {
-            "q": "ช่างไฟฟ้าภายในอาคาร ระดับ 1",
-            "clicks": 4,
-            "impressions": 90,
-            "position": 6.977777777777778
-          },
-          {
-            "q": "อบรมไฟฟ้าระดับ 1",
-            "clicks": 3,
-            "impressions": 100,
-            "position": 4.37
-          },
-          {
-            "q": "สอบ มาตรฐานฝีมือแรงงาน ช่างไฟฟ้าระดับ 1",
-            "clicks": 3,
-            "impressions": 3,
-            "position": 14.666666666666666
-          }
-        ]
-      },
-      {
-        "course": "สถานที่ใช้ LPG",
-        "cat": "กรมธุรกิจพลังงาน",
-        "clicks": 166,
-        "prevClicks": 107,
-        "impressions": 1301,
-        "position": 6.037663335895465,
-        "bestQ": {
-          "q": "ผู้ปฏิบัติงานสถานที่ใช้ก๊าซปิโตรเลียมเหลว",
-          "clicks": 11,
-          "impressions": 24,
-          "position": 1.3333333333333333
-        },
-        "kwCount": 29,
-        "topKw": [
-          {
-            "q": "ผู้ปฏิบัติงานสถานที่ใช้ก๊าซปิโตรเลียมเหลว",
-            "clicks": 11,
-            "impressions": 24,
-            "position": 1.3333333333333333
-          },
-          {
-            "q": "อบรม ผู้ควบคุมก๊าซ lpg 2569",
-            "clicks": 5,
-            "impressions": 31,
-            "position": 3.806451612903226
-          },
-          {
-            "q": "สถานีแก๊ส lpg",
-            "clicks": 0,
-            "impressions": 22,
-            "position": 26.818181818181817
-          },
-          {
-            "q": "สถานีแก๊สโรงงาน",
-            "clicks": 0,
-            "impressions": 15,
-            "position": 28.4
-          },
-          {
-            "q": "สถานีแก๊ส",
-            "clicks": 0,
-            "impressions": 13,
-            "position": 24.692307692307693
-          }
-        ]
-      },
-      {
-        "course": "สถานีบริการน้ำมัน",
-        "cat": "กรมธุรกิจพลังงาน",
-        "clicks": 101,
-        "prevClicks": 76,
-        "impressions": 1079,
-        "position": 4.893419833178869,
-        "bestQ": {
-          "q": "บัตรประจําตัวผู้ปฏิบัติงานสถานีบริการน้ํามัน",
-          "clicks": 0,
-          "impressions": 10,
-          "position": 3.5
-        },
-        "kwCount": 22,
-        "topKw": [
-          {
-            "q": "ผู้ปฏิบัติงาน",
-            "clicks": 1,
-            "impressions": 135,
-            "position": 4.866666666666667
-          },
-          {
-            "q": "สถานีบริการน้ํามัน",
-            "clicks": 0,
-            "impressions": 57,
-            "position": 7.982456140350878
-          },
-          {
-            "q": "สถานีบริการน้ำมัน",
-            "clicks": 0,
-            "impressions": 32,
-            "position": 5.1875
-          },
-          {
-            "q": "ผู้ปฎิบัติงาน",
-            "clicks": 0,
-            "impressions": 18,
-            "position": 3.888888888888889
-          },
-          {
-            "q": "บัตรประจําตัวผู้ปฏิบัติงานสถานีบริการน้ํามัน",
-            "clicks": 0,
-            "impressions": 10,
-            "position": 3.5
-          }
-        ]
-      },
-      {
-        "course": "สถานที่ใช้ NG",
-        "cat": "กรมธุรกิจพลังงาน",
-        "clicks": 90,
-        "prevClicks": 46,
-        "impressions": 1003,
-        "position": 4.331006979062812,
-        "bestQ": {
-          "q": "อบรม ผู้ปฏิบัติงาน สถาน ที่ ใช้ก๊าซธรรมชาติ 2569",
-          "clicks": 1,
-          "impressions": 4,
-          "position": 1
-        },
-        "kwCount": 20,
-        "topKw": [
-          {
-            "q": "อบรมผู้ปฏิบัติงานสถานที่ใช้ก๊าซธรรมชาติ",
-            "clicks": 8,
-            "impressions": 15,
-            "position": 1.6
-          },
-          {
-            "q": "ผู้ปฏิบัติงานสถานที่ใช้ก๊าซธรรมชาติ",
-            "clicks": 5,
-            "impressions": 19,
-            "position": 1.1578947368421053
-          },
-          {
-            "q": "อบรม ผู้ปฏิบัติงาน สถาน ที่ ใช้ก๊าซธรรมชาติ 2569",
-            "clicks": 1,
-            "impressions": 4,
-            "position": 1
-          },
-          {
-            "q": "ผู้ปฏิบัติงาน",
-            "clicks": 0,
-            "impressions": 228,
-            "position": 4.592105263157895
-          },
-          {
-            "q": "ผู้ปฎิบัติงาน",
-            "clicks": 0,
-            "impressions": 26,
-            "position": 2.3461538461538463
-          }
-        ]
-      },
-      {
-        "course": "สถานที่เก็บรักษาน้ำมัน",
-        "cat": "กรมธุรกิจพลังงาน",
-        "clicks": 77,
-        "prevClicks": 58,
-        "impressions": 699,
-        "position": 4.257510729613734,
-        "bestQ": {
-          "q": "สถานที่เก็บรักษาน้ํามันเชื้อเพลิง ลักษณะที่ 3",
-          "clicks": 0,
-          "impressions": 5,
-          "position": 1
-        },
-        "kwCount": 21,
-        "topKw": [
-          {
-            "q": "ผู้ปฏิบัติงานสถานที่เก็บรักษาน้ํามัน",
-            "clicks": 1,
-            "impressions": 12,
-            "position": 1.0833333333333333
-          },
-          {
-            "q": "อบรม ผู้ปฏิบัติงาน สถาน ที่ เก็บ รักษา น้ำมัน 2569",
-            "clicks": 1,
-            "impressions": 1,
-            "position": 2
-          },
-          {
-            "q": "สถานที่ปฏิบัติงาน",
-            "clicks": 0,
-            "impressions": 19,
-            "position": 3.210526315789474
-          },
-          {
-            "q": "สถานที่เก็บน้ำมัน",
-            "clicks": 0,
-            "impressions": 19,
-            "position": 12.842105263157896
-          },
-          {
-            "q": "ตรวจสถานที่เก็บรักษาน้ำมัน",
-            "clicks": 0,
-            "impressions": 13,
-            "position": 18
-          }
-        ]
-      },
-      {
-        "course": "ก๊าซแอมโมเนีย",
-        "cat": "กรมโรงงานอุตสาหกรรม",
-        "clicks": 53,
-        "prevClicks": 42,
-        "impressions": 325,
-        "position": 4.458461538461538,
-        "bestQ": {
-          "q": "อบรม ผู้ควบคุมระบบ ทำความ เย็น 2569",
-          "clicks": 2,
-          "impressions": 7,
-          "position": 8
-        },
-        "kwCount": 9,
-        "topKw": [
-          {
-            "q": "อบรม ผู้ควบคุมระบบ ทำความ เย็น 2569",
-            "clicks": 2,
-            "impressions": 7,
-            "position": 8
-          },
-          {
-            "q": "สมุทรปราการ",
-            "clicks": 1,
-            "impressions": 1,
-            "position": 2
-          },
-          {
-            "q": "คนงานควบคุมก๊าซ",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 14
-          },
-          {
-            "q": "หลักสูตรการอบรม",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 3
-          },
-          {
-            "q": "อบรมหลักสูตรผู้ควบคุมระบบ ทำความ เย็นที่ใช้แอมโมเนียเป็นสาร ทำความ เย็น",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 5.5
-          }
-        ]
-      },
-      {
-        "course": "G CP",
-        "cat": "ผู้รับเหมา CP",
-        "clicks": 49,
-        "prevClicks": 17,
-        "impressions": 901,
-        "position": 5.900110987791343,
-        "bestQ": {
-          "q": "lotus g",
-          "clicks": 0,
-          "impressions": 3,
-          "position": 3.3333333333333335
-        },
-        "kwCount": 32,
-        "topKw": [
-          {
-            "q": "อบรมโลตัส",
-            "clicks": 9,
-            "impressions": 89,
-            "position": 4.764044943820225
-          },
-          {
-            "q": "อบรมผู้รับเหมา",
-            "clicks": 1,
-            "impressions": 2,
-            "position": 1
-          },
-          {
-            "q": "g cp",
-            "clicks": 1,
-            "impressions": 1,
-            "position": 1
-          },
-          {
-            "q": "cp safety passport",
-            "clicks": 0,
-            "impressions": 31,
-            "position": 9.516129032258064
-          },
-          {
-            "q": "net อบรม",
-            "clicks": 0,
-            "impressions": 28,
-            "position": 1
-          }
-        ]
-      },
-      {
-        "course": "ความปลอดภัยในงานที่สูง",
-        "cat": "งานบนที่สูง",
-        "clicks": 44,
-        "prevClicks": 15,
-        "impressions": 836,
-        "position": 5.839712918660287,
-        "bestQ": {
-          "q": "ตามกฎกระทรวง ฯ ทำงานที่สูง 2564 การทำงานในพื้นที่ปฏิบัติงานที่สูงจากพื้นดิน หรือจากพื้นอาคาร ตั้งแต่กี่เมตรขึ้นไป ถึงเรียกว่าทำงานที่สูง",
-          "clicks": 0,
-          "impressions": 24,
-          "position": 1.0416666666666667
-        },
-        "kwCount": 31,
-        "topKw": [
-          {
-            "q": "อบรมที่สูง",
-            "clicks": 2,
-            "impressions": 24,
-            "position": 17.083333333333332
-          },
-          {
-            "q": "อบรมการทํางานที่สูง",
-            "clicks": 1,
-            "impressions": 1,
-            "position": 1
-          },
-          {
-            "q": "ในนนทบุรี",
-            "clicks": 1,
-            "impressions": 1,
-            "position": 2
-          },
-          {
-            "q": "การตกจากที่สูงและที่ลาดชัน ที่มีความสูงตั้งแต่กี่เมตรขึ้นไป ต้องจัดทำราวกั้นหรือรั้วกันตก ตาข่ายนิรภัย หรืออุปกรณ์ป้องกันอื่นใดที่เหมาะสมกับสภาพของการทำงาน",
-            "clicks": 0,
-            "impressions": 31,
-            "position": 8.580645161290324
-          },
-          {
-            "q": "net อบรม",
-            "clicks": 0,
-            "impressions": 30,
-            "position": 1
-          }
-        ]
-      },
-      {
-        "course": "จป.หัวหน้างาน",
-        "cat": "จป & คปอ",
-        "clicks": 38,
-        "prevClicks": 19,
-        "impressions": 1407,
-        "position": 6.668798862828713,
-        "bestQ": {
-          "q": "จป.ระดับหัวหน้างาน",
-          "clicks": 0,
-          "impressions": 6,
-          "position": 3
-        },
-        "kwCount": 36,
-        "topKw": [
-          {
-            "q": "อบรม จป หัวหน้างาน",
-            "clicks": 8,
-            "impressions": 94,
-            "position": 9.52127659574468
-          },
-          {
-            "q": "จป หัวหน้างาน",
-            "clicks": 5,
-            "impressions": 210,
-            "position": 6.5476190476190474
-          },
-          {
-            "q": "จป.หัวหน้างาน",
-            "clicks": 3,
-            "impressions": 210,
-            "position": 6.4904761904761905
-          },
-          {
-            "q": "อบรม จป.หัวหน้างาน",
-            "clicks": 1,
-            "impressions": 30,
-            "position": 5.566666666666666
-          },
-          {
-            "q": "จปหัวหน้างาน",
-            "clicks": 0,
-            "impressions": 36,
-            "position": 6.555555555555555
-          }
-        ]
-      },
-      {
-        "course": "สถานีบรรจุ LPG",
-        "cat": "กรมธุรกิจพลังงาน",
-        "clicks": 38,
-        "prevClicks": 31,
-        "impressions": 410,
-        "position": 6.229268292682927,
-        "bestQ": {
-          "q": "ปิโตรเลียมเหลว",
-          "clicks": 0,
-          "impressions": 9,
-          "position": 5
-        },
-        "kwCount": 18,
-        "topKw": [
-          {
-            "q": "ปิโตรเลียมเหลว",
-            "clicks": 0,
-            "impressions": 9,
-            "position": 5
-          },
-          {
-            "q": "lpg",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 3
-          },
-          {
-            "q": "lpg gas station",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 6.5
-          },
-          {
-            "q": "สถานีแก๊ส lpg",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 9.5
-          },
-          {
-            "q": "30",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 2
-          }
-        ]
-      },
-      {
-        "course": "Solar Cell",
-        "cat": "ความปลอดภัยในงานที่สูง โซล่าเซลล์",
-        "clicks": 37,
-        "prevClicks": 1,
-        "impressions": 738,
-        "position": 8.077235772357724,
-        "bestQ": {
-          "q": "อบรมโซล่าเซลล์ 2569",
-          "clicks": 1,
-          "impressions": 16,
-          "position": 3.625
-        },
-        "kwCount": 27,
-        "topKw": [
-          {
-            "q": "อบรมโซล่าเซลล์ 2569",
-            "clicks": 1,
-            "impressions": 16,
-            "position": 3.625
-          },
-          {
-            "q": "อบรมโซล่าเซลล์",
-            "clicks": 1,
-            "impressions": 11,
-            "position": 7.909090909090909
-          },
-          {
-            "q": "อบรมติดตั้งโซล่าเซลล์ 2569",
-            "clicks": 1,
-            "impressions": 4,
-            "position": 8
-          },
-          {
-            "q": "อบรมการติดตั้งโซล่าเซลล์",
-            "clicks": 1,
-            "impressions": 1,
-            "position": 5
-          },
-          {
-            "q": "อบรม solar cell",
-            "clicks": 0,
-            "impressions": 8,
-            "position": 10.125
-          }
-        ]
-      },
-      {
-        "course": "ADR - พื้นฐาน",
-        "cat": "ADR & TSM",
-        "clicks": 36,
-        "prevClicks": 4,
-        "impressions": 860,
-        "position": 6.283720930232558,
-        "bestQ": {
-          "q": "อบรม adr ราคา",
-          "clicks": 0,
-          "impressions": 4,
-          "position": 1
-        },
-        "kwCount": 31,
-        "topKw": [
-          {
-            "q": "อบรม adr",
-            "clicks": 5,
-            "impressions": 54,
-            "position": 3.7962962962962963
-          },
-          {
-            "q": "อบรมadr",
-            "clicks": 2,
-            "impressions": 25,
-            "position": 3.8
-          },
-          {
-            "q": "สอบ adr ขนส่ง",
-            "clicks": 1,
-            "impressions": 8,
-            "position": 2.25
-          },
-          {
-            "q": "อบรม adr ออนไลน์",
-            "clicks": 1,
-            "impressions": 3,
-            "position": 3
-          },
-          {
-            "q": "อบรม adr ฟรี",
-            "clicks": 0,
-            "impressions": 16,
-            "position": 9.125
-          }
-        ]
-      },
-      {
-        "course": "G AIS",
-        "cat": "ผู้รับเหมา AIS",
-        "clicks": 35,
-        "prevClicks": 21,
-        "impressions": 514,
-        "position": 4.377431906614786,
-        "bestQ": {
-          "q": "ais safety",
-          "clicks": 0,
-          "impressions": 7,
-          "position": 2
-        },
-        "kwCount": 18,
-        "topKw": [
-          {
-            "q": "ais safety passport",
-            "clicks": 2,
-            "impressions": 21,
-            "position": 2.1904761904761907
-          },
-          {
-            "q": "อบรมผู้รับเหมาก่อนเริ่มงาน",
-            "clicks": 1,
-            "impressions": 17,
-            "position": 9.941176470588236
-          },
-          {
-            "q": "ais passport",
-            "clicks": 0,
-            "impressions": 59,
-            "position": 4.8474576271186445
-          },
-          {
-            "q": "สมัคร ais passport",
-            "clicks": 0,
-            "impressions": 11,
-            "position": 8.818181818181818
-          },
-          {
-            "q": "ais safety",
-            "clicks": 0,
-            "impressions": 7,
-            "position": 2
-          }
-        ]
-      },
-      {
-        "course": "ช่างแอร์ ระดับ 1",
-        "cat": "ช่างไฟฟ้า & ช่างแอร์",
-        "clicks": 26,
-        "prevClicks": 17,
-        "impressions": 731,
-        "position": 8.266757865937073,
-        "bestQ": {
-          "q": "ช่างเครื่องปรับอากาศ",
-          "clicks": 1,
-          "impressions": 18,
-          "position": 3.111111111111111
-        },
-        "kwCount": 18,
-        "topKw": [
-          {
-            "q": "ช่างเครื่องปรับอากาศ",
-            "clicks": 1,
-            "impressions": 18,
-            "position": 3.111111111111111
-          },
-          {
-            "q": "ช่างเครื่องปรับอากาศระดับ 1",
-            "clicks": 1,
-            "impressions": 10,
-            "position": 4.7
-          },
-          {
-            "q": "อบรมช่างแอร์ ฟรี",
-            "clicks": 1,
-            "impressions": 2,
-            "position": 17.5
-          },
-          {
-            "q": "空调技师",
-            "clicks": 0,
-            "impressions": 107,
-            "position": 10.63551401869159
-          },
-          {
-            "q": "สอบช่างแอร์ระดับ1",
-            "clicks": 0,
-            "impressions": 17,
-            "position": 8.647058823529413
-          }
-        ]
-      },
-      {
-        "course": "TSM ทบทวน 3 ชั่วโมง",
-        "cat": "ADR & TSM",
-        "clicks": 26,
-        "prevClicks": 8,
-        "impressions": 543,
-        "position": 6.43646408839779,
-        "bestQ": {
-          "q": "tsm training",
-          "clicks": 0,
-          "impressions": 3,
-          "position": 3.6666666666666665
-        },
-        "kwCount": 16,
-        "topKw": [
-          {
-            "q": "ต่ออายุtsm",
-            "clicks": 2,
-            "impressions": 2,
-            "position": 6.5
-          },
-          {
-            "q": "อบรมต่ออายุ tsm",
-            "clicks": 1,
-            "impressions": 4,
-            "position": 7.5
-          },
-          {
-            "q": "อบรมประกอบการรถบรรทุก",
-            "clicks": 0,
-            "impressions": 8,
-            "position": 5.5
-          },
-          {
-            "q": "อบรม ต่ออายุ tsm ออนไลน์",
-            "clicks": 0,
-            "impressions": 4,
-            "position": 7.25
-          },
-          {
-            "q": "tsm 3.0",
-            "clicks": 0,
-            "impressions": 3,
-            "position": 7.666666666666667
-          }
-        ]
-      },
-      {
-        "course": "H AIS",
-        "cat": "ผู้รับเหมา AIS",
-        "clicks": 24,
-        "prevClicks": 19,
-        "impressions": 356,
-        "position": 4.547752808988764,
-        "bestQ": {
-          "q": "หากเข้าปฏิบัติงานโดยไม่มีบัตร safety passport จะมีค่าปรับเท่าใด",
-          "clicks": 0,
-          "impressions": 5,
-          "position": 1
-        },
-        "kwCount": 19,
-        "topKw": [
-          {
-            "q": "h work",
-            "clicks": 0,
-            "impressions": 8,
-            "position": 3.375
-          },
-          {
-            "q": "ศูนย์ฝึกอบรมเนเชอรัลฯ จ.นนทบุรี",
-            "clicks": 0,
-            "impressions": 8,
-            "position": 1.125
-          },
-          {
-            "q": "หากเข้าปฏิบัติงานโดยไม่มีบัตร safety passport จะมีค่าปรับเท่าใด",
-            "clicks": 0,
-            "impressions": 5,
-            "position": 1
-          },
-          {
-            "q": "ลงทะเบียน ais passport",
-            "clicks": 0,
-            "impressions": 4,
-            "position": 9.75
-          },
-          {
-            "q": "งานที่สูง ภาษาอังกฤษ",
-            "clicks": 0,
-            "impressions": 3,
-            "position": 6
-          }
-        ]
-      },
-      {
-        "course": "ดับเพลิงขั้นต้น",
-        "cat": "การป้องกันและระงับอัคคีภัย",
-        "clicks": 20,
-        "prevClicks": 14,
-        "impressions": 540,
-        "position": 8.842592592592592,
-        "bestQ": {
-          "q": "อบรมดับเพลิงขั้นต้น ฟรี 2569",
-          "clicks": 8,
-          "impressions": 209,
-          "position": 5.220095693779904
-        },
-        "kwCount": 13,
-        "topKw": [
-          {
-            "q": "อบรมดับเพลิงขั้นต้น ฟรี 2569",
-            "clicks": 8,
-            "impressions": 209,
-            "position": 5.220095693779904
-          },
-          {
-            "q": "อบรมดับเพลิงขั้นต้น",
-            "clicks": 1,
-            "impressions": 43,
-            "position": 30.13953488372093
-          },
-          {
-            "q": "อบรมดับเพลิงขั้นต้น 2569",
-            "clicks": 1,
-            "impressions": 15,
-            "position": 7.6
-          },
-          {
-            "q": "เพลิงขั้นต้นหมายถึง",
-            "clicks": 0,
-            "impressions": 13,
-            "position": 6.384615384615385
-          },
-          {
-            "q": "ดับเพลิงขั้นต้น",
-            "clicks": 0,
-            "impressions": 5,
-            "position": 11.2
-          }
-        ]
-      },
-      {
-        "course": "โรยตัว",
-        "cat": "งานบนที่สูง",
-        "clicks": 19,
-        "prevClicks": 1,
-        "impressions": 505,
-        "position": 5.251485148514852,
-        "bestQ": {
-          "q": "อบรมโรยตัว",
-          "clicks": 3,
-          "impressions": 22,
-          "position": 3.0454545454545454
-        },
-        "kwCount": 9,
-        "topKw": [
-          {
-            "q": "อบรมโรยตัว",
-            "clicks": 3,
-            "impressions": 22,
-            "position": 3.0454545454545454
-          },
-          {
-            "q": "rope access คือ",
-            "clicks": 0,
-            "impressions": 13,
-            "position": 9.23076923076923
-          },
-          {
-            "q": "โรยตัว",
-            "clicks": 0,
-            "impressions": 12,
-            "position": 6.75
-          },
-          {
-            "q": "เชือกปฏิบัติงาน",
-            "clicks": 0,
-            "impressions": 10,
-            "position": 12.3
-          },
-          {
-            "q": "งานโรยตัวที่สูง",
-            "clicks": 0,
-            "impressions": 6,
-            "position": 7
-          }
-        ]
-      },
-      {
-        "course": "E CP",
-        "cat": "ผู้รับเหมา CP",
-        "clicks": 19,
-        "prevClicks": 10,
-        "impressions": 387,
-        "position": 6.322997416020672,
-        "bestQ": {
-          "q": "อบรมความปลอดภัยในการทํางานกับไฟฟ้า",
-          "clicks": 0,
-          "impressions": 4,
-          "position": 2.5
-        },
-        "kwCount": 27,
-        "topKw": [
-          {
-            "q": "อบรมความปลอดภัยไฟฟ้า",
-            "clicks": 1,
-            "impressions": 22,
-            "position": 6.409090909090909
-          },
-          {
-            "q": "net training",
-            "clicks": 1,
-            "impressions": 2,
-            "position": 2.5
-          },
-          {
-            "q": "อบรมความปลอดภัยเกี่ยวกับไฟฟ้า",
-            "clicks": 0,
-            "impressions": 26,
-            "position": 7.384615384615385
-          },
-          {
-            "q": "หลักสูตรความปลอดภัยในการทํางานเกี่ยวกับไฟฟ้า",
-            "clicks": 0,
-            "impressions": 8,
-            "position": 8.875
-          },
-          {
-            "q": "net อบรม",
-            "clicks": 0,
-            "impressions": 7,
-            "position": 1.4285714285714286
-          }
-        ]
-      },
-      {
-        "course": "E AIS",
-        "cat": "ผู้รับเหมา AIS",
-        "clicks": 16,
-        "prevClicks": 8,
-        "impressions": 237,
-        "position": 12.345991561181435,
-        "bestQ": {
-          "q": "electrical safety training",
-          "clicks": 0,
-          "impressions": 3,
-          "position": 2
-        },
-        "kwCount": 18,
-        "topKw": [
-          {
-            "q": "net อบรม",
-            "clicks": 0,
-            "impressions": 11,
-            "position": 1
-          },
-          {
-            "q": "e-safety",
-            "clicks": 0,
-            "impressions": 3,
-            "position": 19
-          },
-          {
-            "q": "electrical safety training",
-            "clicks": 0,
-            "impressions": 3,
-            "position": 2
-          },
-          {
-            "q": "e safety",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 43
-          },
-          {
-            "q": "esafety",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 58.5
-          }
-        ]
-      },
-      {
-        "course": "การทำงานบนที่สูง เสาส่งสัญญาณ",
-        "cat": "งานบนที่สูง",
-        "clicks": 14,
-        "prevClicks": 4,
-        "impressions": 359,
-        "position": 6.573816155988858,
-        "bestQ": {
-          "q": "work at high",
-          "clicks": 0,
-          "impressions": 5,
-          "position": 2.4
-        },
-        "kwCount": 11,
-        "topKw": [
-          {
-            "q": "งานที่สูง ภาษาอังกฤษ",
-            "clicks": 1,
-            "impressions": 20,
-            "position": 5.55
-          },
-          {
-            "q": "อบรมทํางานที่สูง ออนไลน์",
-            "clicks": 1,
-            "impressions": 1,
-            "position": 25
-          },
-          {
-            "q": "อบรมที่สูง",
-            "clicks": 0,
-            "impressions": 8,
-            "position": 47.75
-          },
-          {
-            "q": "work at high",
-            "clicks": 0,
-            "impressions": 5,
-            "position": 2.4
-          },
-          {
-            "q": "การทํางานบนที่สูง ภาษาอังกฤษ",
-            "clicks": 0,
-            "impressions": 4,
-            "position": 3.25
-          }
-        ]
-      },
-      {
-        "course": "อับอากาศ - ผู้ปฏิบัติงาน",
-        "cat": "อับอากาศ",
-        "clicks": 12,
-        "prevClicks": 5,
-        "impressions": 569,
-        "position": 8.126537785588752,
-        "bestQ": {
-          "q": "ลูกจ้างที่จะสามารถเข้าอบรมหลักสูตร การทำงานในที่อับอากาศได้ จะต้องผ่านการอบรมหลักสูตรใดมาก่อน",
-          "clicks": 0,
-          "impressions": 48,
-          "position": 3.4375
-        },
-        "kwCount": 22,
-        "topKw": [
-          {
-            "q": "อบรมทบทวนอับอากาศ",
-            "clicks": 1,
-            "impressions": 6,
-            "position": 41.333333333333336
-          },
-          {
-            "q": "ใบเซอร์อับอากาศ",
-            "clicks": 1,
-            "impressions": 2,
-            "position": 4.5
-          },
-          {
-            "q": "อับอากาศ",
-            "clicks": 0,
-            "impressions": 100,
-            "position": 4.66
-          },
-          {
-            "q": "ผู้ปฏิบัติงาน",
-            "clicks": 0,
-            "impressions": 49,
-            "position": 4.346938775510204
-          },
-          {
-            "q": "ลูกจ้างที่จะสามารถเข้าอบรมหลักสูตร การทำงานในที่อับอากาศได้ จะต้องผ่านการอบรมหลักสูตรใดมาก่อน",
-            "clicks": 0,
-            "impressions": 48,
-            "position": 3.4375
-          }
-        ]
-      },
-      {
-        "course": "จป.บริหาร",
-        "cat": "จป & คปอ",
-        "clicks": 12,
-        "prevClicks": 11,
-        "impressions": 328,
-        "position": 11.698170731707316,
-        "bestQ": {
-          "q": "safety officer training",
-          "clicks": 0,
-          "impressions": 3,
-          "position": 6
-        },
-        "kwCount": 24,
-        "topKw": [
-          {
-            "q": "อบรม จป บริหาร",
-            "clicks": 1,
-            "impressions": 19,
-            "position": 33.8421052631579
-          },
-          {
-            "q": "safety office",
-            "clicks": 0,
-            "impressions": 8,
-            "position": 11.375
-          },
-          {
-            "q": "อบรมจปบริหาร",
-            "clicks": 0,
-            "impressions": 4,
-            "position": 37
-          },
-          {
-            "q": "safety officer training",
-            "clicks": 0,
-            "impressions": 3,
-            "position": 6
-          },
-          {
-            "q": "safety training courses",
-            "clicks": 0,
-            "impressions": 3,
-            "position": 71
-          }
-        ]
-      },
-      {
-        "course": "ร้านจำหน่ายและโรงเก็บ LPG",
-        "cat": "กรมธุรกิจพลังงาน",
-        "clicks": 11,
-        "prevClicks": 16,
-        "impressions": 246,
-        "position": 6.09349593495935,
-        "bestQ": {
-          "q": "ร้านจำหน่าย",
-          "clicks": 0,
-          "impressions": 28,
-          "position": 7.178571428571429
-        },
-        "kwCount": 11,
-        "topKw": [
-          {
-            "q": "ร้านจำหน่าย",
-            "clicks": 0,
-            "impressions": 28,
-            "position": 7.178571428571429
-          },
-          {
-            "q": "ผู้ปฏิบัติงาน",
-            "clicks": 0,
-            "impressions": 16,
-            "position": 8
-          },
-          {
-            "q": "ศูนย์ฝึกอบรมเนเชอรัลฯ จ.นนทบุรี",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 1
-          },
-          {
-            "q": "฿3,500",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 8
-          },
-          {
-            "q": "29*3500",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 11
-          }
-        ]
-      },
-      {
-        "course": "TSM 6 ชั่วโมง",
-        "cat": "ADR & TSM",
-        "clicks": 11,
-        "prevClicks": 3,
-        "impressions": 130,
-        "position": 5.930769230769231,
-        "bestQ": null,
-        "kwCount": 7,
-        "topKw": [
-          {
-            "q": "มีแบบออนไลน์มั้ย",
-            "clicks": 1,
-            "impressions": 1,
-            "position": 4
-          },
-          {
-            "q": "อบรม tsm ใกล้ ฉัน",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 10.5
-          },
-          {
-            "q": "2000*6",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 30
-          },
-          {
-            "q": "tsm r",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 9
-          },
-          {
-            "q": "tsm training",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 1
-          }
-        ]
-      },
-      {
-        "course": "TSM 18 ชั่วโมง",
-        "cat": "ADR & TSM",
-        "clicks": 10,
-        "prevClicks": 5,
-        "impressions": 377,
-        "position": 6.76657824933687,
-        "bestQ": {
-          "q": "t sm",
-          "clicks": 0,
-          "impressions": 3,
-          "position": 11
-        },
-        "kwCount": 26,
-        "topKw": [
-          {
-            "q": "ttsm ais",
-            "clicks": 0,
-            "impressions": 4,
-            "position": 16
-          },
-          {
-            "q": "t sm",
-            "clicks": 0,
-            "impressions": 3,
-            "position": 11
-          },
-          {
-            "q": "tsm",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 10.5
-          },
-          {
-            "q": "tsm school",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 4
-          },
-          {
-            "q": "tsm training",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 30
-          }
-        ]
-      },
-      {
-        "course": "T AIS",
-        "cat": "ผู้รับเหมา AIS",
-        "clicks": 10,
-        "prevClicks": 2,
-        "impressions": 210,
-        "position": 6.628571428571429,
-        "bestQ": {
-          "q": "net t",
-          "clicks": 0,
-          "impressions": 4,
-          "position": 4.5
-        },
-        "kwCount": 9,
-        "topKw": [
-          {
-            "q": "ais safety passport",
-            "clicks": 0,
-            "impressions": 9,
-            "position": 5.888888888888889
-          },
-          {
-            "q": "net t",
-            "clicks": 0,
-            "impressions": 4,
-            "position": 4.5
-          },
-          {
-            "q": "ais safety",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 56
-          },
-          {
-            "q": "net อบรม",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 1
-          },
-          {
-            "q": "t'ais",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 6.5
-          }
-        ]
-      },
-      {
-        "course": "จป.เทคนิค",
-        "cat": "จป & คปอ",
-        "clicks": 7,
-        "prevClicks": 2,
-        "impressions": 316,
-        "position": 9.651898734177216,
-        "bestQ": {
-          "q": "อบรมจป.เทคนิค",
-          "clicks": 0,
-          "impressions": 6,
-          "position": 3.1666666666666665
-        },
-        "kwCount": 36,
-        "topKw": [
-          {
-            "q": "อบรม จป",
-            "clicks": 1,
-            "impressions": 3,
-            "position": 19.333333333333332
-          },
-          {
-            "q": "อบรมจป",
-            "clicks": 1,
-            "impressions": 1,
-            "position": 18
-          },
-          {
-            "q": "safety and technical courses",
-            "clicks": 0,
-            "impressions": 28,
-            "position": 5.678571428571429
-          },
-          {
-            "q": "อบรม จป เทคนิค",
-            "clicks": 0,
-            "impressions": 18,
-            "position": 13.722222222222221
-          },
-          {
-            "q": "จป.เทคนิค ภาษาอังกฤษ",
-            "clicks": 0,
-            "impressions": 12,
-            "position": 6.916666666666667
-          }
-        ]
-      },
-      {
-        "course": "ไฟฟ้ากรมสวัสดิ์",
-        "cat": "ช่างไฟฟ้า & ช่างแอร์",
-        "clicks": 7,
-        "prevClicks": 10,
-        "impressions": 218,
-        "position": 13.26605504587156,
-        "bestQ": {
-          "q": "dlpw-approved courses",
-          "clicks": 0,
-          "impressions": 13,
-          "position": 3.3076923076923075
-        },
-        "kwCount": 15,
-        "topKw": [
-          {
-            "q": "ผู้ช่วยนายช่างไฟฟ้า",
-            "clicks": 1,
-            "impressions": 1,
-            "position": 6
-          },
-          {
-            "q": "dlpw-approved courses",
-            "clicks": 0,
-            "impressions": 13,
-            "position": 3.3076923076923075
-          },
-          {
-            "q": "work with electricity",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 11
-          },
-          {
-            "q": "อบรมไฟฟ้า",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 48
-          },
-          {
-            "q": "disconnect reconnect licence",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 64
-          }
-        ]
-      },
-      {
-        "course": "ADR - พื้นฐาน+แท๊งค์",
-        "cat": "ADR & TSM",
-        "clicks": 7,
-        "prevClicks": 4,
-        "impressions": 160,
-        "position": 8.15625,
-        "bestQ": null,
-        "kwCount": 7,
-        "topKw": [
-          {
-            "q": "สอบ adr ขนส่ง",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 7
-          },
-          {
-            "q": "อบรม adr ใกล้ ฉัน",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 1
-          },
-          {
-            "q": "adr 49",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 2
-          },
-          {
-            "q": "adr training courses near me",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 71
-          },
-          {
-            "q": "สมัครที่ไหน",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 1
-          }
-        ]
-      },
-      {
-        "course": "ความปลอดภัยในการทำงานที่สูงบนหลังคา",
-        "cat": "งานบนที่สูง",
-        "clicks": 7,
-        "prevClicks": 0,
-        "impressions": 122,
-        "position": 5.19672131147541,
-        "bestQ": null,
-        "kwCount": 3,
-        "topKw": [
-          {
-            "q": "1800÷12",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 12
-          },
-          {
-            "q": "งานหลังคา",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 5
-          },
-          {
-            "q": "เนเชอรัล",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 1
-          }
-        ]
-      },
-      {
-        "course": "SP CP",
-        "cat": "ผู้รับเหมา CP",
-        "clicks": 7,
-        "prevClicks": 4,
-        "impressions": 115,
-        "position": 6.6347826086956525,
-        "bestQ": null,
-        "kwCount": 5,
-        "topKw": [
-          {
-            "q": "ศูนย์ฝึกอบรมเนเชอรัลฯ จ.นนทบุรี",
-            "clicks": 0,
-            "impressions": 10,
-            "position": 1.1
-          },
-          {
-            "q": "อบรมที่สูง",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 28
-          },
-          {
-            "q": "sp.net",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 9
-          },
-          {
-            "q": "อบรมการทํางานบนที่สูง",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 26
-          },
-          {
-            "q": "ในนนทบุรี",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 6
-          }
-        ]
-      },
-      {
-        "course": "H CP",
-        "cat": "ผู้รับเหมา CP",
-        "clicks": 6,
-        "prevClicks": 0,
-        "impressions": 134,
-        "position": 7.067164179104478,
-        "bestQ": null,
-        "kwCount": 1,
-        "topKw": [
-          {
-            "q": "cp training",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 10
-          }
-        ]
-      },
-      {
-        "course": "EC CP",
-        "cat": "ผู้รับเหมา CP",
-        "clicks": 6,
-        "prevClicks": 0,
-        "impressions": 55,
-        "position": 7.763636363636364,
-        "bestQ": {
-          "q": "cp ec",
-          "clicks": 2,
-          "impressions": 3,
-          "position": 3
-        },
-        "kwCount": 4,
-        "topKw": [
-          {
-            "q": "cp ec",
-            "clicks": 2,
-            "impressions": 3,
-            "position": 3
-          },
-          {
-            "q": "telcom",
-            "clicks": 0,
-            "impressions": 3,
-            "position": 3
-          },
-          {
-            "q": "อบรม ec",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 8
-          },
-          {
-            "q": "ecp electrical",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 63
-          }
-        ]
-      },
-      {
-        "course": "อับอากาศ 4 ผู้",
-        "cat": "อับอากาศ",
-        "clicks": 5,
-        "prevClicks": 3,
-        "impressions": 173,
-        "position": 10.468208092485549,
-        "bestQ": {
-          "q": "ลูกจ้างที่จะสามารถเข้าอบรมหลักสูตร การทำงานในที่อับอากาศได้ จะต้องผ่านการอบรมหลักสูตรใดมาก่อน",
-          "clicks": 0,
-          "impressions": 12,
-          "position": 1.25
-        },
-        "kwCount": 12,
-        "topKw": [
-          {
-            "q": "ลูกจ้างที่จะสามารถเข้าอบรมหลักสูตร การทำงานในที่อับอากาศได้ จะต้องผ่านการอบรมหลักสูตรใดมาก่อน",
-            "clicks": 0,
-            "impressions": 12,
-            "position": 1.25
-          },
-          {
-            "q": "อบรมอับอากาศ 4 ผู้",
-            "clicks": 0,
-            "impressions": 5,
-            "position": 22.8
-          },
-          {
-            "q": "อบรม 4 ผู้อับอากาศ",
-            "clicks": 0,
-            "impressions": 4,
-            "position": 32
-          },
-          {
-            "q": "อบรมที่อับอากาศ",
-            "clicks": 0,
-            "impressions": 4,
-            "position": 59.25
-          },
-          {
-            "q": "confined space 4 ผู้",
-            "clicks": 0,
-            "impressions": 3,
-            "position": 15.666666666666666
-          }
-        ]
-      },
-      {
-        "course": "G Trainer CP",
-        "cat": "Trainer CP",
-        "clicks": 5,
-        "prevClicks": 2,
-        "impressions": 66,
-        "position": 4.4393939393939394,
-        "bestQ": null,
-        "kwCount": 2,
-        "topKw": [
-          {
-            "q": "g trainer",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 3
-          },
-          {
-            "q": "training instructors",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 9
-          }
-        ]
-      },
-      {
-        "course": "EC Trainer CP",
-        "cat": "Trainer CP",
-        "clicks": 4,
-        "prevClicks": 2,
-        "impressions": 49,
-        "position": 7.8979591836734695,
-        "bestQ": {
-          "q": "cp ec",
-          "clicks": 0,
-          "impressions": 3,
-          "position": 6.666666666666667
-        },
-        "kwCount": 1,
-        "topKw": [
-          {
-            "q": "cp ec",
-            "clicks": 0,
-            "impressions": 3,
-            "position": 6.666666666666667
-          }
-        ]
-      },
-      {
-        "course": "ดับเพลิง & อพยพหนีไฟ",
-        "cat": "การป้องกันและระงับอัคคีภัย",
-        "clicks": 3,
-        "prevClicks": 1,
-        "impressions": 664,
-        "position": 12.95933734939759,
-        "bestQ": {
-          "q": "ซ้อมดับเพลิงและอพยพหนีไฟ",
-          "clicks": 0,
-          "impressions": 9,
-          "position": 5.777777777777778
-        },
-        "kwCount": 19,
-        "topKw": [
-          {
-            "q": "อบรมหนีไฟ",
-            "clicks": 0,
-            "impressions": 25,
-            "position": 49.64
-          },
-          {
-            "q": "อบรมดับเพลิงขั้นต้นและซ้อมอพยพหนีไฟ",
-            "clicks": 0,
-            "impressions": 23,
-            "position": 50.26086956521739
-          },
-          {
-            "q": "อบรมดับเพลิงและอพยพหนีไฟ",
-            "clicks": 0,
-            "impressions": 22,
-            "position": 49.63636363636363
-          },
-          {
-            "q": "อบรมดับเพลิง",
-            "clicks": 0,
-            "impressions": 18,
-            "position": 44.833333333333336
-          },
-          {
-            "q": "ซ้อมดับเพลิงและอพยพหนีไฟ",
-            "clicks": 0,
-            "impressions": 9,
-            "position": 5.777777777777778
-          }
-        ]
-      },
-      {
-        "course": "อับอากาศ - ผู้อนุญาต",
-        "cat": "อับอากาศ",
-        "clicks": 3,
-        "prevClicks": 2,
-        "impressions": 118,
-        "position": 15.40677966101695,
-        "bestQ": {
-          "q": "ผู้อนุญาต",
-          "clicks": 0,
-          "impressions": 3,
-          "position": 2.333333333333333
-        },
-        "kwCount": 12,
-        "topKw": [
-          {
-            "q": "confined space 意味",
-            "clicks": 0,
-            "impressions": 6,
-            "position": 12
-          },
-          {
-            "q": "閉所作業",
-            "clicks": 0,
-            "impressions": 6,
-            "position": 8.333333333333332
-          },
-          {
-            "q": "อบรม 4 ผู้อับอากาศ",
-            "clicks": 0,
-            "impressions": 4,
-            "position": 80.25
-          },
-          {
-            "q": "密封空間",
-            "clicks": 0,
-            "impressions": 4,
-            "position": 10
-          },
-          {
-            "q": "ผู้อนุญาต",
-            "clicks": 0,
-            "impressions": 3,
-            "position": 2.333333333333333
-          }
-        ]
-      },
-      {
-        "course": "Trainer -G",
-        "cat": "Trainer AIS",
-        "clicks": 3,
-        "prevClicks": 0,
-        "impressions": 85,
-        "position": 8.376470588235295,
-        "bestQ": {
-          "q": "฿2,700",
-          "clicks": 0,
-          "impressions": 4,
-          "position": 8
-        },
-        "kwCount": 7,
-        "topKw": [
-          {
-            "q": "฿2,700",
-            "clicks": 0,
-            "impressions": 4,
-            "position": 8
-          },
-          {
-            "q": "ais safety",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 71
-          },
-          {
-            "q": "safety instructor",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 10
-          },
-          {
-            "q": "2700 44",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 17
-          },
-          {
-            "q": "safety instructor certification",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 5
-          }
-        ]
-      },
-      {
-        "course": "E Trainer CP",
-        "cat": "Trainer CP",
-        "clicks": 1,
-        "prevClicks": 3,
-        "impressions": 92,
-        "position": 7.5,
-        "bestQ": null,
-        "kwCount": 4,
-        "topKw": [
-          {
-            "q": "cp pass",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 89
-          },
-          {
-            "q": "cp passport",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 10
-          },
-          {
-            "q": "cp safety passport",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 58
-          },
-          {
-            "q": "e-cp",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 6
-          }
-        ]
-      },
-      {
-        "course": "คปอ.",
-        "cat": "จป & คปอ",
-        "clicks": 1,
-        "prevClicks": 2,
-        "impressions": 83,
-        "position": 28.457831325301203,
-        "bestQ": {
-          "q": "กฎหมาย อบรม ค ปอ",
-          "clicks": 0,
-          "impressions": 3,
-          "position": 54
-        },
-        "kwCount": 6,
-        "topKw": [
-          {
-            "q": "อบรม คปอ",
-            "clicks": 1,
-            "impressions": 11,
-            "position": 54.63636363636363
-          },
-          {
-            "q": "อบรมคปอ",
-            "clicks": 0,
-            "impressions": 8,
-            "position": 54.125
-          },
-          {
-            "q": "หลักสูตร ค ปอ",
-            "clicks": 0,
-            "impressions": 5,
-            "position": 62.8
-          },
-          {
-            "q": "กฎหมาย อบรม ค ปอ",
-            "clicks": 0,
-            "impressions": 3,
-            "position": 54
-          },
-          {
-            "q": "ค ปอ อบรม",
-            "clicks": 0,
-            "impressions": 3,
-            "position": 61.666666666666664
-          }
-        ]
-      },
-      {
-        "course": "R CP",
-        "cat": "ผู้รับเหมา CP",
-        "clicks": 1,
-        "prevClicks": 1,
-        "impressions": 48,
-        "position": 3.6666666666666665,
-        "bestQ": null,
-        "kwCount": 1,
-        "topKw": [
-          {
-            "q": "roof work",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 6
-          }
-        ]
-      },
-      {
-        "course": "T CP",
-        "cat": "ผู้รับเหมา CP",
-        "clicks": 1,
-        "prevClicks": 0,
-        "impressions": 37,
-        "position": 8.297297297297296,
-        "bestQ": null,
-        "kwCount": 0,
-        "topKw": []
-      },
-      {
-        "course": "refresh E AIS",
-        "cat": "ผู้รับเหมา AIS",
-        "clicks": 1,
-        "prevClicks": 0,
-        "impressions": 31,
-        "position": 17.612903225806452,
-        "bestQ": null,
-        "kwCount": 3,
-        "topKw": [
-          {
-            "q": "ais safety",
-            "clicks": 0,
-            "impressions": 2,
-            "position": 74.5
-          },
-          {
-            "q": "power awareness refresher",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 74
-          },
-          {
-            "q": "รีเฟรชเทรนนิ่ง",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 8
-          }
-        ]
-      },
-      {
-        "course": "refresh G AIS",
-        "cat": "ผู้รับเหมา AIS",
-        "clicks": 1,
-        "prevClicks": 0,
-        "impressions": 22,
-        "position": 7.181818181818182,
-        "bestQ": null,
-        "kwCount": 1,
-        "topKw": [
-          {
-            "q": "refresh g",
-            "clicks": 0,
-            "impressions": 1,
-            "position": 3
-          }
-        ]
-      }
-    ],
-    "intentKw": [
-      {
-        "q": "อบรมช่างไฟฟ้าภายในอาคาร ระดับ 1",
-        "clicks": 20,
-        "impressions": 206,
-        "position": 4.359223300970873,
-        "course": "ช่างไฟฟ้า ระดับ 1"
-      },
-      {
-        "q": "cp safety passport",
-        "clicks": 15,
-        "impressions": 217,
-        "position": 2.3364055299539173,
-        "course": "หน้า CP Safety Passport"
-      },
-      {
-        "q": "cp passport",
-        "clicks": 12,
-        "impressions": 117,
-        "position": 2.5213675213675213,
-        "course": "หน้า CP Safety Passport"
-      },
-      {
-        "q": "อบรมไฟฟ้าภายในอาคาร ระดับ 1",
-        "clicks": 12,
-        "impressions": 92,
-        "position": 3.3043478260869565,
-        "course": "ช่างไฟฟ้า ระดับ 1"
-      },
-      {
-        "q": "ผู้ปฏิบัติงานสถานที่ใช้ก๊าซปิโตรเลียมเหลว",
-        "clicks": 11,
-        "impressions": 24,
-        "position": 1.1666666666666667,
-        "course": "สถานที่ใช้ LPG"
-      },
-      {
-        "q": "อบรม adr",
-        "clicks": 10,
-        "impressions": 95,
-        "position": 4.094736842105263,
-        "course": "ADR - พื้นฐาน"
-      },
-      {
-        "q": "อบรมโลตัส",
-        "clicks": 9,
-        "impressions": 94,
-        "position": 4.425531914893617,
-        "course": "G CP"
-      },
-      {
-        "q": "อบรมดับเพลิงขั้นต้น ฟรี 2569",
-        "clicks": 8,
-        "impressions": 214,
-        "position": 5.303738317757009,
-        "course": "ดับเพลิงขั้นต้น"
-      },
-      {
-        "q": "อบรม จป หัวหน้างาน",
-        "clicks": 8,
-        "impressions": 94,
-        "position": 9.52127659574468,
-        "course": "จป.หัวหน้างาน"
-      },
-      {
-        "q": "อบรมผู้ปฏิบัติงานสถานที่ใช้ก๊าซธรรมชาติ",
-        "clicks": 8,
-        "impressions": 15,
-        "position": 1.0666666666666667,
-        "course": "สถานที่ใช้ NG"
-      },
-      {
-        "q": "อบรม adr ออนไลน์",
-        "clicks": 7,
-        "impressions": 47,
-        "position": 3.021276595744681,
-        "course": "หมวด ADR & TSM"
-      },
-      {
-        "q": "จป หัวหน้างาน",
-        "clicks": 5,
-        "impressions": 210,
-        "position": 6.5476190476190474,
-        "course": "จป.หัวหน้างาน"
-      },
-      {
-        "q": "cp safety passport มี กี่ หลักสูตร",
-        "clicks": 5,
-        "impressions": 46,
-        "position": 1.2173913043478262,
-        "course": "หน้า CP Safety Passport"
-      },
-      {
-        "q": "อบรมadr",
-        "clicks": 5,
-        "impressions": 44,
-        "position": 3.9545454545454546,
-        "course": "หมวด ADR & TSM"
-      },
-      {
-        "q": "อบรม ผู้ควบคุมก๊าซ lpg 2569",
-        "clicks": 5,
-        "impressions": 32,
-        "position": 3.84375,
-        "course": "สถานที่ใช้ LPG"
-      },
-      {
-        "q": "ais safety passport",
-        "clicks": 5,
-        "impressions": 22,
-        "position": 1.5454545454545454,
-        "course": "หมวด ผู้รับเหมา AIS"
-      },
-      {
-        "q": "ผู้ปฏิบัติงานสถานที่ใช้ก๊าซธรรมชาติ",
-        "clicks": 5,
-        "impressions": 19,
-        "position": 1.1578947368421053,
-        "course": "สถานที่ใช้ NG"
-      },
-      {
-        "q": "ช่างไฟฟ้าภายในอาคาร ระดับ 1",
-        "clicks": 4,
-        "impressions": 90,
-        "position": 6.977777777777778,
-        "course": "ช่างไฟฟ้า ระดับ 1"
-      },
-      {
-        "q": "safety passport",
-        "clicks": 4,
-        "impressions": 44,
-        "position": 1.7272727272727273,
-        "course": "หน้า CP Safety Passport"
-      },
-      {
-        "q": "cp safety passport คือ",
-        "clicks": 4,
-        "impressions": 17,
-        "position": 1.2352941176470589,
-        "course": "หน้า CP Safety Passport"
-      }
-    ],
-    "gapKw": [
-      {
-        "q": "training",
-        "clicks": 0,
-        "impressions": 124,
-        "position": 10.153225806451612,
-        "page": "หน้าแรก"
-      },
-      {
-        "q": "空调技师",
-        "clicks": 0,
-        "impressions": 116,
-        "position": 13.887931034482758,
-        "page": "ช่างแอร์ ระดับ 1"
-      },
-      {
-        "q": "อบรม จป หัวหน้างาน",
-        "clicks": 8,
-        "impressions": 96,
-        "position": 11.041666666666666,
-        "page": "จป.หัวหน้างาน"
-      },
-      {
-        "q": "safety and technical courses",
-        "clicks": 0,
-        "impressions": 51,
-        "position": 21.901960784313726,
-        "page": "จป.เทคนิค"
-      },
-      {
-        "q": "safety training thailand",
-        "clicks": 0,
-        "impressions": 49,
-        "position": 34.97959183673469,
-        "page": "หน้าแรก"
-      },
-      {
-        "q": "safety training courses",
-        "clicks": 0,
-        "impressions": 48,
-        "position": 41.0625,
-        "page": "แคตตาล็อกหลักสูตร"
-      },
-      {
-        "q": "ความปลอดภัยออนไลน์ฟรี",
-        "clicks": 0,
-        "impressions": 44,
-        "position": 32.72727272727273,
-        "page": "หน้าแรก"
-      },
-      {
-        "q": "อบรมดับเพลิงขั้นต้น",
-        "clicks": 1,
-        "impressions": 43,
-        "position": 30.13953488372093,
-        "page": "ดับเพลิงขั้นต้น"
-      },
-      {
-        "q": "industrial safety training",
-        "clicks": 0,
-        "impressions": 35,
-        "position": 41.22857142857143,
-        "page": "แคตตาล็อกหลักสูตร"
-      },
-      {
-        "q": "อบรมที่สูง",
-        "clicks": 2,
-        "impressions": 34,
-        "position": 24.941176470588236,
-        "page": "ความปลอดภัยในงานที่สูง"
-      },
-      {
-        "q": "ais safety",
-        "clicks": 0,
-        "impressions": 27,
-        "position": 33.74074074074074,
-        "page": "แคตตาล็อกหลักสูตร"
-      },
-      {
-        "q": "basic safety training",
-        "clicks": 0,
-        "impressions": 27,
-        "position": 50.407407407407405,
-        "page": "แคตตาล็อกหลักสูตร"
-      },
-      {
-        "q": "อบรมดับเพลิงขั้นต้นและซ้อมอพยพหนีไฟ",
-        "clicks": 0,
-        "impressions": 27,
-        "position": 48.96296296296296,
-        "page": "ดับเพลิง & อพยพหนีไฟ"
-      },
-      {
-        "q": "อบรมหนีไฟ",
-        "clicks": 0,
-        "impressions": 26,
-        "position": 49.61538461538461,
-        "page": "ดับเพลิง & อพยพหนีไฟ"
-      },
-      {
-        "q": "อบรมดับเพลิงและอพยพหนีไฟ",
-        "clicks": 1,
-        "impressions": 24,
-        "position": 48.541666666666664,
-        "page": "ดับเพลิง & อพยพหนีไฟ"
-      },
-      {
-        "q": "สถานีแก๊ส lpg",
-        "clicks": 0,
-        "impressions": 24,
-        "position": 25.375,
-        "page": "สถานที่ใช้ LPG"
-      },
-      {
-        "q": "รักษา ความ ปลอดภัย พลัง ร่วม",
-        "clicks": 0,
-        "impressions": 23,
-        "position": 22.73913043478261,
-        "page": "แคตตาล็อกหลักสูตร"
-      },
-      {
-        "q": "อบรมจปหัวหน้างาน",
-        "clicks": 0,
-        "impressions": 23,
-        "position": 14.91304347826087,
-        "page": "จป.หัวหน้างาน"
-      },
-      {
-        "q": "ttsm ais",
-        "clicks": 0,
-        "impressions": 22,
-        "position": 10.272727272727273,
-        "page": "หน้าแรก"
-      },
-      {
-        "q": "dlpw-approved courses",
-        "clicks": 0,
-        "impressions": 21,
-        "position": 21.38095238095238,
-        "page": "ไฟฟ้ากรมสวัสดิ์"
-      },
-      {
-        "q": "อบรมอัคคีภัย",
-        "clicks": 0,
-        "impressions": 21,
-        "position": 47.333333333333336,
-        "page": "หมวด การป้องกันและระงับอัคคีภัย"
-      },
-      {
-        "q": "อบรม adr ฟรี",
-        "clicks": 0,
-        "impressions": 20,
-        "position": 13.1,
-        "page": "ADR - พื้นฐาน"
-      },
-      {
-        "q": "อบรมดับเพลิง",
-        "clicks": 0,
-        "impressions": 20,
-        "position": 42.95,
-        "page": "ดับเพลิง & อพยพหนีไฟ"
-      },
-      {
-        "q": "อบรม จป บริหาร",
-        "clicks": 1,
-        "impressions": 19,
-        "position": 33.8421052631579,
-        "page": "จป.บริหาร"
-      },
-      {
-        "q": "สถานที่เก็บน้ำมัน",
-        "clicks": 0,
-        "impressions": 19,
-        "position": 12.842105263157896,
-        "page": "สถานที่เก็บรักษาน้ำมัน"
-      },
-      {
-        "q": "อบรมช่างแอร์",
-        "clicks": 0,
-        "impressions": 19,
-        "position": 16.63157894736842,
-        "page": "หมวด ช่างไฟฟ้า & ช่างแอร์"
-      }
-    ],
-    "gapKwThai": [
-      {
-        "q": "อบรม จป หัวหน้างาน",
-        "clicks": 8,
-        "impressions": 96,
-        "position": 11.041666666666666,
-        "page": "จป.หัวหน้างาน"
-      },
-      {
-        "q": "ความปลอดภัยออนไลน์ฟรี",
-        "clicks": 0,
-        "impressions": 44,
-        "position": 32.72727272727273,
-        "page": "หน้าแรก"
-      },
-      {
-        "q": "อบรมดับเพลิงขั้นต้น",
-        "clicks": 1,
-        "impressions": 43,
-        "position": 30.13953488372093,
-        "page": "ดับเพลิงขั้นต้น"
-      },
-      {
-        "q": "อบรมที่สูง",
-        "clicks": 2,
-        "impressions": 34,
-        "position": 24.941176470588236,
-        "page": "ความปลอดภัยในงานที่สูง"
-      },
-      {
-        "q": "อบรมดับเพลิงขั้นต้นและซ้อมอพยพหนีไฟ",
-        "clicks": 0,
-        "impressions": 27,
-        "position": 48.96296296296296,
-        "page": "ดับเพลิง & อพยพหนีไฟ"
-      },
-      {
-        "q": "อบรมหนีไฟ",
-        "clicks": 0,
-        "impressions": 26,
-        "position": 49.61538461538461,
-        "page": "ดับเพลิง & อพยพหนีไฟ"
-      },
-      {
-        "q": "อบรมดับเพลิงและอพยพหนีไฟ",
-        "clicks": 1,
-        "impressions": 24,
-        "position": 48.541666666666664,
-        "page": "ดับเพลิง & อพยพหนีไฟ"
-      },
-      {
-        "q": "สถานีแก๊ส lpg",
-        "clicks": 0,
-        "impressions": 24,
-        "position": 25.375,
-        "page": "สถานที่ใช้ LPG"
-      },
-      {
-        "q": "รักษา ความ ปลอดภัย พลัง ร่วม",
-        "clicks": 0,
-        "impressions": 23,
-        "position": 22.73913043478261,
-        "page": "แคตตาล็อกหลักสูตร"
-      },
-      {
-        "q": "อบรมจปหัวหน้างาน",
-        "clicks": 0,
-        "impressions": 23,
-        "position": 14.91304347826087,
-        "page": "จป.หัวหน้างาน"
-      },
-      {
-        "q": "อบรมอัคคีภัย",
-        "clicks": 0,
-        "impressions": 21,
-        "position": 47.333333333333336,
-        "page": "หมวด การป้องกันและระงับอัคคีภัย"
-      },
-      {
-        "q": "อบรม adr ฟรี",
-        "clicks": 0,
-        "impressions": 20,
-        "position": 13.1,
-        "page": "ADR - พื้นฐาน"
-      },
-      {
-        "q": "อบรมดับเพลิง",
-        "clicks": 0,
-        "impressions": 20,
-        "position": 42.95,
-        "page": "ดับเพลิง & อพยพหนีไฟ"
-      },
-      {
-        "q": "อบรม จป บริหาร",
-        "clicks": 1,
-        "impressions": 19,
-        "position": 33.8421052631579,
-        "page": "จป.บริหาร"
-      },
-      {
-        "q": "สถานที่เก็บน้ำมัน",
-        "clicks": 0,
-        "impressions": 19,
-        "position": 12.842105263157896,
-        "page": "สถานที่เก็บรักษาน้ำมัน"
-      },
-      {
-        "q": "อบรมช่างแอร์",
-        "clicks": 0,
-        "impressions": 19,
-        "position": 16.63157894736842,
-        "page": "หมวด ช่างไฟฟ้า & ช่างแอร์"
-      }
-    ],
-    "brandClicks": 305,
-    "attributedClicks": 602,
-    "ranking": {
-      "good": 30,
-      "page1": 14,
-      "low": 3,
-      "none": 5
+    {
+     "m": "ก.ย.",
+     "clicks": 3637,
+     "impressions": 63228,
+     "days": 30,
+     "partial": false
     },
-    "notRanking": [
+    {
+     "m": "ต.ค.",
+     "clicks": 1289,
+     "impressions": 23605,
+     "days": 13,
+     "partial": true
+    }
+   ],
+   "queriesTotal": 1970,
+   "pagesTotal": 443,
+   "groups": [
+    {
+     "label": "หน้าหลักสูตรรายตัว",
+     "value": 2374
+    },
+    {
+     "label": "หน้าแรก",
+     "value": 945
+    },
+    {
+     "label": "หน้าหมวด + หน้าจังหวัด",
+     "value": 811
+    },
+    {
+     "label": "CP Passport · ติดต่อ · บทความ · อื่น ๆ",
+     "value": 527
+    }
+   ],
+   "groupsPrev": {
+    "course": 1911,
+    "home": 923,
+    "catloc": 740,
+    "other": 423
+   },
+   "devices": [
+    {
+     "label": "Desktop",
+     "value": 2824
+    },
+    {
+     "label": "Mobile",
+     "value": 1642
+    },
+    {
+     "label": "Tablet",
+     "value": 32
+    }
+   ],
+   "byCourse": [
+    {
+     "course": "ช่างไฟฟ้า ระดับ 1",
+     "cat": "ช่างไฟฟ้า & ช่างแอร์",
+     "clicks": 435,
+     "prevClicks": 360,
+     "impressions": 11250,
+     "position": 5.8,
+     "bestQ": {
+      "q": "ใบรับรองช่างไฟฟ้า",
+      "clicks": 0,
+      "impressions": 6,
+      "position": 1
+     },
+     "kwCount": 213,
+     "topKw": [
       {
-        "course": "Trainer -E",
-        "cat": "Trainer AIS",
-        "impressions": 25,
-        "clicks": 0,
-        "position": 32.16,
-        "bestQ": null,
-        "topQ": {
-          "q": "ais safety",
-          "clicks": 0,
-          "impressions": 2,
-          "position": 80
-        },
-        "tier": "none",
-        "tierLabel": "ยังไม่ปรากฏ"
+       "q": "อบรมช่างไฟฟ้าภายในอาคาร ระดับ 1",
+       "clicks": 21,
+       "impressions": 323,
+       "position": 2.8
       },
       {
-        "course": "refresh G AIS",
-        "cat": "ผู้รับเหมา AIS",
-        "impressions": 22,
-        "clicks": 1,
-        "position": 7.181818181818182,
-        "bestQ": null,
-        "topQ": {
-          "q": "refresh g",
-          "clicks": 0,
-          "impressions": 1,
-          "position": 3
-        },
-        "tier": "none",
-        "tierLabel": "ยังไม่ปรากฏ"
+       "q": "อบรมไฟฟ้าระดับ 1",
+       "clicks": 17,
+       "impressions": 224,
+       "position": 2.9
       },
       {
-        "course": "B CP",
-        "cat": "ผู้รับเหมา CP",
-        "impressions": 9,
-        "clicks": 0,
-        "position": 14.222222222222221,
-        "bestQ": null,
-        "topQ": null,
-        "tier": "none",
-        "tierLabel": "ยังไม่ปรากฏ"
-      },
-      {
-        "course": "รถขนส่งน้ำมัน",
-        "cat": "กรมธุรกิจพลังงาน",
-        "impressions": 0,
-        "clicks": 0,
-        "position": null,
-        "bestQ": null,
-        "topQ": null,
-        "tier": "none",
-        "tierLabel": "ยังไม่ปรากฏ"
-      },
-      {
-        "course": "ผู้ปฏิบัติงาน ถังขนส่งก๊าซธรรมชาติเฉพาะพนักงานรับหรือจ่ายก๊าซธรรมชาติ",
-        "cat": "กรมธุรกิจพลังงาน",
-        "impressions": 0,
-        "clicks": 0,
-        "position": null,
-        "bestQ": null,
-        "topQ": null,
-        "tier": "none",
-        "tierLabel": "ยังไม่ปรากฏ"
-      },
-      {
-        "course": "คปอ.",
-        "cat": "จป & คปอ",
-        "impressions": 83,
-        "clicks": 1,
-        "position": 28.457831325301203,
-        "bestQ": {
-          "q": "กฎหมาย อบรม ค ปอ",
-          "clicks": 0,
-          "impressions": 3,
-          "position": 54
-        },
-        "topQ": {
-          "q": "อบรม คปอ",
-          "clicks": 1,
-          "impressions": 11,
-          "position": 54.63636363636363
-        },
-        "tier": "low",
-        "tierLabel": "ยังไม่ติดหน้าแรก"
-      },
-      {
-        "course": "A CP",
-        "cat": "ผู้รับเหมา CP",
-        "impressions": 53,
-        "clicks": 0,
-        "position": 11.584905660377359,
-        "bestQ": {
-          "q": "เชือกปฏิบัติงาน",
-          "clicks": 0,
-          "impressions": 8,
-          "position": 31.125
-        },
-        "topQ": {
-          "q": "เชือกปฏิบัติงาน",
-          "clicks": 0,
-          "impressions": 8,
-          "position": 31.125
-        },
-        "tier": "low",
-        "tierLabel": "ยังไม่ติดหน้าแรก"
-      },
-      {
-        "course": "refresh E AIS",
-        "cat": "ผู้รับเหมา AIS",
-        "impressions": 31,
-        "clicks": 1,
-        "position": 17.612903225806452,
-        "bestQ": null,
-        "topQ": {
-          "q": "ais safety",
-          "clicks": 0,
-          "impressions": 2,
-          "position": 74.5
-        },
-        "tier": "low",
-        "tierLabel": "ยังไม่ติดหน้าแรก"
-      },
-      {
-        "course": "ดับเพลิง & อพยพหนีไฟ",
-        "cat": "การป้องกันและระงับอัคคีภัย",
-        "impressions": 664,
-        "clicks": 3,
-        "position": 12.95933734939759,
-        "bestQ": {
-          "q": "ซ้อมดับเพลิงและอพยพหนีไฟ",
-          "clicks": 0,
-          "impressions": 9,
-          "position": 5.777777777777778
-        },
-        "topQ": {
-          "q": "อบรมหนีไฟ",
-          "clicks": 0,
-          "impressions": 25,
-          "position": 49.64
-        },
-        "tier": "page1",
-        "tierLabel": "หน้าแรก · คลิกยังน้อย"
-      },
-      {
-        "course": "จป.เทคนิค",
-        "cat": "จป & คปอ",
-        "impressions": 316,
-        "clicks": 7,
-        "position": 9.651898734177216,
-        "bestQ": {
-          "q": "อบรมจป.เทคนิค",
-          "clicks": 0,
-          "impressions": 6,
-          "position": 3.1666666666666665
-        },
-        "topQ": {
-          "q": "safety and technical courses",
-          "clicks": 0,
-          "impressions": 28,
-          "position": 5.678571428571429
-        },
-        "tier": "page1",
-        "tierLabel": "หน้าแรก · คลิกยังน้อย"
-      },
-      {
-        "course": "ไฟฟ้ากรมสวัสดิ์",
-        "cat": "ช่างไฟฟ้า & ช่างแอร์",
-        "impressions": 218,
-        "clicks": 7,
-        "position": 13.26605504587156,
-        "bestQ": {
-          "q": "dlpw-approved courses",
-          "clicks": 0,
-          "impressions": 13,
-          "position": 3.3076923076923075
-        },
-        "topQ": {
-          "q": "dlpw-approved courses",
-          "clicks": 0,
-          "impressions": 13,
-          "position": 3.3076923076923075
-        },
-        "tier": "page1",
-        "tierLabel": "หน้าแรก · คลิกยังน้อย"
-      },
-      {
-        "course": "ADR - พื้นฐาน+แท๊งค์",
-        "cat": "ADR & TSM",
-        "impressions": 160,
-        "clicks": 7,
-        "position": 8.15625,
-        "bestQ": null,
-        "topQ": {
-          "q": "สอบ adr ขนส่ง",
-          "clicks": 0,
-          "impressions": 2,
-          "position": 7
-        },
-        "tier": "page1",
-        "tierLabel": "หน้าแรก · คลิกยังน้อย"
-      },
-      {
-        "course": "H CP",
-        "cat": "ผู้รับเหมา CP",
-        "impressions": 134,
-        "clicks": 6,
-        "position": 7.067164179104478,
-        "bestQ": null,
-        "topQ": {
-          "q": "cp training",
-          "clicks": 0,
-          "impressions": 1,
-          "position": 10
-        },
-        "tier": "page1",
-        "tierLabel": "หน้าแรก · คลิกยังน้อย"
-      },
-      {
-        "course": "ความปลอดภัยในการทำงานที่สูงบนหลังคา",
-        "cat": "งานบนที่สูง",
-        "impressions": 122,
-        "clicks": 7,
-        "position": 5.19672131147541,
-        "bestQ": null,
-        "topQ": {
-          "q": "1800÷12",
-          "clicks": 0,
-          "impressions": 1,
-          "position": 12
-        },
-        "tier": "page1",
-        "tierLabel": "หน้าแรก · คลิกยังน้อย"
-      },
-      {
-        "course": "SP CP",
-        "cat": "ผู้รับเหมา CP",
-        "impressions": 115,
-        "clicks": 7,
-        "position": 6.6347826086956525,
-        "bestQ": null,
-        "topQ": {
-          "q": "อบรมที่สูง",
-          "clicks": 0,
-          "impressions": 2,
-          "position": 28
-        },
-        "tier": "page1",
-        "tierLabel": "หน้าแรก · คลิกยังน้อย"
-      },
-      {
-        "course": "E Trainer CP",
-        "cat": "Trainer CP",
-        "impressions": 92,
-        "clicks": 1,
-        "position": 7.5,
-        "bestQ": null,
-        "topQ": {
-          "q": "cp pass",
-          "clicks": 0,
-          "impressions": 1,
-          "position": 89
-        },
-        "tier": "page1",
-        "tierLabel": "หน้าแรก · คลิกยังน้อย"
-      },
-      {
-        "course": "Trainer -G",
-        "cat": "Trainer AIS",
-        "impressions": 85,
-        "clicks": 3,
-        "position": 8.376470588235295,
-        "bestQ": {
-          "q": "฿2,700",
-          "clicks": 0,
-          "impressions": 4,
-          "position": 8
-        },
-        "topQ": {
-          "q": "฿2,700",
-          "clicks": 0,
-          "impressions": 4,
-          "position": 8
-        },
-        "tier": "page1",
-        "tierLabel": "หน้าแรก · คลิกยังน้อย"
-      },
-      {
-        "course": "G Trainer CP",
-        "cat": "Trainer CP",
-        "impressions": 66,
-        "clicks": 5,
-        "position": 4.4393939393939394,
-        "bestQ": null,
-        "topQ": {
-          "q": "g trainer",
-          "clicks": 0,
-          "impressions": 2,
-          "position": 3
-        },
-        "tier": "page1",
-        "tierLabel": "หน้าแรก · คลิกยังน้อย"
-      },
-      {
-        "course": "EC Trainer CP",
-        "cat": "Trainer CP",
-        "impressions": 49,
-        "clicks": 4,
-        "position": 7.8979591836734695,
-        "bestQ": {
-          "q": "cp ec",
-          "clicks": 0,
-          "impressions": 3,
-          "position": 6.666666666666667
-        },
-        "topQ": {
-          "q": "cp ec",
-          "clicks": 0,
-          "impressions": 3,
-          "position": 6.666666666666667
-        },
-        "tier": "page1",
-        "tierLabel": "หน้าแรก · คลิกยังน้อย"
-      },
-      {
-        "course": "R CP",
-        "cat": "ผู้รับเหมา CP",
-        "impressions": 48,
-        "clicks": 1,
-        "position": 3.6666666666666665,
-        "bestQ": null,
-        "topQ": {
-          "q": "roof work",
-          "clicks": 0,
-          "impressions": 2,
-          "position": 6
-        },
-        "tier": "page1",
-        "tierLabel": "หน้าแรก · คลิกยังน้อย"
-      },
-      {
-        "course": "R Trainer CP",
-        "cat": "Trainer CP",
-        "impressions": 48,
-        "clicks": 0,
-        "position": 7.395833333333333,
-        "bestQ": {
-          "q": "สอนความ",
-          "clicks": 0,
-          "impressions": 4,
-          "position": 4.25
-        },
-        "topQ": {
-          "q": "r-training",
-          "clicks": 0,
-          "impressions": 5,
-          "position": 14.4
-        },
-        "tier": "page1",
-        "tierLabel": "หน้าแรก · คลิกยังน้อย"
-      },
-      {
-        "course": "T CP",
-        "cat": "ผู้รับเหมา CP",
-        "impressions": 37,
-        "clicks": 1,
-        "position": 8.297297297297296,
-        "bestQ": null,
-        "topQ": null,
-        "tier": "page1",
-        "tierLabel": "หน้าแรก · คลิกยังน้อย"
+       "q": "อบรมช่างไฟฟ้าภายในอาคาร",
+       "clicks": 10,
+       "impressions": 133,
+       "position": 2.8
       }
+     ]
+    },
+    {
+     "course": "สถานที่ใช้ LPG",
+     "cat": "กรมธุรกิจพลังงาน",
+     "clicks": 347,
+     "prevClicks": 241,
+     "impressions": 2431,
+     "position": 5.7,
+     "bestQ": {
+      "q": "ผู้ปฏิบัติงานสถานที่ใช้ก๊าซปิโตรเลียมเหลว",
+      "clicks": 9,
+      "impressions": 37,
+      "position": 1.1
+     },
+     "kwCount": 57,
+     "topKw": [
+      {
+       "q": "ผู้ปฏิบัติงานสถานที่ใช้ก๊าซปิโตรเลียมเหลว",
+       "clicks": 9,
+       "impressions": 37,
+       "position": 1.1
+      },
+      {
+       "q": "อบรมแก๊ส",
+       "clicks": 7,
+       "impressions": 17,
+       "position": 1.2
+      },
+      {
+       "q": "อบรม ผู้ควบคุมก๊าซ lpg 2569",
+       "clicks": 3,
+       "impressions": 33,
+       "position": 1.9
+      }
+     ]
+    },
+    {
+     "course": "สถานที่เก็บรักษาน้ำมัน",
+     "cat": "กรมธุรกิจพลังงาน",
+     "clicks": 150,
+     "prevClicks": 125,
+     "impressions": 1314,
+     "position": 4.7,
+     "bestQ": {
+      "q": "ที่เก็บน้ำมัน",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 1
+     },
+     "kwCount": 29,
+     "topKw": [
+      {
+       "q": "อบรม ผู้ปฏิบัติงาน สถาน ที่ เก็บ รักษา น้ำมัน 2569",
+       "clicks": 3,
+       "impressions": 8,
+       "position": 1.4
+      },
+      {
+       "q": "ผู้ปฏิบัติงาน",
+       "clicks": 0,
+       "impressions": 114,
+       "position": 5
+      },
+      {
+       "q": "ตรวจสถานที่เก็บรักษาน้ำมัน",
+       "clicks": 0,
+       "impressions": 35,
+       "position": 14.5
+      }
+     ]
+    },
+    {
+     "course": "สถานีบริการน้ำมัน",
+     "cat": "กรมธุรกิจพลังงาน",
+     "clicks": 132,
+     "prevClicks": 153,
+     "impressions": 1520,
+     "position": 4.8,
+     "bestQ": {
+      "q": "บัตรประจําตัวผู้ปฏิบัติงานสถานีบริการน้ํามัน",
+      "clicks": 0,
+      "impressions": 6,
+      "position": 1
+     },
+     "kwCount": 26,
+     "topKw": [
+      {
+       "q": "fuel service station",
+       "clicks": 1,
+       "impressions": 1,
+       "position": 8
+      },
+      {
+       "q": "ผู้ปฏิบัติงาน",
+       "clicks": 0,
+       "impressions": 183,
+       "position": 4.7
+      },
+      {
+       "q": "สถานีบริการน้ำมัน",
+       "clicks": 0,
+       "impressions": 54,
+       "position": 5.3
+      }
+     ]
+    },
+    {
+     "course": "สถานที่ใช้ NG",
+     "cat": "กรมธุรกิจพลังงาน",
+     "clicks": 120,
+     "prevClicks": 129,
+     "impressions": 1806,
+     "position": 4.1,
+     "bestQ": {
+      "q": "อบรม ผู้ปฏิบัติงาน สถาน ที่ ใช้ก๊าซธรรมชาติ 2569",
+      "clicks": 7,
+      "impressions": 19,
+      "position": 1
+     },
+     "kwCount": 38,
+     "topKw": [
+      {
+       "q": "อบรม ผู้ปฏิบัติงาน สถาน ที่ ใช้ก๊าซธรรมชาติ 2569",
+       "clicks": 7,
+       "impressions": 19,
+       "position": 1
+      },
+      {
+       "q": "ผู้ปฏิบัติงานสถานที่ใช้ก๊าซธรรมชาติ",
+       "clicks": 5,
+       "impressions": 46,
+       "position": 1.1
+      },
+      {
+       "q": "อบรมผู้ปฏิบัติงานสถานที่ใช้ก๊าซธรรมชาติ",
+       "clicks": 2,
+       "impressions": 5,
+       "position": 1.2
+      }
+     ]
+    },
+    {
+     "course": "ความปลอดภัยในงานที่สูง",
+     "cat": "งานบนที่สูง",
+     "clicks": 103,
+     "prevClicks": 51,
+     "impressions": 2394,
+     "position": 5.4,
+     "bestQ": {
+      "q": "ตามกฎกระทรวง ฯ ทำงานที่สูง 2564 การทำงานในพื้นที่ปฏิบัติงานที่สูงจากพื้นดิน หรือจากพื้นอาคาร ตั้งแต่กี่เมตรขึ้นไป ถึงเรียกว่าทำงานที่สูง",
+      "clicks": 0,
+      "impressions": 16,
+      "position": 1
+     },
+     "kwCount": 72,
+     "topKw": [
+      {
+       "q": "อบรมที่สูง",
+       "clicks": 9,
+       "impressions": 331,
+       "position": 5
+      },
+      {
+       "q": "ที่สูง",
+       "clicks": 3,
+       "impressions": 115,
+       "position": 7.7
+      },
+      {
+       "q": "อบรมทำงานบนที่สูง",
+       "clicks": 3,
+       "impressions": 9,
+       "position": 7.9
+      }
+     ]
+    },
+    {
+     "course": "G CP",
+     "cat": "ผู้รับเหมา CP",
+     "clicks": 97,
+     "prevClicks": 56,
+     "impressions": 1632,
+     "position": 4.6,
+     "bestQ": {
+      "q": "tesco safety passport",
+      "clicks": 0,
+      "impressions": 9,
+      "position": 1.2
+     },
+     "kwCount": 40,
+     "topKw": [
+      {
+       "q": "อบรมโลตัส",
+       "clicks": 22,
+       "impressions": 54,
+       "position": 2.7
+      },
+      {
+       "q": "safety passport",
+       "clicks": 1,
+       "impressions": 57,
+       "position": 7.4
+      },
+      {
+       "q": "cp safety passport",
+       "clicks": 0,
+       "impressions": 61,
+       "position": 7.5
+      }
+     ]
+    },
+    {
+     "course": "ก๊าซแอมโมเนีย",
+     "cat": "กรมโรงงานอุตสาหกรรม",
+     "clicks": 83,
+     "prevClicks": 85,
+     "impressions": 553,
+     "position": 5.8,
+     "bestQ": {
+      "q": "อบรมหลักสูตรผู้ควบคุมระบบ ทำความ เย็นที่ใช้แอมโมเนียเป็นสาร ทำความ เย็น",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 2
+     },
+     "kwCount": 15,
+     "topKw": [
+      {
+       "q": "อบรม ผู้ควบคุมระบบ ทำความ เย็น 2569",
+       "clicks": 2,
+       "impressions": 26,
+       "position": 5.2
+      },
+      {
+       "q": "แอมโมเนีย",
+       "clicks": 1,
+       "impressions": 8,
+       "position": 74
+      },
+      {
+       "q": "อบรมหลักสูตรผู้ควบคุมระบบ ทำความ เย็นที่ใช้แอมโมเนียเป็นสาร ทำความ เย็น",
+       "clicks": 0,
+       "impressions": 4,
+       "position": 2
+      }
+     ]
+    },
+    {
+     "course": "ดับเพลิงขั้นต้น",
+     "cat": "การป้องกันและระงับอัคคีภัย",
+     "clicks": 64,
+     "prevClicks": 37,
+     "impressions": 2192,
+     "position": 6.5,
+     "bestQ": {
+      "q": "การฝึกอบรมดับเพลิงขั้นต้น",
+      "clicks": 0,
+      "impressions": 8,
+      "position": 1
+     },
+     "kwCount": 45,
+     "topKw": [
+      {
+       "q": "อบรมดับเพลิงขั้นต้น ฟรี 2569",
+       "clicks": 21,
+       "impressions": 305,
+       "position": 4.6
+      },
+      {
+       "q": "อบรมดับเพลิงขั้นต้น",
+       "clicks": 11,
+       "impressions": 795,
+       "position": 6.2
+      },
+      {
+       "q": "อบรมดับเพลิงขั้นต้น 2569",
+       "clicks": 5,
+       "impressions": 26,
+       "position": 3.8
+      }
+     ]
+    },
+    {
+     "course": "TSM ทบทวน 3 ชั่วโมง",
+     "cat": "ADR & TSM",
+     "clicks": 62,
+     "prevClicks": 33,
+     "impressions": 734,
+     "position": 6.1,
+     "bestQ": {
+      "q": "อบรม ต่ออายุ tsm ออนไลน์",
+      "clicks": 4,
+      "impressions": 18,
+      "position": 4.1
+     },
+     "kwCount": 27,
+     "topKw": [
+      {
+       "q": "อบรม ต่ออายุ tsm ออนไลน์",
+       "clicks": 4,
+       "impressions": 18,
+       "position": 4.1
+      },
+      {
+       "q": "อบรมต่ออายุ tsm",
+       "clicks": 3,
+       "impressions": 14,
+       "position": 9
+      },
+      {
+       "q": "มีอบรมออนไลน์ไหม",
+       "clicks": 1,
+       "impressions": 1,
+       "position": 2
+      }
+     ]
+    },
+    {
+     "course": "G AIS",
+     "cat": "ผู้รับเหมา AIS",
+     "clicks": 56,
+     "prevClicks": 56,
+     "impressions": 654,
+     "position": 4.1,
+     "bestQ": {
+      "q": "หากเข้าปฏิบัติงานโดยไม่มีบัตร safety passport จะมีค่าปรับเท่าใด",
+      "clicks": 0,
+      "impressions": 5,
+      "position": 1
+     },
+     "kwCount": 25,
+     "topKw": [
+      {
+       "q": "ais safety passport",
+       "clicks": 3,
+       "impressions": 42,
+       "position": 4.2
+      },
+      {
+       "q": "ais passport",
+       "clicks": 1,
+       "impressions": 49,
+       "position": 5.2
+      },
+      {
+       "q": "g ais",
+       "clicks": 0,
+       "impressions": 11,
+       "position": 8.2
+      }
+     ]
+    },
+    {
+     "course": "จป.หัวหน้างาน",
+     "cat": "จป & คปอ",
+     "clicks": 54,
+     "prevClicks": 60,
+     "impressions": 2238,
+     "position": 5.6,
+     "bestQ": {
+      "q": "จป หัวหน้างาน",
+      "clicks": 13,
+      "impressions": 432,
+      "position": 3
+     },
+     "kwCount": 75,
+     "topKw": [
+      {
+       "q": "จป หัวหน้างาน",
+       "clicks": 13,
+       "impressions": 432,
+       "position": 3
+      },
+      {
+       "q": "จป.หัวหน้างาน",
+       "clicks": 8,
+       "impressions": 499,
+       "position": 3.4
+      },
+      {
+       "q": "อบรม จป หัวหน้างาน",
+       "clicks": 2,
+       "impressions": 58,
+       "position": 20.5
+      }
+     ]
+    },
+    {
+     "course": "สถานีบรรจุ LPG",
+     "cat": "กรมธุรกิจพลังงาน",
+     "clicks": 49,
+     "prevClicks": 60,
+     "impressions": 696,
+     "position": 4.3,
+     "bestQ": {
+      "q": "ปิโตรเลียมเหลว",
+      "clicks": 0,
+      "impressions": 13,
+      "position": 5.2
+     },
+     "kwCount": 19,
+     "topKw": [
+      {
+       "q": "lpg",
+       "clicks": 1,
+       "impressions": 1,
+       "position": 12
+      },
+      {
+       "q": "ปิโตรเลียมเหลว",
+       "clicks": 0,
+       "impressions": 13,
+       "position": 5.2
+      },
+      {
+       "q": "฿3,500",
+       "clicks": 0,
+       "impressions": 5,
+       "position": 5.6
+      }
+     ]
+    },
+    {
+     "course": "ADR - พื้นฐาน",
+     "cat": "ADR & TSM",
+     "clicks": 48,
+     "prevClicks": 41,
+     "impressions": 1412,
+     "position": 6.3,
+     "bestQ": {
+      "q": "สอบ adr ขนส่ง",
+      "clicks": 0,
+      "impressions": 22,
+      "position": 2.6
+     },
+     "kwCount": 36,
+     "topKw": [
+      {
+       "q": "อบรม adr ใกล้ ฉัน",
+       "clicks": 1,
+       "impressions": 16,
+       "position": 6.5
+      },
+      {
+       "q": "อบรม adr คือ",
+       "clicks": 1,
+       "impressions": 12,
+       "position": 4.9
+      },
+      {
+       "q": "basic adr",
+       "clicks": 0,
+       "impressions": 33,
+       "position": 8.7
+      }
+     ]
+    }
+   ],
+   "intentKw": [
+    {
+     "q": "อบรมโลตัส",
+     "clicks": 22,
+     "impressions": 54,
+     "position": 2.7,
+     "course": "G CP"
+    },
+    {
+     "q": "อบรมช่างไฟฟ้าภายในอาคาร ระดับ 1",
+     "clicks": 21,
+     "impressions": 323,
+     "position": 2.8,
+     "course": "ช่างไฟฟ้า ระดับ 1"
+    },
+    {
+     "q": "อบรมดับเพลิงขั้นต้น ฟรี 2569",
+     "clicks": 21,
+     "impressions": 305,
+     "position": 4.6,
+     "course": "ดับเพลิงขั้นต้น"
+    },
+    {
+     "q": "อบรมไฟฟ้าระดับ 1",
+     "clicks": 17,
+     "impressions": 224,
+     "position": 2.9,
+     "course": "ช่างไฟฟ้า ระดับ 1"
+    },
+    {
+     "q": "จป หัวหน้างาน",
+     "clicks": 13,
+     "impressions": 432,
+     "position": 3,
+     "course": "จป.หัวหน้างาน"
+    },
+    {
+     "q": "อบรมดับเพลิงขั้นต้น",
+     "clicks": 11,
+     "impressions": 795,
+     "position": 6.2,
+     "course": "ดับเพลิงขั้นต้น"
+    },
+    {
+     "q": "อบรมช่างไฟฟ้าภายในอาคาร",
+     "clicks": 10,
+     "impressions": 133,
+     "position": 2.8,
+     "course": "ช่างไฟฟ้า ระดับ 1"
+    },
+    {
+     "q": "อบรมไฟฟ้าภายในอาคาร ระดับ 1",
+     "clicks": 10,
+     "impressions": 114,
+     "position": 2.1,
+     "course": "ช่างไฟฟ้า ระดับ 1"
+    },
+    {
+     "q": "อบรมที่สูง",
+     "clicks": 9,
+     "impressions": 331,
+     "position": 5,
+     "course": "ความปลอดภัยในงานที่สูง"
+    },
+    {
+     "q": "อบรม tsm",
+     "clicks": 9,
+     "impressions": 93,
+     "position": 8,
+     "course": "TSM 6 ชั่วโมง"
+    }
+   ],
+   "brandClicks": 559,
+   "attributedClicks": 1138,
+   "ranking": {
+    "good": 35,
+    "page1": 10,
+    "low": 6,
+    "none": 3
+   },
+   "coursesVisible": 54,
+   "tiers": [
+    {
+     "course": "ช่างไฟฟ้า ระดับ 1",
+     "cat": "ช่างไฟฟ้า & ช่างแอร์",
+     "clicks": 435,
+     "impressions": 11250,
+     "tier": "good",
+     "bestQ": {
+      "q": "ใบรับรองช่างไฟฟ้า",
+      "position": 1
+     }
+    },
+    {
+     "course": "สถานที่ใช้ LPG",
+     "cat": "กรมธุรกิจพลังงาน",
+     "clicks": 347,
+     "impressions": 2431,
+     "tier": "good",
+     "bestQ": {
+      "q": "ผู้ปฏิบัติงานสถานที่ใช้ก๊าซปิโตรเลียมเหลว",
+      "position": 1.1
+     }
+    },
+    {
+     "course": "สถานที่เก็บรักษาน้ำมัน",
+     "cat": "กรมธุรกิจพลังงาน",
+     "clicks": 150,
+     "impressions": 1314,
+     "tier": "good",
+     "bestQ": {
+      "q": "ที่เก็บน้ำมัน",
+      "position": 1
+     }
+    },
+    {
+     "course": "สถานีบริการน้ำมัน",
+     "cat": "กรมธุรกิจพลังงาน",
+     "clicks": 132,
+     "impressions": 1520,
+     "tier": "good",
+     "bestQ": {
+      "q": "บัตรประจําตัวผู้ปฏิบัติงานสถานีบริการน้ํามัน",
+      "position": 1
+     }
+    },
+    {
+     "course": "สถานที่ใช้ NG",
+     "cat": "กรมธุรกิจพลังงาน",
+     "clicks": 120,
+     "impressions": 1806,
+     "tier": "good",
+     "bestQ": {
+      "q": "อบรม ผู้ปฏิบัติงาน สถาน ที่ ใช้ก๊าซธรรมชาติ 2569",
+      "position": 1
+     }
+    },
+    {
+     "course": "ความปลอดภัยในงานที่สูง",
+     "cat": "งานบนที่สูง",
+     "clicks": 103,
+     "impressions": 2394,
+     "tier": "good",
+     "bestQ": {
+      "q": "ตามกฎกระทรวง ฯ ทำงานที่สูง 2564 การทำงานในพื้นที่ปฏิบัติงานที่สูงจากพื้นดิน หรือจากพื้นอาคาร ตั้งแต่กี่เมตรขึ้นไป ถึงเรียกว่าทำงานที่สูง",
+      "position": 1
+     }
+    },
+    {
+     "course": "G CP",
+     "cat": "ผู้รับเหมา CP",
+     "clicks": 97,
+     "impressions": 1632,
+     "tier": "good",
+     "bestQ": {
+      "q": "tesco safety passport",
+      "position": 1.2
+     }
+    },
+    {
+     "course": "ก๊าซแอมโมเนีย",
+     "cat": "กรมโรงงานอุตสาหกรรม",
+     "clicks": 83,
+     "impressions": 553,
+     "tier": "good",
+     "bestQ": {
+      "q": "อบรมหลักสูตรผู้ควบคุมระบบ ทำความ เย็นที่ใช้แอมโมเนียเป็นสาร ทำความ เย็น",
+      "position": 2
+     }
+    },
+    {
+     "course": "ดับเพลิงขั้นต้น",
+     "cat": "การป้องกันและระงับอัคคีภัย",
+     "clicks": 64,
+     "impressions": 2192,
+     "tier": "good",
+     "bestQ": {
+      "q": "การฝึกอบรมดับเพลิงขั้นต้น",
+      "position": 1
+     }
+    },
+    {
+     "course": "TSM ทบทวน 3 ชั่วโมง",
+     "cat": "ADR & TSM",
+     "clicks": 62,
+     "impressions": 734,
+     "tier": "good",
+     "bestQ": {
+      "q": "อบรม ต่ออายุ tsm ออนไลน์",
+      "position": 4.1
+     }
+    },
+    {
+     "course": "G AIS",
+     "cat": "ผู้รับเหมา AIS",
+     "clicks": 56,
+     "impressions": 654,
+     "tier": "good",
+     "bestQ": {
+      "q": "หากเข้าปฏิบัติงานโดยไม่มีบัตร safety passport จะมีค่าปรับเท่าใด",
+      "position": 1
+     }
+    },
+    {
+     "course": "จป.หัวหน้างาน",
+     "cat": "จป & คปอ",
+     "clicks": 54,
+     "impressions": 2238,
+     "tier": "good",
+     "bestQ": {
+      "q": "จป หัวหน้างาน",
+      "position": 3
+     }
+    },
+    {
+     "course": "สถานีบรรจุ LPG",
+     "cat": "กรมธุรกิจพลังงาน",
+     "clicks": 49,
+     "impressions": 696,
+     "tier": "good",
+     "bestQ": {
+      "q": "ปิโตรเลียมเหลว",
+      "position": 5.2
+     }
+    },
+    {
+     "course": "ADR - พื้นฐาน",
+     "cat": "ADR & TSM",
+     "clicks": 48,
+     "impressions": 1412,
+     "tier": "good",
+     "bestQ": {
+      "q": "สอบ adr ขนส่ง",
+      "position": 2.6
+     }
+    },
+    {
+     "course": "E CP",
+     "cat": "ผู้รับเหมา CP",
+     "clicks": 46,
+     "impressions": 693,
+     "tier": "good",
+     "bestQ": {
+      "q": "อบรมความปลอดภัยในการทํางานกับไฟฟ้า",
+      "position": 2.7
+     }
+    },
+    {
+     "course": "โรยตัว",
+     "cat": "งานบนที่สูง",
+     "clicks": 46,
+     "impressions": 1121,
+     "tier": "good",
+     "bestQ": {
+      "q": "อบรมโรยตัว",
+      "position": 3
+     }
+    },
+    {
+     "course": "Solar Cell",
+     "cat": "ความปลอดภัยในงานที่สูง โซล่าเซลล์",
+     "clicks": 42,
+     "impressions": 1186,
+     "tier": "good",
+     "bestQ": {
+      "q": "solar pv electrical safety training",
+      "position": 2.8
+     }
+    },
+    {
+     "course": "ร้านจำหน่ายและโรงเก็บ LPG",
+     "cat": "กรมธุรกิจพลังงาน",
+     "clicks": 37,
+     "impressions": 383,
+     "tier": "good",
+     "bestQ": {
+      "q": "ผู้ปฏิบัติ",
+      "position": 6.9
+     }
+    },
+    {
+     "course": "TSM 18 ชั่วโมง",
+     "cat": "ADR & TSM",
+     "clicks": 36,
+     "impressions": 1089,
+     "tier": "good",
+     "bestQ": {
+      "q": "tsm training",
+      "position": 2.7
+     }
+    },
+    {
+     "course": "ช่างแอร์ ระดับ 1",
+     "cat": "ช่างไฟฟ้า & ช่างแอร์",
+     "clicks": 35,
+     "impressions": 1004,
+     "tier": "good",
+     "bestQ": {
+      "q": "ช่างแอร์ระดับ 1",
+      "position": 2.3
+     }
+    },
+    {
+     "course": "E AIS",
+     "cat": "ผู้รับเหมา AIS",
+     "clicks": 35,
+     "impressions": 375,
+     "tier": "good",
+     "bestQ": null
+    },
+    {
+     "course": "ADR - พื้นฐาน+แท๊งค์",
+     "cat": "ADR & TSM",
+     "clicks": 31,
+     "impressions": 626,
+     "tier": "good",
+     "bestQ": {
+      "q": "สอบ adr ขนส่ง",
+      "position": 7.4
+     }
+    },
+    {
+     "course": "H AIS",
+     "cat": "ผู้รับเหมา AIS",
+     "clicks": 28,
+     "impressions": 685,
+     "tier": "good",
+     "bestQ": {
+      "q": "ระยะเวลาของบัตร ais safety passport มีอายุทั้งสิ้นกี่ปี",
+      "position": 3.7
+     }
+    },
+    {
+     "course": "ต่ออายุต่อบัตร",
+     "cat": "กรมธุรกิจพลังงาน",
+     "clicks": 25,
+     "impressions": 766,
+     "tier": "good",
+     "bestQ": {
+      "q": "บัตรกรมพลังงาน",
+      "position": 7.7
+     }
+    },
+    {
+     "course": "TSM 6 ชั่วโมง",
+     "cat": "ADR & TSM",
+     "clicks": 21,
+     "impressions": 576,
+     "tier": "good",
+     "bestQ": {
+      "q": "การอบรม tsm",
+      "position": 5.8
+     }
+    },
+    {
+     "course": "อับอากาศ 4 ผู้",
+     "cat": "อับอากาศ",
+     "clicks": 19,
+     "impressions": 427,
+     "tier": "good",
+     "bestQ": {
+      "q": "confined space work",
+      "position": 10.3
+     }
+    },
+    {
+     "course": "จป.เทคนิค",
+     "cat": "จป & คปอ",
+     "clicks": 19,
+     "impressions": 717,
+     "tier": "good",
+     "bestQ": {
+      "q": "safety and technical courses",
+      "position": 3.8
+     }
+    },
+    {
+     "course": "SP CP",
+     "cat": "ผู้รับเหมา CP",
+     "clicks": 17,
+     "impressions": 345,
+     "tier": "good",
+     "bestQ": {
+      "q": "sp training",
+      "position": 8.5
+     }
+    },
+    {
+     "course": "ดับเพลิง & อพยพหนีไฟ",
+     "cat": "การป้องกันและระงับอัคคีภัย",
+     "clicks": 16,
+     "impressions": 1276,
+     "tier": "good",
+     "bestQ": {
+      "q": "เมื่อฝึกซ้อมดับเพลิงและอพยพหนีไฟเสร็จสิ้น ต้องจัดทำรายงานผลการฝึกซ้อมภายในกี่วัน",
+      "position": 1
+     }
+    },
+    {
+     "course": "รถขนส่งน้ำมัน",
+     "cat": "กรมธุรกิจพลังงาน",
+     "clicks": 15,
+     "impressions": 120,
+     "tier": "good",
+     "bestQ": null
+    },
+    {
+     "course": "G Trainer CP",
+     "cat": "Trainer CP",
+     "clicks": 14,
+     "impressions": 122,
+     "tier": "good",
+     "bestQ": {
+      "q": "g trainer",
+      "position": 1.2
+     }
+    },
+    {
+     "course": "จป.บริหาร",
+     "cat": "จป & คปอ",
+     "clicks": 11,
+     "impressions": 475,
+     "tier": "good",
+     "bestQ": {
+      "q": "เรียน จป",
+      "position": 9
+     }
+    },
+    {
+     "course": "R CP",
+     "cat": "ผู้รับเหมา CP",
+     "clicks": 11,
+     "impressions": 121,
+     "tier": "good",
+     "bestQ": {
+      "q": "อบรมที่สูง",
+      "position": 4.4
+     }
+    },
+    {
+     "course": "ไฟฟ้ากรมสวัสดิ์",
+     "cat": "ช่างไฟฟ้า & ช่างแอร์",
+     "clicks": 10,
+     "impressions": 401,
+     "tier": "good",
+     "bestQ": {
+      "q": "dlpw-approved courses",
+      "position": 1.8
+     }
+    },
+    {
+     "course": "ความปลอดภัยในการทำงานที่สูงบนหลังคา",
+     "cat": "งานบนที่สูง",
+     "clicks": 10,
+     "impressions": 309,
+     "tier": "good",
+     "bestQ": null
+    },
+    {
+     "course": "การทำงานบนที่สูง เสาส่งสัญญาณ",
+     "cat": "งานบนที่สูง",
+     "clicks": 8,
+     "impressions": 714,
+     "tier": "page1",
+     "bestQ": {
+      "q": "ทํางานบนที่สูง ภาษาอังกฤษ",
+      "position": 3.6
+     }
+    },
+    {
+     "course": "อับอากาศ - ผู้ปฏิบัติงาน",
+     "cat": "อับอากาศ",
+     "clicks": 7,
+     "impressions": 521,
+     "tier": "page1",
+     "bestQ": {
+      "q": "閉所作業",
+      "position": 3.7
+     }
+    },
+    {
+     "course": "T AIS",
+     "cat": "ผู้รับเหมา AIS",
+     "clicks": 6,
+     "impressions": 313,
+     "tier": "page1",
+     "bestQ": {
+      "q": "ais t",
+      "position": 6.5
+     }
+    },
+    {
+     "course": "H CP",
+     "cat": "ผู้รับเหมา CP",
+     "clicks": 4,
+     "impressions": 203,
+     "tier": "page1",
+     "bestQ": {
+      "q": "h-work",
+      "position": 4.9
+     }
+    },
+    {
+     "course": "Trainer -G",
+     "cat": "Trainer AIS",
+     "clicks": 3,
+     "impressions": 121,
+     "tier": "page1",
+     "bestQ": {
+      "q": "฿2,700",
+      "position": 8.3
+     }
+    },
+    {
+     "course": "refresh G AIS",
+     "cat": "ผู้รับเหมา AIS",
+     "clicks": 2,
+     "impressions": 64,
+     "tier": "page1",
+     "bestQ": {
+      "q": "refresh training",
+      "position": 8.2
+     }
+    },
+    {
+     "course": "R Trainer CP",
+     "cat": "Trainer CP",
+     "clicks": 1,
+     "impressions": 107,
+     "tier": "page1",
+     "bestQ": {
+      "q": "r-training",
+      "position": 7.5
+     }
+    },
+    {
+     "course": "E Trainer CP",
+     "cat": "Trainer CP",
+     "clicks": 1,
+     "impressions": 93,
+     "tier": "page1",
+     "bestQ": {
+      "q": "cp pass",
+      "position": 9
+     }
+    },
+    {
+     "course": "T CP",
+     "cat": "ผู้รับเหมา CP",
+     "clicks": 1,
+     "impressions": 141,
+     "tier": "page1",
+     "bestQ": {
+      "q": "t-training",
+      "position": 6.7
+     }
+    },
+    {
+     "course": "อับอากาศ - ผู้อนุญาต",
+     "cat": "อับอากาศ",
+     "clicks": 1,
+     "impressions": 262,
+     "tier": "page1",
+     "bestQ": {
+      "q": "confined space training",
+      "position": 4.4
+     }
+    },
+    {
+     "course": "EC CP",
+     "cat": "ผู้รับเหมา CP",
+     "clicks": 8,
+     "impressions": 96,
+     "tier": "low",
+     "bestQ": null
+    },
+    {
+     "course": "คปอ.",
+     "cat": "จป & คปอ",
+     "clicks": 2,
+     "impressions": 100,
+     "tier": "low",
+     "bestQ": {
+      "q": "อบรม คปอ",
+      "position": 42.8
+     }
+    },
+    {
+     "course": "refresh E AIS",
+     "cat": "ผู้รับเหมา AIS",
+     "clicks": 2,
+     "impressions": 109,
+     "tier": "low",
+     "bestQ": null
+    },
+    {
+     "course": "B CP",
+     "cat": "ผู้รับเหมา CP",
+     "clicks": 1,
+     "impressions": 172,
+     "tier": "low",
+     "bestQ": {
+      "q": "ลิฟต์บ้าน 3 ชั้น",
+      "position": 60
+     }
+    },
+    {
+     "course": "EC Trainer CP",
+     "cat": "Trainer CP",
+     "clicks": 1,
+     "impressions": 54,
+     "tier": "low",
+     "bestQ": null
+    },
+    {
+     "course": "A CP",
+     "cat": "ผู้รับเหมา CP",
+     "clicks": 1,
+     "impressions": 148,
+     "tier": "low",
+     "bestQ": null
+    },
+    {
+     "course": "forklift",
+     "cat": "การฝึกอบรมลูกจ้างซึ่งจะทำหน้าที่เป็นผู้ขับรถยก",
+     "clicks": 1,
+     "impressions": 30,
+     "tier": "none",
+     "bestQ": null
+    },
+    {
+     "course": "Trainer -E",
+     "cat": "Trainer AIS",
+     "clicks": 0,
+     "impressions": 42,
+     "tier": "none",
+     "bestQ": null
+    },
+    {
+     "course": "ผู้ปฏิบัติงาน ถังขนส่งก๊าซธรรมชาติเฉพาะพนักงานรับหรือจ่ายก๊าซธรรมชาติ",
+     "cat": "กรมธุรกิจพลังงาน",
+     "clicks": 0,
+     "impressions": 33,
+     "tier": "none",
+     "bestQ": null
+    }
+   ],
+   "locations": [
+    [
+     "chiangmai",
+     67,
+     575
     ],
-    "locations": [
-      [
-        "hatyai",
-        36,
-        357
-      ],
-      [
-        "phitsanulok",
-        21,
-        149
-      ],
-      [
-        "chiangmai",
-        17,
-        190
-      ],
-      [
-        "nonthaburi",
-        11,
-        166
-      ],
-      [
-        "suratthani",
-        10,
-        78
-      ],
-      [
-        "korat",
-        8,
-        98
-      ],
-      [
-        "rayong",
-        5,
-        201
-      ],
-      [
-        "online",
-        3,
-        51
-      ],
-      [
-        "chachoengsao",
-        0,
-        3
-      ]
+    [
+     "hatyai",
+     51,
+     461
     ],
-    "headline": "คลิกจาก Google +37%/วัน · การมองเห็น +76% — หลังงาน SEO ชุด ส.ค. ขึ้นระบบ 11–20 ส.ค.",
-    "headline2": "30 จาก 52 หลักสูตรติดอันดับและได้คลิกแล้ว — หัวหอกคือพลังงาน + ช่างไฟฟ้า",
-    "headline3": "ค้นชื่อหลักสูตรเจอหน้าแรก 44 จาก 52 — ที่ยังไม่ติดคือ \"คำทั่วไป\" ที่ลูกค้าใช้ค้น",
-    "execLine": "<ul class=\"blist\"><li><div class=\"itile sm yellow\"><span data-icon=\"trending-up\"></span></div><div><b>คลิกจาก Google +37% ต่อวัน · การมองเห็น +76%</b> เทียบ 23 วันก่อนหน้า — โตหลังงาน SEO ชุด 11–20 ส.ค. ขึ้นระบบ</div></li><li><div class=\"itile sm yellow\"><span data-icon=\"check\"></span></div><div><b>44 จาก 52 หลักสูตรอยู่หน้าแรก</b>เมื่อค้นชื่อหลักสูตร (30 ได้คลิกดีแล้ว) — หัวหอกคือหลักสูตรกรมธุรกิจพลังงานและช่างไฟฟ้า ระดับ 1 (226 คลิก)</div></li><li><div class=\"itile sm yellow\"><span data-icon=\"triangle-alert\"></span></div><div><b>ที่ยังไม่ติดคือคำทั่วไปที่ลูกค้าใช้</b> เช่น \"อบรม จป หัวหน้างาน\" (11) · \"ความปลอดภัยออนไลน์ฟรี\" (33) · \"อบรมดับเพลิงขั้นต้น\" (30) — เราอยู่หน้า 3–6 · 5 หลักสูตรยังไม่ปรากฏเลย (สไลด์ 13)</div></li></ul>",
-    "execText": "SEO: คลิกจาก Google <b>+37%/วัน</b> · การมองเห็น <b>+76%</b> เทียบ 23 วันก่อนหน้า · ค้นชื่อหลักสูตรเจอหน้าแรก <b>44 จาก 52</b> (30 ได้คลิกดีแล้ว) · ที่ยังไม่ติดคือคำทั่วไปที่ลูกค้าใช้ เช่น \"อบรม จป หัวหน้างาน\" (11) · \"ความปลอดภัยออนไลน์ฟรี\" (33) · \"อบรมดับเพลิงขั้นต้น\" (30) (ดูหัวข้อ 07)",
-    "insights": [
-      "<b>+37% คลิก/วัน · +76% การแสดงผล/วัน</b> เทียบ 23 วันก่อนหน้า (78 → 107 คลิก/วัน) — กราฟยกตัวหลังงาน SEO ชุด 11–20 ส.ค. ขึ้นระบบ",
-      "<b>อันดับดีขึ้น 7.8 → 7.6</b> แม้ฐานแสดงผลใหญ่ขึ้นมาก (CTR ลดเป็นผลปกติ)",
-      "<b>หน้าจังหวัดใหม่ได้ 111 คลิก</b> จาก 23 ในรอบก่อน (หาดใหญ่ 36 · พิษณุโลก 21 · เชียงใหม่ 17)"
+    [
+     "nonthaburi",
+     24,
+     576
     ],
-    "brandNote": "<b>คำค้นชื่อบริษัท = ครึ่งหนึ่ง</b>ของคลิกที่ Google เปิดเผยคำค้น (305 จาก 602) · Google ไม่เปิดเผยคำค้นของอีก 1,857 คลิก (76%) — แต่การจับคู่หลักสูตรใช้หน้าที่ถูกคลิก จึงครบทุกคลิก",
-    "notRankingNotes": [
-      "<b>ค้นด้วยชื่อหลักสูตร เราอยู่หน้าแรกเกือบทุกตัว</b> (44 จาก 52) — แต่ชื่อหลักสูตรเต็ม ๆ แทบไม่มีคนค้น คำที่ลูกค้าใช้จริงคือคำสั้น ๆ เช่น \"อบรมดับเพลิง\" \"อบรม คปอ\" \"อบรมอับอากาศ\" ซึ่งคู่แข่งเยอะและเรายังอยู่หน้า 3–6",
-      "<b>ควรทำก่อน:</b> เติมเนื้อหาหน้าหลักสูตรที่ตรงกับคำในตารางซ้าย ตามลำดับการแสดงผล — กลุ่มดับเพลิง/หนีไฟ (รวม ~90 การแสดงผล/23 วัน) · คปอ. · อับอากาศ · จป.บริหาร · ที่สูง — ร่างเนื้อหา 50 หลักสูตรเตรียมไว้แล้ว",
-      "<b>5 หลักสูตรที่ยังไม่ปรากฏเลย</b> (refresh G AIS · Trainer -E · B CP · รถขนส่งน้ำมัน · ผู้ปฏิบัติงาน ถังขนส่งก๊าซธรรมชาติเฉพาะพนักงานรับหรือจ่ายก๊าซธรรมชาติ) — 2 หลักสูตรกรมธุรกิจพลังงานยังไม่มี URL ชื่อหลักสูตร/คำอธิบายในระบบ ต้องเติมข้อมูลก่อน · ที่เหลือคือ refresh/Trainer ที่ขายผ่านลูกค้าองค์กร"
+    [
+     "khonkaen",
+     21,
+     187
     ],
-    "tierRule": "วัดจาก \"คำค้นที่ดีที่สุด\" ของแต่ละหน้าหลักสูตร (คำที่ไม่ใช่ชื่อบริษัท มีการแสดงผล ≥ 3 ครั้ง) ไม่ใช่อันดับเฉลี่ย · ติดอันดับดี = ได้คลิก ≥ 10 หรือมีคำค้นอันดับ ≤ 3 · หน้าแรก = มีคำค้นอันดับ ≤ 10 · ยังไม่ติดหน้าแรก = แสดงผล ≥ 30 ครั้งแต่ไม่มีคำไหนอยู่หน้าแรก · ยังไม่ปรากฏ = แสดงผล < 30 ครั้งใน 23 วัน · หมายเหตุ: ผลค้นหาบนเครื่องของเราเองมักดีกว่าค่าเฉลี่ยจริง เพราะ Google ปรับตามประวัติผู้ใช้"
+    [
+     "online",
+     19,
+     157
+    ],
+    [
+     "korat",
+     12,
+     221
+    ],
+    [
+     "phitsanulok",
+     5,
+     73
+    ],
+    [
+     "rayong",
+     4,
+     147
+    ]
+   ],
+   "locationsPrev": [
+    [
+     "hatyai",
+     47,
+     450
+    ],
+    [
+     "phitsanulok",
+     25,
+     217
+    ],
+    [
+     "chiangmai",
+     22,
+     223
+    ],
+    [
+     "nonthaburi",
+     12,
+     211
+    ],
+    [
+     "korat",
+     11,
+     130
+    ],
+    [
+     "suratthani",
+     11,
+     103
+    ],
+    [
+     "rayong",
+     6,
+     229
+    ],
+    [
+     "online",
+     3,
+     57
+    ],
+    [
+     "chachoengsao",
+     0,
+     4
+    ]
+   ]
+  },
+
+  seoText: {
+    headline: 'คลิกจาก Google <em>+16%/วัน</em> · การมองเห็น +29% · อันดับเฉลี่ยดีขึ้น 7.6 → 6.3',
+    headline2: 'หน้าหลักสูตรได้คลิก <em>+24%</em> — ช่างไฟฟ้า L1 และกลุ่มพลังงานยังเป็นหัวหอก',
+    headline3: 'คำค้นทั่วไปเริ่มขึ้นหน้าแรก — "อบรมดับเพลิงขั้นต้น" จากอันดับ 36 เป็น <em>6</em>',
+    insights: [
+      '<b>ก.ย. = เดือนที่ได้คลิกจาก Google มากที่สุด</b> 3,637 คลิก (ส.ค. 3,094 · ก.ค. 2,441)',
+      '<b>45 จาก 54 หลักสูตรอยู่หน้าแรก</b> เมื่อค้นด้วยคำของหลักสูตรนั้น (รอบก่อน 44 จาก 52)',
+      '<b>หน้าจังหวัดโตต่อ</b> เชียงใหม่ 67 คลิก (จาก 22) · หาดใหญ่ 51 · ขอนแก่น 21 (ใหม่)',
+    ],
+    brandNote: '<b>Google ไม่เปิดเผยคำค้นของ ~75% ของคลิก</b> — ตารางคำค้นจึงครอบคลุมราว 1 ใน 4 ของคลิก ส่วนการนับคลิกต่อหลักสูตรใช้หน้าที่ถูกคลิกจริง จึงครบทุกคลิก · คำค้นชื่อบริษัทคิดเป็น 49% ของคลิกที่เห็นคำค้น',
+    movers: [
+      { q: 'อบรมดับเพลิงขั้นต้น', from: 36.3, to: 6.2, impr: 796, clicks: 11 },
+      { q: 'อบรมที่สูง', from: 23.2, to: 5.0, impr: 337, clicks: 9 },
+      { q: 'อบรมช่างแอร์', from: 25.9, to: 7.2, impr: 49, clicks: 2 },
+      { q: 'อบรม tsm', from: 16.0, to: 8.0, impr: 98, clicks: 10 },
+      { q: 'อบรมช่างไฟฟ้า', from: 14.3, to: 5.4, impr: 51, clicks: 2 },
+      { q: 'จป หัวหน้างาน', from: 6.4, to: 3.0, impr: 432, clicks: 13 },
+      { q: 'อบรม adr ออนไลน์', from: 4.8, to: 1.1, impr: 77, clicks: 15 },
+    ],
+    gaps: [
+      { q: 'อบรมดับเพลิงและอพยพหนีไฟ', pos: 47.9, impr: 27, course: 'ดับเพลิง & อพยพหนีไฟ' },
+      { q: 'อบรม คปอ', pos: 42.8, impr: 10, course: 'คปอ.' },
+      { q: 'อบรมดับเพลิง', pos: 41.3, impr: 31, course: 'ดับเพลิง & อพยพหนีไฟ' },
+      { q: 'อบรม จป บริหาร', pos: 25.7, impr: 21, course: 'จป.บริหาร' },
+      { q: 'สถานีแก๊ส lpg', pos: 23.6, impr: 30, course: 'สถานที่ใช้ LPG' },
+      { q: 'ความปลอดภัยออนไลน์ฟรี', pos: 23.5, impr: 33, course: 'หน้ารวมหลักสูตร' },
+      { q: 'อบรม จป หัวหน้างาน', pos: 20.5, impr: 58, course: 'จป.หัวหน้างาน', note: 'รอบก่อน 9.3' },
+    ],
+    notRankingNotes: [
+      '<b>คำทั่วไปเริ่มติดแล้ว</b> — 7 คำ เช่น "อบรมดับเพลิงขั้นต้น" "อบรมที่สูง" ขยับขึ้นหน้าแรก หลังเติมเนื้อหาหน้าหลักสูตรรอบ ส.ค. (เดิมติดได้เฉพาะเมื่อค้นชื่อหลักสูตรเต็ม)',
+      '<b>กลุ่มที่ยังไม่ติด: ดับเพลิง/หนีไฟ · คปอ. · จป.บริหาร</b> — อยู่หน้า 3–5 · ควรเติมเนื้อหาหน้า "ดับเพลิง & อพยพหนีไฟ" และ "คปอ." ก่อน (มีคนค้นทุกวัน)',
+      '<b>9 หลักสูตรยังไม่ขึ้นหน้าแรก</b> — ส่วนใหญ่เป็น Trainer/refresh/บูมลิฟต์ ที่ขายผ่านลูกค้าองค์กร · forklift และ "ถังขนส่งก๊าซธรรมชาติ" ยังไม่มี URL ชื่อหลักสูตร',
+    ],
+    tierRule: 'วัดจาก "คำค้นที่ดีที่สุด" ของแต่ละหน้าหลักสูตร (ไม่นับคำค้นชื่อบริษัท · แสดงผล ≥ 3 ครั้ง) ไม่ใช่อันดับเฉลี่ย · ติดดี = ได้คลิก ≥ 10 หรือมีคำค้นอันดับ ≤ 3 · หน้าแรก = มีคำค้นอันดับ ≤ 10 · ยังไม่ติดหน้าแรก = แสดงผล ≥ 50 ครั้งแต่ไม่มีคำไหนอยู่หน้าแรก · ยังไม่ปรากฏ = แสดงผล < 50 ครั้งใน 40 วัน',
   },
 };

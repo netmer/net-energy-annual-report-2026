@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>รายงานสรุปผลการปฏิบัติงาน · ส.ค. 2026 | NET Energy</title>
+<title>รายงานสรุปผลการปฏิบัติงาน · ก.ย.–ต.ค. 2569 | NET Energy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -96,7 +96,7 @@
   .blk li b{color:var(--ink)}
   .blk .meta{font-size:10px;color:var(--muted);margin-bottom:4px}
 
-  .weeks{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  .weeks{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
   .wk{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:9px 10px}
   .wk .h{display:flex;justify-content:space-between;font-size:10.5px;color:var(--muted);font-weight:600}
   .wk .h b{color:var(--accent-ink);font-size:13px}
@@ -121,7 +121,7 @@
 <body>
 
 <div class="toolbar">
-  <div class="lbl"><b>รายงานสรุปผลการปฏิบัติงาน</b> · 11 ส.ค. – 3 ก.ย. 2026</div>
+  <div class="lbl"><b>รายงานสรุปผลการปฏิบัติงาน</b> · 4 ก.ย. – 15 ต.ค. 2569</div>
   <div class="btns">
     <a href="index.html" class="btn">ดู Presentation แบบเต็ม</a>
     <button class="btn primary" onclick="window.print()">Print / Save as PDF</button>
@@ -132,14 +132,14 @@
 
   <div class="doc-head">
     <div class="left">
-      <div class="brand"><span class="logo"></span> NET Energy · Progress Report 2026</div>
+      <div class="brand"><span class="logo"></span> NET Energy · Progress Report 2569</div>
       <h1>รายงานสรุปผลการปฏิบัติงาน
-        <span class="sub">รอบเดือนสิงหาคม · 11 สิงหาคม – 3 กันยายน 2026 · ฝ่าย IT &amp; Digital Development</span>
+        <span class="sub">รอบ ก.ย. – ต.ค. 2569 · 4 กันยายน – 15 ตุลาคม 2569 · ฝ่าย IT &amp; Digital Development</span>
       </h1>
     </div>
     <div class="right">
-      <b>เอกสาร v5.0</b>
-      จัดทำ 3 ก.ย. 2026<br>บริษัท เนเชอรัล เอ็นเนอร์ยี เทค จำกัด
+      <b>เอกสาร v6.0</b>
+      จัดทำ 15 ต.ค. 2569<br>บริษัท เนเชอรัล เอ็นเนอร์ยี เทค จำกัด
     </div>
   </div>
 
@@ -147,12 +147,13 @@
   <section>
     <h2><span class="num">01</span> Executive Summary</h2>
     <div class="exec">
-      รอบนี้ (11 ส.ค. – 3 ก.ย. 2026 · 3.5 สัปดาห์) ฝ่าย IT ส่งมอบงานพัฒนา <b>175 commits ใน 9 โปรเจกต์</b> — มากกว่ารอบก่อน (108 ใน 5 สัปดาห์) ·
-      เป็นรอบ<b>ขยายพอร์ต</b>: เปิด<b>ระบบใหม่ 4 ระบบ</b> — ระบบใบเสนอราคา + ใบสั่งซื้อให้ธุรกิจในเครือ <b>ELMER</b> (ย้ายข้อมูลเก่า 1,132 ใบ / PO 35 ใบ),
-      แอปทำรูปติดบัตร <b>NET-ID Photo Studio</b> แทน Photoshop (~100 รูป/วัน), <b>นามบัตรดิจิทัล NFC</b> ของผู้บริหาร และคลังโปสเตอร์ความปลอดภัย <b>KYT MOTTO</b> 76 แผ่น ·
-      ระบบหลักถูกทำให้ "ขายได้จริง" มากขึ้น — ใบประกาศพิมพ์ได้จริงทั้งระบบ, E-Learning พร้อมขาย, ERP เร็วขึ้น 9 เท่า, หน้าหลักสูตรโฉมใหม่, ระบบสถิติเว็บสร้างใหม่ ·
-      ธุรกิจอบรมเดินปกติ: ส.ค. <b>ผู้ผ่านการอบรม 1,155 คน ใน 94 รอบ</b> (ลงทะเบียน 798 ใบ) และ<b>ยอดเข้าเว็บ 45,357 ครั้ง สูงสุดตั้งแต่เปิดเว็บใหม่</b> ·
-      <span id="exec-seo-line">SEO: ดูหัวข้อ 07 (คีย์เวิร์ดแยกตามหลักสูตร + หลักสูตรที่ยังไม่ติดอันดับ)</span>
+      รอบนี้ (4 ก.ย. – 15 ต.ค. 2569 · 6 สัปดาห์) ฝ่าย IT ส่งงานพัฒนา <b>327 commits ใน 12 โปรเจกต์</b> (เฉลี่ย 7.8 งาน/วัน · รอบก่อน 7.3) ·
+      ระบบของเรา<b>เริ่มให้บริการลูกค้าและผู้บริหารโดยตรง</b> — <b>5 ระบบใหม่ขึ้นใช้งานจริง</b>: ระบบตรวจ SHE <b>NET × AXTRA</b> สำหรับลูกค้า CP Axtra (แผนตรวจ 239 สาขา Lotus's),
+      <b>จอผู้บริหาร</b> 6 หน้าที่ดึงตัวเลขเองจาก 3 ระบบ, <b>แบบประเมินด้วย QR 8 ภาษา</b> + คลังข้อสอบแทน Google Form, <b>ป้ายดิจิทัล</b>โถงต้อนรับ (เจอผู้อบรมที่ตกหล่นจากยอดสะสม 7,272 คน)
+      และ<b>เว็บไซต์ใหม่ของ ELMER</b> (www.elmer-int.com) · พร้อมสร้าง <b>LMS สำหรับลูกค้าองค์กร SDS</b> บน dev หลังข้อเสนอผ่าน ·
+      ธุรกิจอบรมทำสถิติใหม่: ก.ย. <b>ลงทะเบียน 967 ใบ · ผู้ผ่านการอบรม 1,375 คน</b> (สูงสุดทั้งคู่ตั้งแต่เปิดระบบ) และ ต.ค. เปิด <b>114 รอบ</b> (In-house 47) ·
+      SEO: คลิกจาก Google <b>+16%/วัน</b>, ก.ย. ได้ 3,637 คลิก (สูงสุด), 45 จาก 54 หลักสูตรอยู่หน้าแรก ·
+      <b>ต้องแก้</b>: ระบบสถิติเว็บของเราไม่ได้บันทึกการเข้าชมตั้งแต่ 3 ก.ย. (หัวข้อ 08)
     </div>
   </section>
 
@@ -160,36 +161,35 @@
   <section>
     <h2><span class="num">02</span> ตัวเลขสำคัญ</h2>
     <div class="kpi-row">
-      <div class="kpi"><div class="lbl">งานพัฒนา (commits)</div><div class="v">175</div><div class="ds">9 โปรเจกต์ · 3.5 สัปดาห์ · รอบก่อน 108</div></div>
-      <div class="kpi" style="--accent-c:var(--s2)"><div class="lbl">ระบบใหม่ที่เปิดใช้จริง</div><div class="v">4</div><div class="ds">ELMER Quotation+PO · NET-ID Photo · NFC · KYT</div></div>
-      <div class="kpi" style="--accent-c:var(--s3)"><div class="lbl">ผู้ผ่านการอบรม · ส.ค.</div><div class="v">1,155</div><div class="ds">94 รอบ · 30 หลักสูตร · ก.ค. 1,198</div></div>
-      <div class="kpi" style="--accent-c:var(--s4)"><div class="lbl">ยอดเข้าเว็บ · ส.ค.</div><div class="v">45,357</div><div class="ds">Page Views · +5.5% จาก ก.ค. · สูงสุด</div></div>
+      <div class="kpi"><div class="lbl">งานพัฒนา (commits)</div><div class="v">327</div><div class="ds">12 โปรเจกต์ · 6 สัปดาห์ · รอบก่อน 175 ใน 24 วัน</div></div>
+      <div class="kpi" style="--accent-c:var(--s2)"><div class="lbl">ระบบใหม่ใช้งานจริง</div><div class="v">5</div><div class="ds">AXTRA Audit · จอผู้บริหาร · QR ประเมิน · ป้ายดิจิทัล · เว็บ ELMER (+ LMS SDS บน dev)</div></div>
+      <div class="kpi" style="--accent-c:var(--s3)"><div class="lbl">ผู้ผ่านการอบรม · ก.ย.</div><div class="v">1,375</div><div class="ds">ลงทะเบียน 967 ใบ · ส.ค. 1,297 คน (+6%)</div></div>
+      <div class="kpi" style="--accent-c:var(--s4)"><div class="lbl">คลิกจาก Google · ก.ย.</div><div class="v">3,637</div><div class="ds">+18% จาก ส.ค. · สูงสุดตั้งแต่เปิดเว็บใหม่</div></div>
     </div>
   </section>
 
   <!-- 03 -->
   <section>
-    <h2><span class="num">03</span> ธุรกิจอบรมเดือน ส.ค. · ตัวเลขจริงจากระบบ</h2>
+    <h2><span class="num">03</span> ธุรกิจอบรม · ตัวเลขจริงจากระบบ (ณ 15 ต.ค. 2569)</h2>
     <div class="two">
       <div>
-        <h3>รายเดือน 2569 <span class="tag">ลงทะเบียน · ผู้ผ่านการอบรม</span></h3>
+        <h3>รายเดือน 2569 <span class="tag">ลงทะเบียน · ผู้ผ่านการอบรม · รอบอบรม</span></h3>
         <table class="data" id="t-months"></table>
-        <div class="note">ลงทะเบียนนับตามวันที่ลงทะเบียน (ทุกสถานะ) · ผู้ผ่านการอบรมนับ trainingRecords ที่ status=completed ตามวันจบอบรม</div>
+        <div class="note"><b>หมายเหตุ</b> ผู้ผ่านการอบรม = รายชื่อที่ยืนยันผลแล้ว จึงเพิ่มย้อนหลังได้ (ส.ค. ปรับจาก 1,155 ในรายงานรอบก่อน เป็น 1,297) · ต.ค. นับถึง 15 ต.ค. · พ.ย. = รอบที่เปิดจองไว้แล้ว</div>
       </div>
       <div>
-        <h3>รอบอบรม ส.ค. <span class="tag">94 รอบ · 30 หลักสูตร</span></h3>
+        <h3>รอบอบรมแยกตามรูปแบบ <span class="tag">ก.ย. 91 รอบ · ต.ค. 114 รอบ</span></h3>
         <table class="data" id="t-rounds"></table>
-        <div class="note">ก.ย. เปิดแล้ว 86 รอบ · ต.ค. 20 รอบ · ลงทะเบียน ส.ค. 798 ใบ = ยืนยัน 645 · ยกเลิก 101 · รอ 52</div>
+        <div class="note">ลงทะเบียน ก.ย. ยืนยัน 822 · ยกเลิก 106 (11%) · รอ 39 — ต.ค. ยกเลิก 7% · บริษัทที่มีผู้ผ่านการอบรม ก.ย. 248 บริษัท</div>
       </div>
     </div>
-    <h3>หลักสูตรที่มีผู้ผ่านการอบรมมากที่สุด · ส.ค. <span class="tag">10 อันดับ · จาก 1,155 คน</span></h3>
+    <h3>หลักสูตรที่มีผู้ผ่านการอบรมมากที่สุด · ก.ย. <span class="tag">10 อันดับ · จาก 1,375 คน</span></h3>
     <div class="bars" id="b-top-trained"></div>
-    <div class="callout">ลงทะเบียน ส.ค. ต่ำกว่า ก.ค. ~12% แต่<b>ผู้ผ่านการอบรมทรงตัว</b>ที่ ~1,150–1,200 คน/เดือน ตลอด 4 เดือน · หลักสูตร CP + AIS ≈ 93% ของผู้ผ่านการอบรม</div>
   </section>
 
   <!-- 04 -->
   <section>
-    <h2><span class="num">04</span> งานพัฒนา · 175 commits</h2>
+    <h2><span class="num">04</span> งานพัฒนา · 327 commits</h2>
     <div class="two">
       <div>
         <h3>แยกตามระบบ <span class="tag">สีส้ม = ระบบใหม่รอบนี้</span></h3>
@@ -198,50 +198,27 @@
       <div>
         <h3>รายสัปดาห์</h3>
         <table class="data" id="t-weeks"></table>
-        <div class="callout" style="margin-top:8px">55% ของงาน (96 commits) ลงที่ระบบใหม่ 4 ระบบ · เว็บไซต์หลัก + ERP 63 · สัปดาห์ที่หนักสุด 25–31 ส.ค. (75) · ทุก repo มีงานที่ส่งมอบถึงผู้ใช้แล้ว</div>
+        <div class="note"><b>ที่มา</b> git log --all --no-merges ทุก repo ใน E:\Devloper · 4 ก.ย. – 15 ต.ค. 2569 · ไม่นับ merge และ stash · ระบบหลัก 55% (NET-workspace 104 + NETMER-Flow 75) · ระบบใหม่ 28% · ระบบอื่น 17%</div>
       </div>
     </div>
   </section>
 
   <!-- 05 -->
   <section>
-    <h2><span class="num">05</span> ระบบใหม่ 4 ระบบ</h2>
+    <h2><span class="num">05</span> ระบบใหม่ 5 ระบบ + ลูกค้าองค์กรรายใหม่</h2>
     <div class="blocks">
-      <div class="blk">
-        <div class="ti">ELMER ใบเสนอราคา + ใบสั่งซื้อ <span class="pill">ธุรกิจในเครือ · ใหม่</span></div>
-        <div class="meta">บริษัท เอลเมอร์ อินทิเกรชั่น จำกัด · production 24 ส.ค. · PO 2 ก.ย. · 34 commits</div>
-        <ul>
-          <li>แทน Google Sheets + Apps Script — ย้ายใบเสนอราคาเก่า <b>1,132 ใบ / ลูกค้า 523 ราย</b> ครบ</li>
-          <li>ใบสั่งซื้อ ส.ค. 69 นำเข้า <b>35 ใบ · ผู้ขาย 7 ราย · 1.73 ล้านบาท</b> — พบสูตรรวมยอดในไฟล์เดิมผิด 33 ใบ, ส่วนลดหาย 17 ใบ</li>
-          <li>ออกเลขไม่ซ้ำ · คำนวณยอด/VAT/ส่วนลด · rev.NN เมื่อแก้ · รู้ว่าลูกค้าเปิดใบแล้ว · ต้นทุน/กำไร% ภายใน</li>
-          <li>ชุดตรวจอัตโนมัติ 7 ชุดก่อนขึ้นระบบ (กติกาใบ 22 เคส · ความเป็นส่วนตัว · พิมพ์ PDF จริง · index 77 ทรง)</li>
-        </ul>
-      </div>
-      <div class="blk">
-        <div class="ti">NET-ID Photo Studio <span class="pill">เครื่องมือของทีม · ใหม่</span></div>
-        <div class="meta">โปรแกรมเดสก์ท็อป Windows · ส่งชุดติดตั้ง 25 ส.ค. · 54 commits</div>
-        <ul>
-          <li>ทำรูปติดบัตร <b>~100 รูป/วัน</b> แทน Photoshop — ลบพื้นหลัง AI · จัดกรอบ/ต่อไหล่ · ปรับสีเฉพาะส่วน · ส่งออกเข้า Asure ID 7</li>
-          <li>ค่ามาตรฐานคาลิเบรตจากงานจริงของทีม <b>815 ใบ</b> · เทียบผลกับงานทีม 120 คู่ 5 มิติ</li>
-          <li>ออฟไลน์ 100% (รูปใบหน้า = ข้อมูลชีวมิติ) · ชุดติดตั้งไฟล์เดียวแถม Python · ด่านตรวจ ~140 ด่าน ตรวจซ้ำ 5 รอบ</li>
-        </ul>
-      </div>
-      <div class="blk">
-        <div class="ti">นามบัตรดิจิทัล NFC <span class="pill">ใหม่</span></div>
-        <div class="meta">netenergy-card.web.app · 1 ก.ย. · 4 commits</div>
-        <ul>
-          <li>แตะบัตร NFC เปิดหน้านามบัตรกรรมการผู้จัดการ — หน้าเดียวครอบ NET + ELMER · LINE / โทร / อีเมล / TikTok / Instagram / แชร์</li>
-          <li>ออกแบบจากจอจริงของเบราว์เซอร์ใน LINE · โฮสต์แยกจากเว็บบริษัท · ไม่ขึ้นผลค้นหา (noindex) · เหลือผูกโดเมน card.netenergy-tech.com</li>
-        </ul>
-      </div>
-      <div class="blk">
-        <div class="ti">KYT MOTTO · คลังโปสเตอร์ความปลอดภัย <span class="pill">ใหม่</span></div>
-        <div class="meta">app--kyt-motto · แค็ตตาล็อก 76 แผ่น 13 ส.ค. · ค้นหาใหม่ 17 ส.ค. · 4 commits</div>
-        <ul>
-          <li>โปสเตอร์ KYT งานก่อสร้าง <b>76 แผ่น · 3 หมวดงาน</b> ใช้จากมือถือหน้างาน</li>
-          <li>ค้นหาตามลักษณะงานแม้พิมพ์ผิด/ย่อคำ — วัดกับ 105 คำค้นจริง: เจอคำแรก <b>100/105</b> (จาก 62) โดยไม่เรียก AI ตอนค้น</li>
-        </ul>
-      </div>
+      <div class="blk"><div class="ti">NET × AXTRA SHE Compliance Audit <span class="pill live">ใช้งานจริง 15 ก.ย.</span></div><div class="meta">บริการตรวจ SHE ให้ลูกค้า CP Axtra · 40 commits</div>
+        <ul><li>ผู้ตรวจกรอกบนมือถือที่สาขา Lotus's (ใช้ได้แม้ไม่มีสัญญาณ) · ผู้จัดการสาขาเซ็นรับบนเครื่อง</li><li>เช็คลิสต์ SHE <b>284 ข้อ 15 Module</b> + FM-Mall 76 ข้อ · คะแนนถ่วงน้ำหนักความเสี่ยง · กำหนดแก้ไข 1/7/30/60 วัน</li><li>แผนเข้าตรวจ <b>239 สาขา</b> ก.ย.–พ.ย. · ผู้ตรวจ 5 คน · รายงาน Excel ตามฟอร์มลูกค้า + PDF</li><li>ด่านทดสอบอัตโนมัติ 311 ด่าน · การส่งอีเมล/LINE อัตโนมัติยังปิดไว้ (ส่งเอง)</li></ul></div>
+      <div class="blk"><div class="ti">จอผู้บริหาร (Exec Board) <span class="pill live">ใช้งานจริง 10 ต.ค.</span></div><div class="meta">NETMER-Flow · ดึงจาก ERP · Document Flow · CP Passport · 34 + 19 + 5 commits</div>
+        <ul><li>6 หน้า: ตัดสินใจ (รอบที่คนไม่ถึงขั้นต่ำ) · ลงผลระบบปลายทาง · ทีมอบรมวันนี้ · ภาพรวมเดือน · ลูกค้า · การเงิน</li><li>ทดสอบย้อนหลัง ก.ค.–ต.ค.: เตือนรอบวิกฤตเฉลี่ย ~3 รอบ/วัน · ถูก 52% ณ วันตัดสินใจ (ตัวชี้วัดเดิม 36%)</li><li>ค่าระบบ ~$16 → ~$5/เดือน (ประมาณการ) · เปิดได้เฉพาะเครื่องที่ลงทะเบียน</li><li>หน้า 2 รอประกาศใช้เช็คลิสต์ TOR</li></ul></div>
+      <div class="blk"><div class="ti">แบบประเมินด้วย QR + คลังข้อสอบ <span class="pill live">9–15 ต.ค.</span></div><div class="meta">ERP · แทน Google Form</div>
+        <ul><li>ผู้อบรมสแกนแล้วทำได้ทันที <b>8 ภาษา</b> · QR ต่อรอบ/ต่อห้อง · ประเมินวิทยากรแยกรายคน</li><li>ย้ายประวัติเข้าระบบ คะแนนตรงชีตเดิม 1,761/1,761 · คะแนนเฉลี่ย 9.26 (318 รุ่น · 7,725 คน)</li><li>หน้าวิเคราะห์ 7 แท็บ · Excel 11 ชีต · โหมดนำเสนอ · AI สรุปความเห็นรายเดือน</li><li>คลังข้อสอบ: นำเข้า Word/PDF (คนตรวจก่อนใช้) · ตรวจคะแนนที่เซิร์ฟเวอร์ · 36 ชุด (ร่าง รอตรวจ)</li></ul></div>
+      <div class="blk"><div class="ti">ป้ายดิจิทัลโถงต้อนรับ <span class="pill live">10–15 ก.ย.</span></div><div class="meta">NETMER-Flow · 11 commits · แทน Google Apps Script + Google Sheet</div>
+        <ul><li>อ่านแผนอบรมจากระบบโดยตรง — เลิกพิมพ์ตัวเลขลงชีตทุกวัน</li><li>เจอว่าสูตรชีตเดิมไม่นับ 260 รอบ (<b>7,272 คน</b>) — ยอดสะสมที่ถูกต้อง 261,333 (จอเดิม 254,306)</li><li>ตั้งเวลาสื่อ · ประกาศด่วน/ฉุกเฉินพร้อมไซเรน · จอในห้องอบรม · รายงานอากาศ · อัลบั้ม</li></ul></div>
+      <div class="blk"><div class="ti">เว็บไซต์ ELMER Integrations <span class="pill live">7 ต.ค.</span></div><div class="meta">www.elmer-int.com · 29 commits ใน 8 วัน</div>
+        <ul><li>เน้นที่ปรึกษาและดูแลระบบบำบัดน้ำเสีย (O&amp;M) · 6 บริการ · 11 สินค้า · 20 ผลงาน · บทความเดิม 46 เรื่อง</li><li>URL เดิม 87 หน้า redirect ครบ · ตรวจ 98 หน้าบนจอมือถือ 360px · หน้า /esg</li><li>ถัดไป: Search Console + sitemap · บัญชีแอดมินให้พนักงาน ELMER</li></ul></div>
+      <div class="blk"><div class="ti">NET LMS สำหรับลูกค้าองค์กร (SDS) <span class="pill wait">dev</span></div><div class="meta">ต้นแบบนำเสนอ 16–21 ก.ย. → ข้อเสนอผ่าน → ระบบจริงบน dev 22–25 ก.ย. · 23 commits</div>
+        <ul><li>อบรมห้องเรียน · ออนไลน์สด · e-Learning คุมสอบด้วยกล้อง · บัตรอบรมมี QR · ผู้รับเหมาหลายชั้น</li><li>34 หน้าจอ · 8 บทบาท · 57 คำสั่งที่ตรวจสิทธิ์ฝั่งเซิร์ฟเวอร์ · ทดสอบ 208 หน้า × 11 บทบาท</li><li>ก่อนขึ้นจริง: ข้อมูล + IT ฝั่งลูกค้า (AD/MFA) · production · ทดสอบเจาะระบบโดยบุคคลที่สาม</li></ul></div>
     </div>
   </section>
 
@@ -249,82 +226,35 @@
   <section>
     <h2><span class="num">06</span> ระบบหลักที่ปรับดีขึ้น</h2>
     <div class="blocks">
-      <div class="blk" style="grid-column:span 2">
-        <div class="ti">เว็บไซต์หลัก + ERP · NET Training Platform <span class="pill live">63 commits · ขึ้นระบบแล้ว</span></div>
-        <ul>
-          <li><b>ใบประกาศพิมพ์ได้จริงทั้งระบบ</b> — เลขที่ต่อหลักสูตร · ฟอนต์มาตรฐานไทย · อัปโหลดรูป/ลายเซ็นวิทยากรเลือกตอนพิมพ์ · ประวัติการอบรมรองรับข้อมูลใหญ่ (เดิม 4,138 จาก 4,718 คนที่ผ่านแล้วไม่มีเลขใบประกาศ)</li>
-          <li><b>E-Learning พร้อมขาย</b> — บังคับเกณฑ์ผ่านที่เคยตั้งไว้เฉย ๆ · ปิดทางเลี่ยงเครื่องเล่น · ย้ายสื่อคอร์สจ่ายเงินออกจากที่เก็บสาธารณะ · เขียนธรรมาภิบาลตามผลตรวจ</li>
-          <li><b>ERP เร็วขึ้นทุกหน้า</b> — billing 11.9 → 1.3 วิ · certificate 7.3 → 0.4 วิ · ทุกหน้า −143 KB · แก้บั๊ก 49 ข้อจากรอบตรวจ + 6 ข้อที่ผู้ใช้แจ้ง</li>
-          <li><b>กู้ผู้อบรม 53 คน</b>ที่หายจาก 2 รอบ H AIS โคราช (19 ส.ค.) — ต้นเหตุ: การเลื่อนรอบทิ้งรายชื่อเก่าไว้แล้วระบบนับว่า "มีแล้ว" · แก้ตัวเชื่อม ERP ↔ NETMER-Flow และซ่อมข้อมูล 168 รอบ</li>
-          <li><b>หน้าหลักสูตรโฉมใหม่ + แกลเลอรีภาพอบรม</b> (14 ส.ค.) · <b>เครื่องมือตรวจสอบหลักสูตรตามกฎหมาย</b> รื้อใหม่ + ชุดทดสอบความแม่นยำ 5 เคส · ส่งผู้รับเหมา True ไป CP</li>
-          <li><b>ระบบสถิติเว็บสร้างใหม่</b> (2 ก.ย.) — เก็บ → สรุปรายวัน/รายเดือน → รายงาน ไม่ต้องอ่าน 45,000 เหตุการณ์ทุกครั้ง · ตัดทราฟฟิกพนักงานออก</li>
-          <li><b>AI + ฐานความรู้กฎหมาย</b> — ย้ายทุก flow ไป Gemini 3.7 + แดชบอร์ดการใช้ AI + ตัวแนะนำหลักสูตร · ตรวจซ้ำข้อกฎหมาย 157 ข้อ พบอ้างอิงผิด 46 → แก้ 58 แถวจากตัวบทจริง · แชตตอบภาษาของผู้ถาม</li>
-          <li><b>SEO พื้นฐาน</b> — ลิงก์จังหวัดทั่วเว็บ · ใบรับรอง 11 ใบแบบ machine-readable · Google Business Profile · ที่อยู่/เวลาทำการ/พิกัดแผนที่ถูกต้อง · เนื้อหาพร้อมวางครบ 50 หลักสูตร</li>
-          <li><b>ช่างไฟฟ้า L1 → DSD</b> — ส่งออกข้อมูลผู้อบรมตามแบบกรมพัฒนาฝีมือแรงงาน: วางไฟล์ → ได้ไฟล์ตามสัญญาข้อมูล พร้อมตารางรหัสและด่านตรวจข้อมูลก่อนส่ง</li>
-        </ul>
-      </div>
-      <div class="blk">
-        <div class="ti">NETMER-Flow (HR) <span class="pill live">7 commits</span></div>
-        <ul>
-          <li><b>OT 2 ครั้ง/วันแสดงครั้งเดียว</b> ในรายงานภาระงานทีม — แก้แล้ว + รวมตรรกะรายวันเป็นชุดเดียว (3 ก.ย.)</li>
-          <li>นัดเวลาเข้างานบนมือถือ · แก้หน้าล้นจอ/กล่องโต้ตอบบนโทรศัพท์</li>
-          <li>LINE รวมข้อความหัวข้อเดียวกัน + แจ้งคำขอลา (19 ส.ค.) · แก้บัญชีแอดมิน 3 คนที่สิทธิ์เพี้ยนจากข้อมูลเก่า</li>
-        </ul>
-      </div>
-      <div class="blk">
-        <div class="ti">CP Safety Passport <span class="pill live">6 commits</span></div>
-        <ul>
-          <li>อัปเกรด E → EE ในรอบเดียว แทนโมดูลเดิม + ต้องมีคุณสมบัติก่อน · ประวัติรวม E ที่ถูกแทนเข้ากับ EE</li>
-          <li>ย้อนสถานะรอบใดรอบหนึ่งได้ แม้มีรอบหลังใช้บัตรไปแล้ว (31 ส.ค.) · ย้าย AI อ่านบัตรไปรุ่นใหม่</li>
-        </ul>
-      </div>
-      <div class="blk">
-        <div class="ti">LINE CSAT <span class="pill wait">รอเลือกกลุ่ม</span></div>
-        <ul>
-          <li>สรุปคะแนนความพอใจรายวัน 08:00 เข้ากลุ่ม LINE ของทีม — ส่ง/ตอบ/ต้องติดตาม พร้อมข้อความลูกค้า (deploy 19 ส.ค.)</li>
-          <li>เปิดใช้ได้ทันทีเมื่อผู้จัดการเลือกกลุ่มในหน้าตั้งค่า · ระบบแสดงค่าใช้จ่าย LINE ต่อเดือนให้ก่อนเปิด</li>
-        </ul>
-      </div>
-      <div class="blk">
-        <div class="ti">NET Document Flow <span class="pill live">1 commit</span></div>
-        <ul>
-          <li>รายงานใบแจ้งหนี้ Excel แบบจัดรูปแบบ + ชีตสรุปตามหมวด (24 ส.ค.)</li>
-          <li>ไม่มีงานเพิ่มในรอบนี้ (เดินปกติ): ELMER Water Analysis · Elmer Wastewater · Online Inspector · Safety Hero</li>
-        </ul>
-      </div>
+      <div class="blk"><div class="ti">เว็บไซต์ NET + ERP <span class="pill live">104 commits</span></div>
+        <ul><li>เช็กชื่อบอร์ดเดียว (Zoom / เครื่องอ่านบัตร) · รูปแบบรอบ Hybrid · เอกสารการสอน 97 ไฟล์ 54 หลักสูตร</li><li>ERP ใช้บนมือถือได้ทุกหน้า (ตรวจ 163 จุด) · กันสร้างหลักสูตรซ้ำ</li><li>ผู้ช่วย AI "โอบอ้อม" ให้ลูกค้าที่ล็อกอิน · ชุดคำถามจริง 20/20 · prompt −71%</li><li>หน้าแรกใหม่ + วิดีโอบริษัท + /esg 4 ภาษา · Core Web Vitals มือถือผ่าน (LCP 1.9 วิ)</li></ul></div>
+      <div class="blk"><div class="ti">ความปลอดภัยข้อมูลส่วนบุคคล (PDPA) <span class="pill live">แก้แล้ว 8/12</span></div>
+        <ul><li>ปิดการเข้าถึงข้อมูลผู้อบรมและไฟล์เอกสารส่วนบุคคลจากภายนอกระบบ</li><li>หน้าข้อสอบไม่ส่งเลขบัตร/เฉลยไปที่มือถือ · คลังข้อสอบไม่เปิดสาธารณะ</li><li>ไลบรารี critical 3 → 0 · high 27 → 12 · SSL Labs A+</li><li>อีก 4 ข้อมีแผนปิดรอบหน้า (รายละเอียดแจ้งแยก)</li></ul></div>
+      <div class="blk"><div class="ti">NETMER-Flow (HR) <span class="pill live">Live</span></div>
+        <ul><li>WFH แทนช่อง SD 2 วัน/เดือน (เริ่ม ต.ค. · รอทดสอบจริง)</li><li>วันลาคงเหลือกฎเดียว (แก้ข้อมูล 6 คน) · ปฏิทินคำขอ · แดชบอร์ด EC (แยก EC อุปกรณ์ IT 23%)</li><li>"งานเสร็จช้า" 74% → 26% (ทดสอบ 8,438 ใบ) · e-Learning ภายใน · เมนูชุดเดียว</li></ul></div>
+      <div class="blk"><div class="ti">ระบบอื่นที่ดูแลอยู่ <span class="pill live">56 commits</span></div>
+        <ul><li>CP Passport: ปลดล็อกรอบที่ติด · ค้นเจอ 655 รายการที่เลขบัตรถูกบันทึกเป็นพาสปอร์ต · แก้อัปโหลดค้าง</li><li>NET Doc Flow: ใบเสร็จแก้ 9 จุด · ฟีดการเงิน · รวมลูกค้าซ้ำ 151 กลุ่ม</li><li>ELMER: ผลน้ำส่งอีเมลจากระบบได้ครั้งแรก · Excel ผลน้ำ/งานน้ำเสีย · ใบเสนอราคา/PO พิมพ์ถูกแบบ</li><li>NET-ID Photo: ชุดแต่งภาพ 9 เครื่องมือ · ชุดอัปเดต ~2 MB (รอส่งทีม)</li></ul></div>
     </div>
   </section>
 
-  <!-- 07 SEO (rendered from REPORT.seo) -->
+  <!-- 07 SEO -->
   <section class="seo" id="sec-seo">
     <h2><span class="num">07</span> SEO · Google Search Console</h2>
     <div id="seo-body"><div class="callout warn">รอข้อมูล Google Search Console API</div></div>
   </section>
 
-  <!-- 08 traffic -->
+  <!-- 08 -->
   <section>
-    <h2><span class="num">08</span> ยอดเข้าเว็บ · สถิติจากระบบของเราเอง</h2>
-    <div class="two">
-      <div>
-        <h3>Page Views รายเดือน <span class="tag">ตั้งแต่เปิดเว็บใหม่</span></h3>
-        <table class="data" id="t-pv"></table>
-        <div class="note">ระบบสถิติใหม่ (analyticsMonthly) · ตัดทราฟฟิกพนักงานออก · Page View = ครั้งที่เปิดหน้า ไม่ใช่จำนวนคน</div>
-      </div>
-      <div>
-        <h3>ช่องทางที่พาคนเข้าเว็บ · ส.ค. <span class="tag">เทียบ ก.ค.</span></h3>
-        <table class="data" id="t-channels"></table>
-      </div>
-    </div>
-    <div class="two" style="margin-top:8px">
-      <div>
-        <h3>หน้าหลักสูตรที่คนเปิดมากที่สุด · ส.ค.</h3>
-        <table class="data" id="t-topcourses"></table>
-      </div>
-      <div>
-        <h3>สัญญาณที่น่าจับตา</h3>
-        <table class="data" id="t-signals"></table>
-        <div class="note">"หน้าสมัคร" = ครั้งที่เปิด /register/[รอบ] · ภาษาต่างประเทศ = การเข้าชมหน้า EN/JA/ZH-Hans</div>
-      </div>
+    <h2><span class="num">08</span> สิ่งที่ต้องตัดสินใจ / ติดตาม</h2>
+    <div class="blocks">
+      <div class="blk"><div class="ti">ระบบสถิติเว็บไม่ได้บันทึกตั้งแต่ 3 ก.ย. <span class="pill">ต้องแก้ก่อน</span></div>
+        <ul><li>การเข้าชมที่บันทึกได้: ส.ค. <b>45,375</b> → 18 ก.ย. – 15 ต.ค. <b>55</b> · วันสุดท้ายที่ข้อมูลครบ 2 ก.ย.</li><li>เกิดหลังเปลี่ยนวิธีเก็บสถิติ 2 ก.ย. · รอบนี้ใช้คลิกจาก Google แทน · ข้อมูล 6 สัปดาห์นี้กู้ย้อนหลังไม่ได้</li></ul></div>
+      <div class="blk"><div class="ti">ทำเสร็จแล้ว — รออนุมัติเปิดใช้ <span class="pill wait">ผู้บริหาร</span></div>
+        <ul><li>เช็คลิสต์ "ลงผลระบบปลายทาง" บนจอผู้บริหาร (รอประกาศ TOR)</li><li>การ์ดสรุปผลประเมินรายวัน + สรุป LINE CSAT 08:00 (รอเลือกกลุ่ม LINE)</li><li>อีเมล/LINE อัตโนมัติของ NET × AXTRA · ให้ระบบเปิดค้าง 1 เครื่อง (~500–700 บาท/เดือน)</li></ul></div>
+      <div class="blk"><div class="ti">รอข้อมูลจากลูกค้า / ทีม</div>
+        <ul><li>SDS: IT ตอบเรื่อง AD/Entra + MFA · ข้อมูลพนักงาน/ประวัติอบรม</li><li>ข้อสอบ 36 ชุดรอตรวจ · คำแปลพม่า/เขมร/ลาวรอเจ้าของภาษา · HR นำเข้าประวัติอบรม 2569</li></ul></div>
+      <div class="blk"><div class="ti">คำถามที่รอคำตอบ</div>
+        <ul><li>WFH: รองรับครึ่งวันไหม · "เดือน" = เดือนปฏิทินหรือรอบเงินเดือน 26→25</li><li>ELMER: ที่อยู่บริษัทที่ถูกต้องสำหรับเว็บไซต์ · ความปลอดภัย: ปิด 4 ข้อที่เหลือ + ทดสอบเจาะระบบโดยบุคคลที่สาม</li></ul></div>
     </div>
   </section>
 
@@ -332,10 +262,12 @@
   <section>
     <h2><span class="num">09</span> ไทม์ไลน์รายสัปดาห์</h2>
     <div class="weeks">
-      <div class="wk"><div class="h"><span>11–17 ส.ค.</span><b>17</b></div><div class="t">SEO + ฐานความรู้กฎหมาย + หน้าหลักสูตรใหม่</div><ul><li>หน้าหลักสูตรโฉมใหม่ + แกลเลอรี (14 ส.ค.)</li><li>ตรวจซ้ำข้อกฎหมาย 157 ข้อ → แก้ 58 แถว</li><li>KYT MOTTO 76 แผ่น + ค้นหาทนสะกดผิด</li></ul></div>
-      <div class="wk star"><div class="h"><span>18–24 ส.ค.</span><b>66</b></div><div class="t">ELMER ขึ้นระบบ · ERP เร็วขึ้น · กู้ผู้อบรม 53 คน</div><ul><li>ELMER ใบเสนอราคา production (22–24 ส.ค.)</li><li>ERP เร็วขึ้น 9 เท่า + แก้บั๊ก 55 ข้อ</li><li>แก้ตัวเชื่อม ERP ↔ Flow · LINE CSAT สรุปรายวัน · Doc Flow Excel</li></ul></div>
-      <div class="wk star"><div class="h"><span>25–31 ส.ค.</span><b>75</b></div><div class="t">NET-ID Photo ส่งทีม · ใบประกาศ · E-Learning</div><ul><li>NET-ID Photo Studio ตั้งต้นจนส่งชุดติดตั้ง</li><li>ใบประกาศพิมพ์ได้จริง · E-Learning พร้อมขาย</li><li>AI Gemini 3.7 · เครื่องมือตรวจกฎหมายรื้อใหม่</li></ul></div>
-      <div class="wk"><div class="h"><span>1–3 ก.ย.</span><b>17</b></div><div class="t">ใบสั่งซื้อ · นามบัตร NFC · สถิติเว็บใหม่</div><ul><li>ELMER ใบสั่งซื้อ 35 ใบ (2 ก.ย.)</li><li>นามบัตร NFC deploy (1 ก.ย.)</li><li>ระบบสถิติเว็บใหม่ · NETMER แก้ OT/มือถือ</li></ul></div>
+      <div class="wk"><div class="h"><span>4–10 ก.ย.</span><b>46</b></div><div class="t">เช็กชื่อบอร์ดเดียว · ผู้ช่วย AI ลูกค้า</div><ul><li>บอร์ดเช็กชื่อ Zoom + เครื่องอ่านบัตร</li><li>ผู้ช่วย AI "โอบอ้อม" · แดชบอร์ดธุรกิจ /admin</li><li>ELMER ใบเสนอราคา/PO พิมพ์ถูกแบบ</li></ul></div>
+      <div class="wk star"><div class="h"><span>11–17 ก.ย.</span><b>53</b></div><div class="t">AXTRA Audit ขึ้นจริง · ป้ายดิจิทัล</div><ul><li>NET × AXTRA เริ่ม 14 ขึ้นจริง 15 ก.ย.</li><li>ป้ายดิจิทัล 10–15 ก.ย.</li><li>ต้นแบบ LMS เพื่อนำเสนอลูกค้า</li></ul></div>
+      <div class="wk"><div class="h"><span>18–24 ก.ย.</span><b>50</b></div><div class="t">ความปลอดภัยข้อมูล · LMS SDS</div><ul><li>ปิดช่องรั่วข้อมูล (18 ก.ย.)</li><li>LMS SDS บน dev 22–25 ก.ย.</li><li>HR: WFH · วันลา · ปฏิทิน · EC</li></ul></div>
+      <div class="wk"><div class="h"><span>25 ก.ย.–1 ต.ค.</span><b>43</b></div><div class="t">เว็บ ELMER · e-Learning ภายใน</div><ul><li>เว็บ ELMER เริ่ม 30 ก.ย.</li><li>e-Learning ภายใน NETMER</li><li>หน้า /esg · โปรไฟล์ลูกค้า</li></ul></div>
+      <div class="wk star"><div class="h"><span>2–8 ต.ค.</span><b>76</b></div><div class="t">จอผู้บริหาร · เว็บ ELMER ขึ้นจริง</div><ul><li>จอผู้บริหาร + ฟีด ERP/Doc Flow</li><li>elmer-int.com ขึ้นจริง 7 ต.ค.</li><li>หน้าแรก NET โฉมใหม่ + เร็วขึ้น</li></ul></div>
+      <div class="wk star"><div class="h"><span>9–15 ต.ค.</span><b>59</b></div><div class="t">QR ประเมิน 8 ภาษา · คลังข้อสอบ</div><ul><li>QR ประเมิน + ข้อสอบ 9–15 ต.ค.</li><li>Hybrid · เอกสารการสอน · ERP มือถือ</li><li>อีเมลผลน้ำ · ใบเสร็จ 9 จุด · NET-ID Photo</li></ul></div>
     </div>
   </section>
 
@@ -354,6 +286,8 @@
   const pct = (a, b) => b ? (a - b) / b * 100 : 0;
   const dtxt = v => (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v).toFixed(Math.abs(v) < 10 ? 1 : 0) + '%';
   const dcls = v => Math.abs(v) < 0.5 ? 'flat' : v > 0 ? 'up' : 'down';
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const short = (q, n) => (q.length > n ? q.slice(0, n - 1) + '…' : q);
   function table(el, head, rows, foot) {
     el.replaceChildren();
     const th = h('thead'), tr = h('tr'); head.forEach(x => tr.appendChild(h('th', null, x))); th.appendChild(tr); el.appendChild(th);
@@ -362,39 +296,30 @@
     el.appendChild(tb);
     if (foot) { const tf = h('tfoot'), t = h('tr'); foot.forEach(c => t.appendChild(h('td', null, c))); tf.appendChild(t); el.appendChild(tf); }
   }
-  function bars(el, rows, opts) {
+  function bars(el, rows) {
     el.replaceChildren(); const max = Math.max(...rows.map(r => r.v));
     rows.forEach(r => { const b = h('div', 'bar'); const l = h('div', 'l'); l.appendChild(document.createTextNode(r.l)); if (r.sub) l.appendChild(h('small', null, r.sub)); b.appendChild(l);
       const t = h('div', 't'); const i = h('i', r.cls || ''); i.style.width = (100 * r.v / max).toFixed(1) + '%'; t.appendChild(i); b.appendChild(t); b.appendChild(h('div', 'v', f(r.v))); el.appendChild(b); });
   }
 
-  // 03
-  const months = ['เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.'];
-  table($('t-months'), ['เดือน', 'ลงทะเบียน (ใบ)', 'ผู้ผ่านการอบรม (คน)'], months.map(m => { const r = D.biz.regs.find(x => x.m === m), t = D.biz.trained.find(x => x.m === m); return [m, r ? f(r.v) : '—', t ? { v: f(t.v), cls: 'n' } : '—']; }));
-  const R = D.biz.augRounds;
-  table($('t-rounds'), ['รายการ', 'จำนวน', 'สัดส่วน'], [['เปิดรับสมัคร', f(R.open), Math.round(100 * R.open / R.total) + '%'], ['เต็ม', f(R.full), Math.round(100 * R.full / R.total) + '%'], ['ยกเลิก', f(R.cancelled), Math.round(100 * R.cancelled / R.total) + '%']].concat(D.biz.augMode.map(m => [m.label, f(m.value), Math.round(100 * m.value / R.total) + '%'])), ['รวมรอบ ส.ค.', f(R.total), '100%']);
-  bars($('b-top-trained'), D.biz.augTopTrained.map(([l, v]) => ({ l, v })));
+  // 03 business
+  const key = m => m.replace('*', '');
+  const months = ['เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.'];
+  table($('t-months'), ['เดือน', 'ลงทะเบียน (ใบ)', 'ผู้ผ่านการอบรม (คน)', 'รอบอบรม'], months.map(m => {
+    const r = D.biz.regs.find(x => key(x.m) === m), t = D.biz.trained.find(x => key(x.m) === m), rd = D.biz.rounds.find(x => x.m === m);
+    const lbl = m + (m === 'ต.ค.' ? ' (ถึง 15)' : m === 'พ.ย.' ? ' (จองแล้ว)' : '');
+    return [lbl, r ? f(r.v) : '—', t ? { v: f(t.v), cls: 'n' } : '—', rd ? f(rd.v) : '—'];
+  }));
+  const sm = D.biz.sepMode, om = D.biz.octMode;
+  table($('t-rounds'), ['รูปแบบ', 'ก.ย.', 'ต.ค.'], sm.map((x, i) => [x.label + (i === 3 ? ' (ต.ค. รวม Hybrid)' : ''), f(x.value), { v: f(om[i].value), cls: 'n' }]), ['รวม', f(D.biz.sep.rounds), f(D.biz.oct.rounds)]);
+  bars($('b-top-trained'), D.biz.sepTopTrained.map(([l, v]) => ({ l, v })));
 
-  // 04
+  // 04 dev
   bars($('b-repos'), D.dev.byRepo.map(r => ({ l: r.label, sub: r.sub, v: r.n, cls: r.kind === 'new' ? 's2' : '' })));
   table($('t-weeks'), ['สัปดาห์', 'commits', 'สัดส่วน'], D.dev.weeks.map(w => [w.label, f(w.n), Math.round(100 * w.n / D.dev.total) + '%']), ['รวม', f(D.dev.total), '100%']);
 
-  // 08
-  table($('t-pv'), ['เดือน', 'Page Views', 'เปลี่ยนแปลง'], D.traffic.monthly.map((m, i, a) => [m.m, { v: f(m.v), cls: 'n' }, i ? { v: dtxt(pct(m.v, a[i - 1].v)), cls: dcls(pct(m.v, a[i - 1].v)) } : '—']));
-  const cj = D.traffic.channelsJul, chRows = [['Direct', 27406, cj.direct], ['ค้นหา Google / Bing', 11040, cj.search], ['ลิงก์ภายในเว็บ', 6030, cj.internal], ['โซเชียล (Facebook)', 304, cj.social], ['LINE', 229, cj.line], ['แชตองค์กร (Teams)', 137, cj.messaging], ['เว็บอื่นอ้างอิง', 114, cj.referral], ['AI (ChatGPT · Gemini)', 89, cj.ai]];
-  table($('t-channels'), ['ช่องทาง', 'ส.ค.', 'ก.ค.', 'เปลี่ยน'], chRows.map(([l, a, b]) => [l, { v: f(a), cls: 'n' }, f(b), { v: dtxt(pct(a, b)), cls: dcls(pct(a, b)) }]));
-  table($('t-topcourses'), ['หลักสูตร', 'ครั้ง'], D.traffic.topCourses.map(([l, v]) => [l, { v: f(v), cls: 'n' }]));
-  const L = D.traffic.locale, LJ = D.traffic.localeJul, fo = L.en + L.ja + L.zh, foJ = LJ.en + LJ.ja + LJ.zh;
-  table($('t-signals'), ['สัญญาณ', 'ส.ค.', 'ก.ค.', 'เปลี่ยน'], [
-    ['เปิดหน้าหลักสูตรรายตัว', { v: f(D.traffic.routesAug.coursePages), cls: 'n' }, f(11316), { v: dtxt(pct(D.traffic.routesAug.coursePages, 11316)), cls: 'up' }],
-    ['เปิดหน้าสมัคร (/register)', { v: f(D.traffic.routesAug.register), cls: 'n' }, f(4307), { v: dtxt(pct(D.traffic.routesAug.register, 4307)), cls: 'up' }],
-    ['หน้าภาษาต่างประเทศ (EN/JA/ZH)', { v: f(fo), cls: 'n' }, f(foJ), { v: dtxt(pct(fo, foJ)), cls: 'up' }],
-    ['เข้ามาจาก AI (ChatGPT + Gemini)', { v: f(89), cls: 'n' }, f(100), { v: dtxt(pct(89, 100)), cls: 'down' }],
-    ['ผู้ใช้ที่ล็อกอิน (page views)', { v: f(D.traffic.signedInAug), cls: 'n' }, f(8581), { v: dtxt(pct(D.traffic.signedInAug, 8581)), cls: 'down' }],
-  ]);
-
   // 07 SEO
-  const S = D.seo; if (!S) return;
+  const S = D.seo, T = D.seoText || {}; if (!S) return;
   const body = $('seo-body'); body.replaceChildren();
   const t = S.totals, p = S.prev, cpd = t.clicks / S.window.days, cpdP = p.clicks / S.prevWindow.days, ipd = t.impressions / S.window.days, ipdP = p.impressions / S.prevWindow.days;
   const h3 = (txt, tag) => { const e = h('h3'); e.appendChild(document.createTextNode(txt)); if (tag) e.appendChild(h('span', 'tag', tag)); return e; };
@@ -403,40 +328,38 @@
   table(t1, ['ตัวชี้วัด', 'รอบนี้', 'ต่อวัน', 'รอบก่อน', 'ต่อวัน', 'เปลี่ยนแปลง/วัน'], [
     ['การคลิก · Clicks', { v: f(t.clicks), cls: 'n' }, cpd.toFixed(1), f(p.clicks), cpdP.toFixed(1), { v: dtxt(pct(cpd, cpdP)), cls: dcls(pct(cpd, cpdP)) }],
     ['การแสดงผล · Impressions', { v: f(t.impressions), cls: 'n' }, f(Math.round(ipd)), f(p.impressions), f(Math.round(ipdP)), { v: dtxt(pct(ipd, ipdP)), cls: dcls(pct(ipd, ipdP)) }],
-    ['CTR เฉลี่ย', { v: (t.ctr * 100).toFixed(2) + '%', cls: 'n' }, '—', (p.ctr * 100).toFixed(2) + '%', '—', { v: ((t.ctr - p.ctr) * 100 > 0 ? '+' : '−') + Math.abs((t.ctr - p.ctr) * 100).toFixed(2) + ' จุด', cls: dcls((t.ctr - p.ctr) * 100) }],
-    ['อันดับเฉลี่ย · Position', { v: t.position.toFixed(2), cls: 'n' }, '—', p.position.toFixed(2), '—', { v: (p.position - t.position > 0 ? 'ดีขึ้น ' : p.position - t.position < 0 ? 'แย่ลง ' : 'เท่าเดิม ') + Math.abs(p.position - t.position).toFixed(2), cls: dcls(p.position - t.position) }],
+    ['CTR เฉลี่ย', { v: (t.ctr * 100).toFixed(2) + '%', cls: 'n' }, '—', (p.ctr * 100).toFixed(2) + '%', '—', { v: ((t.ctr - p.ctr) * 100 > 0 ? '+' : '−') + Math.abs((t.ctr - p.ctr) * 100).toFixed(2) + ' จุด', cls: 'flat' }],
+    ['อันดับเฉลี่ย · Position', { v: t.position.toFixed(1), cls: 'n' }, '—', p.position.toFixed(1), '—', { v: 'ดีขึ้น ' + (p.position - t.position).toFixed(1), cls: dcls(p.position - t.position) }],
   ]);
-  const ins = h('div', 'callout'); ins.innerHTML = (S.insights || []).join(' · '); body.appendChild(ins);
+  const ins = h('div', 'callout'); ins.innerHTML = (T.insights || []).join(' · '); body.appendChild(ins);
 
-  body.appendChild(h3('7.2 คลิกแยกตามประเภทหน้า และอุปกรณ์'));
+  body.appendChild(h3('7.2 คลิกจาก Google รายเดือน และแยกตามประเภทหน้า'));
   const two = h('div', 'two'); body.appendChild(two);
+  const tm = h('table', 'data'); two.appendChild(tm);
+  table(tm, ['เดือน', 'คลิก', 'แสดงผล', 'คลิก/วัน'], S.monthly.map((m, i, a) => [m.m + (m.partial ? ' (13 วัน)' : ''), { v: f(m.clicks), cls: 'n' }, f(m.impressions), (m.clicks / m.days).toFixed(0)]));
   const tg = h('table', 'data'); two.appendChild(tg); const gtot = S.groups.reduce((a, g) => a + g.value, 0);
   table(tg, ['ประเภทหน้า', 'คลิก', 'สัดส่วน'], S.groups.map(g => [g.label, { v: f(g.value), cls: 'n' }, Math.round(100 * g.value / gtot) + '%']));
-  const td = h('table', 'data'); two.appendChild(td); const dtot = S.devices.reduce((a, g) => a + g.value, 0);
-  table(td, ['อุปกรณ์', 'คลิก', 'สัดส่วน', 'CTR', 'อันดับ'], S.devices.map(g => [g.label, { v: f(g.value), cls: 'n' }, Math.round(100 * g.value / dtot) + '%', g.ctr != null ? (g.ctr * 100).toFixed(1) + '%' : '—', g.position != null ? g.position.toFixed(1) : '—']));
 
-  body.appendChild(h3('7.3 คีย์เวิร์ดที่คนค้นแล้วเจอเรา แยกตามหลักสูตร', S.byCourse.length + ' หลักสูตรที่ได้คลิก · เรียงตามคลิก · จับคู่จากข้อมูล คีย์เวิร์ด × หน้า ของ Search Console'));
+  body.appendChild(h3('7.3 หลักสูตรที่ได้คลิกจาก Google มากที่สุด', 'จับคู่จากข้อมูล คีย์เวิร์ด × หน้า ของ Search Console · เทียบ 40 วันก่อนหน้า'));
   const tc = h('table', 'data wide'); body.appendChild(tc);
-  table(tc, ['หลักสูตร · คีย์เวิร์ดเด่น', 'คีย์เวิร์ด', 'คลิก', 'แสดงผล', 'CTR', 'อันดับเฉลี่ย', 'คำค้นที่ติดดีสุด'], S.byCourse.slice(0, 20).map(c => [
-    { html: '<b>' + esc(c.course) + '</b><span class="kw">' + esc(c.topKw.slice(0, 3).map(k => k.q + ' (' + k.clicks + ')').join(' · ')) + '</span>' }, f(c.kwCount), { v: f(c.clicks), cls: 'n' }, f(c.impressions), (100 * c.clicks / c.impressions).toFixed(1) + '%', c.position.toFixed(1), c.bestQ ? { html: esc(c.bestQ.q) + ' <b>@' + c.bestQ.position.toFixed(1) + '</b>' } : '—']));
+  table(tc, ['หลักสูตร · คีย์เวิร์ดเด่น', 'คลิก', 'ก่อนหน้า', 'เปลี่ยน', 'แสดงผล', 'อันดับเฉลี่ย', 'คำค้นที่ติดดีสุด'], S.byCourse.map(c => [
+    { html: '<b>' + esc(c.course) + '</b><span class="kw">' + esc(c.topKw.slice(0, 3).map(k => k.q + ' (' + k.clicks + ')').join(' · ')) + '</span>' }, { v: f(c.clicks), cls: 'n' }, f(c.prevClicks), { v: dtxt(pct(c.clicks, c.prevClicks)), cls: dcls(pct(c.clicks, c.prevClicks)) }, f(c.impressions), c.position.toFixed(1), c.bestQ ? { html: esc(short(c.bestQ.q, 34)) + ' <b>@' + c.bestQ.position.toFixed(1) + '</b>' } : '—']));
 
-  body.appendChild(h3('7.4 คำที่ลูกค้าใช้ค้นหา "หลักสูตร" แล้วเจอเรา', 'ไม่นับคำค้นชื่อบริษัท · 20 อันดับตามคลิก'));
-  const tk = h('table', 'data'); body.appendChild(tk);
-  table(tk, ['คีย์เวิร์ด', 'หลักสูตร / หน้าที่คนคลิก', 'คลิก', 'แสดงผล', 'อันดับ'], S.intentKw.slice(0, 20).map(k => [k.q, { v: k.course, cls: 'dim' }, { v: f(k.clicks), cls: 'n' }, f(k.impressions), { v: k.position.toFixed(1), cls: k.position <= 3 ? 'up' : k.position > 10 ? 'down' : '' }]));
-  const bn = h('div', 'callout'); bn.innerHTML = S.brandNote || ''; body.appendChild(bn);
+  body.appendChild(h3('7.4 คำค้นทั่วไปที่ขยับขึ้นหน้าแรก', 'อันดับเฉลี่ย 40 วันก่อน → รอบนี้'));
+  const tmv = h('table', 'data'); body.appendChild(tmv);
+  table(tmv, ['คำค้น', 'อันดับก่อน', 'อันดับรอบนี้', 'แสดงผล', 'คลิก'], (T.movers || []).map(k => [k.q, k.from.toFixed(1), { v: k.to.toFixed(1), cls: 'up' }, f(k.impr), { v: f(k.clicks), cls: 'n' }]));
+  const bn = h('div', 'callout'); bn.innerHTML = T.brandNote || ''; body.appendChild(bn);
 
-  body.appendChild(h3('7.5 หลักสูตรแยกตามสถานะการติดอันดับ (วัดจากคำค้นที่ดีที่สุดของแต่ละหน้า ไม่ใช่อันดับเฉลี่ย)', 'ติดอันดับดี ' + S.ranking.good + ' · หน้าแรก คลิกยังน้อย ' + S.ranking.page1 + ' · ยังไม่ติดหน้าแรก ' + S.ranking.low + ' · ยังไม่ปรากฏ ' + S.ranking.none + ' จาก 52'));
-  const tn = h('table', 'data wide'); body.appendChild(tn);
-  const qcell = q => q ? { html: esc(q.q) + ' <b>@' + q.position.toFixed(1) + '</b> <span class="dim">(' + q.impressions + ')</span>' } : { v: '—', cls: 'dim' };
-  table(tn, ['หลักสูตร', 'หมวด', 'แสดงผล', 'คลิก', 'เฉลี่ย', 'คำค้นที่ติดดีสุด (อันดับ · แสดงผล)', 'คำค้นที่คนใช้มากสุด (อันดับ · แสดงผล)', 'สถานะ'], S.notRanking.map(r => [r.course, { v: r.cat, cls: 'dim' }, { v: f(r.impressions), cls: r.impressions === 0 ? 'down' : '' }, f(r.clicks), r.position == null ? '—' : r.position.toFixed(1), qcell(r.bestQ), qcell(r.topQ), r.tierLabel]));
-  const rule = h('div', 'note'); rule.innerHTML = '<b>เกณฑ์</b> ' + (S.tierRule || '') + ' · ตารางนี้แสดงเฉพาะหลักสูตรที่ยังไม่ถึงเกณฑ์ "ติดอันดับดี" (' + S.notRanking.length + ' หลักสูตร) · หลักสูตรที่ติดอันดับดีอยู่ในตาราง 7.3'; body.appendChild(rule);
-
-  body.appendChild(h3('7.6 คำทั่วไปที่ลูกค้าค้น แต่เรายังอยู่หน้า 2 ขึ้นไป', 'โอกาสที่ควรทำเนื้อหาก่อน · เรียงตามจำนวนครั้งที่ Google แสดงเรา'));
+  body.appendChild(h3('7.5 คำทั่วไปที่ลูกค้าค้น แต่เรายังอยู่หน้า 2 ขึ้นไป', 'โอกาสที่ควรทำเนื้อหาก่อน'));
   const tg2 = h('table', 'data'); body.appendChild(tg2);
-  table(tg2, ['คำค้น', 'แสดงผล', 'คลิก', 'อันดับเรา', 'หน้า', 'หน้าที่ Google แสดง'], (S.gapKw || []).map(k => [k.q, { v: f(k.impressions), cls: 'n' }, f(k.clicks), { v: k.position.toFixed(1), cls: k.position > 30 ? 'down' : '' }, 'หน้า ' + Math.ceil(k.position / 10), { v: k.page, cls: 'dim' }]));
-  const nn = h('div', 'callout warn'); nn.innerHTML = (S.notRankingNotes || []).join('<br>'); body.appendChild(nn);
-  if (S.execText) $('exec-seo-line').innerHTML = S.execText;
-  function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+  table(tg2, ['คำค้น', 'อันดับเรา', 'แสดงผล', 'หลักสูตรที่เกี่ยวข้อง'], (T.gaps || []).map(k => [k.q + (k.note ? ' (' + k.note + ')' : ''), { v: k.pos.toFixed(1) + ' (หน้า ' + Math.ceil(k.pos / 10) + ')', cls: k.pos > 30 ? 'down' : '' }, f(k.impr), { v: k.course, cls: 'dim' }]));
+
+  body.appendChild(h3('7.6 หลักสูตรแยกตามสถานะการติดอันดับ', 'ติดอันดับดี ' + S.ranking.good + ' · หน้าแรก คลิกยังน้อย ' + S.ranking.page1 + ' · ยังไม่ติดหน้าแรก ' + S.ranking.low + ' · ยังไม่ปรากฏ ' + S.ranking.none + ' จาก ' + S.coursesVisible));
+  const tn = h('table', 'data wide'); body.appendChild(tn);
+  const label = { good: 'ติดอันดับดี', page1: 'หน้าแรก · คลิกยังน้อย', low: 'ยังไม่ติดหน้าแรก', none: 'ยังไม่ปรากฏ' };
+  table(tn, ['หลักสูตร', 'หมวด', 'แสดงผล', 'คลิก', 'คำค้นที่ติดดีสุด', 'สถานะ'], S.tiers.filter(r => r.tier !== 'good').map(r => [r.course, { v: r.cat, cls: 'dim' }, f(r.impressions), f(r.clicks), r.bestQ ? { html: esc(short(r.bestQ.q, 34)) + ' <b>@' + r.bestQ.position.toFixed(1) + '</b>' } : { v: '—', cls: 'dim' }, { v: label[r.tier], cls: r.tier === 'page1' ? '' : 'down' }]));
+  const rule = h('div', 'note'); rule.innerHTML = '<b>เกณฑ์</b> ' + (T.tierRule || '') + ' · ตารางนี้แสดงเฉพาะหลักสูตรที่ยังไม่ถึงเกณฑ์ "ติดอันดับดี"'; body.appendChild(rule);
+  const nn = h('div', 'callout warn'); nn.innerHTML = (T.notRankingNotes || []).join('<br>'); body.appendChild(nn);
 })();
 </script>
 </body>

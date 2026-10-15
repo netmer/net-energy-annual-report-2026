@@ -1,11 +1,32 @@
 // ============================================================
-// Deck runtime — stage scaling, navigation, reveal, count-up, chart rendering
+// Deck runtime — stage scaling, navigation, reveal, count-up, theme, chart rendering
 // ============================================================
 (function () {
+  const root = document.documentElement;
   const stage = document.getElementById('stage');
   const slides = Array.from(document.querySelectorAll('.slide'));
   const total = slides.length;
   let cur = -1;
+
+  // ---------- background layers (aurora + dot grid) on every slide
+  slides.forEach(s => {
+    const a = document.createElement('div'); a.className = 'aurora'; a.appendChild(document.createElement('i'));
+    const g = document.createElement('div'); g.className = 'gridbg';
+    s.prepend(g); s.prepend(a);
+  });
+
+  // ---------- theme: ?theme=light|dark wins, then the viewer's last choice, else dark
+  const themeBtn = document.getElementById('theme-btn');
+  function setTheme(t, persist) {
+    root.setAttribute('data-theme', t);
+    if (themeBtn && window.NetIcons) { themeBtn.innerHTML = NetIcons.svg(t === 'dark' ? 'sun' : 'moon'); themeBtn.title = t === 'dark' ? 'ธีมสว่าง (T)' : 'ธีมมืด (T)'; }
+    if (persist) { try { localStorage.setItem('net-deck-theme', t); } catch (e) { /* storage blocked — theme still applies */ } }
+  }
+  const qTheme = (location.search.match(/[?&]theme=(light|dark)/) || [])[1];
+  let saved = null; try { saved = localStorage.getItem('net-deck-theme'); } catch (e) { saved = null; }
+  setTheme(qTheme || (saved === 'light' || saved === 'dark' ? saved : 'dark'), false);
+  const toggleTheme = () => setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark', true);
+  if (themeBtn) themeBtn.addEventListener('click', toggleTheme);
 
   // ---------- scale the 1600×900 stage to the viewport
   function fit() {
@@ -34,7 +55,7 @@
 
   // ---------- count-up
   const STATIC = /[?&]static=1/.test(location.search);
-  if (STATIC) document.documentElement.classList.add('no-anim');
+  if (STATIC) root.classList.add('no-anim');
   const reduce = STATIC || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function countUps(slide) {
     slide.querySelectorAll('[data-count]').forEach(el => {
@@ -43,7 +64,7 @@
       const pre = el.dataset.pre || '', suf = el.dataset.suf || '';
       const f = v => pre + (dec ? v.toFixed(dec) : Math.round(v).toLocaleString('en-US')) + suf;
       if (reduce) { el.textContent = f(target); return; }
-      const t0 = performance.now(), dur = 1100;
+      const t0 = performance.now(), dur = 1200;
       if (el._raf) cancelAnimationFrame(el._raf);
       const tick = now => { const p = Math.min(1, (now - t0) / dur); const e = 1 - Math.pow(1 - p, 3); el.textContent = f(target * e); if (p < 1) el._raf = requestAnimationFrame(tick); };
       el._raf = requestAnimationFrame(tick);
@@ -63,15 +84,14 @@
     cur = i;
     const s = slides[i];
     s.classList.add('is-active');
-    // reveal in reading order
     const rev = Array.from(s.querySelectorAll('[data-reveal]'));
-    rev.forEach((e, k) => { if (!e.style.getPropertyValue('--d')) e.style.setProperty('--d', (0.08 + k * 0.06).toFixed(2) + 's'); });
+    rev.forEach((e, k) => { if (!e.style.getPropertyValue('--d')) e.style.setProperty('--d', (0.1 + k * 0.06).toFixed(2) + 's'); });
     requestAnimationFrame(() => requestAnimationFrame(() => { rev.forEach(e => e.classList.add('in')); Charts.reveal(s); countUps(s); }));
     fill.style.width = ((i + 1) / total * 100) + '%';
     curNum.textContent = i + 1;
     Array.from(dots.children).forEach((d, k) => d.classList.toggle('on', k === i));
     Array.from(menuList.children).forEach((m, k) => m.classList.toggle('on', k === i));
-    history.replaceState(null, '', '#' + (i + 1));
+    history.replaceState(null, '', location.search + '#' + (i + 1));
     Charts.hideTip();
   }
   function next() { goTo(cur + 1); } function prev() { goTo(cur - 1); }
@@ -87,10 +107,10 @@
       case 'Home': goTo(0); break; case 'End': goTo(total - 1); break;
       case 'm': case 'M': toggleMenu(); break;
       case 'f': case 'F': toggleFs(); break;
+      case 't': case 'T': toggleTheme(); break;
       case 'Escape': closeMenu(); break;
     }
   });
-  // swipe
   let px = null;
   document.addEventListener('pointerdown', e => { px = e.clientX; });
   document.addEventListener('pointerup', e => { if (px == null) return; const dx = e.clientX - px; px = null; if (Math.abs(dx) > 70 && e.pointerType === 'touch') (dx < 0 ? next() : prev()); });
@@ -106,9 +126,8 @@
   function toggleFs() { if (!document.fullscreenElement) document.documentElement.requestFullscreen && document.documentElement.requestFullscreen(); else document.exitFullscreen && document.exitFullscreen(); }
   document.getElementById('fs-btn').addEventListener('click', toggleFs);
 
-  // hint
   const hint = document.getElementById('hint');
-  if (!STATIC) { setTimeout(() => hint.classList.add('show'), 800); setTimeout(() => hint.classList.remove('show'), 7000); }
+  if (!STATIC) { setTimeout(() => hint.classList.add('show'), 900); setTimeout(() => hint.classList.remove('show'), 7000); }
 
   // ---------- render charts from REPORT data
   if (window.Renderers) {
@@ -116,7 +135,6 @@
   }
   if (window.NetIcons) NetIcons.hydrate(document);
 
-  // ---------- start
   const n = parseInt((location.hash || '').slice(1));
   goTo(!isNaN(n) && n >= 1 && n <= total ? n - 1 : 0);
 })();
