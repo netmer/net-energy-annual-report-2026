@@ -24,7 +24,7 @@
   <div class="chrome-top">
     <div class="brand"><img src="assets/icons/net-wordmark.png" alt="NET"><span class="sep"></span>Progress Report · ก.ย.–ต.ค. 2569</div>
     <div class="right">
-      <span class="counter"><b id="cur-num">1</b> <span>/ <span id="total-num">22</span></span></span>
+      <span class="counter"><b id="cur-num">1</b> <span>/ <span id="total-num">16</span></span></span>
       <button class="ibtn" id="theme-btn" title="สลับธีม (T)"><span data-icon="sun"></span></button>
       <button class="ibtn" id="menu-btn" title="สารบัญ (M)"><span data-icon="list"></span></button>
       <button class="ibtn" id="fs-btn" title="เต็มจอ (F)"><span data-icon="maximize"></span></button>
@@ -74,16 +74,14 @@
     <div class="s-inner">
       <div class="s-head">
         <div class="eyebrow" data-reveal>Agenda</div>
-        <h2 class="h" data-reveal>หัวข้อวันนี้ — <em>7 เรื่อง</em> ใน 22 สไลด์</h2>
+        <h2 class="h" data-reveal>หัวข้อ<em>วันนี้</em></h2>
       </div>
-      <div class="s-body agenda">
+      <div class="s-body agenda" style="grid-template-columns:repeat(3,1fr)">
         <div class="card ag" data-jump="3" data-reveal><div class="num">01</div><div class="itile"><span data-icon="chart-pie"></span></div><div class="t">สรุปสำหรับผู้บริหาร</div><div class="d">ตัวเลขหลักของรอบ และ 3 เรื่องที่ควรรู้</div><div class="ag-go"><span data-icon="arrow-right"></span> สไลด์ 3</div></div>
-        <div class="card ag" data-jump="4" data-reveal><div class="num">02</div><div class="itile aqua"><span data-icon="graduation-cap"></span></div><div class="t">ธุรกิจอบรม ก.ย.–ต.ค.</div><div class="d">ลงทะเบียน · ผู้ผ่านการอบรม · รอบอบรม — สถิติใหม่ทั้งสามตัว</div><div class="ag-go"><span data-icon="arrow-right"></span> สไลด์ 4</div></div>
-        <div class="card ag" data-jump="5" data-reveal><div class="num">03</div><div class="itile"><span data-icon="chart-column"></span></div><div class="t">งานพัฒนาภาพรวม</div><div class="d">327 งาน ใน 12 โปรเจกต์ แยกตามระบบและรายสัปดาห์</div><div class="ag-go"><span data-icon="arrow-right"></span> สไลด์ 5</div></div>
-        <div class="card ag glow orange" data-jump="6" data-reveal><div class="num">04</div><div class="itile orange"><span data-icon="rocket"></span></div><div class="t">ระบบใหม่ 5 ระบบ + ลูกค้าองค์กรรายใหม่</div><div class="d">NET × AXTRA SHE Audit · จอผู้บริหาร · QR ประเมิน 8 ภาษา · ป้ายดิจิทัล · เว็บ ELMER · LMS สำหรับ SDS</div><div class="ag-go"><span data-icon="arrow-right"></span> สไลด์ 6–12</div></div>
-        <div class="card ag" data-jump="13" data-reveal><div class="num">05</div><div class="itile violet"><span data-icon="wrench"></span></div><div class="t">ระบบหลักที่ปรับดีขึ้น</div><div class="d">เว็บไซต์ + ERP · ความปลอดภัยข้อมูล · NETMER-Flow · ระบบอื่น ๆ</div><div class="ag-go"><span data-icon="arrow-right"></span> สไลด์ 13–16</div></div>
-        <div class="card ag" data-jump="17" data-reveal><div class="num">06</div><div class="itile amber"><span data-icon="search"></span></div><div class="t">SEO · Google</div><div class="d">คลิก · อันดับ · หลักสูตรไหนติด-ไม่ติด · คำค้นที่ขยับขึ้น</div><div class="ag-go"><span data-icon="arrow-right"></span> สไลด์ 17–19</div></div>
-        <div class="card ag" data-jump="20" data-reveal><div class="num">07</div><div class="itile red"><span data-icon="flag"></span></div><div class="t">ติดตาม · ไทม์ไลน์ · รอบถัดไป</div><div class="d">สิ่งที่รอการตัดสินใจ ลำดับงาน 6 สัปดาห์ และแผนรอบหน้า</div><div class="ag-go"><span data-icon="arrow-right"></span> สไลด์ 20–22</div></div>
+        <div class="card ag glow orange" data-jump="4" data-reveal><div class="num">02</div><div class="itile orange"><span data-icon="rocket"></span></div><div class="t">ระบบใหม่ 5 ระบบ + ลูกค้าองค์กร</div><div class="d">NET × AXTRA · จอผู้บริหาร · QR ประเมิน · ป้ายดิจิทัล · เว็บ ELMER · LMS สำหรับ SDS</div><div class="ag-go"><span data-icon="arrow-right"></span> สไลด์ 4–10</div></div>
+        <div class="card ag" data-jump="11" data-reveal><div class="num">03</div><div class="itile violet"><span data-icon="wrench"></span></div><div class="t">เว็บไซต์ NET + ERP</div><div class="d">เช็กชื่อ · Hybrid · เอกสารการสอน · ERP บนมือถือ · ผู้ช่วย AI · หน้าแรกใหม่</div><div class="ag-go"><span data-icon="arrow-right"></span> สไลด์ 11</div></div>
+        <div class="card ag" data-jump="12" data-reveal><div class="num">04</div><div class="itile amber"><span data-icon="search"></span></div><div class="t">SEO · Google</div><div class="d">คลิก · อันดับ · หลักสูตรที่ติด-ไม่ติด · คำค้นที่ขยับขึ้น</div><div class="ag-go"><span data-icon="arrow-right"></span> สไลด์ 12–14</div></div>
+        <div class="card ag" data-jump="15" data-reveal><div class="num">05</div><div class="itile aqua"><span data-icon="calendar"></span></div><div class="t">ไทม์ไลน์ · รอบถัดไป</div><div class="d">ลำดับงาน 6 สัปดาห์ และแผนรอบหน้า</div><div class="ag-go"><span data-icon="arrow-right"></span> สไลด์ 15–16</div></div>
         <div class="card soft ag" style="cursor:default;justify-content:center;gap:12px">
           <div class="row" style="gap:10px;font-size:14px;color:var(--muted)"><span data-icon="mouse-pointer-click"></span> ใช้งานสไลด์</div>
           <div class="kv"><span>เลื่อนสไลด์</span><b>← →</b></div>
@@ -100,7 +98,7 @@
     <div class="s-inner">
       <div class="s-head">
         <div class="eyebrow" data-reveal>01 · Executive summary</div>
-        <h2 class="h" data-reveal>ระบบของเรา<em>เริ่มทำงานให้ลูกค้าและผู้บริหารโดยตรง</em> — ขณะที่ธุรกิจอบรมทำสถิติใหม่</h2>
+        <h2 class="h" data-reveal>สรุปสำหรับ<em>ผู้บริหาร</em></h2>
       </div>
       <div class="s-body stack">
         <div class="grid g4">
@@ -111,7 +109,7 @@
         </div>
         <div class="grid g3 fill">
           <div class="card" data-reveal>
-            <div class="card-head"><div class="itile orange"><span data-icon="briefcase"></span></div><div><div class="t">1 · ระบบที่ให้บริการลูกค้าโดยตรง</div><div class="s">92 commits บน 3 ระบบใหม่</div></div></div>
+            <div class="card-head"><div class="itile orange"><span data-icon="briefcase"></span></div><div><div class="t">1 · บริการลูกค้าโดยตรง</div><div class="s">92 commits บน 3 ระบบใหม่</div></div></div>
             <ul class="blist tight">
               <li><div class="itile sm orange"><span data-icon="store"></span></div><div><b>NET × AXTRA SHE Audit</b> ขึ้นจริง 15 ก.ย. — แผนตรวจ 239 สาขา Lotus's ถึง พ.ย.</div></li>
               <li><div class="itile sm orange"><span data-icon="graduation-cap"></span></div><div><b>LMS สำหรับ SDS</b> — ข้อเสนอผ่าน สร้างระบบจริงบน dev แล้ว รอข้อมูลลูกค้า</div></li>
@@ -119,7 +117,7 @@
             </ul>
           </div>
           <div class="card" data-reveal>
-            <div class="card-head"><div class="itile"><span data-icon="tv"></span></div><div><div class="t">2 · ตัวเลขขึ้นจอเอง ไม่ต้องกรอก</div><div class="s">NETMER-Flow · ERP · Document Flow</div></div></div>
+            <div class="card-head"><div class="itile"><span data-icon="tv"></span></div><div><div class="t">2 · ตัวเลขขึ้นจอเอง</div><div class="s">NETMER-Flow · ERP · Document Flow</div></div></div>
             <ul class="blist tight">
               <li><div class="itile sm"><span data-icon="layout-dashboard"></span></div><div><b>จอผู้บริหาร 6 หน้า</b> ดึงเองจาก ERP · Doc Flow · CP Passport</div></li>
               <li><div class="itile sm"><span data-icon="monitor"></span></div><div><b>ป้ายดิจิทัล</b> แทนชีตที่ต้องพิมพ์ทุกวัน — เจอผู้อบรมตกหล่น 7,272 คน</div></li>
@@ -127,11 +125,11 @@
             </ul>
           </div>
           <div class="card" data-reveal>
-            <div class="card-head"><div class="itile amber"><span data-icon="trending-up"></span></div><div><div class="t">3 · ธุรกิจ + การมองเห็นโตต่อ</div><div class="s">Firestore · Google Search Console</div></div></div>
+            <div class="card-head"><div class="itile amber"><span data-icon="trending-up"></span></div><div><div class="t">3 · ธุรกิจ + SEO โตต่อ</div><div class="s">Firestore · Google Search Console</div></div></div>
             <ul class="blist tight">
               <li><div class="itile sm amber"><span data-icon="calendar"></span></div><div><b>ต.ค. เปิด 114 รอบ</b> มากที่สุดตั้งแต่เปิดระบบ — In-house 47 รอบ (ก.ย. 19)</div></li>
-              <li><div class="itile sm amber"><span data-icon="search"></span></div><div><b>คลิก Google +16%/วัน</b> · หลักสูตร 45/54 อยู่หน้าแรก · คำทั่วไปเริ่มติด</div></li>
-              <li><div class="itile sm red"><span data-icon="triangle-alert"></span></div><div><b>ต้องแก้:</b> ระบบสถิติเว็บของเราหยุดบันทึกตั้งแต่ 3 ก.ย. (สไลด์ 20)</div></li>
+              <li><div class="itile sm amber"><span data-icon="search"></span></div><div><b>คลิก Google +16%/วัน</b> · หลักสูตร 49/54 อยู่หน้าแรก · คำทั่วไปเริ่มติด</div></li>
+              <li><div class="itile sm amber"><span data-icon="trending-up"></span></div><div><b>"อบรมดับเพลิงขั้นต้น"</b> อันดับ 36 → 6 · หน้าจังหวัดเชียงใหม่ คลิก 22 → 67</div></li>
             </ul>
           </div>
         </div>
@@ -140,116 +138,58 @@
     </div>
   </section>
 
-  <!-- ============ 4 · BUSINESS ============ -->
-  <section class="slide" data-title="ธุรกิจอบรม ก.ย.–ต.ค." data-nav-icon="graduation-cap" data-aura="aqua">
-    <div class="s-inner">
-      <div class="s-head">
-        <div class="eyebrow aqua" data-reveal>02 · ธุรกิจอบรม</div>
-        <h2 class="h" data-reveal>ก.ย. ลงทะเบียน <em>967 ใบ</em> · ผ่านอบรม <em>1,375 คน</em> — และ ต.ค. เปิด 114 รอบ</h2>
-      </div>
-      <div class="s-body stack">
-        <div class="grid g3">
-          <div class="card" data-reveal><figure data-chart="regsByMonth" style="height:236px"></figure></div>
-          <div class="card" data-reveal><figure data-chart="trainedByMonth" style="height:236px"></figure></div>
-          <div class="card" data-reveal><figure data-chart="roundsByMonth" style="height:236px"></figure></div>
-        </div>
-        <div class="grid g-12 fill">
-          <div class="card span-5" data-reveal><figure data-chart="sepTopTrained" style="height:100%"></figure></div>
-          <div class="card span-4" data-reveal style="display:flex;flex-direction:column;gap:14px">
-            <figure data-chart="octMode"></figure>
-            <div class="facts" style="grid-template-columns:1fr 1fr;margin-top:auto">
-              <div class="fact"><div class="v">47<small>รอบ</small></div><div class="l">In-house ใน ต.ค. — 2.5 เท่าของ ก.ย. (19)</div></div>
-              <div class="fact"><div class="v">83<small>รอบ</small></div><div class="l">พ.ย. เปิดจองไว้แล้ว</div></div>
-            </div>
-          </div>
-          <div class="card soft span-3" data-reveal>
-            <h4>อ่านตัวเลขนี้อย่างไร</h4>
-            <div class="kv"><span>ลงทะเบียน ก.ย. ยืนยัน</span><b>822</b></div>
-            <div class="kv"><span>ยกเลิก ก.ย. → ต.ค.</span><b>11% → 7%</b></div>
-            <div class="kv"><span>บริษัทที่มีผู้ผ่าน ก.ย.</span><b>248</b></div>
-            <p style="font-size:13.5px;margin-top:10px;line-height:1.5">ผู้ผ่านการอบรม = รายชื่อที่<b>ยืนยันผลแล้ว</b> จึงเพิ่มย้อนหลังได้ — ส.ค. ปรับจาก 1,155 (รายงานรอบก่อน) เป็น 1,297 · * ต.ค. นับถึง 15 ต.ค.</p>
-          </div>
-        </div>
-      </div>
-      <div class="s-foot"><b>ที่มา</b> Firestore ณ 15 ต.ค. 2569: registrations (วันลงทะเบียน) · trainingRecords status=completed (วันจบอบรม) · trainingSchedules (วันเริ่มรอบ · ไม่หักรอบยกเลิก)</div>
-    </div>
-  </section>
-
-  <!-- ============ 5 · DEV WORK ============ -->
-  <section class="slide" data-title="งานพัฒนา 327 งาน" data-nav-icon="chart-column">
-    <div class="s-inner">
-      <div class="s-head">
-        <div class="eyebrow" data-reveal>03 · งานพัฒนา</div>
-        <h2 class="h" data-reveal>327 งานใน 6 สัปดาห์ — <em>ระบบหลัก 55%</em> · ระบบใหม่ 28% · ระบบอื่น 17%</h2>
-      </div>
-      <div class="s-body grid g-12">
-        <div class="card span-7" data-reveal><figure data-chart="devByRepo" style="height:100%"></figure></div>
-        <div class="span-5 stack">
-          <div class="card" data-reveal><figure data-chart="devWeeks" style="height:262px"></figure></div>
-          <div class="facts fill" data-reveal style="grid-template-columns:1fr 1fr">
-            <div class="fact"><div class="v">179</div><div class="l">เว็บไซต์ + ERP (104) และ NETMER-Flow (75)</div></div>
-            <div class="fact"><div class="v">92</div><div class="l">บน 3 ระบบใหม่ที่เริ่มเขียนในรอบนี้</div></div>
-            <div class="fact"><div class="v">76</div><div class="l">สัปดาห์ที่หนักสุด 2–8 ต.ค. (จอผู้บริหาร + ฟีดข้อมูล)</div></div>
-            <div class="fact"><div class="v">7.8<small>/วัน</small></div><div class="l">เฉลี่ยทั้งรอบ · รอบก่อน 175 งานใน 24 วัน (7.3/วัน)</div></div>
-          </div>
-        </div>
-      </div>
-      <div class="s-foot"><b>ที่มา</b> git log --all --no-merges ทุก repo ใน E:\Devloper · 4 ก.ย. – 15 ต.ค. 2569 · ไม่นับ merge และ stash</div>
-    </div>
-  </section>
-
-  <!-- ============ 6 · NEW SYSTEMS OVERVIEW ============ -->
+  <!-- ============ 4 · NEW SYSTEMS OVERVIEW ============ -->
   <section class="slide" data-title="ระบบใหม่รอบนี้" data-nav-icon="rocket" data-aura="orange">
     <div class="s-inner">
       <div class="s-head">
-        <div class="eyebrow orange" data-reveal>04 · ระบบใหม่</div>
-        <h2 class="h" data-reveal>5 ระบบใหม่ขึ้นใช้งานจริง + <em>ระบบสำหรับลูกค้าองค์กรรายใหม่</em></h2>
+        <div class="eyebrow orange" data-reveal>02 · ระบบใหม่</div>
+        <h2 class="h" data-reveal>ระบบใหม่<em>รอบนี้</em></h2>
       </div>
       <div class="s-body bento">
-        <div class="card b b1 glow orange" data-jump="7" data-reveal>
+        <div class="card b b1 glow orange" data-jump="5" data-reveal>
           <div class="top"><div class="itile lg orange"><span data-icon="store"></span></div><div><h4>NET × AXTRA SHE Audit</h4><div class="card-sub">บริการตรวจ SHE ให้ลูกค้า CP Axtra</div></div><span class="badge live">ใช้งานจริง 15 ก.ย.</span></div>
           <p>ผู้ตรวจกรอกบนมือถือที่สาขา Lotus's (ออฟไลน์ได้) — ได้คะแนนและรายงานตามแบบของลูกค้า แล้วติดตามการแก้ไขจนปิดประเด็น</p>
           <div class="kpi"><span class="bignum" data-count="239">239</span><span>สาขาในแผนเข้าตรวจ<br>ก.ย.–พ.ย. · ผู้ตรวจ 5 คน</span></div>
         </div>
-        <div class="card b b2 glow" data-jump="8" data-reveal>
+        <div class="card b b2 glow" data-jump="6" data-reveal>
           <div class="top"><div class="itile lg"><span data-icon="tv"></span></div><div><h4>จอผู้บริหาร (Exec Board)</h4><div class="card-sub">ทีวีห้องผู้บริหาร · NETMER-Flow</div></div><span class="badge live">ใช้งานจริง 10 ต.ค.</span></div>
           <p>รอบไหนคนไม่ถึงขั้นต่ำ ทีมวันนี้ ภาพรวมเดือน ลูกค้า การเงิน — ดึงจาก 3 ระบบอัตโนมัติ ไม่มีใครต้องกรอก</p>
           <div class="kpi"><span class="bignum">6</span><span>หน้า · สร้างเสร็จใน 6 วัน<br>(5–10 ต.ค.)</span></div>
         </div>
-        <div class="card b b3" data-jump="9" data-reveal>
+        <div class="card b b3" data-jump="7" data-reveal>
           <div class="top"><div class="itile violet"><span data-icon="qr-code"></span></div><span class="badge live">9–15 ต.ค.</span></div>
           <h4>ประเมินด้วย QR + คลังข้อสอบ</h4>
           <p>แทน Google Form · ประเมินวิทยากรรายคน · ข้อสอบตรวจที่เซิร์ฟเวอร์</p>
           <div class="kpi"><span class="bignum">8</span><span>ภาษาสำหรับผู้อบรม</span></div>
         </div>
-        <div class="card b b4" data-jump="10" data-reveal>
+        <div class="card b b4" data-jump="8" data-reveal>
           <div class="top"><div class="itile aqua"><span data-icon="monitor"></span></div><span class="badge live">10–15 ก.ย.</span></div>
           <h4>ป้ายดิจิทัลโถงต้อนรับ</h4>
           <p>ยอดผู้อบรมสะสมอัปเดตเอง · ประกาศด่วน · อากาศ · อัลบั้ม</p>
           <div class="kpi"><span class="bignum" data-count="261333">261,333</span><span>คน<br>ยอดสะสม</span></div>
         </div>
-        <div class="card b b5" data-jump="11" data-reveal>
+        <div class="card b b5" data-jump="9" data-reveal>
           <div class="top"><div class="itile amber"><span data-icon="globe"></span></div><span class="badge live">7 ต.ค.</span></div>
           <h4>เว็บไซต์ ELMER</h4>
           <p>www.elmer-int.com · ที่ปรึกษา + ดูแลระบบบำบัดน้ำเสีย</p>
           <div class="kpi"><span class="bignum">98</span><span>หน้า · URL เดิม<br>redirect ครบ 87</span></div>
         </div>
-        <div class="card b" data-jump="12" data-reveal style="grid-column:span 6;flex-direction:row;align-items:center;gap:18px;padding:16px 22px">
+        <div class="card b" data-jump="10" data-reveal style="grid-column:span 6;flex-direction:row;align-items:center;gap:18px;padding:16px 22px">
           <div class="itile lg"><span data-icon="graduation-cap"></span></div>
           <div style="flex:1"><h4 style="margin:0">NET LMS สำหรับลูกค้าองค์กร (SDS) <span class="badge dev" style="margin-left:8px;vertical-align:2px">dev · รอข้อมูลลูกค้า</span></h4><p>ระบบจัดการอบรมความปลอดภัยเฉพาะองค์กร — ข้อเสนอผ่านแล้ว สร้างระบบจริงบน dev ใน 4 วัน (22–25 ก.ย.) · 34 หน้าจอ · 8 บทบาท</p></div>
-          <div class="ag-go" style="border:0;padding:0;margin:0;color:var(--muted);font-size:13px;display:flex;gap:6px;align-items:center"><span data-icon="arrow-right"></span> สไลด์ 12</div>
+          <div class="ag-go" style="border:0;padding:0;margin:0;color:var(--muted);font-size:13px;display:flex;gap:6px;align-items:center"><span data-icon="arrow-right"></span> สไลด์ 10</div>
         </div>
       </div>
       <div class="s-foot"><b>คลิกการ์ด</b> เพื่อดูรายละเอียดแต่ละระบบ · ภาพหน้าจอในสไลด์ถัดไปใช้ข้อมูลทดสอบ/ข้อมูลจำลอง ไม่มีข้อมูลส่วนบุคคลจริง</div>
     </div>
   </section>
 
-  <!-- ============ 7 · NET × AXTRA SHE AUDIT ============ -->
+  <!-- ============ 5 · NET × AXTRA SHE AUDIT ============ -->
   <section class="slide" data-title="ใหม่ · NET × AXTRA SHE Audit" data-nav-icon="store" data-aura="orange">
     <div class="s-inner">
       <div class="s-head">
-        <div class="eyebrow orange" data-reveal>04 · ระบบใหม่ 1/6 · บริการลูกค้า CP Axtra</div>
-        <h2 class="h" data-reveal>NET × AXTRA: ตรวจ SHE สาขา Lotus's บนมือถือ — <em>ได้รายงานตามแบบของลูกค้าทันที</em></h2>
+        <div class="eyebrow orange" data-reveal>02 · ระบบใหม่ 1/6</div>
+        <h2 class="h" data-reveal>NET × AXTRA <em>SHE Audit</em></h2>
       </div>
       <div class="s-body sys rev">
         <div class="media" data-reveal>
@@ -278,12 +218,12 @@
     </div>
   </section>
 
-  <!-- ============ 8 · EXEC BOARD ============ -->
+  <!-- ============ 6 · EXEC BOARD ============ -->
   <section class="slide" data-title="ใหม่ · จอผู้บริหาร" data-nav-icon="tv" data-aura="violet">
     <div class="s-inner">
       <div class="s-head">
-        <div class="eyebrow orange" data-reveal>04 · ระบบใหม่ 2/6 · NETMER-Flow</div>
-        <h2 class="h" data-reveal>จอผู้บริหาร: ตัวเลขธุรกิจ 6 หน้าบนทีวี — <em>ดึงเองจาก 3 ระบบ</em> ไม่มีใครต้องกรอก</h2>
+        <div class="eyebrow orange" data-reveal>02 · ระบบใหม่ 2/6</div>
+        <h2 class="h" data-reveal><em>จอผู้บริหาร</em> (Exec Board)</h2>
       </div>
       <div class="s-body sys rev" style="grid-template-columns:1.2fr 1fr">
         <div class="media" data-reveal>
@@ -318,12 +258,12 @@
     </div>
   </section>
 
-  <!-- ============ 9 · QR EVALUATION + EXAM ============ -->
+  <!-- ============ 7 · QR EVALUATION + EXAM ============ -->
   <section class="slide" data-title="ใหม่ · ประเมินด้วย QR + คลังข้อสอบ" data-nav-icon="qr-code" data-aura="violet">
     <div class="s-inner">
       <div class="s-head">
-        <div class="eyebrow orange" data-reveal>04 · ระบบใหม่ 3/6 · ERP</div>
-        <h2 class="h" data-reveal>ประเมินการอบรมด้วย QR <em>8 ภาษา</em> แทน Google Form + คลังข้อสอบกลาง</h2>
+        <div class="eyebrow orange" data-reveal>02 · ระบบใหม่ 3/6</div>
+        <h2 class="h" data-reveal>ประเมินด้วย <em>QR</em> + คลังข้อสอบ</h2>
       </div>
       <div class="s-body sys rev" style="grid-template-columns:1.12fr 1fr">
         <div class="media" data-reveal>
@@ -353,12 +293,12 @@
     </div>
   </section>
 
-  <!-- ============ 10 · SIGNAGE ============ -->
+  <!-- ============ 8 · SIGNAGE ============ -->
   <section class="slide" data-title="ใหม่ · ป้ายดิจิทัล" data-nav-icon="monitor" data-aura="aqua">
     <div class="s-inner">
       <div class="s-head">
-        <div class="eyebrow orange" data-reveal>04 · ระบบใหม่ 4/6 · ป้ายดิจิทัลโถงต้อนรับ</div>
-        <h2 class="h" data-reveal>ป้ายดิจิทัล: เลิกพิมพ์ตัวเลขลงชีตทุกวัน — และ<em>เจอผู้อบรมที่ตกหล่น 7,272 คน</em></h2>
+        <div class="eyebrow orange" data-reveal>02 · ระบบใหม่ 4/6</div>
+        <h2 class="h" data-reveal><em>ป้ายดิจิทัล</em>โถงต้อนรับ</h2>
       </div>
       <div class="s-body sys" style="grid-template-columns:1.05fr 1fr">
         <div class="media" data-reveal style="flex-direction:row;gap:18px">
@@ -391,12 +331,12 @@
     </div>
   </section>
 
-  <!-- ============ 11 · ELMER WEBSITE ============ -->
+  <!-- ============ 9 · ELMER WEBSITE ============ -->
   <section class="slide" data-title="ใหม่ · เว็บไซต์ ELMER" data-nav-icon="globe" data-aura="aqua">
     <div class="s-inner">
       <div class="s-head">
-        <div class="eyebrow orange" data-reveal>04 · ระบบใหม่ 5/6 · ธุรกิจในเครือ ELMER</div>
-        <h2 class="h" data-reveal>เว็บไซต์ใหม่ ELMER Integrations — <em>www.elmer-int.com</em> ขึ้นจริง 7 ต.ค.</h2>
+        <div class="eyebrow orange" data-reveal>02 · ระบบใหม่ 5/6</div>
+        <h2 class="h" data-reveal>เว็บไซต์ <em>ELMER</em> Integrations</h2>
       </div>
       <div class="s-body sys rev" style="grid-template-columns:1.25fr 1fr">
         <div class="media" data-reveal>
@@ -429,12 +369,12 @@
     </div>
   </section>
 
-  <!-- ============ 12 · SDS LMS ============ -->
+  <!-- ============ 10 · SDS LMS ============ -->
   <section class="slide" data-title="ใหม่ · LMS ลูกค้าองค์กร (SDS)" data-nav-icon="graduation-cap" data-aura="violet">
     <div class="s-inner">
       <div class="s-head">
-        <div class="eyebrow" data-reveal>04 · ระบบใหม่ 6/6 · ลูกค้าองค์กรรายแรก</div>
-        <h2 class="h" data-reveal>NET LMS สำหรับ SDS — <em>ข้อเสนอผ่าน</em> และสร้างระบบจริงบน dev แล้ว</h2>
+        <div class="eyebrow orange" data-reveal>02 · ระบบใหม่ 6/6</div>
+        <h2 class="h" data-reveal>NET LMS สำหรับ <em>SDS</em></h2>
       </div>
       <div class="s-body sys">
         <div class="media" data-reveal>
@@ -482,12 +422,12 @@
     </div>
   </section>
 
-  <!-- ============ 13 · CORE: WEBSITE + ERP ============ -->
+  <!-- ============ 11 · CORE: WEBSITE + ERP ============ -->
   <section class="slide" data-title="เว็บไซต์ NET + ERP" data-nav-icon="wrench">
     <div class="s-inner">
       <div class="s-head">
-        <div class="eyebrow violet" data-reveal>05 · ระบบหลัก · เว็บไซต์ NET + ERP (104 commits)</div>
-        <h2 class="h" data-reveal>เว็บไซต์ + ERP: หน้าบ้าน<em>โฉมใหม่และเร็วขึ้น</em> · หลังบ้านใช้ได้ทุกที่</h2>
+        <div class="eyebrow violet" data-reveal>03 · ระบบหลัก</div>
+        <h2 class="h" data-reveal>เว็บไซต์ <em>NET</em> + ERP</h2>
       </div>
       <div class="s-body grid g-12">
         <div class="span-5 stack" data-reveal>
@@ -509,132 +449,12 @@
     </div>
   </section>
 
-  <!-- ============ 14 · SECURITY ============ -->
-  <section class="slide" data-title="ความปลอดภัยข้อมูล (PDPA)" data-nav-icon="shield-check" data-aura="red">
-    <div class="s-inner">
-      <div class="s-head">
-        <div class="eyebrow red" data-reveal>05 · ความปลอดภัยข้อมูลส่วนบุคคล (PDPA)</div>
-        <h2 class="h" data-reveal>ปิดช่องทางเข้าถึงข้อมูลผู้อบรมที่ไม่ควรเปิด — <em>แก้แล้ว 8 จาก 12 ข้อ</em> ที่ตรวจพบ</h2>
-      </div>
-      <div class="s-body grid g-12">
-        <div class="card span-4 glow aqua" data-reveal style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center">
-          <div class="ring" style="--c:345.6;--off:115.2;width:170px;height:170px">
-            <svg viewBox="0 0 132 132"><circle class="trk" cx="66" cy="66" r="55"/><circle class="val" cx="66" cy="66" r="55"/></svg>
-            <div class="lbl"><div><b>8/12</b><span>ข้อที่แก้แล้ว</span></div></div>
-          </div>
-          <p style="font-size:15.5px">ตรวจความปลอดภัยภายในรอบ ก.ย. (เทียบเกณฑ์ VA/PT) — ข้อที่ร้ายแรงที่สุดปิดก่อนทั้งหมด</p>
-          <div class="facts" style="grid-template-columns:1fr 1fr;width:100%">
-            <div class="fact"><div class="v">3<span class="arrow">→</span>0</div><div class="l">ช่องโหว่ระดับ critical ในไลบรารี</div></div>
-            <div class="fact"><div class="v">A+</div><div class="l">SSL Labs</div></div>
-          </div>
-        </div>
-        <div class="card span-8" data-reveal style="display:flex;flex-direction:column">
-          <div class="card-head"><div class="itile aqua"><span data-icon="shield-check"></span></div><div><div class="t">สิ่งที่ปิดแล้วในรอบนี้</div><div class="s">ทดสอบกฎความปลอดภัยใน emulator ผ่าน 20/20 และ 10/10 ก่อนขึ้นระบบ</div></div></div>
-          <ul class="blist" style="gap:26px;margin-top:10px">
-            <li><div class="itile sm aqua"><span data-icon="lock"></span></div><div><span class="k">ข้อมูลผู้อบรมและไฟล์เอกสารส่วนบุคคล</span>ปิดการเข้าถึงจากภายนอกระบบทั้งหมด — เปิดได้เฉพาะเจ้าหน้าที่ที่ล็อกอินและมีสิทธิ์</div></li>
-            <li><div class="itile sm aqua"><span data-icon="clipboard-check"></span></div><div><span class="k">หน้าข้อสอบและผลประเมินของผู้อบรม</span>ไม่ส่งเลขบัตรหรือเฉลยไปที่มือถือ · ตรวจคะแนนที่เซิร์ฟเวอร์ · คลังข้อสอบไม่เปิดสาธารณะ</div></li>
-            <li><div class="itile sm aqua"><span data-icon="users"></span></div><div><span class="k">สิทธิ์ผู้ดูแลระบบ</span>ปิดช่องที่คนนอกตั้งตัวเองเป็นแอดมิน · ซ่อนอีเมลลูกค้าจากหน้าที่ไม่จำเป็น</div></li>
-            <li><div class="itile sm aqua"><span data-icon="package"></span></div><div><span class="k">ไลบรารีที่ใช้</span>อัปเกรดทั้งระบบ — critical 3 → 0 · high 27 → 12</div></li>
-          </ul>
-          <div class="callout warn" style="margin-top:auto"><b>อีก 4 ข้อ</b> มีแผนปิดในรอบหน้า — รายละเอียดแจ้งแยก ไม่ใส่ในเอกสารที่เผยแพร่ · ก่อนขึ้นระบบลูกค้าองค์กรจริงต้องมีการทดสอบเจาะระบบโดยบุคคลที่สาม</div>
-        </div>
-      </div>
-      <div class="s-foot"><b>ที่มา</b> เอกสารผลตรวจความปลอดภัยภายใน (ก.ย. 2569) · git history NET-workspace 18 ก.ย. และ 15 ต.ค.</div>
-    </div>
-  </section>
-
-  <!-- ============ 15 · NETMER-FLOW HR ============ -->
-  <section class="slide" data-title="NETMER-Flow · HR" data-nav-icon="briefcase">
-    <div class="s-inner">
-      <div class="s-head">
-        <div class="eyebrow violet" data-reveal>05 · ระบบหลัก · NETMER-Flow (HR)</div>
-        <h2 class="h" data-reveal>NETMER-Flow: ตัวเลข HR <em>ตรงขึ้น</em> และเครื่องมือใหม่ที่ทีมขอ</h2>
-      </div>
-      <div class="s-body grid g3" style="grid-template-rows:1fr 1fr">
-        <div class="card kc" data-reveal>
-          <div class="card-head"><div class="itile"><span data-icon="clock"></span></div><div><div class="t">WFH แทนช่อง SD</div><div class="s">เริ่มคิดตั้งแต่ ต.ค. 2569</div></div><span class="badge wait">รอทดสอบจริง</span></div>
-          <p>ยื่นใบเดียวจบ (ระบบลงเวลาให้เอง) · วันที่ไม่ได้ใช้ได้ค่าตอบแทน 8 ชม. OT เมื่อ HR ยืนยันสิ้นเดือน</p>
-          <div class="kfoot"><span class="bignum">2</span><span>วัน/เดือน<br>ต่อพนักงาน</span></div>
-        </div>
-        <div class="card kc" data-reveal>
-          <div class="card-head"><div class="itile"><span data-icon="calendar"></span></div><div><div class="t">วันลาคงเหลือ + ปฏิทินคำขอ</div><div class="s">ใช้งานจริง 28 ก.ย.</div></div><span class="badge live">Live</span></div>
-          <p>กฎตัดวันลาชุดเดียวทุกหน้า — แก้ "ลาป่วยไปหักลากิจ" และใบลาข้ามปี · เห็นว่าใครลา/OT วันไหน อนุมัติจากปฏิทินได้</p>
-          <div class="kfoot"><span class="bignum">6</span><span>คนที่วันลาคงเหลือถูกแก้ให้ถูก<br>(มีสำรองข้อมูลก่อนแก้)</span></div>
-        </div>
-        <div class="card kc" data-reveal>
-          <div class="card-head"><div class="itile"><span data-icon="gauge"></span></div><div><div class="t">"งานเสร็จช้า" แม่นขึ้น</div><div class="s">ทดสอบกับงานจริง 8,438 ใบ</div></div><span class="badge wait">รอทดสอบจริง</span></div>
-          <p>สูตรเดิมที่กระจาย 3 ที่รวมเป็นหนึ่ง และนับจากวันที่ส่งตรวจ · เวลาเฉลี่ยจริง 58 ชม./งาน</p>
-          <div class="kfoot"><span class="bignum">74→26%</span><span>สัดส่วนงานที่<br>ขึ้นว่า "ช้า"</span></div>
-        </div>
-        <div class="card kc" data-reveal>
-          <div class="card-head"><div class="itile"><span data-icon="thumbs-up"></span></div><div><div class="t">แดชบอร์ด EC</div><div class="s">ใช้งานจริง 28 ก.ย.</div></div><span class="badge live">Live</span></div>
-          <p>แยก EC ที่เกิดจากอุปกรณ์ IT ออกจากอันดับรายบุคคล — ให้คนกล้าแจ้ง EC มากขึ้น</p>
-          <div class="kfoot"><span class="bignum">23%</span><span>ของ EC ทั้งหมดมาจากอุปกรณ์ IT<br>(53 จาก 227 รายการ)</span></div>
-        </div>
-        <div class="card kc" data-reveal>
-          <div class="card-head"><div class="itile"><span data-icon="video"></span></div><div><div class="t">e-Learning ภายใน</div><div class="s">ใช้งานจริง 26 ก.ย. – 3 ต.ค.</div></div><span class="badge live">Live</span></div>
-          <p>มอบหมายตามตำแหน่ง/แผนก · วิดีโอกันกรอข้าม · คุมสอบรายหลักสูตร · นำเข้าประวัติจาก Excel ครั้งละ 2,000 แถว — รอ HR นำเข้าข้อมูลปี 2569</p>
-          <div class="kfoot"><span class="bignum">12</span><span>ชม./ปี<br>เป้าเริ่มต้นต่อคน</span></div>
-        </div>
-        <div class="card kc" data-reveal>
-          <div class="card-head"><div class="itile"><span data-icon="list"></span></div><div><div class="t">เมนูชุดเดียว + แก้จุดค้าง</div><div class="s">ทั้งระบบ</div></div><span class="badge live">Live</span></div>
-          <p>ค้นหาเมนูภาษาไทยด้วย Ctrl+K · แก้ที่เก็บรูปตรวจรถผ่าน QR (เดิมรูปไม่ถูกบันทึก) · ยอดเช็กชื่อขึ้นตั้งแต่ 17:00</p>
-          <div class="kfoot"><span class="bignum">9→5</span><span>ปุ่มเมนูบนสุด<br>พอดีจอโน้ตบุ๊ก</span></div>
-        </div>
-      </div>
-      <div class="s-foot"><b>ที่มา</b> git log NETMER-Flow (จอผู้บริหาร + ป้ายดิจิทัลอยู่ในสไลด์ระบบใหม่) · "รอทดสอบจริง" = ขึ้นระบบแล้วแต่ยังไม่ได้ทดสอบบนหน้าจอจริงด้วยบัญชีผู้ใช้</div>
-    </div>
-  </section>
-
-  <!-- ============ 16 · OTHER SYSTEMS ============ -->
-  <section class="slide" data-title="ระบบอื่นที่ดูแลอยู่" data-nav-icon="layers">
-    <div class="s-inner">
-      <div class="s-head">
-        <div class="eyebrow violet" data-reveal>05 · ระบบที่ดูแลอยู่ (56 commits)</div>
-        <h2 class="h" data-reveal>ระบบที่ใช้ทุกวัน: แก้จุดที่ทำให้<em>งานติด ตัวเลขผิด</em> และเพิ่มสิ่งที่ทีมขอ</h2>
-      </div>
-      <div class="s-body grid g3" style="grid-template-rows:1fr 1fr">
-        <div class="card kc" data-reveal>
-          <div class="card-head"><div class="itile amber"><span data-icon="id-card"></span></div><div><div class="t">CP Safety Passport</div><div class="s">15 commits</div></div><span class="badge live">Live</span></div>
-          <ul class="blist bul tight"><li><div>ปลดล็อกรอบอบรมที่ติด 3 แบบ (เช่น R รุ่น 127 · 43 คน)</div></li><li><div>ล้างอักขระซ่อนในข้อมูล 1,619 รายการ · BU 6 กลุ่ม</div></li><li><div>แก้อัปโหลดใบเซอร์ค้าง 10 นาที (15 ต.ค.)</div></li></ul>
-          <div class="kfoot"><span class="bignum">655</span><span>รายการที่เลขบัตรถูกบันทึกเป็นพาสปอร์ต<br>— กลับมาค้นเจอแล้ว</span></div>
-        </div>
-        <div class="card kc" data-reveal>
-          <div class="card-head"><div class="itile"><span data-icon="receipt"></span></div><div><div class="t">NET Document Flow</div><div class="s">9 commits</div></div><span class="badge live">Live</span></div>
-          <ul class="blist bul tight"><li><div>ใบเสร็จ: แก้ 9 จุดที่แจ้ง — เลขไม่ซ้ำ · จ่ายบางส่วน · ตรา CANCELLED</div></li><li><div>ส่งยอดการเงินให้จอผู้บริหาร · พบเงินเข้าที่นับตกหล่น 44,405 บาท</div></li></ul>
-          <div class="kfoot"><span class="bignum">151</span><span>กลุ่มลูกค้าซ้ำที่รวมแล้ว<br>(ย้ายเอกสาร 538 ใบ)</span></div>
-        </div>
-        <div class="card kc" data-reveal>
-          <div class="card-head"><div class="itile aqua"><span data-icon="droplets"></span></div><div><div class="t">ELMER Water Analysis</div><div class="s">9 commits</div></div><span class="badge live">Live</span></div>
-          <ul class="blist bul aqua tight"><li><div><b>ส่งอีเมลรายงานผลน้ำจากระบบได้จริงครั้งแรก</b> (ส่งเบื้องหลัง ไม่ค้างหน้าจอ)</div></li><li><div>แท็บขั้นงาน รอผลน้ำ / รอส่งเมล / ส่งแล้ว · Excel ตามตัวกรอง</div></li></ul>
-          <div class="kfoot"><span class="bignum">3</span><span>ชีตใน Excel: รายงาน · จุดไม่ผ่านเกณฑ์<br>· เงื่อนไข (พร้อม WO/PO/ราคา)</span></div>
-        </div>
-        <div class="card kc" data-reveal>
-          <div class="card-head"><div class="itile orange"><span data-icon="file-text"></span></div><div><div class="t">ELMER ใบเสนอราคา + PO</div><div class="s">8 commits</div></div><span class="badge live">Live</span></div>
-          <ul class="blist bul orange tight"><li><div>PO พิมพ์ชื่อ ตำแหน่ง ลายเซ็นผู้อนุมัติ</div></li><li><div>บรรทัด LPF ระบุฝ่ายที่จ่าย · แก้เลข PO ชนกับ Excel</div></li></ul>
-          <div class="kfoot"><span class="bignum">1</span><span>แผ่นสำหรับใบเสนอราคา 16 รายการ<br>(ตรวจด้วยการพิมพ์จริง ไม่ล้นหน้า)</span></div>
-        </div>
-        <div class="card kc" data-reveal>
-          <div class="card-head"><div class="itile aqua"><span data-icon="waves"></span></div><div><div class="t">ELMER Wastewater</div><div class="s">1 commit</div></div><span class="badge live">Live</span></div>
-          <ul class="blist bul aqua tight"><li><div>ส่งออก Excel งานซ่อม (CM) และงาน PM ตามตัวกรองที่เลือก</div></li><li><div>รายงานรายเดือนเป็นไฟล์เดียว</div></li></ul>
-          <div class="kfoot"><span class="bignum">3</span><span>ชีตในรายงานรายเดือน: สรุปตามสาขา<br>· รายการงาน · เงื่อนไข</span></div>
-        </div>
-        <div class="card kc" data-reveal>
-          <div class="card-head"><div class="itile violet"><span data-icon="image"></span></div><div><div class="t">NET-ID Photo Studio</div><div class="s">13 commits · ออฟไลน์ 100%</div></div><span class="badge wait">รอส่งทีม</span></div>
-          <ul class="blist bul tight"><li><div>ชุดแต่งภาพ 9 เครื่องมือ — ลดนอยส์ · ฟัน/ตา · AI ลบวัตถุในเครื่อง</div></li><li><div>ล้างรอยบีบอัดรูปจาก LINE (ครึ่งหนึ่งของต้นฉบับ)</div></li></ul>
-          <div class="kfoot"><span class="bignum">~2 MB</span><span>ชุดอัปเดต<br>(เดิมต้องส่งชุดเต็ม 31 MB)</span></div>
-        </div>
-      </div>
-      <div class="s-foot"><b>เดินปกติ ไม่มีงานเพิ่ม</b> LINE CSAT · KYT MOTTO · นามบัตร NFC · Safety Hero · แอปแชตมือถือ · LPG Training · Online Inspector (ปรับป้ายช่วงวันที่ 1 จุด)</div>
-    </div>
-  </section>
-
-  <!-- ============ 17 · SEO OVERVIEW ============ -->
+  <!-- ============ 12 · SEO OVERVIEW ============ -->
   <section class="slide" data-title="SEO · ภาพรวม" data-nav-icon="search" data-aura="amber">
     <div class="s-inner">
       <div class="s-head">
-        <div class="eyebrow amber" data-reveal>06 · SEO · Google Search Console</div>
-        <h2 class="h long" data-reveal id="seo-h1">SEO ภาพรวมรอบนี้</h2>
+        <div class="eyebrow amber" data-reveal>04 · SEO 1/3</div>
+        <h2 class="h" data-reveal id="seo-h1"><em>SEO</em> ภาพรวม</h2>
       </div>
       <div class="s-body stack">
         <div class="grid g4" id="seo-stats"></div>
@@ -648,12 +468,12 @@
     </div>
   </section>
 
-  <!-- ============ 18 · SEO BY COURSE ============ -->
+  <!-- ============ 13 · SEO BY COURSE ============ -->
   <section class="slide" data-title="SEO · แยกตามหลักสูตร" data-nav-icon="search" data-aura="amber">
     <div class="s-inner">
       <div class="s-head">
-        <div class="eyebrow amber" data-reveal>06 · SEO · คลิกแยกตามหลักสูตร</div>
-        <h2 class="h long" data-reveal id="seo-h2">หลักสูตรที่ได้คลิกจาก Google</h2>
+        <div class="eyebrow amber" data-reveal>04 · SEO 2/3</div>
+        <h2 class="h" data-reveal id="seo-h2"><em>SEO</em> แยกตามหลักสูตร</h2>
       </div>
       <div class="s-body grid g-12">
         <div class="card span-7" data-reveal><figure data-chart="seoByCourse" style="height:100%"></figure></div>
@@ -663,21 +483,20 @@
     </div>
   </section>
 
-  <!-- ============ 19 · SEO GAPS + TIERS ============ -->
+  <!-- ============ 14 · SEO GAPS + TIERS ============ -->
   <section class="slide" data-title="SEO · ที่ยังไม่ติดอันดับ" data-nav-icon="triangle-alert" data-aura="amber">
     <div class="s-inner">
       <div class="s-head">
-        <div class="eyebrow amber" data-reveal>06 · SEO · หลักสูตรติด-ไม่ติด และคำที่ต้องทำต่อ</div>
-        <h2 class="h long" data-reveal id="seo-h3">หลักสูตรที่ยังไม่ติดอันดับ</h2>
+        <div class="eyebrow amber" data-reveal>04 · SEO 3/3</div>
+        <h2 class="h" data-reveal id="seo-h3"><em>SEO</em> สถานะการติดอันดับ</h2>
       </div>
       <div class="s-body grid g-12">
         <div class="card span-7" data-reveal id="seo-gaps"></div>
         <div class="span-5 stack" data-reveal>
           <div class="facts" id="seo-tiers" style="grid-template-columns:repeat(4,1fr)"></div>
           <div class="card fill">
-            <h4>9 หลักสูตรที่ยังไม่ขึ้นหน้าแรก</h4>
-            <div class="chips" id="seo-tierlist" style="margin-top:8px"></div>
-            <div id="seo-notes" style="margin-top:6px"></div>
+            <h4>หลักสูตรที่ยังไม่อยู่หน้าแรก</h4>
+            <div id="seo-tierlist" style="margin-top:6px"></div>
           </div>
         </div>
       </div>
@@ -685,59 +504,12 @@
     </div>
   </section>
 
-  <!-- ============ 20 · WATCH LIST / DECISIONS ============ -->
-  <section class="slide" data-title="สิ่งที่ต้องตัดสินใจ / ติดตาม" data-nav-icon="flag" data-aura="red">
-    <div class="s-inner">
-      <div class="s-head">
-        <div class="eyebrow red" data-reveal>07 · ติดตาม</div>
-        <h2 class="h" data-reveal>สิ่งที่ต้องการ<em>การตัดสินใจ</em>และการติดตามในรอบหน้า</h2>
-      </div>
-      <div class="s-body grid g2" style="grid-template-rows:1fr 1fr">
-        <div class="card risk glow" data-reveal style="--accent:var(--crit)">
-          <div class="rh"><div class="itile red"><span data-icon="chart-column"></span></div><div class="t">ระบบสถิติเว็บของเราไม่ได้บันทึกการเข้าชมตั้งแต่ 3 ก.ย.</div><span class="badge crit">ต้องแก้ก่อน</span></div>
-          <div class="facts" style="grid-template-columns:1fr 1fr 1fr">
-            <div class="fact"><div class="v">45,375</div><div class="l">การเข้าชมที่บันทึกได้ใน ส.ค.</div></div>
-            <div class="fact"><div class="v">55</div><div class="l">ที่บันทึกได้ 18 ก.ย. – 15 ต.ค.</div></div>
-            <div class="fact"><div class="v">2 ก.ย.</div><div class="l">วันสุดท้ายที่ข้อมูลครบ</div></div>
-          </div>
-          <p>เกิดหลังเปลี่ยนวิธีเก็บสถิติวันที่ 2 ก.ย. — หน้าแดชบอร์ดยังเปิดได้แต่ไม่มีข้อมูลใหม่ · <b>รอบนี้ใช้คลิกจาก Google แทน</b> และจะแก้เป็นงานแรกของรอบหน้า (ข้อมูล 6 สัปดาห์นี้กู้ย้อนหลังไม่ได้)</p>
-        </div>
-        <div class="card risk" data-reveal>
-          <div class="rh"><div class="itile amber"><span data-icon="clock"></span></div><div class="t">ทำเสร็จแล้ว — รออนุมัติเปิดใช้</div><span class="badge wait">รอผู้บริหาร</span></div>
-          <ul class="blist bul tight">
-            <li><div><b>เช็คลิสต์ "ลงผลระบบปลายทาง"</b> บนจอผู้บริหาร — รอประกาศใช้ TOR</div></li>
-            <li><div><b>การ์ดสรุปผลประเมินรายวันเข้า LINE</b> และสรุป LINE CSAT 08:00 — รอเลือกกลุ่ม</div></li>
-            <li><div><b>อีเมล/LINE อัตโนมัติของ NET × AXTRA</b> · แบบ Excel ที่แนบไปกับอีเมล</div></li>
-            <li><div>ให้ AXTRA เปิดค้างไว้ 1 เครื่อง แก้ช้าตอนเปิดครั้งแรก (~500–700 บาท/เดือน)</div></li>
-          </ul>
-        </div>
-        <div class="card risk" data-reveal>
-          <div class="rh"><div class="itile"><span data-icon="inbox"></span></div><div class="t">รอข้อมูลจากลูกค้า / ทีม</div><span class="badge dev">ติดตาม</span></div>
-          <ul class="blist bul tight">
-            <li><div><b>SDS</b> — IT ตอบเรื่อง AD/Entra + MFA และส่งข้อมูลพนักงาน/ประวัติอบรม</div></li>
-            <li><div><b>ข้อสอบ 36 ชุด</b> รอเจ้าหน้าที่ตรวจก่อนเปิดใช้ · คำแปลพม่า/เขมร/ลาว รอเจ้าของภาษา</div></li>
-            <li><div><b>HR</b> นำเข้าประวัติอบรมปี 2569 เข้า e-Learning ภายใน · ยืนยันเป้า 12/24 ชม.</div></li>
-          </ul>
-        </div>
-        <div class="card risk" data-reveal>
-          <div class="rh"><div class="itile violet"><span data-icon="lightbulb"></span></div><div class="t">คำถามที่รอคำตอบ</div><span class="badge gray">ตัดสินใจ</span></div>
-          <ul class="blist bul tight">
-            <li><div><b>WFH</b> — รองรับครึ่งวันไหม · "เดือน" = เดือนปฏิทิน หรือรอบเงินเดือน 26→25</div></li>
-            <li><div><b>ELMER</b> — ที่อยู่บริษัทที่ถูกต้อง (44/99 หรือ 1/233) สำหรับเว็บไซต์</div></li>
-            <li><div><b>ความปลอดภัย</b> — ปิดอีก 4 ข้อที่เหลือ + จัดการทดสอบเจาะระบบโดยบุคคลที่สามก่อนขึ้นระบบ SDS</div></li>
-          </ul>
-        </div>
-      </div>
-      <div class="s-foot"><b>ที่มา</b> analyticsEvents (Firestore) นับตามเวลาที่บันทึก · บันทึกสถานะงานในแต่ละโปรเจกต์</div>
-    </div>
-  </section>
-
-  <!-- ============ 21 · TIMELINE ============ -->
+  <!-- ============ 15 · TIMELINE ============ -->
   <section class="slide" data-title="ไทม์ไลน์ 6 สัปดาห์" data-nav-icon="calendar">
     <div class="s-inner">
       <div class="s-head">
-        <div class="eyebrow" data-reveal>07 · Timeline</div>
-        <h2 class="h" data-reveal>ลำดับงาน 6 สัปดาห์ — <em>ทุกสัปดาห์มีระบบใหม่ขึ้นจริง</em></h2>
+        <div class="eyebrow" data-reveal>05 · Timeline</div>
+        <h2 class="h" data-reveal>ไทม์ไลน์ <em>6 สัปดาห์</em></h2>
       </div>
       <div class="s-body weeks">
         <div class="card wk" data-reveal>
@@ -757,9 +529,9 @@
         <div class="card wk" data-reveal>
           <div class="wk-h"><span class="t">18–24 ก.ย.</span><span class="n">50<small>งาน</small></span></div>
           <div class="wk-bar"><i data-w="66%"></i></div>
-          <div class="wk-title">ความปลอดภัยข้อมูล · LMS SDS</div>
-          <ul><li><b>ปิดช่องรั่วข้อมูล</b> (18 ก.ย.)</li><li><b>LMS SDS</b> สร้างบน dev 22–25</li><li>HR: WFH · วันลา · ปฏิทิน · EC</li><li>AXTRA: แผน 239 สาขา</li></ul>
-          <div class="live"><div class="lh">ขึ้นระบบจริง</div><div>ปิดช่องรั่วข้อมูล (18 ก.ย.)</div><div>LMS SDS บน dev (25 ก.ย.)</div></div>
+          <div class="wk-title">ความปลอดภัยระบบ · LMS SDS</div>
+          <ul><li><b>อัปเกรดความปลอดภัยระบบ</b> (18 ก.ย.)</li><li><b>LMS SDS</b> สร้างบน dev 22–25</li><li>HR: WFH · วันลา · ปฏิทิน · EC</li><li>AXTRA: แผน 239 สาขา</li></ul>
+          <div class="live"><div class="lh">ขึ้นระบบจริง</div><div>อัปเกรดความปลอดภัย (18 ก.ย.)</div><div>LMS SDS บน dev (25 ก.ย.)</div></div>
         </div>
         <div class="card wk" data-reveal>
           <div class="wk-h"><span class="t">25 ก.ย.–1 ต.ค.</span><span class="n">43<small>งาน</small></span></div>
@@ -787,7 +559,7 @@
     </div>
   </section>
 
-  <!-- ============ 22 · CLOSING ============ -->
+  <!-- ============ 16 · CLOSING ============ -->
   <section class="slide" data-title="รอบถัดไป · Q&amp;A" data-nav-icon="sparkles" data-aura="violet">
     <div class="s-inner">
       <div class="closing">
@@ -804,7 +576,6 @@
         <div class="card glow" data-reveal>
           <div class="card-head"><div class="itile"><span data-icon="compass"></span></div><div><div class="t">รอบถัดไป · พ.ย. 2569</div><div class="s">เรียงตามลำดับที่จะทำ</div></div></div>
           <ul class="blist">
-            <li><div class="itile sm red"><span data-icon="chart-column"></span></div><div><span class="k">แก้ระบบสถิติเว็บให้กลับมาบันทึก</span>และปิดงานความปลอดภัยที่เหลืออีก 4 ข้อ</div></li>
             <li><div class="itile sm amber"><span data-icon="check"></span></div><div><span class="k">เปิดใช้งานที่ทำเสร็จแล้ว (เมื่ออนุมัติ)</span>เช็คลิสต์จอผู้บริหาร · การ์ดประเมินเข้า LINE · อีเมลอัตโนมัติ AXTRA</div></li>
             <li><div class="itile sm"><span data-icon="graduation-cap"></span></div><div><span class="k">SDS: เตรียมขึ้นระบบจริง</span>ตั้ง production · Microsoft SSO · นำเข้าข้อมูลจริงเมื่อได้รับจากลูกค้า</div></li>
             <li><div class="itile sm amber"><span data-icon="search"></span></div><div><span class="k">SEO: เติมเนื้อหาหน้าที่ยังไม่ติด</span>ดับเพลิง &amp; อพยพหนีไฟ · คปอ. · จป.บริหาร</div></li>

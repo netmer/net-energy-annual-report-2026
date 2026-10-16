@@ -58,25 +58,30 @@
   // ---------- slide · gaps + tiers
   if (T.headline3) $('seo-h3').innerHTML = T.headline3;
   const tiersBox = $('seo-tiers'); tiersBox.replaceChildren();
-  [['good', 'ติดอันดับดี'], ['page1', 'หน้าแรก คลิกยังน้อย'], ['low', 'ยังไม่ติดหน้าแรก'], ['none', 'ยังไม่ปรากฏ']].forEach(([k, l]) => {
-    const fc = h('div', 'fact'); const v = h('div', 'v', String(S.ranking[k])); v.appendChild(h('small', null, '/ ' + S.coursesVisible)); fc.appendChild(v); fc.appendChild(h('div', 'l', l)); tiersBox.appendChild(fc);
+  [['good', 'ได้คลิกดี'], ['page1', 'หน้าแรก · คลิกยังน้อย'], ['edge', 'ขอบหน้าแรก'], ['low', 'ยังไม่ขึ้นหน้าแรก']].forEach(([k, l]) => {
+    const fc = h('div', 'fact'); const v = h('div', 'v', String(S.ranking[k] || 0)); v.appendChild(h('small', null, '/ ' + S.coursesVisible)); fc.appendChild(v); fc.appendChild(h('div', 'l', l)); tiersBox.appendChild(fc);
   });
+  const posCell = (v, imp) => h('td', v == null ? 'dim' : v > 15 ? 'down' : v > 10 ? null : 'up', v == null ? '—' : v.toFixed(1) + (imp != null && imp < 30 ? '*' : ''));
   const gp = $('seo-gaps'); gp.replaceChildren();
   const gh = h('div', 'card-head'); const gi = h('div', 'itile orange'); gi.appendChild(icon('triangle-alert')); gh.appendChild(gi);
-  const ghd = h('div'); ghd.appendChild(h('div', 't', 'คำทั่วไปที่ลูกค้าค้น แต่เรายังอยู่หน้า 2 ขึ้นไป')); ghd.appendChild(h('div', 's', 'อันดับเฉลี่ยของเรา · แสดงผลใน 40 วัน · หน้าที่ Google เลือกแสดง')); gh.appendChild(ghd); gp.appendChild(gh);
-  const t2 = h('table', 'ktable'); const th2 = h('thead'); const trh2 = h('tr'); ['คำค้น', 'อันดับ', 'แสดงผล', 'หลักสูตร'].forEach(x => trh2.appendChild(h('th', null, x))); th2.appendChild(trh2); t2.appendChild(th2);
+  const ghd = h('div'); ghd.appendChild(h('div', 't', 'คำค้นทั่วไปที่ยังอยู่หน้า 2 ขึ้นไป')); ghd.appendChild(h('div', 's', 'อันดับเฉลี่ยจากผู้ค้นจริง · 40 วัน และล่าสุด 1–15 ต.ค.')); gh.appendChild(ghd); gp.appendChild(gh);
+  const t2 = h('table', 'ktable'); const th2 = h('thead'); const trh2 = h('tr'); ['คำค้น', '40 วัน', 'ล่าสุด', 'แสดงผล', 'หน้าที่เกี่ยวข้อง'].forEach(x => trh2.appendChild(h('th', null, x))); th2.appendChild(trh2); t2.appendChild(th2);
   const tb2 = h('tbody');
   (T.gaps || []).forEach(k => {
-    const tr = h('tr'); const td1 = h('td', null, k.q); if (k.note) td1.appendChild(h('span', 'kwline', k.note)); tr.appendChild(td1);
-    tr.appendChild(h('td', k.pos > 30 ? 'down' : null, Math.round(k.pos) + ' (หน้า ' + Math.ceil(k.pos / 10) + ')'));
+    const tr = h('tr'); tr.appendChild(h('td', null, k.q));
+    tr.appendChild(posCell(k.pos)); tr.appendChild(posCell(k.recent));
     tr.appendChild(h('td', 'n', f(k.impr))); tr.appendChild(h('td', 'dim', k.course)); tb2.appendChild(tr);
   });
   t2.appendChild(tb2); gp.appendChild(t2);
   const tl = $('seo-tierlist'); tl.replaceChildren();
-  S.tiers.filter(x => x.tier === 'low' || x.tier === 'none').forEach(x => {
-    const c = h('span', 'chip' + (x.tier === 'none' ? ' off' : '')); c.appendChild(document.createTextNode(x.course.length > 34 ? x.course.slice(0, 32) + '…' : x.course)); tl.appendChild(c);
+  const t3 = h('table', 'ktable'); const th3 = h('thead'); const trh3 = h('tr'); ['หลักสูตร', '40 วัน', 'ล่าสุด', 'แสดงผล'].forEach(x => trh3.appendChild(h('th', null, x))); th3.appendChild(trh3); t3.appendChild(th3);
+  const tb3 = h('tbody');
+  S.tiers.filter(x => x.tier === 'low' || x.tier === 'edge').forEach(x => {
+    const tr = h('tr'); const td = h('td', null, x.course); td.appendChild(h('span', 'kwline', x.tier === 'low' ? 'ยังไม่ขึ้นหน้าแรก' : 'ขอบหน้าแรก')); tr.appendChild(td);
+    tr.appendChild(posCell(x.position)); tr.appendChild(posCell(x.recentPos, x.recentImpr)); tr.appendChild(h('td', 'n', f(x.impressions))); tb3.appendChild(tr);
   });
-  const nt = $('seo-notes'); nt.replaceChildren();
+  t3.appendChild(tb3); tl.appendChild(t3);
+  const nt = h('div'); nt.style.cssText = 'margin-top:14px;padding-top:6px;border-top:1px dashed var(--line)'; gp.appendChild(nt);
   (T.notRankingNotes || []).forEach(x => { const pp = h('p'); pp.style.marginTop = '8px'; pp.style.fontSize = '15px'; pp.innerHTML = x; nt.appendChild(pp); });
   $('seo-foot3').innerHTML = '<b>เกณฑ์</b> ' + (T.tierRule || '');
 })();

@@ -895,576 +895,606 @@ window.REPORT = {
    "brandClicks": 559,
    "attributedClicks": 1138,
    "ranking": {
-    "good": 35,
-    "page1": 10,
-    "low": 6,
-    "none": 3
+    "low": 3,
+    "edge": 2,
+    "page1": 15,
+    "good": 34
    },
    "coursesVisible": 54,
    "tiers": [
     {
-     "course": "ช่างไฟฟ้า ระดับ 1",
-     "cat": "ช่างไฟฟ้า & ช่างแอร์",
-     "clicks": 435,
-     "impressions": 11250,
-     "tier": "good",
-     "bestQ": {
-      "q": "ใบรับรองช่างไฟฟ้า",
-      "position": 1
-     }
-    },
-    {
-     "course": "สถานที่ใช้ LPG",
-     "cat": "กรมธุรกิจพลังงาน",
-     "clicks": 347,
-     "impressions": 2431,
-     "tier": "good",
-     "bestQ": {
-      "q": "ผู้ปฏิบัติงานสถานที่ใช้ก๊าซปิโตรเลียมเหลว",
-      "position": 1.1
-     }
-    },
-    {
-     "course": "สถานที่เก็บรักษาน้ำมัน",
-     "cat": "กรมธุรกิจพลังงาน",
-     "clicks": 150,
-     "impressions": 1314,
-     "tier": "good",
-     "bestQ": {
-      "q": "ที่เก็บน้ำมัน",
-      "position": 1
-     }
-    },
-    {
-     "course": "สถานีบริการน้ำมัน",
-     "cat": "กรมธุรกิจพลังงาน",
-     "clicks": 132,
-     "impressions": 1520,
-     "tier": "good",
-     "bestQ": {
-      "q": "บัตรประจําตัวผู้ปฏิบัติงานสถานีบริการน้ํามัน",
-      "position": 1
-     }
-    },
-    {
-     "course": "สถานที่ใช้ NG",
-     "cat": "กรมธุรกิจพลังงาน",
-     "clicks": 120,
-     "impressions": 1806,
-     "tier": "good",
-     "bestQ": {
-      "q": "อบรม ผู้ปฏิบัติงาน สถาน ที่ ใช้ก๊าซธรรมชาติ 2569",
-      "position": 1
-     }
-    },
-    {
-     "course": "ความปลอดภัยในงานที่สูง",
-     "cat": "งานบนที่สูง",
-     "clicks": 103,
-     "impressions": 2394,
-     "tier": "good",
-     "bestQ": {
-      "q": "ตามกฎกระทรวง ฯ ทำงานที่สูง 2564 การทำงานในพื้นที่ปฏิบัติงานที่สูงจากพื้นดิน หรือจากพื้นอาคาร ตั้งแต่กี่เมตรขึ้นไป ถึงเรียกว่าทำงานที่สูง",
-      "position": 1
-     }
-    },
-    {
-     "course": "G CP",
-     "cat": "ผู้รับเหมา CP",
-     "clicks": 97,
-     "impressions": 1632,
-     "tier": "good",
-     "bestQ": {
-      "q": "tesco safety passport",
-      "position": 1.2
-     }
-    },
-    {
-     "course": "ก๊าซแอมโมเนีย",
-     "cat": "กรมโรงงานอุตสาหกรรม",
-     "clicks": 83,
-     "impressions": 553,
-     "tier": "good",
-     "bestQ": {
-      "q": "อบรมหลักสูตรผู้ควบคุมระบบ ทำความ เย็นที่ใช้แอมโมเนียเป็นสาร ทำความ เย็น",
-      "position": 2
-     }
-    },
-    {
-     "course": "ดับเพลิงขั้นต้น",
-     "cat": "การป้องกันและระงับอัคคีภัย",
-     "clicks": 64,
-     "impressions": 2192,
-     "tier": "good",
-     "bestQ": {
-      "q": "การฝึกอบรมดับเพลิงขั้นต้น",
-      "position": 1
-     }
-    },
-    {
-     "course": "TSM ทบทวน 3 ชั่วโมง",
-     "cat": "ADR & TSM",
-     "clicks": 62,
-     "impressions": 734,
-     "tier": "good",
-     "bestQ": {
-      "q": "อบรม ต่ออายุ tsm ออนไลน์",
-      "position": 4.1
-     }
-    },
-    {
-     "course": "G AIS",
-     "cat": "ผู้รับเหมา AIS",
-     "clicks": 56,
-     "impressions": 654,
-     "tier": "good",
-     "bestQ": {
-      "q": "หากเข้าปฏิบัติงานโดยไม่มีบัตร safety passport จะมีค่าปรับเท่าใด",
-      "position": 1
-     }
-    },
-    {
-     "course": "จป.หัวหน้างาน",
-     "cat": "จป & คปอ",
-     "clicks": 54,
-     "impressions": 2238,
-     "tier": "good",
-     "bestQ": {
-      "q": "จป หัวหน้างาน",
-      "position": 3
-     }
-    },
-    {
-     "course": "สถานีบรรจุ LPG",
-     "cat": "กรมธุรกิจพลังงาน",
-     "clicks": 49,
-     "impressions": 696,
-     "tier": "good",
-     "bestQ": {
-      "q": "ปิโตรเลียมเหลว",
-      "position": 5.2
-     }
-    },
-    {
-     "course": "ADR - พื้นฐาน",
-     "cat": "ADR & TSM",
-     "clicks": 48,
-     "impressions": 1412,
-     "tier": "good",
-     "bestQ": {
-      "q": "สอบ adr ขนส่ง",
-      "position": 2.6
-     }
-    },
-    {
-     "course": "E CP",
-     "cat": "ผู้รับเหมา CP",
-     "clicks": 46,
-     "impressions": 693,
-     "tier": "good",
-     "bestQ": {
-      "q": "อบรมความปลอดภัยในการทํางานกับไฟฟ้า",
-      "position": 2.7
-     }
-    },
-    {
-     "course": "โรยตัว",
-     "cat": "งานบนที่สูง",
-     "clicks": 46,
-     "impressions": 1121,
-     "tier": "good",
-     "bestQ": {
-      "q": "อบรมโรยตัว",
-      "position": 3
-     }
-    },
-    {
-     "course": "Solar Cell",
-     "cat": "ความปลอดภัยในงานที่สูง โซล่าเซลล์",
-     "clicks": 42,
-     "impressions": 1186,
-     "tier": "good",
-     "bestQ": {
-      "q": "solar pv electrical safety training",
-      "position": 2.8
-     }
-    },
-    {
-     "course": "ร้านจำหน่ายและโรงเก็บ LPG",
-     "cat": "กรมธุรกิจพลังงาน",
-     "clicks": 37,
-     "impressions": 383,
-     "tier": "good",
-     "bestQ": {
-      "q": "ผู้ปฏิบัติ",
-      "position": 6.9
-     }
-    },
-    {
-     "course": "TSM 18 ชั่วโมง",
-     "cat": "ADR & TSM",
-     "clicks": 36,
-     "impressions": 1089,
-     "tier": "good",
-     "bestQ": {
-      "q": "tsm training",
-      "position": 2.7
-     }
-    },
-    {
-     "course": "ช่างแอร์ ระดับ 1",
-     "cat": "ช่างไฟฟ้า & ช่างแอร์",
-     "clicks": 35,
-     "impressions": 1004,
-     "tier": "good",
-     "bestQ": {
-      "q": "ช่างแอร์ระดับ 1",
-      "position": 2.3
-     }
-    },
-    {
-     "course": "E AIS",
-     "cat": "ผู้รับเหมา AIS",
-     "clicks": 35,
-     "impressions": 375,
-     "tier": "good",
-     "bestQ": null
-    },
-    {
-     "course": "ADR - พื้นฐาน+แท๊งค์",
-     "cat": "ADR & TSM",
-     "clicks": 31,
-     "impressions": 626,
-     "tier": "good",
-     "bestQ": {
-      "q": "สอบ adr ขนส่ง",
-      "position": 7.4
-     }
-    },
-    {
-     "course": "H AIS",
-     "cat": "ผู้รับเหมา AIS",
-     "clicks": 28,
-     "impressions": 685,
-     "tier": "good",
-     "bestQ": {
-      "q": "ระยะเวลาของบัตร ais safety passport มีอายุทั้งสิ้นกี่ปี",
-      "position": 3.7
-     }
-    },
-    {
-     "course": "ต่ออายุต่อบัตร",
-     "cat": "กรมธุรกิจพลังงาน",
-     "clicks": 25,
-     "impressions": 766,
-     "tier": "good",
-     "bestQ": {
-      "q": "บัตรกรมพลังงาน",
-      "position": 7.7
-     }
-    },
-    {
-     "course": "TSM 6 ชั่วโมง",
-     "cat": "ADR & TSM",
-     "clicks": 21,
-     "impressions": 576,
-     "tier": "good",
-     "bestQ": {
-      "q": "การอบรม tsm",
-      "position": 5.8
-     }
-    },
-    {
-     "course": "อับอากาศ 4 ผู้",
-     "cat": "อับอากาศ",
-     "clicks": 19,
-     "impressions": 427,
-     "tier": "good",
-     "bestQ": {
-      "q": "confined space work",
-      "position": 10.3
-     }
-    },
-    {
-     "course": "จป.เทคนิค",
-     "cat": "จป & คปอ",
-     "clicks": 19,
-     "impressions": 717,
-     "tier": "good",
-     "bestQ": {
-      "q": "safety and technical courses",
-      "position": 3.8
-     }
-    },
-    {
-     "course": "SP CP",
-     "cat": "ผู้รับเหมา CP",
-     "clicks": 17,
-     "impressions": 345,
-     "tier": "good",
-     "bestQ": {
-      "q": "sp training",
-      "position": 8.5
-     }
-    },
-    {
-     "course": "ดับเพลิง & อพยพหนีไฟ",
-     "cat": "การป้องกันและระงับอัคคีภัย",
-     "clicks": 16,
-     "impressions": 1276,
-     "tier": "good",
-     "bestQ": {
-      "q": "เมื่อฝึกซ้อมดับเพลิงและอพยพหนีไฟเสร็จสิ้น ต้องจัดทำรายงานผลการฝึกซ้อมภายในกี่วัน",
-      "position": 1
-     }
-    },
-    {
-     "course": "รถขนส่งน้ำมัน",
-     "cat": "กรมธุรกิจพลังงาน",
-     "clicks": 15,
-     "impressions": 120,
-     "tier": "good",
-     "bestQ": null
-    },
-    {
-     "course": "G Trainer CP",
-     "cat": "Trainer CP",
-     "clicks": 14,
-     "impressions": 122,
-     "tier": "good",
-     "bestQ": {
-      "q": "g trainer",
-      "position": 1.2
-     }
-    },
-    {
-     "course": "จป.บริหาร",
-     "cat": "จป & คปอ",
-     "clicks": 11,
-     "impressions": 475,
-     "tier": "good",
-     "bestQ": {
-      "q": "เรียน จป",
-      "position": 9
-     }
-    },
-    {
-     "course": "R CP",
-     "cat": "ผู้รับเหมา CP",
-     "clicks": 11,
-     "impressions": 121,
-     "tier": "good",
-     "bestQ": {
-      "q": "อบรมที่สูง",
-      "position": 4.4
-     }
-    },
-    {
-     "course": "ไฟฟ้ากรมสวัสดิ์",
-     "cat": "ช่างไฟฟ้า & ช่างแอร์",
-     "clicks": 10,
-     "impressions": 401,
-     "tier": "good",
-     "bestQ": {
-      "q": "dlpw-approved courses",
-      "position": 1.8
-     }
-    },
-    {
-     "course": "ความปลอดภัยในการทำงานที่สูงบนหลังคา",
-     "cat": "งานบนที่สูง",
-     "clicks": 10,
-     "impressions": 309,
-     "tier": "good",
-     "bestQ": null
-    },
-    {
-     "course": "การทำงานบนที่สูง เสาส่งสัญญาณ",
-     "cat": "งานบนที่สูง",
-     "clicks": 8,
-     "impressions": 714,
-     "tier": "page1",
-     "bestQ": {
-      "q": "ทํางานบนที่สูง ภาษาอังกฤษ",
-      "position": 3.6
-     }
-    },
-    {
-     "course": "อับอากาศ - ผู้ปฏิบัติงาน",
-     "cat": "อับอากาศ",
-     "clicks": 7,
-     "impressions": 521,
-     "tier": "page1",
-     "bestQ": {
-      "q": "閉所作業",
-      "position": 3.7
-     }
-    },
-    {
-     "course": "T AIS",
-     "cat": "ผู้รับเหมา AIS",
-     "clicks": 6,
-     "impressions": 313,
-     "tier": "page1",
-     "bestQ": {
-      "q": "ais t",
-      "position": 6.5
-     }
-    },
-    {
-     "course": "H CP",
-     "cat": "ผู้รับเหมา CP",
-     "clicks": 4,
-     "impressions": 203,
-     "tier": "page1",
-     "bestQ": {
-      "q": "h-work",
-      "position": 4.9
-     }
-    },
-    {
-     "course": "Trainer -G",
-     "cat": "Trainer AIS",
-     "clicks": 3,
-     "impressions": 121,
-     "tier": "page1",
-     "bestQ": {
-      "q": "฿2,700",
-      "position": 8.3
-     }
-    },
-    {
-     "course": "refresh G AIS",
-     "cat": "ผู้รับเหมา AIS",
-     "clicks": 2,
-     "impressions": 64,
-     "tier": "page1",
-     "bestQ": {
-      "q": "refresh training",
-      "position": 8.2
-     }
-    },
-    {
-     "course": "R Trainer CP",
-     "cat": "Trainer CP",
-     "clicks": 1,
-     "impressions": 107,
-     "tier": "page1",
-     "bestQ": {
-      "q": "r-training",
-      "position": 7.5
-     }
-    },
-    {
-     "course": "E Trainer CP",
-     "cat": "Trainer CP",
-     "clicks": 1,
-     "impressions": 93,
-     "tier": "page1",
-     "bestQ": {
-      "q": "cp pass",
-      "position": 9
-     }
-    },
-    {
-     "course": "T CP",
+     "course": "B CP",
      "cat": "ผู้รับเหมา CP",
      "clicks": 1,
-     "impressions": 141,
-     "tier": "page1",
-     "bestQ": {
-      "q": "t-training",
-      "position": 6.7
-     }
+     "impressions": 172,
+     "position": 71.7,
+     "recentPos": 78,
+     "recentImpr": 120,
+     "tier": "low",
+     "quiet": false
     },
     {
      "course": "อับอากาศ - ผู้อนุญาต",
      "cat": "อับอากาศ",
      "clicks": 1,
      "impressions": 262,
-     "tier": "page1",
-     "bestQ": {
-      "q": "confined space training",
-      "position": 4.4
-     }
-    },
-    {
-     "course": "EC CP",
-     "cat": "ผู้รับเหมา CP",
-     "clicks": 8,
-     "impressions": 96,
+     "position": 18.7,
+     "recentPos": 12.2,
+     "recentImpr": 165,
      "tier": "low",
-     "bestQ": null
+     "quiet": false
     },
     {
      "course": "คปอ.",
      "cat": "จป & คปอ",
      "clicks": 2,
      "impressions": 100,
+     "position": 18.4,
+     "recentPos": 16.9,
+     "recentImpr": 22,
      "tier": "low",
-     "bestQ": {
-      "q": "อบรม คปอ",
-      "position": 42.8
-     }
+     "quiet": false
     },
     {
-     "course": "refresh E AIS",
-     "cat": "ผู้รับเหมา AIS",
-     "clicks": 2,
-     "impressions": 109,
-     "tier": "low",
-     "bestQ": null
+     "course": "ดับเพลิง & อพยพหนีไฟ",
+     "cat": "การป้องกันและระงับอัคคีภัย",
+     "clicks": 16,
+     "impressions": 1276,
+     "position": 11.3,
+     "recentPos": 14.5,
+     "recentImpr": 227,
+     "tier": "edge",
+     "quiet": false
     },
     {
-     "course": "B CP",
-     "cat": "ผู้รับเหมา CP",
-     "clicks": 1,
-     "impressions": 172,
-     "tier": "low",
-     "bestQ": {
-      "q": "ลิฟต์บ้าน 3 ชั้น",
-      "position": 60
-     }
+     "course": "อับอากาศ - ผู้ปฏิบัติงาน",
+     "cat": "อับอากาศ",
+     "clicks": 7,
+     "impressions": 521,
+     "position": 10.1,
+     "recentPos": 9.5,
+     "recentImpr": 166,
+     "tier": "edge",
+     "quiet": false
     },
     {
-     "course": "EC Trainer CP",
+     "course": "R Trainer CP",
      "cat": "Trainer CP",
      "clicks": 1,
-     "impressions": 54,
-     "tier": "low",
-     "bestQ": null
+     "impressions": 107,
+     "position": 9.6,
+     "recentPos": 12,
+     "recentImpr": 45,
+     "tier": "page1",
+     "quiet": false
     },
     {
-     "course": "A CP",
-     "cat": "ผู้รับเหมา CP",
-     "clicks": 1,
-     "impressions": 148,
-     "tier": "low",
-     "bestQ": null
+     "course": "Trainer -G",
+     "cat": "Trainer AIS",
+     "clicks": 3,
+     "impressions": 121,
+     "position": 7.7,
+     "recentPos": 9.1,
+     "recentImpr": 36,
+     "tier": "page1",
+     "quiet": false
     },
     {
-     "course": "forklift",
-     "cat": "การฝึกอบรมลูกจ้างซึ่งจะทำหน้าที่เป็นผู้ขับรถยก",
-     "clicks": 1,
-     "impressions": 30,
-     "tier": "none",
-     "bestQ": null
+     "course": "refresh G AIS",
+     "cat": "ผู้รับเหมา AIS",
+     "clicks": 2,
+     "impressions": 64,
+     "position": 7.1,
+     "recentPos": 7.1,
+     "recentImpr": 23,
+     "tier": "page1",
+     "quiet": false
     },
     {
      "course": "Trainer -E",
      "cat": "Trainer AIS",
      "clicks": 0,
      "impressions": 42,
-     "tier": "none",
-     "bestQ": null
+     "position": 6.9,
+     "recentPos": 13.8,
+     "recentImpr": 28,
+     "tier": "page1",
+     "quiet": true
+    },
+    {
+     "course": "forklift",
+     "cat": "การฝึกอบรมลูกจ้างซึ่งจะทำหน้าที่เป็นผู้ขับรถยก",
+     "clicks": 1,
+     "impressions": 30,
+     "position": 6.7,
+     "recentPos": 7.4,
+     "recentImpr": 34,
+     "tier": "page1",
+     "quiet": true
+    },
+    {
+     "course": "E Trainer CP",
+     "cat": "Trainer CP",
+     "clicks": 1,
+     "impressions": 93,
+     "position": 6.7,
+     "recentPos": 6,
+     "recentImpr": 34,
+     "tier": "page1",
+     "quiet": false
+    },
+    {
+     "course": "EC Trainer CP",
+     "cat": "Trainer CP",
+     "clicks": 1,
+     "impressions": 54,
+     "position": 6.4,
+     "recentPos": 6.3,
+     "recentImpr": 15,
+     "tier": "page1",
+     "quiet": false
+    },
+    {
+     "course": "A CP",
+     "cat": "ผู้รับเหมา CP",
+     "clicks": 1,
+     "impressions": 148,
+     "position": 6.4,
+     "recentPos": 5.7,
+     "recentImpr": 35,
+     "tier": "page1",
+     "quiet": false
+    },
+    {
+     "course": "refresh E AIS",
+     "cat": "ผู้รับเหมา AIS",
+     "clicks": 2,
+     "impressions": 109,
+     "position": 6.1,
+     "recentPos": 6.1,
+     "recentImpr": 47,
+     "tier": "page1",
+     "quiet": false
+    },
+    {
+     "course": "การทำงานบนที่สูง เสาส่งสัญญาณ",
+     "cat": "งานบนที่สูง",
+     "clicks": 8,
+     "impressions": 714,
+     "position": 6,
+     "recentPos": 5.4,
+     "recentImpr": 249,
+     "tier": "page1",
+     "quiet": false
     },
     {
      "course": "ผู้ปฏิบัติงาน ถังขนส่งก๊าซธรรมชาติเฉพาะพนักงานรับหรือจ่ายก๊าซธรรมชาติ",
      "cat": "กรมธุรกิจพลังงาน",
      "clicks": 0,
      "impressions": 33,
-     "tier": "none",
-     "bestQ": null
+     "position": 5.9,
+     "recentPos": 7.5,
+     "recentImpr": 12,
+     "tier": "page1",
+     "quiet": true
+    },
+    {
+     "course": "T CP",
+     "cat": "ผู้รับเหมา CP",
+     "clicks": 1,
+     "impressions": 141,
+     "position": 5.9,
+     "recentPos": 6.8,
+     "recentImpr": 60,
+     "tier": "page1",
+     "quiet": false
+    },
+    {
+     "course": "H CP",
+     "cat": "ผู้รับเหมา CP",
+     "clicks": 4,
+     "impressions": 203,
+     "position": 5.7,
+     "recentPos": 5.9,
+     "recentImpr": 53,
+     "tier": "page1",
+     "quiet": false
+    },
+    {
+     "course": "T AIS",
+     "cat": "ผู้รับเหมา AIS",
+     "clicks": 6,
+     "impressions": 313,
+     "position": 5.6,
+     "recentPos": 5.5,
+     "recentImpr": 66,
+     "tier": "page1",
+     "quiet": false
+    },
+    {
+     "course": "EC CP",
+     "cat": "ผู้รับเหมา CP",
+     "clicks": 8,
+     "impressions": 96,
+     "position": 3.5,
+     "recentPos": 4,
+     "recentImpr": 34,
+     "tier": "page1",
+     "quiet": false
+    },
+    {
+     "course": "อับอากาศ 4 ผู้",
+     "cat": "อับอากาศ",
+     "clicks": 19,
+     "impressions": 427,
+     "position": 10,
+     "recentPos": 7.7,
+     "recentImpr": 166,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "จป.บริหาร",
+     "cat": "จป & คปอ",
+     "clicks": 11,
+     "impressions": 475,
+     "position": 7.9,
+     "recentPos": 5.4,
+     "recentImpr": 191,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "Solar Cell",
+     "cat": "ความปลอดภัยในงานที่สูง โซล่าเซลล์",
+     "clicks": 42,
+     "impressions": 1186,
+     "position": 7.8,
+     "recentPos": 8.7,
+     "recentImpr": 252,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "จป.เทคนิค",
+     "cat": "จป & คปอ",
+     "clicks": 19,
+     "impressions": 717,
+     "position": 7.5,
+     "recentPos": 6.1,
+     "recentImpr": 407,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "TSM 6 ชั่วโมง",
+     "cat": "ADR & TSM",
+     "clicks": 21,
+     "impressions": 576,
+     "position": 6.9,
+     "recentPos": 6.3,
+     "recentImpr": 219,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "ช่างแอร์ ระดับ 1",
+     "cat": "ช่างไฟฟ้า & ช่างแอร์",
+     "clicks": 35,
+     "impressions": 1004,
+     "position": 6.5,
+     "recentPos": 6.5,
+     "recentImpr": 359,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "ดับเพลิงขั้นต้น",
+     "cat": "การป้องกันและระงับอัคคีภัย",
+     "clicks": 64,
+     "impressions": 2192,
+     "position": 6.5,
+     "recentPos": 6.4,
+     "recentImpr": 894,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "ADR - พื้นฐาน",
+     "cat": "ADR & TSM",
+     "clicks": 48,
+     "impressions": 1412,
+     "position": 6.3,
+     "recentPos": 6.5,
+     "recentImpr": 432,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "ต่ออายุต่อบัตร",
+     "cat": "กรมธุรกิจพลังงาน",
+     "clicks": 25,
+     "impressions": 766,
+     "position": 6.3,
+     "recentPos": 6.7,
+     "recentImpr": 360,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "TSM 18 ชั่วโมง",
+     "cat": "ADR & TSM",
+     "clicks": 36,
+     "impressions": 1089,
+     "position": 6.2,
+     "recentPos": 6,
+     "recentImpr": 431,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "TSM ทบทวน 3 ชั่วโมง",
+     "cat": "ADR & TSM",
+     "clicks": 62,
+     "impressions": 734,
+     "position": 6.1,
+     "recentPos": 5.1,
+     "recentImpr": 175,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "ไฟฟ้ากรมสวัสดิ์",
+     "cat": "ช่างไฟฟ้า & ช่างแอร์",
+     "clicks": 10,
+     "impressions": 401,
+     "position": 5.9,
+     "recentPos": 6,
+     "recentImpr": 136,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "ก๊าซแอมโมเนีย",
+     "cat": "กรมโรงงานอุตสาหกรรม",
+     "clicks": 83,
+     "impressions": 553,
+     "position": 5.8,
+     "recentPos": 6.4,
+     "recentImpr": 165,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "ช่างไฟฟ้า ระดับ 1",
+     "cat": "ช่างไฟฟ้า & ช่างแอร์",
+     "clicks": 435,
+     "impressions": 11250,
+     "position": 5.8,
+     "recentPos": 5.7,
+     "recentImpr": 3522,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "สถานที่ใช้ LPG",
+     "cat": "กรมธุรกิจพลังงาน",
+     "clicks": 347,
+     "impressions": 2431,
+     "position": 5.7,
+     "recentPos": 6.7,
+     "recentImpr": 710,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "จป.หัวหน้างาน",
+     "cat": "จป & คปอ",
+     "clicks": 54,
+     "impressions": 2238,
+     "position": 5.6,
+     "recentPos": 5,
+     "recentImpr": 846,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "โรยตัว",
+     "cat": "งานบนที่สูง",
+     "clicks": 46,
+     "impressions": 1121,
+     "position": 5.6,
+     "recentPos": 5.6,
+     "recentImpr": 403,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "ร้านจำหน่ายและโรงเก็บ LPG",
+     "cat": "กรมธุรกิจพลังงาน",
+     "clicks": 37,
+     "impressions": 383,
+     "position": 5.6,
+     "recentPos": 5.7,
+     "recentImpr": 92,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "ADR - พื้นฐาน+แท๊งค์",
+     "cat": "ADR & TSM",
+     "clicks": 31,
+     "impressions": 626,
+     "position": 5.5,
+     "recentPos": 4.9,
+     "recentImpr": 219,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "ความปลอดภัยในงานที่สูง",
+     "cat": "งานบนที่สูง",
+     "clicks": 103,
+     "impressions": 2394,
+     "position": 5.4,
+     "recentPos": 5,
+     "recentImpr": 912,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "ความปลอดภัยในการทำงานที่สูงบนหลังคา",
+     "cat": "งานบนที่สูง",
+     "clicks": 10,
+     "impressions": 309,
+     "position": 5,
+     "recentPos": 5.3,
+     "recentImpr": 98,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "สถานีบริการน้ำมัน",
+     "cat": "กรมธุรกิจพลังงาน",
+     "clicks": 132,
+     "impressions": 1520,
+     "position": 4.8,
+     "recentPos": 4.5,
+     "recentImpr": 376,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "SP CP",
+     "cat": "ผู้รับเหมา CP",
+     "clicks": 17,
+     "impressions": 345,
+     "position": 4.7,
+     "recentPos": 4.9,
+     "recentImpr": 94,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "G Trainer CP",
+     "cat": "Trainer CP",
+     "clicks": 14,
+     "impressions": 122,
+     "position": 4.7,
+     "recentPos": 4.9,
+     "recentImpr": 51,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "สถานที่เก็บรักษาน้ำมัน",
+     "cat": "กรมธุรกิจพลังงาน",
+     "clicks": 150,
+     "impressions": 1314,
+     "position": 4.7,
+     "recentPos": 4.3,
+     "recentImpr": 345,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "G CP",
+     "cat": "ผู้รับเหมา CP",
+     "clicks": 97,
+     "impressions": 1632,
+     "position": 4.6,
+     "recentPos": 4.1,
+     "recentImpr": 509,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "E CP",
+     "cat": "ผู้รับเหมา CP",
+     "clicks": 46,
+     "impressions": 693,
+     "position": 4.6,
+     "recentPos": 4,
+     "recentImpr": 219,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "H AIS",
+     "cat": "ผู้รับเหมา AIS",
+     "clicks": 28,
+     "impressions": 685,
+     "position": 4.5,
+     "recentPos": 4.2,
+     "recentImpr": 187,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "สถานีบรรจุ LPG",
+     "cat": "กรมธุรกิจพลังงาน",
+     "clicks": 49,
+     "impressions": 696,
+     "position": 4.3,
+     "recentPos": 3.6,
+     "recentImpr": 208,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "R CP",
+     "cat": "ผู้รับเหมา CP",
+     "clicks": 11,
+     "impressions": 121,
+     "position": 4.3,
+     "recentPos": 4.8,
+     "recentImpr": 32,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "รถขนส่งน้ำมัน",
+     "cat": "กรมธุรกิจพลังงาน",
+     "clicks": 15,
+     "impressions": 120,
+     "position": 4.2,
+     "recentPos": 5.1,
+     "recentImpr": 41,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "G AIS",
+     "cat": "ผู้รับเหมา AIS",
+     "clicks": 56,
+     "impressions": 654,
+     "position": 4.1,
+     "recentPos": 3.7,
+     "recentImpr": 171,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "สถานที่ใช้ NG",
+     "cat": "กรมธุรกิจพลังงาน",
+     "clicks": 120,
+     "impressions": 1806,
+     "position": 4.1,
+     "recentPos": 4,
+     "recentImpr": 562,
+     "tier": "good",
+     "quiet": false
+    },
+    {
+     "course": "E AIS",
+     "cat": "ผู้รับเหมา AIS",
+     "clicks": 35,
+     "impressions": 375,
+     "position": 3.5,
+     "recentPos": 2.9,
+     "recentImpr": 108,
+     "tier": "good",
+     "quiet": false
     }
    ],
    "locations": [
@@ -1559,12 +1589,12 @@ window.REPORT = {
   },
 
   seoText: {
-    headline: 'คลิกจาก Google <em>+16%/วัน</em> · การมองเห็น +29% · อันดับเฉลี่ยดีขึ้น 7.6 → 6.3',
-    headline2: 'หน้าหลักสูตรได้คลิก <em>+24%</em> — ช่างไฟฟ้า L1 และกลุ่มพลังงานยังเป็นหัวหอก',
-    headline3: 'คำค้นทั่วไปเริ่มขึ้นหน้าแรก — "อบรมดับเพลิงขั้นต้น" จากอันดับ 36 เป็น <em>6</em>',
+    headline: '<em>SEO</em> ภาพรวม',
+    headline2: '<em>SEO</em> แยกตามหลักสูตร',
+    headline3: '<em>SEO</em> สถานะการติดอันดับ',
     insights: [
       '<b>ก.ย. = เดือนที่ได้คลิกจาก Google มากที่สุด</b> 3,637 คลิก (ส.ค. 3,094 · ก.ค. 2,441)',
-      '<b>45 จาก 54 หลักสูตรอยู่หน้าแรก</b> เมื่อค้นด้วยคำของหลักสูตรนั้น (รอบก่อน 44 จาก 52)',
+      '<b>49 จาก 54 หลักสูตร อันดับเฉลี่ยอยู่หน้าแรก</b> (วัดจากทุกคำค้นของหน้าหลักสูตร)',
       '<b>หน้าจังหวัดโตต่อ</b> เชียงใหม่ 67 คลิก (จาก 22) · หาดใหญ่ 51 · ขอนแก่น 21 (ใหม่)',
     ],
     brandNote: '<b>Google ไม่เปิดเผยคำค้นของ ~75% ของคลิก</b> — ตารางคำค้นจึงครอบคลุมราว 1 ใน 4 ของคลิก ส่วนการนับคลิกต่อหลักสูตรใช้หน้าที่ถูกคลิกจริง จึงครบทุกคลิก · คำค้นชื่อบริษัทคิดเป็น 49% ของคลิกที่เห็นคำค้น',
@@ -1578,19 +1608,20 @@ window.REPORT = {
       { q: 'อบรม adr ออนไลน์', from: 4.8, to: 1.1, impr: 77, clicks: 15 },
     ],
     gaps: [
-      { q: 'อบรมดับเพลิงและอพยพหนีไฟ', pos: 47.9, impr: 27, course: 'ดับเพลิง & อพยพหนีไฟ' },
-      { q: 'อบรม คปอ', pos: 42.8, impr: 10, course: 'คปอ.' },
-      { q: 'อบรมดับเพลิง', pos: 41.3, impr: 31, course: 'ดับเพลิง & อพยพหนีไฟ' },
-      { q: 'อบรม จป บริหาร', pos: 25.7, impr: 21, course: 'จป.บริหาร' },
-      { q: 'สถานีแก๊ส lpg', pos: 23.6, impr: 30, course: 'สถานที่ใช้ LPG' },
-      { q: 'ความปลอดภัยออนไลน์ฟรี', pos: 23.5, impr: 33, course: 'หน้ารวมหลักสูตร' },
-      { q: 'อบรม จป หัวหน้างาน', pos: 20.5, impr: 58, course: 'จป.หัวหน้างาน', note: 'รอบก่อน 9.3' },
+      { q: 'อบรมดับเพลิงขั้นต้นและซ้อมอพยพหนีไฟ', pos: 52.8, recent: 49.9, impr: 34, course: 'ดับเพลิง & อพยพหนีไฟ' },
+      { q: 'อบรมดับเพลิงและอพยพหนีไฟ', pos: 47.9, recent: 46.3, impr: 27, course: 'ดับเพลิง & อพยพหนีไฟ' },
+      { q: 'อบรมหนีไฟ', pos: 47.2, recent: 53.4, impr: 29, course: 'ดับเพลิง & อพยพหนีไฟ' },
+      { q: 'อบรมดับเพลิง', pos: 41.3, recent: 55.5, impr: 31, course: 'ดับเพลิง & อพยพหนีไฟ' },
+      { q: 'สถานีแก๊ส lpg', pos: 23.6, recent: 22.8, impr: 30, course: 'สถานที่ใช้ LPG' },
+      { q: 'ความปลอดภัยออนไลน์ฟรี', pos: 23.5, recent: 18.4, impr: 33, course: 'หน้ารวมหลักสูตร' },
+      { q: 'อบรม จป หัวหน้างาน', pos: 20.5, recent: 20.6, impr: 58, course: 'จป.หัวหน้างาน' },
+      { q: 'สถานที่เก็บน้ำมัน', pos: 16.3, recent: 17.7, impr: 30, course: 'สถานที่เก็บรักษาน้ำมัน' },
     ],
     notRankingNotes: [
-      '<b>คำทั่วไปเริ่มติดแล้ว</b> — 7 คำ เช่น "อบรมดับเพลิงขั้นต้น" "อบรมที่สูง" ขยับขึ้นหน้าแรก หลังเติมเนื้อหาหน้าหลักสูตรรอบ ส.ค. (เดิมติดได้เฉพาะเมื่อค้นชื่อหลักสูตรเต็ม)',
-      '<b>กลุ่มที่ยังไม่ติด: ดับเพลิง/หนีไฟ · คปอ. · จป.บริหาร</b> — อยู่หน้า 3–5 · ควรเติมเนื้อหาหน้า "ดับเพลิง & อพยพหนีไฟ" และ "คปอ." ก่อน (มีคนค้นทุกวัน)',
-      '<b>9 หลักสูตรยังไม่ขึ้นหน้าแรก</b> — ส่วนใหญ่เป็น Trainer/refresh/บูมลิฟต์ ที่ขายผ่านลูกค้าองค์กร · forklift และ "ถังขนส่งก๊าซธรรมชาติ" ยังไม่มี URL ชื่อหลักสูตร',
+      '<b>ควรทำก่อน:</b> เติมเนื้อหาหน้า "ดับเพลิง &amp; อพยพหนีไฟ" และ "คปอ." — คำค้นกลุ่มนี้ยังอยู่หน้า 3–5 และมีคนค้นทุกวัน',
+      '<b>B CP (บูมลิฟต์)</b> — Google จับคู่หน้านี้กับคำ "ลิฟต์บ้าน" จึงอยู่ลึก ต้องปรับข้อความหน้าให้ชัดว่าเป็นหลักสูตรอบรม',
+      '<b>อันดับเป็นค่าเฉลี่ยจากผู้ค้นจริงทุกคน</b> — ผลค้นหาบนเครื่องเรามักดีกว่า เพราะ Google ปรับผลตามประวัติการเข้าเว็บและตำแหน่งของผู้ค้น',
     ],
-    tierRule: 'วัดจาก "คำค้นที่ดีที่สุด" ของแต่ละหน้าหลักสูตร (ไม่นับคำค้นชื่อบริษัท · แสดงผล ≥ 3 ครั้ง) ไม่ใช่อันดับเฉลี่ย · ติดดี = ได้คลิก ≥ 10 หรือมีคำค้นอันดับ ≤ 3 · หน้าแรก = มีคำค้นอันดับ ≤ 10 · ยังไม่ติดหน้าแรก = แสดงผล ≥ 50 ครั้งแต่ไม่มีคำไหนอยู่หน้าแรก · ยังไม่ปรากฏ = แสดงผล < 50 ครั้งใน 40 วัน',
+    tierRule: 'วัดจากอันดับเฉลี่ยของหน้าหลักสูตรใน Search Console (รวมทุกคำค้น รวมคำที่ Google ไม่เปิดเผย) 4 ก.ย. – 13 ต.ค. · ได้คลิกดี = อันดับ ≤ 10 และคลิก ≥ 10 · หน้าแรก = อันดับ ≤ 10 · ขอบหน้าแรก = อันดับ 10–15 · ยังไม่ขึ้นหน้าแรก = อันดับ > 15 · ล่าสุด = 1–15 ต.ค.',
   },
 };

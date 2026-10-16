@@ -152,7 +152,7 @@
       <b>จอผู้บริหาร</b> 6 หน้าที่ดึงตัวเลขเองจาก 3 ระบบ, <b>แบบประเมินด้วย QR 8 ภาษา</b> + คลังข้อสอบแทน Google Form, <b>ป้ายดิจิทัล</b>โถงต้อนรับ (เจอผู้อบรมที่ตกหล่นจากยอดสะสม 7,272 คน)
       และ<b>เว็บไซต์ใหม่ของ ELMER</b> (www.elmer-int.com) · พร้อมสร้าง <b>LMS สำหรับลูกค้าองค์กร SDS</b> บน dev หลังข้อเสนอผ่าน ·
       ธุรกิจอบรมทำสถิติใหม่: ก.ย. <b>ลงทะเบียน 967 ใบ · ผู้ผ่านการอบรม 1,375 คน</b> (สูงสุดทั้งคู่ตั้งแต่เปิดระบบ) และ ต.ค. เปิด <b>114 รอบ</b> (In-house 47) ·
-      SEO: คลิกจาก Google <b>+16%/วัน</b>, ก.ย. ได้ 3,637 คลิก (สูงสุด), 45 จาก 54 หลักสูตรอยู่หน้าแรก ·
+      SEO: คลิกจาก Google <b>+16%/วัน</b>, ก.ย. ได้ 3,637 คลิก (สูงสุด), 49 จาก 54 หลักสูตรอยู่หน้าแรก ·
       <b>ต้องแก้</b>: ระบบสถิติเว็บของเราไม่ได้บันทึกการเข้าชมตั้งแต่ 3 ก.ย. (หัวข้อ 08)
     </div>
   </section>
@@ -352,13 +352,13 @@
 
   body.appendChild(h3('7.5 คำทั่วไปที่ลูกค้าค้น แต่เรายังอยู่หน้า 2 ขึ้นไป', 'โอกาสที่ควรทำเนื้อหาก่อน'));
   const tg2 = h('table', 'data'); body.appendChild(tg2);
-  table(tg2, ['คำค้น', 'อันดับเรา', 'แสดงผล', 'หลักสูตรที่เกี่ยวข้อง'], (T.gaps || []).map(k => [k.q + (k.note ? ' (' + k.note + ')' : ''), { v: k.pos.toFixed(1) + ' (หน้า ' + Math.ceil(k.pos / 10) + ')', cls: k.pos > 30 ? 'down' : '' }, f(k.impr), { v: k.course, cls: 'dim' }]));
+  table(tg2, ['คำค้น', 'อันดับ 40 วัน', 'ล่าสุด 1–15 ต.ค.', 'แสดงผล', 'หลักสูตรที่เกี่ยวข้อง'], (T.gaps || []).map(k => [k.q, { v: k.pos.toFixed(1), cls: k.pos > 30 ? 'down' : '' }, { v: k.recent.toFixed(1), cls: k.recent > 30 ? 'down' : '' }, f(k.impr), { v: k.course, cls: 'dim' }]));
 
-  body.appendChild(h3('7.6 หลักสูตรแยกตามสถานะการติดอันดับ', 'ติดอันดับดี ' + S.ranking.good + ' · หน้าแรก คลิกยังน้อย ' + S.ranking.page1 + ' · ยังไม่ติดหน้าแรก ' + S.ranking.low + ' · ยังไม่ปรากฏ ' + S.ranking.none + ' จาก ' + S.coursesVisible));
+  body.appendChild(h3('7.6 หลักสูตรแยกตามสถานะการติดอันดับ', 'ได้คลิกดี ' + S.ranking.good + ' · หน้าแรก คลิกยังน้อย ' + S.ranking.page1 + ' · ขอบหน้าแรก ' + S.ranking.edge + ' · ยังไม่ขึ้นหน้าแรก ' + S.ranking.low + ' จาก ' + S.coursesVisible));
   const tn = h('table', 'data wide'); body.appendChild(tn);
-  const label = { good: 'ติดอันดับดี', page1: 'หน้าแรก · คลิกยังน้อย', low: 'ยังไม่ติดหน้าแรก', none: 'ยังไม่ปรากฏ' };
-  table(tn, ['หลักสูตร', 'หมวด', 'แสดงผล', 'คลิก', 'คำค้นที่ติดดีสุด', 'สถานะ'], S.tiers.filter(r => r.tier !== 'good').map(r => [r.course, { v: r.cat, cls: 'dim' }, f(r.impressions), f(r.clicks), r.bestQ ? { html: esc(short(r.bestQ.q, 34)) + ' <b>@' + r.bestQ.position.toFixed(1) + '</b>' } : { v: '—', cls: 'dim' }, { v: label[r.tier], cls: r.tier === 'page1' ? '' : 'down' }]));
-  const rule = h('div', 'note'); rule.innerHTML = '<b>เกณฑ์</b> ' + (T.tierRule || '') + ' · ตารางนี้แสดงเฉพาะหลักสูตรที่ยังไม่ถึงเกณฑ์ "ติดอันดับดี"'; body.appendChild(rule);
+  const label = { good: 'ได้คลิกดี', page1: 'หน้าแรก · คลิกยังน้อย', edge: 'ขอบหน้าแรก', low: 'ยังไม่ขึ้นหน้าแรก' };
+  table(tn, ['หลักสูตร', 'หมวด', 'แสดงผล', 'คลิก', 'อันดับ 40 วัน', 'ล่าสุด 1–15 ต.ค.', 'สถานะ'], S.tiers.filter(r => r.tier !== 'good').map(r => [r.course, { v: r.cat, cls: 'dim' }, f(r.impressions), f(r.clicks), r.position == null ? '—' : r.position.toFixed(1), r.recentPos == null ? '—' : r.recentPos.toFixed(1) + (r.recentImpr < 30 ? '*' : ''), { v: label[r.tier] + (r.quiet ? ' · คนค้นน้อย' : ''), cls: r.tier === 'low' ? 'down' : r.tier === 'edge' ? '' : 'up' }]));
+  const rule = h('div', 'note'); rule.innerHTML = '<b>เกณฑ์</b> ' + (T.tierRule || '') + ' · * = ช่วงล่าสุดมีการแสดงผลน้อยกว่า 30 ครั้ง · ตารางนี้แสดงเฉพาะหลักสูตรที่ยังไม่ถึงเกณฑ์ "ได้คลิกดี"'; body.appendChild(rule);
   const nn = h('div', 'callout warn'); nn.innerHTML = (T.notRankingNotes || []).join('<br>'); body.appendChild(nn);
 })();
 </script>
