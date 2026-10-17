@@ -371,7 +371,7 @@ h2.h.long{font-size:38px;line-height:1.22;max-width:1440px}
 .ag.wide{grid-column:span 2}
 
 /* ---------- bento (new systems) ---------- */
-.bento{display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:minmax(0,1fr) minmax(0,1.08fr) auto;gap:16px;height:100%}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:minmax(0,.88fr) minmax(0,1.2fr) auto;gap:16px;height:100%}
 .bento .b{display:flex;flex-direction:column;gap:8px;overflow:hidden;cursor:pointer;transition:transform .25s var(--ease)}
 .bento .b:hover{transform:translateY(-3px)}
 .bento .b .top{display:flex;align-items:center;gap:12px}
@@ -381,7 +381,7 @@ h2.h.long{font-size:38px;line-height:1.22;max-width:1440px}
 .bento .b .kpi{margin-top:auto;display:flex;align-items:baseline;gap:10px}
 .bento .b .kpi .bignum{font-size:42px}
 .bento .b .kpi span{font-size:14px;color:var(--muted);line-height:1.35}
-.bento .b1{grid-column:span 3}.bento .b2{grid-column:span 3}.bento .b3{grid-column:span 2}.bento .b4{grid-column:span 2}.bento .b5{grid-column:span 2}
+.bento .b1{grid-column:span 6}.bento .b2{grid-column:span 6}.bento .b3,.bento .b4,.bento .b5,.bento .b6{grid-column:span 3}
 
 /* ---------- system spotlight ---------- */
 .sys{display:grid;grid-template-columns:1fr 1.12fr;gap:30px;height:100%;min-height:0}
