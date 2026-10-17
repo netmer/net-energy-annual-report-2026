@@ -11,7 +11,7 @@ window.REPORT = {
     total: 327, repos: 12, prevTotal: 175, prevDays: 24,
     byRepo: [
       { label: 'เว็บไซต์ NET + ERP', sub: 'NET-workspace', n: 104, kind: 'core' },
-      { label: 'NETMER-Flow', sub: 'HR · จอผู้บริหาร · ป้ายดิจิทัล', n: 75, kind: 'core' },
+      { label: 'NETMER-Flow', sub: 'HR · จอภาพรวมองค์กร · ป้ายดิจิทัล', n: 75, kind: 'core' },
       { label: 'NET × AXTRA SHE Audit', sub: 'cp-axtra-audit · ใหม่', n: 40, kind: 'new' },
       { label: 'เว็บไซต์ ELMER', sub: 'elmer-int.com · ใหม่', n: 29, kind: 'new' },
       { label: 'NET LMS (SDS)', sub: 'net-lms · ใหม่', n: 23, kind: 'new' },
